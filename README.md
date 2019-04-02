@@ -5,7 +5,9 @@ Created 2019-04-01
 Based on: 
 https://www.youtube.com/watch?v=1rw9MfIleEg
 and
- https://www.youtube.com/watch?v=hnCmSXCZEpU
+https://www.youtube.com/watch?v=hnCmSXCZEpU
+https://www.joezimjs.com/javascript/complete-guide-upgrading-gulp-4/
+https://www.liquidlight.co.uk/blog/how-do-i-update-to-gulp-4/
 
 
 1.  Install node
