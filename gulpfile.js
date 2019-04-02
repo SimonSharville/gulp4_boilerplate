@@ -1,5 +1,6 @@
  const gulp = require('gulp');
  const imagemin = require('gulp-imagemin');
+ const uglify = require('gulp-uglify');
 
  /*
   -- Top Level Functions --
@@ -13,12 +14,19 @@
  // Copy all HTML files
  gulp.task('copyHtml', function(){
   gulp.src('src/*.html')
-    .pipe(gulp.dest('docs'));
+  .pipe(gulp.dest('docs'));
  });
 
  // Minimise Images
  gulp.task('imageMin', () =>
-    gulp.src('src/assets/images/*')
-        .pipe(imagemin())
-        .pipe(gulp.dest('docs/assets/images'))
+  gulp.src('src/assets/images/*')
+  .pipe(imagemin())
+  .pipe(gulp.dest('docs/assets/images'))
 );
+
+ // Minify JS
+ gulp.task('minify', function(){
+  gulp.src('src/assets/js/*.js')
+  .pipe(uglify())
+  .pipe(gulp.dest('docs/assets/js'));
+ });

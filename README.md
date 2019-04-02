@@ -27,3 +27,5 @@ and
 
 7.  Add Gulp packages
     npm install --save-dev gulp-imagemin    (minimises images)
+    npm install --save-dev gulp-uglify      (minifies js files)
+    
