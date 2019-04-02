@@ -70,10 +70,4 @@ gulp.task('default', gulp.parallel('html', 'images', 'css', 'scripts'), gulp.ser
 done();
 }));
 
-// gulp.task('watch', function e(e){
-//   return gulp.watch('src/assets/js/*.js', gulp.series('scripts'));
-//   return gulp.watch('src/assets/images/*', gulp.series('imageMin'));
-//   return gulp.watch('src/assets/scss/*.scss', gulp.series('sass'));
-//   return gulp.watch('src/*.html', gulp.series('copyHtml'));
-//   e();
-// });
+
