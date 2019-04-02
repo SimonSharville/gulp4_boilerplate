@@ -31,4 +31,5 @@ https://www.liquidlight.co.uk/blog/how-do-i-update-to-gulp-4/
     npm install --save-dev gulp-imagemin    (Minimises images)
     npm install --save-dev gulp-uglify      (Minifies js files)
     npm install --save-dev gulp-sass        (Compiles scss to css)
+    npm install --save-dev gulp-concat      (Cconcats js files into one)
 
