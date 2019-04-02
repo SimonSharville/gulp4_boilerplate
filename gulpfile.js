@@ -16,49 +16,55 @@
 
 
 // Copy all HTML files
-gulp.task('copyHtml', gulp.series(function(done){
+function copy_html(done){
   gulp.src('src/*.html')
   .pipe(gulp.dest('docs'));
   done();
-}));
+};
 
 // Minimise Images
-
-gulp.task('imageMin', gulp.series(function(done){
+function image_min(done){
   gulp.src('src/assets/images/*')
   .pipe(imagemin())
   .pipe(gulp.dest('docs/assets/images'));
   done();
-}));
+};
 
-
-// Minify JS - Removed, now under scripts
-// gulp.task('minify', gulp.series(function(done){
-//   gulp.src('src/assets/js/*.js')
-//   .pipe(uglify())
-//   .pipe(gulp.dest('docs/assets/js'));
-//   done();
-// }));
 
 // Compile sass
-gulp.task('sass', gulp.series(function(done){
+function scss_css(done){
   gulp.src('src/assets/scss/*.scss')
   .pipe(sass().on('error', sass.logError))
   .pipe(gulp.dest('docs/assets/css'));
   done();
-}));
+};
 
 // Scripts
-gulp.task('scripts', gulp.series(function(done){
+function concate_scripts(done){
   gulp.src('src/assets/js/*.js')
   .pipe(concat('main.js'))
-  .pipe(uglify())
+  .pipe(uglify()) // minifies the js
   .pipe(gulp.dest('docs/assets/js'));
   done();
-}));
+};
+
+
+// Tasks
+gulp.task('copy_html', copy_html);
+gulp.task('image_min', image_min);
+gulp.task('scss_css', scss_css);
+gulp.task('concate_scripts', concate_scripts);
 
 
 // Run all tasks gulp v4
-gulp.task('default', gulp.series(gulp.parallel('copyHtml', 'imageMin', 'sass', 'scripts'), gulp.series(function(done) {
+gulp.task('default', gulp.parallel('copy_html', 'image_min', 'scss_css', 'concate_scripts'), gulp.series(function(done) {
 done();
-})));
+}));
+
+// gulp.task('watch', function e(e){
+//   return gulp.watch('src/assets/js/*.js', gulp.series('scripts'));
+//   return gulp.watch('src/assets/images/*', gulp.series('imageMin'));
+//   return gulp.watch('src/assets/scss/*.scss', gulp.series('sass'));
+//   return gulp.watch('src/*.html', gulp.series('copyHtml'));
+//   e();
+// });
