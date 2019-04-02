@@ -16,14 +16,14 @@
 
 
 // Copy all HTML files
-function copy_html(done){
+function html(done){
   gulp.src('src/*.html')
   .pipe(gulp.dest('docs'));
   done();
 };
 
 // Minimise Images
-function image_min(done){
+function images(done){
   gulp.src('src/assets/images/*')
   .pipe(imagemin())
   .pipe(gulp.dest('docs/assets/images'));
@@ -32,15 +32,15 @@ function image_min(done){
 
 
 // Compile sass
-function scss_css(done){
+function css(done){
   gulp.src('src/assets/scss/*.scss')
   .pipe(sass().on('error', sass.logError))
   .pipe(gulp.dest('docs/assets/css'));
   done();
 };
 
-// Scripts
-function concate_scripts(done){
+// Concat and Minify Scripts
+function scripts(done){
   gulp.src('src/assets/js/*.js')
   .pipe(concat('main.js'))
   .pipe(uglify()) // minifies the js
@@ -48,16 +48,25 @@ function concate_scripts(done){
   done();
 };
 
+// Watch Files
+function watch(){
+  gulp.watch('html', html);
+  gulp.watch('image', images);
+  gulp.watch('css', css);
+  gulp.watch('scripts', scripts);
+}
+
 
 // Tasks
-gulp.task('copy_html', copy_html);
-gulp.task('image_min', image_min);
-gulp.task('scss_css', scss_css);
-gulp.task('concate_scripts', concate_scripts);
+gulp.task('html', html);
+gulp.task('images', images);
+gulp.task('css', css);
+gulp.task('scripts', scripts);
+gulp.task('watch', watch);
 
 
 // Run all tasks gulp v4
-gulp.task('default', gulp.parallel('copy_html', 'image_min', 'scss_css', 'concate_scripts'), gulp.series(function(done) {
+gulp.task('default', gulp.parallel('html', 'images', 'css', 'scripts'), gulp.series(function(done) {
 done();
 }));
 
