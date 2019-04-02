@@ -26,6 +26,7 @@ and
 6.  Create gulpfile.js
 
 7.  Add Gulp packages
-    npm install --save-dev gulp-imagemin    (minimises images)
-    npm install --save-dev gulp-uglify      (minifies js files)
-    
+    npm install --save-dev gulp-imagemin    (Minimises images)
+    npm install --save-dev gulp-uglify      (Minifies js files)
+    npm install --save-dev gulp-sass        (Compiles scss to css)
+
