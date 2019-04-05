@@ -12,6 +12,7 @@ https://www.joezimjs.com/javascript/complete-guide-upgrading-gulp-4/
 https://www.liquidlight.co.uk/blog/how-do-i-update-to-gulp-4/
 https://www.youtube.com/watch?v=2HpNiyimo8E
 https://www.youtube.com/watch?v=tTrPLQ6nOX8
+https://www.youtube.com/watch?v=QgMQeLymAdU
 
 
 1.  Install node
@@ -36,4 +37,5 @@ https://www.youtube.com/watch?v=tTrPLQ6nOX8
     npm install --save-dev gulp-uglify      (Minifies js files)
     npm install --save-dev gulp-sass        (Compiles scss to css)
     npm install --save-dev gulp-concat      (Cconcats js files into one)
+    npm install --save-dev browser-sync     (syncs the browser on changes)
 
