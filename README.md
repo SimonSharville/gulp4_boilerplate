@@ -6,9 +6,12 @@ Based on:
 https://www.youtube.com/watch?v=1rw9MfIleEg
 and
 https://www.youtube.com/watch?v=hnCmSXCZEpU
+
+Gulp 4
 https://www.joezimjs.com/javascript/complete-guide-upgrading-gulp-4/
 https://www.liquidlight.co.uk/blog/how-do-i-update-to-gulp-4/
 https://www.youtube.com/watch?v=2HpNiyimo8E
+https://www.youtube.com/watch?v=tTrPLQ6nOX8
 
 
 1.  Install node

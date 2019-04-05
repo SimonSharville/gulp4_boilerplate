@@ -5,6 +5,7 @@
  const uglify = require('gulp-uglify');
  const sass = require('gulp-sass');
  const concat = require('gulp-concat');
+ // const { watch } = require('gulp');
 
  /*
   -- Top Level Functions --
@@ -48,26 +49,27 @@ function js(done){
   done();
 };
 
-// Watch Files
-function watch(){
-  gulp.watch('html', html);
-  gulp.watch('image', images);
-  gulp.watch('css', css);
-  gulp.watch('js', js);
-}
+// // Watch Files
+// function watch_files(){
+//   gulp.watch('image', images);
+//   gulp.watch('css', css);
+//   gulp.watch('js', js);
+//   gulp.watch('html', html);
+// }
 
 
 // Tasks
-gulp.task('html', html);
 gulp.task('images', images);
 gulp.task('css', css);
 gulp.task('js', js);
-gulp.task('watch', watch);
+gulp.task('html', html);
+
 
 
 // Run all tasks gulp v4
-gulp.task('default', gulp.parallel('html', 'images', 'css', 'js'), gulp.series(function(done) {
+gulp.task('default', gulp.parallel('css', 'js', 'images', 'html'), gulp.series(function(done) {
 done();
 }));
 
+// gulp.task('watch', watch_files);
 
