@@ -39,8 +39,8 @@ function css(done){
   done();
 };
 
-// Concat and Minify Scripts
-function scripts(done){
+// Concat and Minify js
+function js(done){
   gulp.src('src/assets/js/*.js')
   .pipe(concat('main.js'))
   .pipe(uglify()) // minifies the js
@@ -53,7 +53,7 @@ function watch(){
   gulp.watch('html', html);
   gulp.watch('image', images);
   gulp.watch('css', css);
-  gulp.watch('scripts', scripts);
+  gulp.watch('js', js);
 }
 
 
@@ -61,12 +61,12 @@ function watch(){
 gulp.task('html', html);
 gulp.task('images', images);
 gulp.task('css', css);
-gulp.task('scripts', scripts);
+gulp.task('js', js);
 gulp.task('watch', watch);
 
 
 // Run all tasks gulp v4
-gulp.task('default', gulp.parallel('html', 'images', 'css', 'scripts'), gulp.series(function(done) {
+gulp.task('default', gulp.parallel('html', 'images', 'css', 'js'), gulp.series(function(done) {
 done();
 }));
 
