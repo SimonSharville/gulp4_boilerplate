@@ -33,9 +33,14 @@ https://www.youtube.com/watch?v=QgMQeLymAdU
 6.  Create gulpfile.js
 
 7.  Add Gulp packages
-    npm install --save-dev gulp-imagemin    (Minimises images)
-    npm install --save-dev gulp-uglify      (Minifies js files)
-    npm install --save-dev gulp-sass        (Compiles scss to css)
-    npm install --save-dev gulp-concat      (Cconcats js files into one)
-    npm install --save-dev browser-sync     (syncs the browser on changes)
+    npm install --save-dev gulp-imagemin                (Minimises images)
+    npm install --save-dev gulp-uglify                  (Minifies js files)
+    npm install --save-dev gulp-sass                    (Compiles scss to css)
+    npm install --save-dev gulp-concat                  (Cconcats js files into one)
+    npm install --save-dev browser-sync                 (syncs the browser on changes)
+    npm install --save-dev gulp-autoprefixer
+    npm install --save-dev gulp-changed                 (looks for changed images)
+    npm install --save-dev gulp-clean-css
+    npm install --save-dev gulp-line-ending-corrector   (Correct line ending for differnet systems)
+
 
