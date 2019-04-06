@@ -2,6 +2,9 @@
 
 Created 2019-04-01
 
+cd Gits/bootstrap_4_boilerplate
+
+
 Based on: 
 https://www.youtube.com/watch?v=1rw9MfIleEg
 and
@@ -42,5 +45,6 @@ https://www.youtube.com/watch?v=QgMQeLymAdU
     npm install --save-dev gulp-changed                 (looks for changed images)
     npm install --save-dev gulp-clean-css
     npm install --save-dev gulp-line-ending-corrector   (Correct line ending for differnet systems)
+    npm install --save-dev gulp-sourcemaps              (identifies location of original source files in browser development)
 
 

@@ -17,9 +17,30 @@ const autoprefixer = require('gulp-autoprefixer'),
 
 
 
+// Compile sass
+function styles(){
+  return gulp.src('src/assets/scss/*.scss')
+  .pipe(sass().on('error', sass.logError))
+  .pipe(gulp.dest('docs/assets/css'))
+  .pipe(browserSync.stream());
+}
 
+function watch() {
+  browserSync.init({
+    server: {
+      baseDir: 'docs'
+    }
+  });
 
+  gulp.watch('docs/assets/css/*.css', styles);
+  // gulp.watch('docs/*.html').on('change', browserSync.reload);
+  // gulp.watch('src/assets/js/*.js').on('change', browserSync.reload);
+}
 
+exports.styles = styles;
+exports.watch = watch;
+
+ 
 // First Attempt ===================================
 
 
