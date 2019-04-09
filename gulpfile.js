@@ -5,7 +5,6 @@ const gulp = require('gulp');
 // const { watch } = require('gulp');
 const autoprefixer = require('gulp-autoprefixer'),
       browserSync = require('browser-sync').create(),
-      reload = browserSync.reload,
       sass = require('gulp-sass'),
       cleanCSS = require('gulp-clean-css'),
       sourcemaps = require('gulp-sourcemaps'),
@@ -16,14 +15,41 @@ const autoprefixer = require('gulp-autoprefixer'),
       lineec = require('gulp-line-ending-corrector');
 
 
+/*
+-- Top Level Functions --
+gulp.task   - Defines tasks
+gulp.src    - Points to files to use
+gulp.dest   - Points to output folder
+gulp.watch  - Watch files and folders for changes
+*/
+
+
+// Functions ====================================
 
 // Compile sass
 function styles(){
-  return gulp.src('src/assets/scss/*.scss')
+  return gulp.src('src/assets/scss/**/*.scss')
   .pipe(sass().on('error', sass.logError))
   .pipe(gulp.dest('docs/assets/css'))
   .pipe(browserSync.stream());
 }
+
+function html(done){
+  gulp.src('src/*.html')
+  .pipe(gulp.dest('docs'));
+  done();
+};
+
+// Concat and Minify js
+function js(done){
+  gulp.src('src/assets/js/*.js')
+  .pipe(concat('main.js'))
+  .pipe(uglify()) // minifies the js
+  .pipe(gulp.dest('docs/assets/js'));
+  done();
+};
+
+// These watches the source folder
 
 function watch() {
   browserSync.init({
@@ -32,25 +58,22 @@ function watch() {
     }
   });
 
-  gulp.watch('docs/assets/css/*.css', styles);
-  // gulp.watch('docs/*.html').on('change', browserSync.reload);
-  // gulp.watch('src/assets/js/*.js').on('change', browserSync.reload);
+  gulp.watch('src/assets/scss/**/*.scss', styles); 
+  gulp.watch('src/*.html', html).on('change', browserSync.reload);
+  gulp.watch('src/assets/js/**/*.js', js).on('change', browserSync.reload);
 }
 
-exports.styles = styles;
+// exports.styles = styles;
+// exports.html = html;
 exports.watch = watch;
 
  
-// First Attempt ===================================
 
 
-/*
--- Top Level Functions --
-gulp.task   - Defines tasks
-gulp.src    - Points to files to use
-gulp.dest   - Points to output folder
-gulp.watch  - Watch files and folders for changes
-*/
+
+
+// First Attempt ================================
+
 
 
 // // Copy all HTML files
