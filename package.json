@@ -1,0 +1,37 @@
+{
+  "name": "bootstrap_4_boilerplate",
+  "version": "1.0.0",
+  "description": "Bootstrap 4 Boilerplate",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SimonSharville/bootstrap4_boilerplate.git"
+  },
+  "author": "Simon Sharville",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SimonSharville/bootstrap4_boilerplate/issues"
+  },
+  "homepage": "https://github.com/SimonSharville/bootstrap4_boilerplate#readme",
+  "dependencies": {
+    "gulp": "^4.0.0"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.3",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-changed": "^3.2.0",
+    "gulp-clean-css": "^4.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^5.0.3",
+    "gulp-line-ending-corrector": "^1.0.3",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify": "^3.0.2"
+  }
+}
