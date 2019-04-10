@@ -12,6 +12,7 @@ const autoprefixer = require('gulp-autoprefixer'),
       imagemin = require('gulp-imagemin'),
       changed = require('gulp-changed'),
       uglify = require('gulp-uglify'),
+      rename = require('gulp-rename'),
       lineec = require('gulp-line-ending-corrector');
 
 
@@ -30,9 +31,12 @@ gulp.watch  - Watch files and folders for changes
 function styles(){
   return gulp.src('src/assets/scss/**/*.scss')
   .pipe(sass().on('error', sass.logError))
+  .pipe(cleanCSS({compatibility: 'ie8'})) // Minimises the css
+  .pipe(rename({extname : '.min.css' }))     //the extension fo the renamed CSS file
   .pipe(gulp.dest('docs/assets/css'))
   .pipe(browserSync.stream());
 }
+
 
 function html(done){
   gulp.src('src/*.html')
@@ -58,13 +62,14 @@ function watch() {
     }
   });
 
-  gulp.watch('src/assets/scss/**/*.scss', styles); 
+  gulp.watch('src/assets/scss/**/*.scss', styles);
   gulp.watch('src/*.html', html).on('change', browserSync.reload);
   gulp.watch('src/assets/js/**/*.js', js).on('change', browserSync.reload);
 }
 
 // exports.styles = styles;
 // exports.html = html;
+// exports.minimiseCSS = minimiseCSS;
 exports.watch = watch;
 
  

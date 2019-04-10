@@ -47,5 +47,6 @@ https://www.youtube.com/watch?v=4y8Iw85__Xk
     npm install --save-dev gulp-clean-css
     npm install --save-dev gulp-line-ending-corrector   (Correct line ending for differnet systems)
     npm install --save-dev gulp-sourcemaps              (identifies location of original source files in browser development)
+    npm install --save-dev gulp-rename                 (Renames files)
 
 
