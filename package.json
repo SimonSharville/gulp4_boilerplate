@@ -28,9 +28,11 @@
     "gulp-changed": "^3.2.0",
     "gulp-clean-css": "^4.0.0",
     "gulp-concat": "^2.6.1",
+    "gulp-haml": "^1.0.1",
     "gulp-imagemin": "^5.0.3",
     "gulp-line-ending-corrector": "^1.0.3",
     "gulp-rename": "^1.4.0",
+    "gulp-ruby-haml": "0.0.9",
     "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "^2.6.5",
     "gulp-uglify": "^3.0.2"

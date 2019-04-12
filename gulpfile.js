@@ -14,6 +14,7 @@ const autoprefixer = require('gulp-autoprefixer'),
       uglify = require('gulp-uglify'),
       rename = require('gulp-rename'),
       lineec = require('gulp-line-ending-corrector');
+      haml = require('gulp-ruby-haml');
 
 
 /*
@@ -32,7 +33,7 @@ function styles(){
   return gulp.src('src/assets/scss/**/*.scss')
   .pipe(sass().on('error', sass.logError))
   .pipe(cleanCSS({compatibility: 'ie8'})) // Minimises the css
-  .pipe(rename({extname : '.min.css' }))     //the extension fo the renamed CSS file
+  .pipe(rename({extname : '.min.css' }))  // Add extension to the renamed CSS file
   .pipe(gulp.dest('docs/assets/css'))
   .pipe(browserSync.stream());
 }
@@ -53,7 +54,17 @@ function js(done){
   done();
 };
 
-// These watches the source folder
+// Haml to Html
+function hamlHTML(done){
+  gulp.src('src/**/*.haml').
+  pipe(haml().on('error', function(e) { console.log(e.message); })).
+  pipe(gulp.dest('docs'));
+  done();
+};
+
+
+// /////////////////////////////
+// These watch the source folder
 
 function watch() {
   browserSync.init({
@@ -64,12 +75,14 @@ function watch() {
 
   gulp.watch('src/assets/scss/**/*.scss', styles);
   gulp.watch('src/*.html', html).on('change', browserSync.reload);
+  gulp.watch('src/**/*.haml', hamlHTML).on('change', browserSync.reload);
   gulp.watch('src/assets/js/**/*.js', js).on('change', browserSync.reload);
 }
 
 // exports.styles = styles;
 // exports.html = html;
 // exports.minimiseCSS = minimiseCSS;
+// exports.hamlHTML = hamlHTML;
 exports.watch = watch;
 
  
