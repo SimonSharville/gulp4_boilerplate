@@ -51,3 +51,10 @@ https://www.youtube.com/watch?v=4y8Iw85__Xk
     npm install --save-dev gulp-ruby-haml              (Compiles haml to html)
 
 
+8. Install Ruby
+    https://number42.de/blog/2018/05/22/rbenv-2018-05-22-rbenv.html
+    https://github.com/rbenv/rbenv
+    rbenv install 2.6.2     (installs ruby version globaly)
+    rbenv local 2.6.2       (Installs locally)
+    rbenv version           (Checks version) 
+    rbenv versions          (Checks all versions installed and highlights active) 
