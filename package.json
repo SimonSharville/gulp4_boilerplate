@@ -30,6 +30,8 @@
     "gulp-concat": "^2.6.1",
     "gulp-haml": "^1.0.1",
     "gulp-imagemin": "^5.0.3",
+    "gulp-include-html": "^1.0.14",
+    "gulp-inject-partials": "^1.0.5",
     "gulp-line-ending-corrector": "^1.0.3",
     "gulp-rename": "^1.4.0",
     "gulp-ruby-haml": "0.0.9",

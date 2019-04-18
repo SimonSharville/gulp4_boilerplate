@@ -49,6 +49,8 @@ https://www.youtube.com/watch?v=4y8Iw85__Xk
     npm install --save-dev gulp-sourcemaps              (identifies location of original source files in browser development)
     npm install --save-dev gulp-rename                 (Renames files)
     npm install --save-dev gulp-ruby-haml              (Compiles haml to html)
+    npm install --save-dev gulp-inject-partials        (Injects partials)
+    npm install --save-dev gulp-include-html
 
 
 8. Install Ruby
