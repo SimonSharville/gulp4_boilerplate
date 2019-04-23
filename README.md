@@ -50,7 +50,10 @@ https://www.youtube.com/watch?v=4y8Iw85__Xk
     npm install --save-dev gulp-rename                 (Renames files)
     npm install --save-dev gulp-ruby-haml              (Compiles haml to html)
     npm install --save-dev gulp-inject-partials        (Injects partials)
-    npm install --save-dev gulp-include-html
+    npm install --save-dev gulp-include-html           DIDN'T WORK
+    npm install --save-dev gulp-html-partial           DIDN'T WORK
+    npm install --save-dev gulp-file-include           DIDN'T WORK
+    npm install --save-dev gulp-include
 
 
 8. Install Ruby
