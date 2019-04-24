@@ -55,12 +55,6 @@ function hamlHTML(done){
   done();
 };
 
-// Create HTML Files
-// function html(done){
-//   gulp.src('src/dist/*.html')
-//   .pipe(gulp.dest('docs'));
-//   done();
-// };
 
 // Concat and Minify js
 function js(done){
@@ -70,10 +64,6 @@ function js(done){
   .pipe(gulp.dest('docs/assets/js'));
   done();
 };
-
-
-
-
 
 
 
@@ -88,10 +78,10 @@ function watch(done) {
   })
   done();
 
-  gulp.watch('src/assets/scss/**/*.scss', styles);
-  gulp.watch('src/views/**/*.haml', includeHTML).on('change', browserSync.stream);
+  
+  gulp.watch('src/views/**/*.haml', includeHTML).on('change', browserSync.reload);
   gulp.watch('src/dist/*.haml', hamlHTML).on('change', browserSync.reload);
-  // gulp.watch('src/dist/*.html', html).on('change', browserSync.reload);
+  gulp.watch('src/assets/scss/**/*.scss', styles).on('change', browserSync.reload);
   gulp.watch('src/assets/js/**/*.js', js).on('change', browserSync.reload);
 }
 
@@ -99,7 +89,7 @@ function watch(done) {
 // exports.minimiseCSS = minimiseCSS;
 // exports.html = html;
 // exports.hamlHTML = hamlHTML;
-exports.includeHTML = includeHTML;
+// exports.includeHTML = includeHTML;
 exports.watch = watch;
 
  
