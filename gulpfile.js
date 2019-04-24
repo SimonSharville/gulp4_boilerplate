@@ -31,7 +31,7 @@ gulp.watch  - Watch files and folders for changes
 
 // Compile sass
 function styles(){
-  return gulp.src('src/assets/scss/**/*.scss')
+  return gulp.src('app/assets/scss/**/*.scss')
   .pipe(sourcemaps.init())
       .pipe(sass().on('error', sass.logError))
       .pipe(autoprefixer({
@@ -47,7 +47,7 @@ function styles(){
 
 // Include Partials
 function includeHTML (done) {
-  gulp.src('src/views/**/*.haml')
+  gulp.src('app/views/**/*.haml')
     .pipe(include()).on('error', console.log)
     .pipe(gulp.dest('dist'))
     done();
@@ -64,7 +64,7 @@ function hamlHTML(done){
 
 // Concat and Minify js
 function js(done){
-  gulp.src('src/assets/js/*.js')
+  gulp.src('app/assets/js/*.js')
   .pipe(sourcemaps.init())
     .pipe(concat('main.js'))
     .pipe(uglify()) // minifies the js
@@ -87,10 +87,10 @@ function watch(done) {
   done();
 
   
-  gulp.watch('src/views/**/*.haml', includeHTML).on('change', browserSync.reload);
+  gulp.watch('app/views/**/*.haml', includeHTML).on('change', browserSync.reload);
   gulp.watch('dist/*.haml', hamlHTML).on('change', browserSync.reload);
-  gulp.watch('src/assets/scss/**/*.scss', styles).on('change', browserSync.reload);
-  gulp.watch('src/assets/js/**/*.js', js).on('change', browserSync.reload);
+  gulp.watch('app/assets/scss/**/*.scss', styles).on('change', browserSync.reload);
+  gulp.watch('app/assets/js/**/*.js', js).on('change', browserSync.reload);
 }
 
 
@@ -113,14 +113,14 @@ gulp.task('default', build);
 
 // // Copy all HTML files
 // function html(done){
-//   gulp.src('src/*.html')
+//   gulp.src('app/*.html')
 //   .pipe(gulp.dest('docs'));
 //   done();
 // };
 
 // // Minimise Images
 // function images(done){
-//   gulp.src('src/assets/images/*')
+//   gulp.src('app/assets/images/*')
 //   .pipe(imagemin())
 //   .pipe(gulp.dest('docs/assets/images'));
 //   done();
@@ -129,7 +129,7 @@ gulp.task('default', build);
 
 // // Compile sass
 // function css(done){
-//   gulp.src('src/assets/scss/*.scss')
+//   gulp.src('app/assets/scss/*.scss')
 //   .pipe(sass().on('error', sass.logError))
 //   .pipe(gulp.dest('docs/assets/css'));
 //   done();
@@ -137,7 +137,7 @@ gulp.task('default', build);
 
 // // Concat and Minify js
 // function js(done){
-//   gulp.src('src/assets/js/*.js')
+//   gulp.src('app/assets/js/*.js')
 //   .pipe(concat('main.js'))
 //   .pipe(uglify()) // minifies the js
 //   .pipe(gulp.dest('docs/assets/js'));
