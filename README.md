@@ -42,7 +42,7 @@ https://www.youtube.com/watch?v=4y8Iw85__Xk
     npm install --save-dev gulp-sass                    (Compiles scss to css)
     npm install --save-dev gulp-concat                  (Cconcats js files into one)
     npm install --save-dev browser-sync                 (syncs the browser on changes)
-    npm install --save-dev gulp-autoprefixer
+    npm install --save-dev gulp-autoprefixer            (prefixes css for various browsers)
     npm install --save-dev gulp-changed                 (looks for changed images)
     npm install --save-dev gulp-clean-css
     npm install --save-dev gulp-line-ending-corrector   (Correct line ending for differnet systems)
@@ -53,7 +53,8 @@ https://www.youtube.com/watch?v=4y8Iw85__Xk
     npm install --save-dev gulp-include-html           DIDN'T WORK
     npm install --save-dev gulp-html-partial           DIDN'T WORK
     npm install --save-dev gulp-file-include           DIDN'T WORK
-    npm install --save-dev gulp-include
+    npm install --save-dev gulp-include                (Include Partials into HAML files)
+    npm install --save-dev gulp-sourcemaps             (Allows to find original file in development)
 
 
 8. Install Ruby

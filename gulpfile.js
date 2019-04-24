@@ -32,13 +32,15 @@ gulp.watch  - Watch files and folders for changes
 // Compile sass
 function styles(){
   return gulp.src('src/assets/scss/**/*.scss')
-  .pipe(sass().on('error', sass.logError))
-  .pipe(autoprefixer({
-        browsers: ['last 2 versions'],
-        cascade: false
-    }))
-  .pipe(cleanCSS({compatibility: 'ie8'})) // Minimises the css
-  .pipe(rename({extname : '.min.css' }))  // Add extension to the renamed CSS file
+  .pipe(sourcemaps.init())
+      .pipe(sass().on('error', sass.logError))
+      .pipe(autoprefixer({
+            browsers: ['last 2 versions'],
+            cascade: false
+        }))
+      .pipe(cleanCSS({compatibility: 'ie8'})) // Minimises the css
+      .pipe(rename({extname : '.min.css' }))  // Add extension to the renamed CSS file
+  .pipe(sourcemaps.write('./'))
   .pipe(gulp.dest('docs/assets/css'))
   .pipe(browserSync.stream());
 }
@@ -63,8 +65,10 @@ function hamlHTML(done){
 // Concat and Minify js
 function js(done){
   gulp.src('src/assets/js/*.js')
-  .pipe(concat('main.js'))
-  .pipe(uglify()) // minifies the js
+  .pipe(sourcemaps.init())
+    .pipe(concat('main.js'))
+    .pipe(uglify()) // minifies the js
+  .pipe(sourcemaps.write('./'))
   .pipe(gulp.dest('docs/assets/js'));
   done();
 };
