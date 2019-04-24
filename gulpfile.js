@@ -49,13 +49,13 @@ function styles(){
 function includeHTML (done) {
   gulp.src('src/views/**/*.haml')
     .pipe(include()).on('error', console.log)
-    .pipe(gulp.dest('src/dist'))
+    .pipe(gulp.dest('dist'))
     done();
 };
 
 // Haml to Html
 function hamlHTML(done){
-  gulp.src('src/dist/*.haml')
+  gulp.src('dist/*.haml')
   .pipe(haml().on('error', function(e) { console.log(e.message); }))
   .pipe(gulp.dest('docs'));
   done();
@@ -88,7 +88,7 @@ function watch(done) {
 
   
   gulp.watch('src/views/**/*.haml', includeHTML).on('change', browserSync.reload);
-  gulp.watch('src/dist/*.haml', hamlHTML).on('change', browserSync.reload);
+  gulp.watch('dist/*.haml', hamlHTML).on('change', browserSync.reload);
   gulp.watch('src/assets/scss/**/*.scss', styles).on('change', browserSync.reload);
   gulp.watch('src/assets/js/**/*.js', js).on('change', browserSync.reload);
 }
