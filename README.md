@@ -50,13 +50,18 @@ https://www.youtube.com/watch?v=4y8Iw85__Xk
     npm install --save-dev gulp-rename                  (Renames files)
     npm install --save-dev gulp-ruby-haml               (Compiles haml to html)
     npm install --save-dev gulp-inject-partials         (Injects partials)
-    npm install --save-dev gulp-include-html            DIDN'T WORK
-    npm install --save-dev gulp-html-partial            DIDN'T WORK
-    npm install --save-dev gulp-file-include            DIDN'T WORK
+    npm install --save-dev gulp-include-html            DIDN'T WORK - Removed
+    npm install --save-dev gulp-html-partial            DIDN'T WORK - Removed
+    npm install --save-dev gulp-file-include            DIDN'T WORK - Removed
     npm install --save-dev gulp-include                 (Include Partials into HAML files)
     npm install --save-dev gulp-sourcemaps              (Allows to find original file in development)
 
+    NOTES
     npm rm gulp-NAME                                    (To remove a package)
+    To Duplicate poject, Copy project, rename it and in terminal type:
+      npm install
+
+
 
 8. Install Ruby
     https://number42.de/blog/2018/05/22/rbenv-2018-05-22-rbenv.html
