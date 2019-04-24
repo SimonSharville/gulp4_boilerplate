@@ -33,6 +33,10 @@ gulp.watch  - Watch files and folders for changes
 function styles(){
   return gulp.src('src/assets/scss/**/*.scss')
   .pipe(sass().on('error', sass.logError))
+  .pipe(autoprefixer({
+        browsers: ['last 2 versions'],
+        cascade: false
+    }))
   .pipe(cleanCSS({compatibility: 'ie8'})) // Minimises the css
   .pipe(rename({extname : '.min.css' }))  // Add extension to the renamed CSS file
   .pipe(gulp.dest('docs/assets/css'))
@@ -85,14 +89,16 @@ function watch(done) {
   gulp.watch('src/assets/js/**/*.js', js).on('change', browserSync.reload);
 }
 
-// exports.styles = styles;
-// exports.minimiseCSS = minimiseCSS;
-// exports.html = html;
-// exports.hamlHTML = hamlHTML;
-// exports.includeHTML = includeHTML;
+
+exports.includeHTML = includeHTML;
+exports.hamlHTML = hamlHTML;
+exports.styles = styles;
+exports.js = js;
 exports.watch = watch;
 
- 
+// Sets the default to gulp watch
+var build = gulp.parallel(watch);
+gulp.task('default', build);
 
 
 
