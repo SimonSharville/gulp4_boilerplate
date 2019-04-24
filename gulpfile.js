@@ -39,12 +39,28 @@ function styles(){
   .pipe(browserSync.stream());
 }
 
+// Include Partials
+function includeHTML (done) {
+  gulp.src('src/views/**/*.haml')
+    .pipe(include()).on('error', console.log)
+    .pipe(gulp.dest('src/dist'))
+    done();
+};
 
-function html(done){
-  gulp.src('src/*.html')
+// Haml to Html
+function hamlHTML(done){
+  gulp.src('src/dist/*.haml')
+  .pipe(haml().on('error', function(e) { console.log(e.message); }))
   .pipe(gulp.dest('docs'));
   done();
 };
+
+// Create HTML Files
+// function html(done){
+//   gulp.src('src/dist/*.html')
+//   .pipe(gulp.dest('docs'));
+//   done();
+// };
 
 // Concat and Minify js
 function js(done){
@@ -55,46 +71,35 @@ function js(done){
   done();
 };
 
-// Include Partials
-function includeHTML (done) {
-  gulp.src('src/**/*.haml')
-    .pipe(include())
-      .on('error', console.log)
-    .pipe(gulp.dest('dist'))
-    done();
-};
 
-// Haml to Html
-function hamlHTML(done){
-  gulp.src('dist/**/*.haml').
-  pipe(haml().on('error', function(e) { console.log(e.message); })).
-  pipe(gulp.dest('docs'));
-  done();
-};
+
+
 
 
 
 // /////////////////////////////
 // These watch the source folder
 
-function watch() {
+function watch(done) {
   browserSync.init({
     server: {
       baseDir: 'docs'
     }
-  });
+  })
+  done();
 
   gulp.watch('src/assets/scss/**/*.scss', styles);
-  gulp.watch('src/*.html', html).on('change', browserSync.reload);
-  gulp.watch('src/**/*.haml', includeHTML).on('change', browserSync.reload);
-  gulp.watch('dist/**/*.haml', hamlHTML).on('change', browserSync.reload);
+  gulp.watch('src/views/**/*.haml', includeHTML).on('change', browserSync.stream);
+  gulp.watch('src/dist/*.haml', hamlHTML).on('change', browserSync.reload);
+  // gulp.watch('src/dist/*.html', html).on('change', browserSync.reload);
   gulp.watch('src/assets/js/**/*.js', js).on('change', browserSync.reload);
 }
 
 // exports.styles = styles;
-// exports.html = html;
 // exports.minimiseCSS = minimiseCSS;
+// exports.html = html;
 // exports.hamlHTML = hamlHTML;
+exports.includeHTML = includeHTML;
 exports.watch = watch;
 
  
