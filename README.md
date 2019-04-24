@@ -47,15 +47,16 @@ https://www.youtube.com/watch?v=4y8Iw85__Xk
     npm install --save-dev gulp-clean-css
     npm install --save-dev gulp-line-ending-corrector   (Correct line ending for differnet systems)
     npm install --save-dev gulp-sourcemaps              (identifies location of original source files in browser development)
-    npm install --save-dev gulp-rename                 (Renames files)
-    npm install --save-dev gulp-ruby-haml              (Compiles haml to html)
-    npm install --save-dev gulp-inject-partials        (Injects partials)
-    npm install --save-dev gulp-include-html           DIDN'T WORK
-    npm install --save-dev gulp-html-partial           DIDN'T WORK
-    npm install --save-dev gulp-file-include           DIDN'T WORK
-    npm install --save-dev gulp-include                (Include Partials into HAML files)
-    npm install --save-dev gulp-sourcemaps             (Allows to find original file in development)
+    npm install --save-dev gulp-rename                  (Renames files)
+    npm install --save-dev gulp-ruby-haml               (Compiles haml to html)
+    npm install --save-dev gulp-inject-partials         (Injects partials)
+    npm install --save-dev gulp-include-html            DIDN'T WORK
+    npm install --save-dev gulp-html-partial            DIDN'T WORK
+    npm install --save-dev gulp-file-include            DIDN'T WORK
+    npm install --save-dev gulp-include                 (Include Partials into HAML files)
+    npm install --save-dev gulp-sourcemaps              (Allows to find original file in development)
 
+    npm rm gulp-NAME                                    (To remove a package)
 
 8. Install Ruby
     https://number42.de/blog/2018/05/22/rbenv-2018-05-22-rbenv.html
