@@ -25,10 +25,12 @@ gulp.dest   - Points to output folder
 gulp.watch  - Watch files and folders for changes
 */
 
+
+// Order Files ==================================
 // Order of JS files
 var jsSRC = [
-  'app/assets/js/file1.js',
-  'app/assets/js/file2.js'
+  'app/assets/js/scripts/file1.js',
+  'app/assets/js/scripts/file2.js'
 ];
 
 // Functions ====================================
@@ -77,11 +79,20 @@ function hamlHTML (done) {
 function js(){
   return gulp.src(jsSRC)
   .pipe(sourcemaps.init())
-    .pipe(concat('main.js'))
-    .pipe(uglify()) // minifies the js
+    .pipe(concat('sardJS.js'))
+  .pipe(sourcemaps.write('./'))
+  .pipe(gulp.dest('app/assets/js'));
+};
+
+function minifyJS(done){
+  gulp.src('app/assets/js/sardJS.js')
+  .pipe(sourcemaps.init())
+  .pipe(uglify().on('error', function(f) { console.log(f.message); })) // minifies the js
+  .pipe(rename({extname : '.min.js' }))  // Add extension to the file
   .pipe(sourcemaps.write('./'))
   .pipe(gulp.dest('docs/assets/js'));
-};
+  done();
+}
 
 
 
@@ -101,6 +112,7 @@ function watch(done) {
   gulp.watch('app/assets/scss/**/*.scss', compileCSS);
   gulp.watch('app/assets/css/*css', concatCSS).on('change', browserSync.reload);
   gulp.watch(jsSRC, js).on('change', browserSync.reload);
+  gulp.watch('app/assets/js/sardJS.js', minifyJS).on('change', browserSync.reload);
 }
 
 
@@ -108,6 +120,7 @@ exports.hamlHTML = hamlHTML;
 exports.compileCSS = compileCSS;
 exports.concatCSS = concatCSS;
 exports.js = js;
+exports.minifyJS = minifyJS;
 exports.watch = watch;
 
 // Sets the default to gulp watch
