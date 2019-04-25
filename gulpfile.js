@@ -27,11 +27,16 @@ gulp.watch  - Watch files and folders for changes
 
 
 // Order Files ==================================
+
 // Order of JS files
+// When you change this stop and restart gulp
 var jsSRC = [
   'app/assets/js/scripts/file1.js',
   'app/assets/js/scripts/file2.js'
 ];
+
+// For ordering SCSS file use scss/sard-styles.scss
+// NEVER use the css folder
 
 // Functions ====================================
 
