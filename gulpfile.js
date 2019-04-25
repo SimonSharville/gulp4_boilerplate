@@ -25,6 +25,11 @@ gulp.dest   - Points to output folder
 gulp.watch  - Watch files and folders for changes
 */
 
+// Order of JS files
+var jsSRC = [
+  'app/assets/js/file1.js',
+  'app/assets/js/file2.js'
+];
 
 // Functions ====================================
 
@@ -68,15 +73,14 @@ function hamlHTML (done) {
 };
 
 
-// Concat and Minify js
-function js(done){
-  gulp.src('app/assets/js/*.js')
+// // Concat and Minify js
+function js(){
+  return gulp.src(jsSRC)
   .pipe(sourcemaps.init())
     .pipe(concat('main.js'))
     .pipe(uglify()) // minifies the js
   .pipe(sourcemaps.write('./'))
   .pipe(gulp.dest('docs/assets/js'));
-  done();
 };
 
 
@@ -96,7 +100,7 @@ function watch(done) {
   gulp.watch('app/views/**/*.haml', hamlHTML).on('change', browserSync.reload);
   gulp.watch('app/assets/scss/**/*.scss', compileCSS);
   gulp.watch('app/assets/css/*css', concatCSS).on('change', browserSync.reload);
-  gulp.watch('app/assets/js/**/*.js', js).on('change', browserSync.reload);
+  gulp.watch(jsSRC, js).on('change', browserSync.reload);
 }
 
 
