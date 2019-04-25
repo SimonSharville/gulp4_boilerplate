@@ -1,0 +1,19 @@
+body {
+  background: lightgreen;
+  height: 400vh;
+}
+
+h1 {
+  color: red;
+}
+
+h2 {
+  color: blue;
+}
+
+a {
+  -webkit-transition: all 320ms ease;
+  transition: all 320ms ease;
+}
+
+/*# sourceMappingURL=sard-styles.css.map */

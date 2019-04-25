@@ -2,23 +2,33 @@
 
 Created 2019-04-01
 
-cd Gits/bootstrap_4_boilerplate
+
+TO USE
+  In Terminal go to:
+  cd Gits/bootstrap_4_boilerplate
+
+  and type:
+  gulp
+
+  Always work within the 'app' folder, this will render into the 'div' and the the 'docs' folder. The 'docs' folder will be the live stuff.
 
 
-Based on: 
-https://www.youtube.com/watch?v=1rw9MfIleEg
-and
-https://www.youtube.com/watch?v=hnCmSXCZEpU
+Based on the following tutorials: 
+  https://www.youtube.com/watch?v=1rw9MfIleEg
+  and
+  https://www.youtube.com/watch?v=hnCmSXCZEpU
 
-Gulp 4
-https://www.joezimjs.com/javascript/complete-guide-upgrading-gulp-4/
-https://www.liquidlight.co.uk/blog/how-do-i-update-to-gulp-4/
-https://www.youtube.com/watch?v=2HpNiyimo8E
-https://www.youtube.com/watch?v=tTrPLQ6nOX8
-https://www.youtube.com/watch?v=QgMQeLymAdU
-https://www.youtube.com/watch?v=4y8Iw85__Xk
+  Gulp 4
+  https://www.joezimjs.com/javascript/complete-guide-upgrading-gulp-4/
+  https://www.liquidlight.co.uk/blog/how-do-i-update-to-gulp-4/
+  https://www.youtube.com/watch?v=2HpNiyimo8E
+  https://www.youtube.com/watch?v=tTrPLQ6nOX8
+  https://www.youtube.com/watch?v=QgMQeLymAdU
+  https://www.youtube.com/watch?v=4y8Iw85__Xk
+  https://www.youtube.com/watch?v=yowgoHo_IZk
 
 
+Install Process
 1.  Install node
     
 2.  Install Gulp globally
@@ -58,12 +68,15 @@ https://www.youtube.com/watch?v=4y8Iw85__Xk
 
     NOTES
     npm rm gulp-NAME                                    (To remove a package)
+
+
+To Duplicate Project
     To Duplicate poject, Copy project, rename it and in terminal type:
       npm install
 
 
 
-8. Install Ruby
+<!-- 8. Install Ruby
     https://number42.de/blog/2018/05/22/rbenv-2018-05-22-rbenv.html
     https://github.com/rbenv/rbenv
     rbenv install 2.6.2     (installs ruby version globaly)
@@ -82,4 +95,4 @@ https://www.youtube.com/watch?v=4y8Iw85__Xk
         1.9.3-p551
         2.2.10
         2.2.2
-        2.3.8
+        2.3.8 -->

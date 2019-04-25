@@ -2,7 +2,6 @@
 
 const gulp = require('gulp');
 
-// const { watch } = require('gulp');
 const autoprefixer = require('gulp-autoprefixer'),
       browserSync = require('browser-sync').create(),
       sass = require('gulp-sass'),
@@ -29,18 +28,29 @@ gulp.watch  - Watch files and folders for changes
 
 // Functions ====================================
 
-// Compile sass
-function styles(){
+// Compile scss to css
+function compileCSS(){
   return gulp.src('app/assets/scss/**/*.scss')
-  .pipe(sourcemaps.init())
-      .pipe(sass().on('error', sass.logError))
-      .pipe(autoprefixer({
-            browsers: ['last 2 versions'],
-            cascade: false
-        }))
-      .pipe(cleanCSS({compatibility: 'ie8'})) // Minimises the css
-      .pipe(rename({extname : '.min.css' }))  // Add extension to the renamed CSS file
+  .pipe(sourcemaps.init({loadMaps: true}))
+    .pipe(sass({
+      outputStyle: 'expanded'
+    }).on('error', sass.logError))
+    .pipe(autoprefixer({
+      browsers: ['last 2 versions'],
+      cascade: false
+    }))
   .pipe(sourcemaps.write('./'))
+  .pipe(lineec())
+  .pipe(gulp.dest('dev/assets/css'))
+}
+
+function concatCSS() {
+  return gulp.src('dev/assets/css/*css')
+  .pipe(sourcemaps.init({loadMaps: true, largeFile: true}))
+  .pipe(concat('sard-styles.min.css'))
+  .pipe(cleanCSS({compatibility: 'ie8'})) // Minimises the css
+  .pipe(sourcemaps.write('./'))
+  .pipe(lineec())
   .pipe(gulp.dest('docs/assets/css'))
   .pipe(browserSync.stream());
 }
@@ -49,13 +59,13 @@ function styles(){
 function includeHTML (done) {
   gulp.src('app/views/**/*.haml')
     .pipe(include()).on('error', console.log)
-    .pipe(gulp.dest('dist'))
+    .pipe(gulp.dest('dev'))
     done();
 };
 
 // Haml to Html
 function hamlHTML(done){
-  gulp.src('dist/*.haml')
+  gulp.src('dev/*.haml')
   .pipe(haml().on('error', function(e) { console.log(e.message); }))
   .pipe(gulp.dest('docs'));
   done();
@@ -88,21 +98,23 @@ function watch(done) {
 
   
   gulp.watch('app/views/**/*.haml', includeHTML).on('change', browserSync.reload);
-  gulp.watch('dist/*.haml', hamlHTML).on('change', browserSync.reload);
-  gulp.watch('app/assets/scss/**/*.scss', styles).on('change', browserSync.reload);
+  gulp.watch('dev/*.haml', hamlHTML).on('change', browserSync.reload);
+  gulp.watch('app/assets/scss/**/*.scss', compileCSS);
+  gulp.watch('dev/assets/css/*css', concatCSS).on('change', browserSync.reload);
   gulp.watch('app/assets/js/**/*.js', js).on('change', browserSync.reload);
 }
 
 
 exports.includeHTML = includeHTML;
 exports.hamlHTML = hamlHTML;
-exports.styles = styles;
+exports.compileCSS = compileCSS;
+exports.concatCSS = concatCSS;
 exports.js = js;
 exports.watch = watch;
 
 // Sets the default to gulp watch
-var build = gulp.parallel(watch);
-gulp.task('default', build);
+var finish = gulp.parallel(watch);
+gulp.task('default', finish);
 
 
 
