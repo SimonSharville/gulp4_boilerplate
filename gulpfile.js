@@ -41,11 +41,11 @@ function compileCSS(){
     }))
   .pipe(sourcemaps.write('./'))
   .pipe(lineec())
-  .pipe(gulp.dest('dev/assets/css'))
+  .pipe(gulp.dest('app/assets/css'))
 }
 
 function concatCSS() {
-  return gulp.src('dev/assets/css/*css')
+  return gulp.src('app/assets/css/*css')
   .pipe(sourcemaps.init({loadMaps: true, largeFile: true}))
   .pipe(concat('sard-styles.min.css'))
   .pipe(cleanCSS({compatibility: 'ie8'})) // Minimises the css
@@ -57,7 +57,10 @@ function concatCSS() {
 
 // Include Partials and convert to HTML
 function hamlHTML (done) {
-  gulp.src('app/views/**/*.haml')
+  gulp.src([
+    'app/views/**/*.haml',
+    '!app/views/partials/**/*',      //exclude files within partials
+    ])
     .pipe(include().on('error', function(d) { console.log(d.message); })) // Includes partials
     .pipe(haml().on('error', function(e) { console.log(e.message); }))
     .pipe(gulp.dest('docs'))
@@ -92,7 +95,7 @@ function watch(done) {
   
   gulp.watch('app/views/**/*.haml', hamlHTML).on('change', browserSync.reload);
   gulp.watch('app/assets/scss/**/*.scss', compileCSS);
-  gulp.watch('dev/assets/css/*css', concatCSS).on('change', browserSync.reload);
+  gulp.watch('app/assets/css/*css', concatCSS).on('change', browserSync.reload);
   gulp.watch('app/assets/js/**/*.js', js).on('change', browserSync.reload);
 }
 
