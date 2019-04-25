@@ -55,20 +55,13 @@ function concatCSS() {
   .pipe(browserSync.stream());
 }
 
-// Include Partials
-function includeHTML (done) {
+// Include Partials and convert to HTML
+function hamlHTML (done) {
   gulp.src('app/views/**/*.haml')
-    .pipe(include()).on('error', console.log)
-    .pipe(gulp.dest('dev'))
+    .pipe(include().on('error', function(d) { console.log(d.message); })) // Includes partials
+    .pipe(haml().on('error', function(e) { console.log(e.message); }))
+    .pipe(gulp.dest('docs'))
     done();
-};
-
-// Haml to Html
-function hamlHTML(done){
-  gulp.src('dev/*.haml')
-  .pipe(haml().on('error', function(e) { console.log(e.message); }))
-  .pipe(gulp.dest('docs'));
-  done();
 };
 
 
@@ -97,15 +90,13 @@ function watch(done) {
   done();
 
   
-  gulp.watch('app/views/**/*.haml', includeHTML).on('change', browserSync.reload);
-  gulp.watch('dev/*.haml', hamlHTML).on('change', browserSync.reload);
+  gulp.watch('app/views/**/*.haml', hamlHTML).on('change', browserSync.reload);
   gulp.watch('app/assets/scss/**/*.scss', compileCSS);
   gulp.watch('dev/assets/css/*css', concatCSS).on('change', browserSync.reload);
   gulp.watch('app/assets/js/**/*.js', js).on('change', browserSync.reload);
 }
 
 
-exports.includeHTML = includeHTML;
 exports.hamlHTML = hamlHTML;
 exports.compileCSS = compileCSS;
 exports.concatCSS = concatCSS;
