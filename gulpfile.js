@@ -35,6 +35,9 @@ var jsSRC = [
   'app/assets/js/scripts/file2.js'
 ];
 
+var imgSRC = 'app/assets/images/**/*',
+    imgDEST = 'docs/assets/images/';
+
 // For ordering SCSS file use scss/sard-styles.scss
 // NEVER use the css folder
 
@@ -99,6 +102,17 @@ function minifyJS(done){
   done();
 }
 
+// Minify Images
+function imgmin() {
+  return gulp.src(imgSRC)
+  .pipe(changed(imgDEST))
+      .pipe( imagemin([
+        imagemin.gifsicle({interlaced: true}),
+        imagemin.jpegtran({progressive: true}),
+        imagemin.optipng({optimizationLevel: 5})
+      ]))
+      .pipe( gulp.dest(imgDEST));
+}
 
 
 // /////////////////////////////
@@ -113,11 +127,12 @@ function watch(done) {
   done();
 
   
-  gulp.watch('app/views/**/*.haml', hamlHTML).on('change', browserSync.reload);
+  gulp.watch('app/views/**/*.haml', hamlHTML);
   gulp.watch('app/assets/scss/**/*.scss', compileCSS);
-  gulp.watch('app/assets/css/*css', concatCSS).on('change', browserSync.reload);
-  gulp.watch(jsSRC, js).on('change', browserSync.reload);
-  gulp.watch('app/assets/js/sardJS.js', minifyJS).on('change', browserSync.reload);
+  gulp.watch('app/assets/css/*css', concatCSS);
+  gulp.watch(jsSRC, js);
+  gulp.watch('app/assets/js/sardJS.js', minifyJS);
+  gulp.watch(imgSRC, imgmin).on('change', browserSync.reload);
 }
 
 
