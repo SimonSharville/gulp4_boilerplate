@@ -87,7 +87,7 @@ function hamlHTML (done) {
 // // Concat and Minify js
 function js(){
   return gulp.src(jsSRC)
-  .pipe(sourcemaps.init())
+  .pipe(sourcemaps.init({loadMaps: true, largeFile: true}))
     .pipe(concat('sardJS.js'))
   .pipe(sourcemaps.write('./'))
   .pipe(gulp.dest('app/assets/js'));
@@ -95,7 +95,7 @@ function js(){
 
 function minifyJS(done){
   gulp.src('app/assets/js/sardJS.js')
-  .pipe(sourcemaps.init())
+  .pipe(sourcemaps.init({loadMaps: true, largeFile: true}))
   .pipe(uglify().on('error', function(f) { console.log(f.message); })) // minifies the js
   .pipe(rename({extname : '.min.js' }))  // Add extension to the file
   .pipe(sourcemaps.write('./'))
