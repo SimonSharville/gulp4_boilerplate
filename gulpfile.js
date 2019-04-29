@@ -116,7 +116,6 @@ function minifyImages(done) {
   done();
 }
 
-
 // Delete Images
 function imageDelete(){
   return del([
@@ -157,68 +156,4 @@ exports.watch = watch;
 // Sets the default to gulp watch
 var finish = gulp.parallel(watch);
 gulp.task('default', finish);
-
-
-
-
-// First Attempt ================================
-
-
-
-// // Copy all HTML files
-// function html(done){
-//   gulp.src('app/*.html')
-//   .pipe(gulp.dest('docs'));
-//   done();
-// };
-
-// // Minimise Images
-// function images(done){
-//   gulp.src('app/assets/images/*')
-//   .pipe(imagemin())
-//   .pipe(gulp.dest('docs/assets/images'));
-//   done();
-// };
-
-
-// // Compile sass
-// function css(done){
-//   gulp.src('app/assets/scss/*.scss')
-//   .pipe(sass().on('error', sass.logError))
-//   .pipe(gulp.dest('docs/assets/css'));
-//   done();
-// };
-
-// // Concat and Minify js
-// function js(done){
-//   gulp.src('app/assets/js/*.js')
-//   .pipe(concat('main.js'))
-//   .pipe(uglify()) // minifies the js
-//   .pipe(gulp.dest('docs/assets/js'));
-//   done();
-// };
-
-// // Watch Files
-// function watch_files(){
-//   gulp.watch('image', images);
-//   gulp.watch('css', css);
-//   gulp.watch('js', js);
-//   gulp.watch('html', html);
-// }
-
-
-// // Tasks
-// gulp.task('images', images);
-// gulp.task('css', css);
-// gulp.task('js', js);
-// gulp.task('html', html);
-
-
-
-// // Run all tasks gulp v4
-// gulp.task('default', gulp.parallel('css', 'js', 'images', 'html'), gulp.series(function(done) {
-// done();
-// }));
-
-// gulp.task('watch', watch_files);
 
