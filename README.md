@@ -5,7 +5,7 @@ Created 2019-04-01
 
 TO USE
   In Terminal go to:
-  cd Gits/bootstrap_4_boilerplate
+  cd Gits/gulp4_boilerplate
 
   and type:
   gulp
