@@ -65,6 +65,7 @@ Install Process
     npm install --save-dev gulp-file-include            DIDN'T WORK - Removed
     npm install --save-dev gulp-include                 (Include Partials into HAML files)
     npm install --save-dev gulp-sourcemaps              (Allows to find original file in development)
+    npm install --save-dev del                          (Delete files and folder)
 
     NOTES
     npm rm gulp-NAME                                    (To remove a package)

@@ -15,6 +15,7 @@ const autoprefixer = require('gulp-autoprefixer'),
       lineec = require('gulp-line-ending-corrector');
       haml = require('gulp-ruby-haml');
       include = require('gulp-include');
+      del = require('del');
 
 
 /*
@@ -103,7 +104,7 @@ function minifyJS(done){
 }
 
 // Minify Images
-function imgmin() {
+function minifyImages(done) {
   return gulp.src(imgSRC)
   .pipe(changed(imgDEST))
       .pipe( imagemin([
@@ -111,9 +112,17 @@ function imgmin() {
         imagemin.jpegtran({progressive: true}),
         imagemin.optipng({optimizationLevel: 5})
       ]))
-      .pipe( gulp.dest(imgDEST));
+      .pipe( gulp.dest(imgDEST))
+  done();
 }
 
+
+// Delete Images
+function imageDelete(){
+  return del([
+    'docs/assets/images/**/*'
+  ]);
+}
 
 // /////////////////////////////
 // These watch the source folder
@@ -127,12 +136,13 @@ function watch(done) {
   done();
 
   
-  gulp.watch('app/views/**/*.haml', hamlHTML);
-  gulp.watch('app/assets/scss/**/*.scss', compileCSS);
-  gulp.watch('app/assets/css/*css', concatCSS);
-  gulp.watch(jsSRC, js);
-  gulp.watch('app/assets/js/sardJS.js', minifyJS);
-  gulp.watch(imgSRC, imgmin).on('change', browserSync.reload);
+  gulp.watch('app/views/**/*.haml', hamlHTML).on('change', browserSync.reload);
+  gulp.watch('app/assets/scss/**/*.scss', compileCSS).on('change', browserSync.reload);
+  gulp.watch('app/assets/css/*css', concatCSS).on('change', browserSync.reload);
+  gulp.watch(jsSRC, js).on('change', browserSync.reload);
+  gulp.watch('app/assets/js/sardJS.js', minifyJS).on('change', browserSync.reload);
+  gulp.watch(imgSRC, imageDelete).on('change', browserSync.reload);
+  gulp.watch(imgSRC, minifyImages).on('change', browserSync.reload);
 }
 
 
@@ -140,6 +150,7 @@ exports.hamlHTML = hamlHTML;
 exports.compileCSS = compileCSS;
 exports.concatCSS = concatCSS;
 exports.js = js;
+exports.minifyImages = minifyImages;
 exports.minifyJS = minifyJS;
 exports.watch = watch;
 
