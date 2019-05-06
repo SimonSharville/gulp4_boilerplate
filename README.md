@@ -78,4 +78,4 @@ To Duplicate Project
 
 
 SARD Styles and Scripts =======
-  This Boilerpleate has no Bootstrap or JQuery installed, instead it links to a remote set of bootstrap styles and scripts. To change Bootstrap variables and components you MUST use the remote set. To add new styles that are only specific to this project, you can add them to the assets folder folder
+  This Boilerpleate has no Bootstrap or JQuery installed, instead it links to a remote set of bootstrap styles and scripts. To change Bootstrap variables and components you MUST use the remote set. To add new styles that are only specific to this project, you can add them to the assets folder.

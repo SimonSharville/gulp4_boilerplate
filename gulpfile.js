@@ -39,7 +39,7 @@ var jsSRC = [
 var imgSRC = 'app/assets/images/**/*',
     imgDEST = 'docs/assets/images/';
 
-// For ordering SCSS file use scss/sard-styles.scss
+// For ordering SCSS file use scss/local-styles.scss
 // NEVER use the css folder
 
 // Functions ====================================
@@ -63,7 +63,7 @@ function compileCSS(){
 function concatCSS() {
   return gulp.src('app/assets/css/*css')
   .pipe(sourcemaps.init({loadMaps: true, largeFile: true}))
-  .pipe(concat('sard-styles.min.css'))
+  .pipe(concat('local-styles.min.css'))
   .pipe(cleanCSS({compatibility: 'ie8'})) // Minimises the css
   .pipe(sourcemaps.write('./'))
   .pipe(lineec())
@@ -88,13 +88,13 @@ function hamlHTML (done) {
 function js(){
   return gulp.src(jsSRC)
   .pipe(sourcemaps.init({loadMaps: true, largeFile: true}))
-    .pipe(concat('sardJS.js'))
+    .pipe(concat('localScripts.js'))
   .pipe(sourcemaps.write('./'))
   .pipe(gulp.dest('app/assets/js'));
 };
 
 function minifyJS(done){
-  gulp.src('app/assets/js/sardJS.js')
+  gulp.src('app/assets/js/localScripts.js')
   .pipe(sourcemaps.init({loadMaps: true, largeFile: true}))
   .pipe(uglify().on('error', function(f) { console.log(f.message); })) // minifies the js
   .pipe(rename({extname : '.min.js' }))  // Add extension to the file
@@ -139,7 +139,7 @@ function watch(done) {
   gulp.watch('app/assets/scss/**/*.scss', compileCSS).on('change', browserSync.reload);
   gulp.watch('app/assets/css/*css', concatCSS).on('change', browserSync.reload);
   gulp.watch(jsSRC, js).on('change', browserSync.reload);
-  gulp.watch('app/assets/js/sardJS.js', minifyJS).on('change', browserSync.reload);
+  gulp.watch('app/assets/js/localScripts.js', minifyJS).on('change', browserSync.reload);
   gulp.watch(imgSRC, imageDelete).on('change', browserSync.reload);
   gulp.watch(imgSRC, minifyImages).on('change', browserSync.reload);
 }
