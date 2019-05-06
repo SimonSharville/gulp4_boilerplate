@@ -1,19 +1,9 @@
-body {
-  background: yellow;
-  height: 400vh;
-}
-
 h1 {
-  color: red;
+  color: green;
 }
 
 h2 {
   color: blue;
-}
-
-a {
-  -webkit-transition: all 320ms ease;
-  transition: all 320ms ease;
 }
 
 /*# sourceMappingURL=sard-styles.css.map */
