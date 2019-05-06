@@ -1,4 +1,4 @@
-# bootstrap_4_boilerplate
+# gulp_4_boilerplate
 
 Created 2019-04-01
 
@@ -77,23 +77,5 @@ To Duplicate Project
 
 
 
-<!-- 8. Install Ruby
-    https://number42.de/blog/2018/05/22/rbenv-2018-05-22-rbenv.html
-    https://github.com/rbenv/rbenv
-    rbenv install 2.6.2     (installs ruby version globaly)
-    rbenv local 2.6.2       (Installs locally)
-    rbenv version           (Checks version) 
-    rbenv versions          (Checks all versions installed and highlights active) 
-    gem install bundler     Bundler version 2.0.1
-
-    Changed to 2.3.8 by typing: rbenv local 2.3.8
-
-      The `haml' command exists in these Ruby versions:
-        1.9.3-p551
-        2.2.10
-        2.3.8
-      The `nokogiri' command exists in these Ruby versions:
-        1.9.3-p551
-        2.2.10
-        2.2.2
-        2.3.8 -->
+SARD Styles and Scripts =======
+This Boilerpleate has no Bootstrap or JQuery installed, instead it links to a remote set of bootstrap styles and scripts. To change Bootstrap variables and components you MUST use the remote set. To add new styles that are only specific to this project, you can add styles to the scss folder
