@@ -1,0 +1,192 @@
+!!!
+%html.no-js{:lang => "en"}
+  %head
+    %title Bootstrap 4 Layout - Typography
+    %meta{:content => "ie=edge", "http-equiv" => "x-ua-compatible"}/
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+    / %link{:href => "https://simonsharville.github.io/gulp4_bootstrap4_boilerplate/assets/css/sard-styles.min.css", :rel => "stylesheet"}/
+    / / Local styles
+    %link{:href => "assets/css/sard-styles.min.css", :rel => "stylesheet"}/
+ 
+  %body
+    //=include shared/_navbar.haml
+
+    .container
+      .row
+        .col-12
+          %h1 Typography
+          %hr
+          %h1 
+            H1 Heading
+            %br
+            Roboto Light
+          %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed est tortor, consectetur a neque sed, mollis accumsan tortor. Duis vitae varius magna. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+
+          %h2 
+            H2 Heading
+            %br
+            Roboto Light
+          %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed est tortor, consectetur a neque sed, mollis accumsan tortor. Duis vitae varius magna. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+
+          %h3 
+            H3 Heading
+            %br
+            Roboto Regular
+          %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed est tortor, consectetur a neque sed, mollis accumsan tortor. Duis vitae varius magna. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+
+          %h4 
+            H4 Heading
+            %br
+            Roboto Medium
+          %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed est tortor, consectetur a neque sed, mollis accumsan tortor. Duis vitae varius magna. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+
+          %h5 
+            H5 Heading
+            %br
+            Roboto Bold
+          %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed est tortor, consectetur a neque sed, mollis accumsan tortor. Duis vitae varius magna. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+
+          %h6 
+            H6 Heading
+            %br
+            Roboto Black
+          %p
+            %em Heading 6 is the same size as the paragraph text
+            %br
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed est tortor, consectetur a neque sed, mollis accumsan tortor. Duis vitae varius magna. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos
+          %hr
+
+        .col-12
+          %h1 Display headings
+          %p Traditional heading elements are designed to work best in the meat of your page content. When you need a heading to stand out, consider using a display heading—a larger, slightly more opinionated heading style. Keep in mind these headings are  responsive and resize depending on the screen width.
+          %h1.display-1 Display 1
+          %h1.display-2 Display 2
+          %h1.display-3 Display 3
+          %h1.display-4 Display 4
+
+          %hr
+        .col-12
+          %h1 Lead
+          %p
+            Make a paragraph stand out by adding
+            = succeed "." do
+              %code.highlighter-rouge .lead
+          %p.lead
+            This is an example of Lead. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.
+
+          %hr
+        .col-12
+          %h1 Inline text elements
+          %p Styling for common inline HTML5 elements.
+          %p
+            You can use the mark tag to
+            %mark highlight
+            text.
+            %code.highlighter-rouge %mark
+          %p
+            %del This line of text is meant to be treated as deleted text.
+            %code.highlighter-rouge %del
+          %p
+            %s This line of text is meant to be treated as no longer accurate.
+            %code.highlighter-rouge %s
+          %p
+            %ins This line of text is meant to be treated as an addition to the document.
+            %code.highlighter-rouge %ins
+          %p
+            %u This line of text will render as underlined
+            %code.highlighter-rouge %u
+          %p
+            %small This line of text is meant to be treated as fine print.
+            %code.highlighter-rouge %small
+          %p
+            %strong This line rendered as bold text.
+            %code.highlighter-rouge %strong or %b
+          %p
+            %i This line rendered as italicized text.
+            %code.highlighter-rouge %em or %i
+
+          %hr
+        .col-12
+          %h1 Blockquotes
+          %p This is an example of a blockquote.
+
+          %blockquote.blockquote
+            %p.mb-0 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+
+          %blockquote.blockquote
+            %p.mb-0 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+            %footer.blockquote-footer
+              Someone famous in
+              %cite{:title => "Source Title"} Source Title
+
+          %hr
+        .col-12
+          %h1 Lists
+          %h4 Unstyled
+          %p
+            Remove the default
+            %code.highlighter-rouge list-style
+            and left margin on list items (immediate children only).
+            = succeed "," do
+              %strong This only applies to immediate children list items
+
+          %ul.list-unstyled
+            %li Lorem ipsum dolor sit amet
+            %li Consectetur adipiscing elit
+            %li Integer molestie lorem at massa
+            %li Facilisis in pretium nisl aliquet
+            %li
+              Nulla volutpat aliquam velit
+              %ul
+                %li Phasellus iaculis neque
+                %li Purus sodales ultricies
+                %li Vestibulum laoreet porttitor sem
+                %li Ac tristique libero volutpat at
+            %li Faucibus porta lacus fringilla vel
+            %li Aenean sit amet erat nunc
+            %li Eget porttitor lorem
+
+          %h4 Inline
+          %p
+            Remove a list’s bullets and apply some light
+            %code.highlighter-rouge margin
+            with a combination of two classes,
+            %code.highlighter-rouge .list-inline
+            and
+            = succeed "." do
+              %code.highlighter-rouge .list-inline-item
+          %ul.list-inline
+            %li.list-inline-item Lorem ipsum
+            %li.list-inline-item Phasellus iaculis
+            %li.list-inline-item Nulla volutpat
+
+          %h4 Description list alignment
+          %p
+            Align terms and descriptions horizontally by using our grid system’s predefined classes (or semantic mixins). For longer terms, you can optionally add a
+            %code.highlighter-rouge .text-truncate
+            class to truncate the text with an ellipsis.
+
+          %dl.row
+            %dt.col-sm-3 Description lists
+            %dd.col-sm-9 A description list is perfect for defining terms.
+            %dt.col-sm-3 Euismod
+            %dd.col-sm-9
+              %p Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.
+              %p Donec id elit non mi porta gravida at eget metus.
+            %dt.col-sm-3 Malesuada porta
+            %dd.col-sm-9 Etiam porta sem malesuada magna mollis euismod.
+            %dt.col-sm-3.text-truncate Truncated term is truncated
+            %dd.col-sm-9 Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+            %dt.col-sm-3 Nesting
+            %dd.col-sm-9
+              %dl.row
+                %dt.col-sm-4 Nested definition list
+                %dd.col-sm-8 Aenean posuere, tortor sed cursus feugiat, nunc augue blandit nunc.
+  
+
+    / SCRIPTS ==================================================================
+    
+    / Remote Scripts
+    %script{:src => "https://simonsharville.github.io/gulp4_bootstrap4_boilerplate/assets/js/sardJS.min.js"}
+    / Local Scripts
+    %script{:src => "assets/js/localScripts.min.js"}

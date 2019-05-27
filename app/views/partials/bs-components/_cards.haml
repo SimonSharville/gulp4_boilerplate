@@ -1,0 +1,266 @@
+.card{:style => "width: 18rem;"}
+  %img.card-img-top{:alt => "...", :src => "..."}/
+  .card-body
+    %h5.card-title Card title
+    %p.card-text Some quick example text to build on the card title and make up the bulk of the card's content.
+  %ul.list-group.list-group-flush
+    %li.list-group-item Cras justo odio
+    %li.list-group-item Dapibus ac facilisis in
+    %li.list-group-item Vestibulum at eros
+  .card-body
+    %a.card-link{:href => "#"} Card link
+    %a.card-link{:href => "#"} Another link
+
+%hr
+.card.text-center
+  .card-header
+    Featured
+  .card-body
+    %h5.card-title Special title treatment
+    %p.card-text With supporting text below as a natural lead-in to additional content.
+    %a.btn.btn-primary{:href => "#"} Go somewhere
+  .card-footer.text-muted
+    2 days ago
+
+%hr
+
+.row
+  .col-sm-6
+    .card
+      .card-body
+        %h5.card-title Special title treatment
+        %p.card-text With supporting text below as a natural lead-in to additional content.
+        %a.btn.btn-primary{:href => "#"} Go somewhere
+  .col-sm-6
+    .card
+      .card-body
+        %h5.card-title Special title treatment
+        %p.card-text With supporting text below as a natural lead-in to additional content.
+        %a.btn.btn-primary{:href => "#"} Go somewhere
+
+%hr
+
+%h4 Navigation
+.card.text-center
+  .card-header
+    %ul.nav.nav-tabs.card-header-tabs
+      %li.nav-item
+        %a.nav-link.active{:href => "#"} Active
+      %li.nav-item
+        %a.nav-link{:href => "#"} Link
+      %li.nav-item
+        %a.nav-link.disabled{"aria-disabled" => "true", :href => "#", :tabindex => "-1"} Disabled
+  .card-body
+    %h5.card-title Special title treatment
+    %p.card-text With supporting text below as a natural lead-in to additional content.
+    %a.btn.btn-primary{:href => "#"} Go somewhere
+
+%hr
+
+%h4 Horizontal
+.card.mb-3{:style => "max-width: 540px;"}
+  .row.no-gutters
+    .col-md-4
+      %img.card-img{:alt => "...", :src => "..."}/
+    .col-md-8
+      .card-body
+        %h5.card-title Card title
+        %p.card-text This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+        %p.card-text
+          %small.text-muted Last updated 3 mins ago
+
+%hr
+
+%h4 Card Styles
+.row
+  .col-sm-6
+    .card.text-white.bg-primary.mb-3{:style => "max-width: 18rem;"}
+      .card-header Header
+      .card-body
+        %h5.card-title Primary card title
+        %p.card-text Some quick example text to build on the card title and make up the bulk of the card's content.
+    .card.text-white.bg-secondary.mb-3{:style => "max-width: 18rem;"}
+      .card-header Header
+      .card-body
+        %h5.card-title Secondary card title
+        %p.card-text Some quick example text to build on the card title and make up the bulk of the card's content.
+    .card.text-white.bg-success.mb-3{:style => "max-width: 18rem;"}
+      .card-header Header
+      .card-body
+        %h5.card-title Success card title
+        %p.card-text Some quick example text to build on the card title and make up the bulk of the card's content.
+    .card.text-white.bg-danger.mb-3{:style => "max-width: 18rem;"}
+      .card-header Header
+      .card-body
+        %h5.card-title Danger card title
+        %p.card-text Some quick example text to build on the card title and make up the bulk of the card's content.
+    .card.text-white.bg-warning.mb-3{:style => "max-width: 18rem;"}
+      .card-header Header
+      .card-body
+        %h5.card-title Warning card title
+        %p.card-text Some quick example text to build on the card title and make up the bulk of the card's content.
+    .card.text-white.bg-info.mb-3{:style => "max-width: 18rem;"}
+      .card-header Header
+      .card-body
+        %h5.card-title Info card title
+        %p.card-text Some quick example text to build on the card title and make up the bulk of the card's content.
+    .card.bg-light.mb-3{:style => "max-width: 18rem;"}
+      .card-header Header
+      .card-body
+        %h5.card-title Light card title
+        %p.card-text Some quick example text to build on the card title and make up the bulk of the card's content.
+    .card.text-white.bg-dark.mb-3{:style => "max-width: 18rem;"}
+      .card-header Header
+      .card-body
+        %h5.card-title Dark card title
+        %p.card-text Some quick example text to build on the card title and make up the bulk of the card's content.  
+
+  .col-sm-6
+    .card.border-primary.mb-3{:style => "max-width: 18rem;"}
+      .card-header Header
+      .card-body.text-primary
+        %h5.card-title Primary card title
+        %p.card-text Some quick example text to build on the card title and make up the bulk of the card's content.
+    .card.border-secondary.mb-3{:style => "max-width: 18rem;"}
+      .card-header Header
+      .card-body.text-secondary
+        %h5.card-title Secondary card title
+        %p.card-text Some quick example text to build on the card title and make up the bulk of the card's content.
+    .card.border-success.mb-3{:style => "max-width: 18rem;"}
+      .card-header Header
+      .card-body.text-success
+        %h5.card-title Success card title
+        %p.card-text Some quick example text to build on the card title and make up the bulk of the card's content.
+    .card.border-danger.mb-3{:style => "max-width: 18rem;"}
+      .card-header Header
+      .card-body.text-danger
+        %h5.card-title Danger card title
+        %p.card-text Some quick example text to build on the card title and make up the bulk of the card's content.
+    .card.border-warning.mb-3{:style => "max-width: 18rem;"}
+      .card-header Header
+      .card-body.text-warning
+        %h5.card-title Warning card title
+        %p.card-text Some quick example text to build on the card title and make up the bulk of the card's content.
+    .card.border-info.mb-3{:style => "max-width: 18rem;"}
+      .card-header Header
+      .card-body.text-info
+        %h5.card-title Info card title
+        %p.card-text Some quick example text to build on the card title and make up the bulk of the card's content.
+    .card.border-light.mb-3{:style => "max-width: 18rem;"}
+      .card-header Header
+      .card-body
+        %h5.card-title Light card title
+        %p.card-text Some quick example text to build on the card title and make up the bulk of the card's content.
+    .card.border-dark.mb-3{:style => "max-width: 18rem;"}
+      .card-header Header
+      .card-body.text-dark
+        %h5.card-title Dark card title
+        %p.card-text Some quick example text to build on the card title and make up the bulk of the card's content.
+
+%hr
+
+%h4 Card Groups
+.card-group
+  .card
+    %img.card-img-top{:alt => "...", :src => "..."}/
+    .card-body
+      %h5.card-title Card title
+      %p.card-text This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+    .card-footer
+      %small.text-muted Last updated 3 mins ago
+  .card
+    %img.card-img-top{:alt => "...", :src => "..."}/
+    .card-body
+      %h5.card-title Card title
+      %p.card-text This card has supporting text below as a natural lead-in to additional content.
+    .card-footer
+      %small.text-muted Last updated 3 mins ago
+  .card
+    %img.card-img-top{:alt => "...", :src => "..."}/
+    .card-body
+      %h5.card-title Card title
+      %p.card-text This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.
+    .card-footer
+      %small.text-muted Last updated 3 mins ago
+
+
+%hr
+
+%h4 Card Decks
+.card-deck
+  .card
+    %img.card-img-top{:alt => "...", :src => "..."}/
+    .card-body
+      %h5.card-title Card title
+      %p.card-text This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+    .card-footer
+      %small.text-muted Last updated 3 mins ago
+  .card
+    %img.card-img-top{:alt => "...", :src => "..."}/
+    .card-body
+      %h5.card-title Card title
+      %p.card-text This card has supporting text below as a natural lead-in to additional content.
+    .card-footer
+      %small.text-muted Last updated 3 mins ago
+  .card
+    %img.card-img-top{:alt => "...", :src => "..."}/
+    .card-body
+      %h5.card-title Card title
+      %p.card-text This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.
+    .card-footer
+      %small.text-muted Last updated 3 mins ago
+
+%hr
+
+%h4 Card Columns
+.card-columns
+  .card
+    %img.card-img-top{:alt => "...", :src => "..."}/
+    .card-body
+      %h5.card-title Card title that wraps to a new line
+      %p.card-text This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+  .card.p-3
+    %blockquote.blockquote.mb-0.card-body
+      %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+      %footer.blockquote-footer
+        %small.text-muted
+          Someone famous in
+          %cite{:title => "Source Title"} Source Title
+  .card
+    %img.card-img-top{:alt => "...", :src => "..."}/
+    .card-body
+      %h5.card-title Card title
+      %p.card-text This card has supporting text below as a natural lead-in to additional content.
+      %p.card-text
+        %small.text-muted Last updated 3 mins ago
+  .card.bg-primary.text-white.text-center.p-3
+    %blockquote.blockquote.mb-0
+      %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat.
+      %footer.blockquote-footer.text-white
+        %small
+          Someone famous in
+          %cite{:title => "Source Title"} Source Title
+  .card.text-center
+    .card-body
+      %h5.card-title Card title
+      %p.card-text This card has a regular title and short paragraphy of text below it.
+      %p.card-text
+        %small.text-muted Last updated 3 mins ago
+  .card
+    %img.card-img-top{:alt => "...", :src => "..."}/
+  .card.p-3.text-right
+    %blockquote.blockquote.mb-0
+      %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+      %footer.blockquote-footer
+        %small.text-muted
+          Someone famous in
+          %cite{:title => "Source Title"} Source Title
+  .card
+    .card-body
+      %h5.card-title Card title
+      %p.card-text This is another card with title and supporting text below. This card has some additional content to make it slightly taller overall.
+      %p.card-text
+        %small.text-muted Last updated 3 mins ago
+
+
+

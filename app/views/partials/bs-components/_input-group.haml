@@ -1,0 +1,123 @@
+%h4 Basic example
+.input-group.mb-3
+  .input-group-prepend
+    %span#basic-addon1.input-group-text @
+  %input.form-control{"aria-describedby" => "basic-addon1", "aria-label" => "Username", :placeholder => "Username", :type => "text"}/
+.input-group.mb-3
+  %input.form-control{"aria-describedby" => "basic-addon2", "aria-label" => "Recipient's username", :placeholder => "Recipient's username", :type => "text"}/
+  .input-group-append
+    %span#basic-addon2.input-group-text @example.com
+%label{:for => "basic-url"} Your vanity URL
+.input-group.mb-3
+  .input-group-prepend
+    %span#basic-addon3.input-group-text https://example.com/users/
+  %input#basic-url.form-control{"aria-describedby" => "basic-addon3", :type => "text"}/
+.input-group.mb-3
+  .input-group-prepend
+    %span.input-group-text $
+  %input.form-control{"aria-label" => "Amount (to the nearest dollar)", :type => "text"}/
+  .input-group-append
+    %span.input-group-text .00
+.input-group
+  .input-group-prepend
+    %span.input-group-text With textarea
+  %textarea.form-control{"aria-label" => "With textarea"}
+
+%hr
+
+%h4 Sizing
+.input-group.input-group-sm.mb-3
+  .input-group-prepend
+    %span#inputGroup-sizing-sm.input-group-text Small
+  %input.form-control{"aria-describedby" => "inputGroup-sizing-sm", "aria-label" => "Sizing example input", :type => "text"}/
+.input-group.mb-3
+  .input-group-prepend
+    %span#inputGroup-sizing-default.input-group-text Default
+  %input.form-control{"aria-describedby" => "inputGroup-sizing-default", "aria-label" => "Sizing example input", :type => "text"}/
+.input-group.input-group-lg
+  .input-group-prepend
+    %span#inputGroup-sizing-lg.input-group-text Large
+  %input.form-control{"aria-describedby" => "inputGroup-sizing-lg", "aria-label" => "Sizing example input", :type => "text"}/
+
+%hr
+%h4 Checkboxes and Radios
+.input-group.mb-3
+  .input-group-prepend
+    .input-group-text
+      %input{"aria-label" => "Checkbox for following text input", :type => "checkbox"}/
+  %input.form-control{"aria-label" => "Text input with checkbox", :type => "text"}/
+.input-group
+  .input-group-prepend
+    .input-group-text
+      %input{"aria-label" => "Radio button for following text input", :type => "radio"}/
+  %input.form-control{"aria-label" => "Text input with radio button", :type => "text"}/
+
+%hr
+%h4 Multiple inputs
+.input-group
+  .input-group-prepend
+    %span.input-group-text First and last name
+  %input.form-control{"aria-label" => "First name", :type => "text"}/
+  %input.form-control{"aria-label" => "Last name", :type => "text"}/
+
+%hr
+%h4 Custom forms with Select
+.input-group.mb-3
+  .input-group-prepend
+    %label.input-group-text{:for => "inputGroupSelect01"} Options
+  %select#inputGroupSelect01.custom-select
+    %option{:selected => "selected"} Choose...
+    %option{:value => "1"} One
+    %option{:value => "2"} Two
+    %option{:value => "3"} Three
+.input-group.mb-3
+  %select#inputGroupSelect02.custom-select
+    %option{:selected => "selected"} Choose...
+    %option{:value => "1"} One
+    %option{:value => "2"} Two
+    %option{:value => "3"} Three
+  .input-group-append
+    %label.input-group-text{:for => "inputGroupSelect02"} Options
+.input-group.mb-3
+  .input-group-prepend
+    %button.btn.btn-outline-secondary{:type => "button"} Button
+  %select#inputGroupSelect03.custom-select{"aria-label" => "Example select with button addon"}
+    %option{:selected => "selected"} Choose...
+    %option{:value => "1"} One
+    %option{:value => "2"} Two
+    %option{:value => "3"} Three
+.input-group
+  %select#inputGroupSelect04.custom-select{"aria-label" => "Example select with button addon"}
+    %option{:selected => "selected"} Choose...
+    %option{:value => "1"} One
+    %option{:value => "2"} Two
+    %option{:value => "3"} Three
+  .input-group-append
+    %button.btn.btn-outline-secondary{:type => "button"} Button
+
+%hr
+%h4 Custom file input
+.input-group.mb-3
+  .input-group-prepend
+    %span#inputGroupFileAddon01.input-group-text Upload
+  .custom-file
+    %input#inputGroupFile01.custom-file-input{"aria-describedby" => "inputGroupFileAddon01", :type => "file"}/
+    %label.custom-file-label{:for => "inputGroupFile01"} Choose file
+.input-group.mb-3
+  .custom-file
+    %input#inputGroupFile02.custom-file-input{:type => "file"}/
+    %label.custom-file-label{"aria-describedby" => "inputGroupFileAddon02", :for => "inputGroupFile02"} Choose file
+  .input-group-append
+    %span#inputGroupFileAddon02.input-group-text Upload
+.input-group.mb-3
+  .input-group-prepend
+    %button#inputGroupFileAddon03.btn.btn-outline-secondary{:type => "button"} Button
+  .custom-file
+    %input#inputGroupFile03.custom-file-input{"aria-describedby" => "inputGroupFileAddon03", :type => "file"}/
+    %label.custom-file-label{:for => "inputGroupFile03"} Choose file
+.input-group
+  .custom-file
+    %input#inputGroupFile04.custom-file-input{"aria-describedby" => "inputGroupFileAddon04", :type => "file"}/
+    %label.custom-file-label{:for => "inputGroupFile04"} Choose file
+  .input-group-append
+    %button#inputGroupFileAddon04.btn.btn-outline-secondary{:type => "button"} Button

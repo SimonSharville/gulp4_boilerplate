@@ -6,55 +6,232 @@
     %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
 
     / Remote styles
-    %link{:href => "https://simonsharville.github.io/gulp4_bootstrap4_boilerplate/assets/css/sard-styles.min.css", :rel => "stylesheet"}/
+    / %link{:href => "https://simonsharville.github.io/gulp4_bootstrap4_boilerplate/assets/css/sard-styles.min.css", :rel => "stylesheet"}/
     / Local styles
-    %link{:href => "assets/css/local-styles.min.css", :rel => "stylesheet"}/
+    %link{:href => "assets/css/sard-styles.min.css", :rel => "stylesheet"}/
 
   %body
-    //=include partials/global/_navbar.haml
-
-    .container
-      %h1 GULP 4 - Index page 
-
-
-      %h2 type into terminal: gulp watch
-
-
-    
-      //=include partials/index/_partialtest.haml
-
-
-      %a.btn.btn-primary{:href => "#"} button
-      %i.fas.fa-anchor
+    //=include shared/_navbar.haml
 
 
     .container
-      .row
-        .col
-          %h1 Bootstrap Grid
-      .row
-        .col-12.col-sm-4.column
-          One of three columns
-        .col-12.col-sm-4.column
-          One of three columns
-        .col-12.col-sm-4.column
-          One of three columns
+      %h1 SARD Gulp 4 - Boilerplate
 
-      .row
-        .col-12
-          %h1 Collapse
-        .col-12
-          %p
-            %a.btn.btn-primary{"aria-controls" => "collapseExample", "aria-expanded" => "false", "data-toggle" => "collapse", :href => "#collapseExample", :role => "button"}
-              Link with href
-            %button.btn.btn-primary{"aria-controls" => "collapseExample", "aria-expanded" => "false", "data-target" => "#collapseExample", "data-toggle" => "collapse", :type => "button"}
-              Button with data-target
-          #collapseExample.collapse
-            .card.card-body
-              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+      %p.lead This boilerplate is built using Gulp 4.
+      %p.lead All the styles for Bootstrap Components, Fonts, Colours, Sard Icons and Font Awesome Icons are loaded from a remote site. As well as any Javerscript.
+
+      %p To add new styles, add them within the "scss/local-styles" folder. and import them into the "scss/_local-overrides.scss" file.
+      %hr
+      %h4 Icons
+      %p This is a mixture of fontawesome and sicons to test alignment.
+
+
+      %i.fas.fa-arrow-alt-circle-right.fa-xs
+
+      %i.sicon.sicon-arrow-down-circle.sicon-xs
+
+      %i.fas.fa-adjust.fa-xs
+
+      %i.sicon.sicon-circle.sicon-xs
+      XS
+
+      %p
+
+      %i.fas.fa-arrow-alt-circle-right.fa-sm
+
+      %i.sicon.sicon-arrow-down-circle.sicon-sm
+
+      %i.fas.fa-adjust.fa-sm
+
+      %i.sicon.sicon-circle.sicon-sm
+      SM
+
+      %p
+
+      %i.fas.fa-arrow-alt-circle-right
+
+      %i.sicon.sicon-arrow-down-circle
+
+      %i.fas.fa-adjust
+
+      %i.sicon.sicon-circle
+      Default
+
+      %p
+
+      %i.fas.fa-arrow-alt-circle-right.fa-lg
+
+      %i.sicon.sicon-arrow-down-circle.sicon-lg
+
+      %i.fas.fa-adjust.fa-lg
+
+      %i.sicon.sicon-circle.sicon-lg
+      LG
+
+      %p
+
+      %i.fas.fa-arrow-alt-circle-right.fa-1x
+
+      %i.sicon.sicon-arrow-down-circle.sicon-1x
+
+      %i.fas.fa-adjust.fa-1x
+
+      %i.sicon.sicon-circle.sicon-1x
+      1x
+
+
+      %p
+
+      %i.fas.fa-arrow-alt-circle-right.fa-2x
+
+      %i.sicon.sicon-arrow-down-circle.sicon-2x
+
+      %i.fas.fa-adjust.fa-2x
+
+      %i.sicon.sicon-circle.sicon-2x
+      2x
+
+
+      %p
+
+      %i.fas.fa-arrow-alt-circle-right.fa-3x
+
+      %i.sicon.sicon-arrow-down-circle.sicon-3x
+
+      %i.fas.fa-adjust.fa-3x
+
+      %i.sicon.sicon-circle.sicon-3x
+      3x
+
+
+      %p
+
+      %i.fas.fa-arrow-alt-circle-right.fa-4x
+
+      %i.sicon.sicon-arrow-down-circle.sicon-4x
+
+      %i.fas.fa-adjust.fa-4x
+
+      %i.sicon.sicon-circle.sicon-4x
+      4x
+
+      %p
+
+      %i.fas.fa-arrow-alt-circle-right.fa-5x
+
+      %i.sicon.sicon-arrow-down-circle.sicon-5x
+
+      %i.fas.fa-adjust.fa-5x
+
+      %i.sicon.sicon-circle.sicon-5x
+      5x
+
+      %p
+
+      %i.fas.fa-arrow-alt-circle-right.fa-6x
+
+      %i.sicon.sicon-arrow-down-circle.sicon-6x
+
+      %i.fas.fa-adjust.fa-6x
+
+      %i.sicon.sicon-circle.sicon-6x
+      6x
+
+      %p
+
+      %i.fas.fa-arrow-alt-circle-right.fa-7x
+
+      %i.sicon.sicon-arrow-down-circle.sicon-7x
+
+      %i.fas.fa-adjust.fa-7x
+
+      %i.sicon.sicon-circle.sicon-7x
+      7x
+
+      %p
+
+      %i.fas.fa-arrow-alt-circle-right.fa-8x
+
+      %i.sicon.sicon-arrow-down-circle.sicon-8x
+
+      %i.fas.fa-adjust.fa-8x
+
+      %i.sicon.sicon-circle.sicon-8x
+      8x
+
+
+      %p
+
+      %i.fas.fa-arrow-alt-circle-right.fa-9x
+
+      %i.sicon.sicon-arrow-down-circle.sicon-9x
+
+      %i.fas.fa-adjust.fa-9x
+
+      %i.sicon.sicon-circle.sicon-9x
+      9x
+
+      %p
+
+      %i.fas.fa-arrow-alt-circle-right.fa-10x
+
+      %i.sicon.sicon-arrow-down-circle.sicon-10x
+
+      %i.fas.fa-adjust.fa-10x
+
+      %i.sicon.sicon-circle.sicon-10x
+      10x
+
+      %hr
+
+
+      %i.fas.fa-arrow-alt-circle-right.fa-2x.fa-spin
+
+      %i.sicon.sicon-arrow-down-circle.sicon-2x.sicon-spin
+
+      %i.fas.fa-adjust.fa-2x.fa-spin
+
+      %i.sicon.sicon-circle.sicon-2x.sicon-spin
+      2x Spin
+
+      %p
+
+      %i.fas.fa-arrow-alt-circle-right.fa-2x.fa-pulse
+
+      %i.sicon.sicon-arrow-down-circle.sicon-2x.sicon-pulse
+
+      %i.fas.fa-adjust.fa-2x.fa-pulse
+
+      %i.sicon.sicon-circle.sicon-2x.sicon-pulse
+      2x Pulse
+
+      %p
+
+      %i.fas.fa-arrow-alt-circle-right.fa-2x.fa-border
+
+      %i.sicon.sicon-arrow-down-circle.sicon-2x.sicon-border
+
+      %i.fas.fa-adjust.fa-2x.fa-border
+
+      %i.sicon.sicon-circle.sicon-2x.sicon-border
+      2x Border
+
+      %p
+
+      .icon-bg
+
+        %i.fas.fa-arrow-alt-circle-right.fa-2x.fa-inverse
+
+        %i.sicon.sicon-arrow-down-circle.sicon-2x.sicon-inverse
+
+        %i.fas.fa-adjust.fa-2x.fa-inverse
+
+        %i.sicon.sicon-circle.sicon-2x.sicon-inverse
+        2x Inverse
 
 
     / SCRIPTS ==================================================================
+
     / Remote Scripts
     %script{:src => "https://simonsharville.github.io/gulp4_bootstrap4_boilerplate/assets/js/sardJS.min.js"}
     / Local Scripts

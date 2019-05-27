@@ -1,0 +1,10 @@
+// Local styles
+// These are extra styles added after the remote sard-styles.
+
+// Import Order =======================
+
+// Remote Styles
+@import url('https://simonsharville.github.io/gulp4_bootstrap4_boilerplate/assets/css/sard-styles.min.css');
+
+// Local Styles
+@import 'local-overrides';
