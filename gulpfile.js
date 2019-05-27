@@ -154,6 +154,6 @@ exports.minifyJS = minifyJS;
 exports.watch = watch;
 
 // Sets the default to gulp watch
-var finish = gulp.parallel(watch);
-gulp.task('default', finish);
+var build = gulp.parallel(watch);
+gulp.task('default', build);
 
