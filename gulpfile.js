@@ -88,13 +88,13 @@ function hamlHTML (done) {
 function js(){
   return gulp.src(jsSRC)
   .pipe(sourcemaps.init({loadMaps: true, largeFile: true}))
-    .pipe(concat('localScripts.js'))
+    .pipe(concat('local-scripts.js'))
   .pipe(sourcemaps.write('./'))
-  .pipe(gulp.dest('app/assets/js'));
+  .pipe(gulp.dest('docs/assets/js'));
 };
 
 function minifyJS(done){
-  gulp.src('app/assets/js/localScripts.js')
+  gulp.src('docs/assets/js/local-scripts.js')
   .pipe(sourcemaps.init({loadMaps: true, largeFile: true}))
   .pipe(uglify().on('error', function(f) { console.log(f.message); })) // minifies the js
   .pipe(rename({extname : '.min.js' }))  // Add extension to the file
@@ -139,7 +139,7 @@ function watch(done) {
   gulp.watch('app/assets/scss/**/*.scss', compileCSS).on('change', browserSync.reload);
   gulp.watch('app/assets/css/*css', concatCSS).on('change', browserSync.reload);
   gulp.watch(jsSRC, js).on('change', browserSync.reload);
-  gulp.watch('app/assets/js/localScripts.js', minifyJS).on('change', browserSync.reload);
+  gulp.watch('docs/assets/js/local-scripts.js', minifyJS).on('change', browserSync.reload);
   gulp.watch(imgSRC, imageDelete).on('change', browserSync.reload);
   gulp.watch(imgSRC, minifyImages).on('change', browserSync.reload);
 }
