@@ -81,3 +81,18 @@ To Duplicate Project
 
 SARD Styles and Scripts =======
   This Boilerpleate has no Bootstrap or JQuery installed, instead it links to a remote set of bootstrap styles and scripts. To change Bootstrap variables and components you MUST use the remote set. To add new styles that are only specific to this project, you can add them to the assets folder.
+
+===================================================================
+Testing
+2019-05-28
+Basic Bootstrap components
+IE11 - Win7       – OK
+IE10 - Win7       - OK - Popover & tooltip bottom, showing on top.
+IE9 - Win7        - Can't reach site
+MSEdge - Win10    - Can't reach site
+IE11 - Win81      - OK - Type a little shit but readable.
+WinDev1811Eval    - OK
+
+
+
+
