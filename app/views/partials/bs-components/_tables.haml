@@ -1,0 +1,585 @@
+
+
+.row
+  .col-sm-12
+    %h4 Basic Table
+    %table.table
+      %thead
+        %tr
+          %th{:scope => "col"} #
+          %th{:scope => "col"} First
+          %th{:scope => "col"} Last
+          %th{:scope => "col"} Handle
+      %tbody
+        %tr
+          %th{:scope => "row"} 1
+          %td Mark
+          %td Otto
+          %td @mdo
+        %tr
+          %th{:scope => "row"} 2
+          %td Jacob
+          %td Thornton
+          %td @fat
+        %tr
+          %th{:scope => "row"} 3
+          %td Larry
+          %td the Bird
+          %td @twitter
+
+%hr
+
+.row
+  .col-sm-12
+    %h4 Inverted Basic Table
+    %p
+      You can also invert the colors—with light text on dark backgrounds—with
+      = succeed "." do
+        %code.highlighter-rouge .table-dark
+
+    %table.table.table-dark
+      %thead
+        %tr
+          %th{:scope => "col"} #
+          %th{:scope => "col"} First
+          %th{:scope => "col"} Last
+          %th{:scope => "col"} Handle
+      %tbody
+        %tr
+          %th{:scope => "row"} 1
+          %td Mark
+          %td Otto
+          %td @mdo
+        %tr
+          %th{:scope => "row"} 2
+          %td Jacob
+          %td Thornton
+          %td @fat
+        %tr
+          %th{:scope => "row"} 3
+          %td Larry
+          %td the Bird
+          %td @twitter
+
+%hr
+
+.row
+  .col-sm-12
+    %h4 Table head options
+    %p
+      Similar to tables and dark tables, use the modifier classes
+      %code.highlighter-rouge .thead-light
+      or
+      %code.highlighter-rouge .thead-dark
+      to make the head appear ligh or dark grey.
+
+    %table.table
+      %thead.thead-dark
+        %tr
+          %th{:scope => "col"} #
+          %th{:scope => "col"} First
+          %th{:scope => "col"} Last
+          %th{:scope => "col"} Handle
+      %tbody
+        %tr
+          %th{:scope => "row"} 1
+          %td Mark
+          %td Otto
+          %td @mdo
+        %tr
+          %th{:scope => "row"} 2
+          %td Jacob
+          %td Thornton
+          %td @fat
+        %tr
+          %th{:scope => "row"} 3
+          %td Larry
+          %td the Bird
+          %td @twitter
+    %table.table
+      %thead.thead-light
+        %tr
+          %th{:scope => "col"} #
+          %th{:scope => "col"} First
+          %th{:scope => "col"} Last
+          %th{:scope => "col"} Handle
+      %tbody
+        %tr
+          %th{:scope => "row"} 1
+          %td Mark
+          %td Otto
+          %td @mdo
+        %tr
+          %th{:scope => "row"} 2
+          %td Jacob
+          %td Thornton
+          %td @fat
+        %tr
+          %th{:scope => "row"} 3
+          %td Larry
+          %td the Bird
+          %td @twitter
+
+%hr
+%h4 Striped rows
+%p
+  Use
+  %code.highlighter-rouge .table-striped
+  to add zebra-striping to any table row within the Body
+
+.row
+  .col-sm-6
+    %table.table.table-striped
+      %thead
+        %tr
+          %th{:scope => "col"} #
+          %th{:scope => "col"} First
+          %th{:scope => "col"} Last
+          %th{:scope => "col"} Handle
+      %tbody
+        %tr
+          %th{:scope => "row"} 1
+          %td Mark
+          %td Otto
+          %td @mdo
+        %tr
+          %th{:scope => "row"} 2
+          %td Jacob
+          %td Thornton
+          %td @fat
+        %tr
+          %th{:scope => "row"} 3
+          %td Larry
+          %td the Bird
+          %td @twitter
+
+  .col-sm-6
+    %table.table.table-striped.table-dark
+      %thead
+        %tr
+          %th{:scope => "col"} #
+          %th{:scope => "col"} First
+          %th{:scope => "col"} Last
+          %th{:scope => "col"} Handle
+      %tbody
+        %tr
+          %th{:scope => "row"} 1
+          %td Mark
+          %td Otto
+          %td @mdo
+        %tr
+          %th{:scope => "row"} 2
+          %td Jacob
+          %td Thornton
+          %td @fat
+        %tr
+          %th{:scope => "row"} 3
+          %td Larry
+          %td the Bird
+          %td @twitter
+
+
+%hr
+%h4 Bordered table
+%p
+  Add
+  %code.highlighter-rouge .table-bordered
+  for borders on all sides of the table and cells.
+
+.row
+  .col-sm-6
+    %table.table.table-bordered
+      %thead
+        %tr
+          %th{:scope => "col"} #
+          %th{:scope => "col"} First
+          %th{:scope => "col"} Last
+          %th{:scope => "col"} Handle
+      %tbody
+        %tr
+          %th{:scope => "row"} 1
+          %td Mark
+          %td Otto
+          %td @mdo
+        %tr
+          %th{:scope => "row"} 2
+          %td Jacob
+          %td Thornton
+          %td @fat
+        %tr
+          %th{:scope => "row"} 3
+          %td{:colspan => "2"} Larry the Bird
+          %td @twitter
+  .col-sm-6
+    %table.table.table-bordered.table-dark
+      %thead
+        %tr
+          %th{:scope => "col"} #
+          %th{:scope => "col"} First
+          %th{:scope => "col"} Last
+          %th{:scope => "col"} Handle
+      %tbody
+        %tr
+          %th{:scope => "row"} 1
+          %td Mark
+          %td Otto
+          %td @mdo
+        %tr
+          %th{:scope => "row"} 2
+          %td Jacob
+          %td Thornton
+          %td @fat
+        %tr
+          %th{:scope => "row"} 3
+          %td{:colspan => "2"} Larry the Bird
+          %td @twitter
+
+%hr
+%h4 Hoverable rows
+%p
+  Add
+  %code.highlighter-rouge .table-hover
+  to enable a hover state on table rows within a body.
+.row
+  .col-sm-6
+    %table.table.table-hover
+      %thead
+        %tr
+          %th{:scope => "col"} #
+          %th{:scope => "col"} First
+          %th{:scope => "col"} Last
+          %th{:scope => "col"} Handle
+      %tbody
+        %tr
+          %th{:scope => "row"} 1
+          %td Mark
+          %td Otto
+          %td @mdo
+        %tr
+          %th{:scope => "row"} 2
+          %td Jacob
+          %td Thornton
+          %td @fat
+        %tr
+          %th{:scope => "row"} 3
+          %td{:colspan => "2"} Larry the Bird
+          %td @twitter
+
+  .col-sm-6
+    %table.table.table-hover.table-dark
+      %thead
+        %tr
+          %th{:scope => "col"} #
+          %th{:scope => "col"} First
+          %th{:scope => "col"} Last
+          %th{:scope => "col"} Handle
+      %tbody
+        %tr
+          %th{:scope => "row"} 1
+          %td Mark
+          %td Otto
+          %td @mdo
+        %tr
+          %th{:scope => "row"} 2
+          %td Jacob
+          %td Thornton
+          %td @fat
+        %tr
+          %th{:scope => "row"} 3
+          %td{:colspan => "2"} Larry the Bird
+          %td @twitter
+
+%hr
+%h4 Small table
+%p
+  Add
+  %code.highlighter-rouge .table-sm
+  to make tables more compact by cutting cell padding in half.
+
+.row
+  .col-sm-6
+    %table.table.table-sm
+      %thead
+        %tr
+          %th{:scope => "col"} #
+          %th{:scope => "col"} First
+          %th{:scope => "col"} Last
+          %th{:scope => "col"} Handle
+      %tbody
+        %tr
+          %th{:scope => "row"} 1
+          %td Mark
+          %td Otto
+          %td @mdo
+        %tr
+          %th{:scope => "row"} 2
+          %td Jacob
+          %td Thornton
+          %td @fat
+        %tr
+          %th{:scope => "row"} 3
+          %td{:colspan => "2"} Larry the Bird
+          %td @twitter
+  .col-sm-6
+    %table.table.table-sm.table-dark
+      %thead
+        %tr
+          %th{:scope => "col"} #
+          %th{:scope => "col"} First
+          %th{:scope => "col"} Last
+          %th{:scope => "col"} Handle
+      %tbody
+        %tr
+          %th{:scope => "row"} 1
+          %td Mark
+          %td Otto
+          %td @mdo
+        %tr
+          %th{:scope => "row"} 2
+          %td Jacob
+          %td Thornton
+          %td @fat
+        %tr
+          %th{:scope => "row"} 3
+          %td{:colspan => "2"} Larry the Bird
+          %td @twitter
+
+%hr
+%h4 Captions
+%p
+  A
+  %code.highlighter-rouge caption
+  functions like a heading for a table. It helps users with screen readers to find a table and understand what it’s about and decide if they want to read it.
+
+.row
+  .col-sm-6
+    %table.table
+      %caption List of users
+      %thead
+        %tr
+          %th{:scope => "col"} #
+          %th{:scope => "col"} First
+          %th{:scope => "col"} Last
+          %th{:scope => "col"} Handle
+      %tbody
+        %tr
+          %th{:scope => "row"} 1
+          %td Mark
+          %td Otto
+          %td @mdo
+        %tr
+          %th{:scope => "row"} 2
+          %td Jacob
+          %td Thornton
+          %td @fat
+        %tr
+          %th{:scope => "row"} 3
+          %td Larry
+          %td the Bird
+          %td @twitter
+
+%hr
+%h4 Responsive tables
+%p
+  Responsive tables allow tables to be scrolled horizontally with ease. Make any table responsive across all viewports by wrapping a
+  %code.highlighter-rouge .table
+  with
+  = succeed "." do
+    %code.highlighter-rouge .table-responsive
+  = succeed "." do
+    %code.highlighter-rouge .table-responsive{-sm|-md|-lg|-xl}
+
+.row
+  .col-sm-6
+    .table-responsive.mb-3
+      %table.table
+        %thead
+          %tr
+            %th{:scope => "col"} #
+            %th{:scope => "col"} Heading
+            %th{:scope => "col"} Heading
+            %th{:scope => "col"} Heading
+            %th{:scope => "col"} Heading
+            %th{:scope => "col"} Heading
+            %th{:scope => "col"} Heading
+            %th{:scope => "col"} Heading
+            %th{:scope => "col"} Heading
+            %th{:scope => "col"} Heading
+        %tbody
+          %tr
+            %th{:scope => "row"} 1
+            %td Cell
+            %td Cell
+            %td Cell
+            %td Cell
+            %td Cell
+            %td Cell
+            %td Cell
+            %td Cell
+            %td Cell
+          %tr
+            %th{:scope => "row"} 2
+            %td Cell
+            %td Cell
+            %td Cell
+            %td Cell
+            %td Cell
+            %td Cell
+            %td Cell
+            %td Cell
+            %td Cell
+          %tr
+            %th{:scope => "row"} 3
+            %td Cell
+            %td Cell
+            %td Cell
+            %td Cell
+            %td Cell
+            %td Cell
+            %td Cell
+            %td Cell
+            %td Cell
+
+%h4 Breakpoint specific
+%p
+  Use
+  %code.highlighter-rouge .table-responsive{-sm|-md|-lg|-xl}
+  as needed to create responsive tables up to a particular breakpoint. From that breakpoint and up, the table will behave normally and not scroll horizontally.
+
+.row
+  .col
+    %h5 Small
+    .table-responsive-sm
+      %table.table
+        %thead
+          %tr
+            %th{:scope => "col"} #
+            %th{:scope => "col"} Heading
+            %th{:scope => "col"} Heading
+            %th{:scope => "col"} Heading
+            %th{:scope => "col"} Heading
+            %th{:scope => "col"} Heading
+        %tbody
+          %tr
+            %th{:scope => "row"} 1
+            %td Cell
+            %td Cell
+            %td Cell
+            %td Cell
+            %td Cell
+          %tr
+            %th{:scope => "row"} 2
+            %td Cell
+            %td Cell
+            %td Cell
+            %td Cell
+            %td Cell
+          %tr
+            %th{:scope => "row"} 3
+            %td Cell
+            %td Cell
+            %td Cell
+            %td Cell
+            %td Cell
+    %h5 Medium
+    .table-responsive-md
+      %table.table
+        %thead
+          %tr
+            %th{:scope => "col"} #
+            %th{:scope => "col"} Heading
+            %th{:scope => "col"} Heading
+            %th{:scope => "col"} Heading
+            %th{:scope => "col"} Heading
+            %th{:scope => "col"} Heading
+        %tbody
+          %tr
+            %th{:scope => "row"} 1
+            %td Cell
+            %td Cell
+            %td Cell
+            %td Cell
+            %td Cell
+          %tr
+            %th{:scope => "row"} 2
+            %td Cell
+            %td Cell
+            %td Cell
+            %td Cell
+            %td Cell
+          %tr
+            %th{:scope => "row"} 3
+            %td Cell
+            %td Cell
+            %td Cell
+            %td Cell
+            %td Cell
+
+    %h5 Large
+    .table-responsive-lg
+      %table.table
+        %thead
+          %tr
+            %th{:scope => "col"} #
+            %th{:scope => "col"} Heading
+            %th{:scope => "col"} Heading
+            %th{:scope => "col"} Heading
+            %th{:scope => "col"} Heading
+            %th{:scope => "col"} Heading
+        %tbody
+          %tr
+            %th{:scope => "row"} 1
+            %td Cell
+            %td Cell
+            %td Cell
+            %td Cell
+            %td Cell
+          %tr
+            %th{:scope => "row"} 2
+            %td Cell
+            %td Cell
+            %td Cell
+            %td Cell
+            %td Cell
+          %tr
+            %th{:scope => "row"} 3
+            %td Cell
+            %td Cell
+            %td Cell
+            %td Cell
+            %td Cell
+
+    %h5 Extra Large
+    .table-responsive-xl
+      %table.table
+        %thead
+          %tr
+            %th{:scope => "col"} #
+            %th{:scope => "col"} Heading
+            %th{:scope => "col"} Heading
+            %th{:scope => "col"} Heading
+            %th{:scope => "col"} Heading
+            %th{:scope => "col"} Heading
+        %tbody
+          %tr
+            %th{:scope => "row"} 1
+            %td Cell
+            %td Cell
+            %td Cell
+            %td Cell
+            %td Cell
+          %tr
+            %th{:scope => "row"} 2
+            %td Cell
+            %td Cell
+            %td Cell
+            %td Cell
+            %td Cell
+          %tr
+            %th{:scope => "row"} 3
+            %td Cell
+            %td Cell
+            %td Cell
+            %td Cell
+            %td Cell
+
