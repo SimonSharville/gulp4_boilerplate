@@ -88,8 +88,8 @@ Testing
 Basic Bootstrap components
 IE11 - Win7       – OK
 IE10 - Win7       - OK - Popover & tooltip bottom, showing on top.
-IE9 - Win7        - Can't reach site
-MSEdge - Win10    - Can't reach site
+IE9 - Win7        - We don't support IE 9 any more. And it all looks shit anyway.
+MSEdge - Win10    - OK
 IE11 - Win81      - OK - Type a little shit but readable.
 WinDev1811Eval    - OK
 
