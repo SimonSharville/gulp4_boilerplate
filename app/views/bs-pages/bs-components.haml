@@ -4,10 +4,10 @@
     %title Bootstrap 4 Layout - BS Components
     %meta{:content => "ie=edge", "http-equiv" => "x-ua-compatible"}/
     %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
-    %link{:href => "assets/css/sard-styles.min.css", :rel => "stylesheet"}/
+    %link{:href => "../assets/css/sard-styles.min.css", :rel => "stylesheet"}/
  
   %body
-    //=include shared/_navbar.haml
+    //=include ../navbars/_navbar-x1.haml
 
 
     .container.first
@@ -15,93 +15,94 @@
         .col-12
           %h1 Bootstrap Components
           %p.lead These are default Bootstrap Components with no SARD styling other than the global colouring and font styles.
-          %h2#alerts.bs-anchor Alerts
-          //=include partials/bs-components/_alerts.haml
+          %h2#alerts.bs-anchor Alerts X
+          //=include bs-components/_alerts.haml
 
           %hr.black
 
           %h2#badges.bs-anchor Badges
-          //=include partials/bs-components/_badges.haml
+          //=include bs-components/_badges.haml
 
           %hr.black
 
           %h2#breadcrumbs.bs-anchor Breadcrumbs
-          //=include partials/bs-components/_breadcrumbs.haml
+          //=include bs-components/_breadcrumbs.haml
 
           %hr.black
 
           %h2#buttons.bs-anchor Buttons
-          //=include partials/bs-components/_buttons.haml
+          //=include bs-components/_buttons.haml
 
           %hr.black
 
           %h2#cards.bs-anchor Cards
-          //=include partials/bs-components/_cards.haml
+          //=include bs-components/_cards.haml
 
           %hr.black
 
           %h2#collapse.bs-anchor Collapse
-          //=include partials/bs-components/_collapse.haml
+          //=include bs-components/_collapse.haml
 
           %hr.black
 
           %h2#dropdowns.bs-anchor Dropdowns
-          //=include partials/bs-components/_dropdowns.haml
+          //=include bs-components/_dropdowns.haml
 
           %hr.black
 
           %h2#forms.bs-anchor Forms
-          //=include partials/bs-components/_forms.haml
+          //=include bs-components/_forms.haml
 
           %hr.black
 
           %h2#input-group.bs-anchor Input Group
-          //=include partials/bs-components/_input-group.haml
+          //=include bs-components/_input-group.haml
 
           %hr.black
 
           %h2#list-group.bs-anchor List Group
-          //=include partials/bs-components/_list-group.haml
+          //=include bs-components/_list-group.haml
 
           %hr.black
 
           %h2#modal.bs-anchor Modal
-          //=include partials/bs-components/_modal.haml
+          //=include bs-components/_modal.haml
 
           %hr.black
 
           %h2#navs.bs-anchor Navs
-          //=include partials/bs-components/_navs.haml
+          //=include bs-components/_navs.haml
 
           %hr.black
 
           %h2#navbar.bs-anchor Navbar
-          //=include partials/bs-components/_navbar.haml
+          //=include bs-components/_navbar.haml
 
           %hr.black
 
           %h2#pagination.bs-anchor Pagintaion
-          //=include partials/bs-components/_pagination.haml
+          //=include bs-components/_pagination.haml
 
           %hr.black
 
           %h2#popovers.bs-anchor Popovers
-          //=include partials/bs-components/_popovers.haml
+          //=include bs-components/_popovers.haml
 
           %hr.black
 
           %h2#progress.bs-anchor Progress
-          //=include partials/bs-components/_progress.haml
+          //=include bs-components/_progress.haml
+
 
           %hr.black
 
           %h2#tables.bs-anchor Tables
-          //=include partials/bs-components/_tables.haml
+          //=include bs-components/_tables.haml
 
           %hr.black
 
           %h2#tooltips.bs-anchor Tooltips
-          //=include partials/bs-components/_tooltips.haml
+          //=include bs-components/_tooltips.haml
 
 
           %hr.black
@@ -109,13 +110,13 @@
           %h1 Bootstrap 3 Components
 
           %h2#panels.bs-anchor Panels
-          //=include partials/bs-components/_panels.haml
+          //=include bs-components/_panels.haml
 
 
 
-    / SCRIPTS ==================================================================
-    
+    / Scripts
+
     / Remote Scripts
     %script{:src => "https://simonsharville.github.io/gulp4_bootstrap4_boilerplate/assets/js/remote-sard-scripts.min.js"}
     / Local Scripts
-    %script{:src => "assets/js/local-scripts.min.js"}
+    %script{:src => "../assets/js/local-scripts.min.js"}

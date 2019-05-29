@@ -1,17 +1,13 @@
 !!!
 %html.no-js{:lang => "en"}
   %head
-    %title Gulp 4 Layout
+    %title Gulp 4 Boilerplate
     %meta{:content => "ie=edge", "http-equiv" => "x-ua-compatible"}/
     %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
-
-    / Remote styles
-    / %link{:href => "https://simonsharville.github.io/gulp4_bootstrap4_boilerplate/assets/css/sard-styles.min.css", :rel => "stylesheet"}/
-    / Local styles
     %link{:href => "assets/css/sard-styles.min.css", :rel => "stylesheet"}/
-
+ 
   %body
-    //=include shared/_navbar.haml
+    //=include navbars/_navbar-x0.haml
 
 
     .container
@@ -25,22 +21,15 @@
 
       %h6 Adding scripts
       %p When adding scripts, there are 2 options:
-
       %p 1.  You can add a script to the scripts folder and then add it in the gulpfile.js file, This will add it to the global 'local-scripts.js' file on all pages.
-
       %p or
-
       %p 2.  You can add it to the scripts folder and link to it from a specific page. These will NOT be included in the global 'local-scripts.js' file on all pages.
 
 
 
-
-
-
-    / SCRIPTS ==================================================================
+    / Scripts ================================
 
     / Remote Scripts
     %script{:src => "https://simonsharville.github.io/gulp4_bootstrap4_boilerplate/assets/js/remote-sard-scripts.min.js"}
     / Local Scripts
     %script{:src => "assets/js/local-scripts.min.js"}
-

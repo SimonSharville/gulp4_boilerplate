@@ -4,12 +4,10 @@
     %title Bootstrap 4 Layout - Typography
     %meta{:content => "ie=edge", "http-equiv" => "x-ua-compatible"}/
     %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
-    / %link{:href => "https://simonsharville.github.io/gulp4_bootstrap4_boilerplate/assets/css/sard-styles.min.css", :rel => "stylesheet"}/
-    / / Local styles
-    %link{:href => "assets/css/sard-styles.min.css", :rel => "stylesheet"}/
+    %link{:href => "../assets/css/sard-styles.min.css", :rel => "stylesheet"}/
  
   %body
-    //=include shared/_navbar.haml
+    //=include ../navbars/_navbar-x1.haml
 
     .container
       .row
@@ -83,7 +81,6 @@
           %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed est tortor, consectetur a neque sed, mollis accumsan tortor. Duis vitae varius magna. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
 
           %hr
-
         .col-12
           %h1 Display headings
           %p Traditional heading elements are designed to work best in the meat of your page content. When you need a heading to stand out, consider using a display heading—a larger, slightly more opinionated heading style. Keep in mind these headings are  responsive and resize depending on the screen width.
@@ -212,9 +209,9 @@
                 %dd.col-sm-8 Aenean posuere, tortor sed cursus feugiat, nunc augue blandit nunc.
   
 
-    / SCRIPTS ==================================================================
-    
+    / Scripts ================================
+
     / Remote Scripts
     %script{:src => "https://simonsharville.github.io/gulp4_bootstrap4_boilerplate/assets/js/remote-sard-scripts.min.js"}
     / Local Scripts
-    %script{:src => "assets/js/local-scripts.min.js"}
+    %script{:src => "../assets/js/local-scripts.min.js"}
