@@ -1,4 +1,4 @@
-.card{:style => "width: 18rem;"}
+.card.card-sard{:style => "width: 18rem;"}
   %img.card-img-top{:alt => "...", :src => "..."}/
   .card-body
     %h5.card-title Card title
@@ -12,7 +12,7 @@
     %a.card-link{:href => "#"} Another link
 
 %hr
-.card.text-center
+.card.card-sard.text-center
   .card-header
     Featured
   .card-body
@@ -26,13 +26,13 @@
 
 .row
   .col-sm-6
-    .card
+    .card.card-sard
       .card-body
         %h5.card-title Special title treatment
         %p.card-text With supporting text below as a natural lead-in to additional content.
         %a.btn.btn-primary{:href => "#"} Go somewhere
   .col-sm-6
-    .card
+    .card.card-sard
       .card-body
         %h5.card-title Special title treatment
         %p.card-text With supporting text below as a natural lead-in to additional content.
@@ -41,7 +41,7 @@
 %hr
 
 %h4 Navigation
-.card.text-center
+.card.card-sard.text-center
   .card-header
     %ul.nav.nav-tabs.card-header-tabs
       %li.nav-item
@@ -58,7 +58,7 @@
 %hr
 
 %h4 Horizontal
-.card.mb-3{:style => "max-width: 540px;"}
+.card.card-sard.mb-3{:style => "max-width: 540px;"}
   .row.no-gutters
     .col-md-4
       %img.card-img{:alt => "...", :src => "..."}/
@@ -74,108 +74,293 @@
 %h4 Card Styles
 .row
   .col-sm-6
-    .card.text-white.bg-primary.mb-3{:style => "max-width: 18rem;"}
-      .card-header Header
+    .card.card-sard.mb-3
+      .card-header Card Sard / Default
+      .card-body.border-bottom
+        %h5.card-title .card.card-sard
+        %p.card-text 
+          This can also be classed as 
+          %br
+          %span.bold .card.card-default.
+          %br
+          This .card-body has .border-bottom added to it, you could also add .border-top
       .card-body
-        %h5.card-title Primary card title
-        %p.card-text Some quick example text to build on the card title and make up the bulk of the card's content.
-    .card.text-white.bg-secondary.mb-3{:style => "max-width: 18rem;"}
-      .card-header Header
-      .card-body
-        %h5.card-title Secondary card title
-        %p.card-text Some quick example text to build on the card title and make up the bulk of the card's content.
-    .card.text-white.bg-success.mb-3{:style => "max-width: 18rem;"}
-      .card-header Header
-      .card-body
-        %h5.card-title Success card title
-        %p.card-text Some quick example text to build on the card title and make up the bulk of the card's content.
-    .card.text-white.bg-danger.mb-3{:style => "max-width: 18rem;"}
-      .card-header Header
-      .card-body
-        %h5.card-title Danger card title
-        %p.card-text Some quick example text to build on the card title and make up the bulk of the card's content.
-    .card.text-white.bg-warning.mb-3{:style => "max-width: 18rem;"}
-      .card-header Header
-      .card-body
-        %h5.card-title Warning card title
-        %p.card-text Some quick example text to build on the card title and make up the bulk of the card's content.
-    .card.text-white.bg-info.mb-3{:style => "max-width: 18rem;"}
-      .card-header Header
-      .card-body
-        %h5.card-title Info card title
-        %p.card-text Some quick example text to build on the card title and make up the bulk of the card's content.
-    .card.bg-light.mb-3{:style => "max-width: 18rem;"}
-      .card-header Header
-      .card-body
-        %h5.card-title Light card title
-        %p.card-text Some quick example text to build on the card title and make up the bulk of the card's content.
-    .card.text-white.bg-dark.mb-3{:style => "max-width: 18rem;"}
-      .card-header Header
-      .card-body
-        %h5.card-title.text-white Dark card title
-        %p.card-text.text-white Some quick example text to build on the card title and make up the bulk of the card's content.  
+        %h5.card-title 2nd Card body
+        %p Below is a %hr between the paras.
+        %hr
+        %p Normal para. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed est tortor, consectetur a neque sed.
+      .card-footer
+        Card Footer / 
+        %span.text-muted .text-muted
 
-  .col-sm-6
-    .card.border-primary.mb-3{:style => "max-width: 18rem;"}
-      .card-header Header
-      .card-body.text-primary
-        %h5.card-title Primary card title
-        %p.card-text Some quick example text to build on the card title and make up the bulk of the card's content.
-    .card.border-secondary.mb-3{:style => "max-width: 18rem;"}
-      .card-header Header
-      .card-body.text-secondary
-        %h5.card-title Secondary card title
-        %p.card-text Some quick example text to build on the card title and make up the bulk of the card's content.
-    .card.border-success.mb-3{:style => "max-width: 18rem;"}
-      .card-header Header
-      .card-body.text-success
-        %h5.card-title Success card title
-        %p.card-text Some quick example text to build on the card title and make up the bulk of the card's content.
-    .card.border-danger.mb-3{:style => "max-width: 18rem;"}
-      .card-header Header
-      .card-body.text-danger
-        %h5.card-title Danger card title
-        %p.card-text Some quick example text to build on the card title and make up the bulk of the card's content.
-    .card.border-warning.mb-3{:style => "max-width: 18rem;"}
-      .card-header Header
-      .card-body.text-warning
-        %h5.card-title Warning card title
-        %p.card-text Some quick example text to build on the card title and make up the bulk of the card's content.
-    .card.border-info.mb-3{:style => "max-width: 18rem;"}
-      .card-header Header
-      .card-body.text-info
-        %h5.card-title Info card title
-        %p.card-text Some quick example text to build on the card title and make up the bulk of the card's content.
-    .card.border-light.mb-3{:style => "max-width: 18rem;"}
-      .card-header Header
+    .card.card-primary.mb-3
+      .card-header Card Primary
+      .card-body.border-bottom
+        %h5.card-title .card.card-primary
+        %p.card-text 
+          This .card-body has .border-bottom added to it, you could also add .border-top
       .card-body
-        %h5.card-title Light card title
-        %p.card-text Some quick example text to build on the card title and make up the bulk of the card's content.
-    .card.border-dark.mb-3{:style => "max-width: 18rem;"}
-      .card-header Header
-      .card-body.text-dark
-        %h5.card-title Dark card title
-        %p.card-text Some quick example text to build on the card title and make up the bulk of the card's content.
+        %h5.card-title 2nd Card body
+        %p Below is a %hr between the paras.
+        %hr
+        %p Normal para. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed est tortor, consectetur a neque sed.
+      .card-footer
+        Card Footer / 
+        %span.text-muted .text-muted
+
+    .card.card-success.mb-3
+      .card-header Card Success
+      .card-body.border-bottom
+        %h5.card-title .card.card-success
+        %p.card-text 
+          This .card-body has .border-bottom added to it, you could also add .border-top
+      .card-body
+        %h5.card-title 2nd Card body
+        %p Below is a %hr between the paras.
+        %hr
+        %p Normal para. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed est tortor, consectetur a neque sed.
+      .card-footer
+        Card Footer / 
+        %span.text-muted .text-muted
+
+    .card.card-danger.mb-3
+      .card-header Card Danger 
+      .card-body.border-bottom
+        %h5.card-title .card.card-danger
+        %p.card-text 
+          This .card-body has .border-bottom added to it, you could also add .border-top
+      .card-body
+        %h5.card-title 2nd Card body
+        %p Below is a %hr between the paras.
+        %hr
+        %p Normal para. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed est tortor, consectetur a neque sed.
+      .card-footer
+        Card Footer / 
+        %span.text-muted .text-muted
+
+    .card.card-warning.mb-3
+      .card-header Card Warning 
+      .card-body.border-bottom
+        %h5.card-title .card.card-warning
+        %p.card-text 
+          This .card-body has .border-bottom added to it, you could also add .border-top
+      .card-body
+        %h5.card-title 2nd Card body
+        %p Below is a %hr between the paras.
+        %hr
+        %p Normal para. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed est tortor, consectetur a neque sed.
+      .card-footer
+        Card Footer / 
+        %span.text-muted .text-muted
+
+    .card.card-info.mb-3
+      .card-header Card Info 
+      .card-body.border-bottom
+        %h5.card-title .card.card-info
+        %p.card-text 
+          This .card-body has .border-bottom added to it, you could also add .border-top
+      .card-body
+        %h5.card-title 2nd Card body
+        %p Below is a %hr between the paras.
+        %hr
+        %p Normal para. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed est tortor, consectetur a neque sed.
+      .card-footer
+        Card Footer / 
+        %span.text-muted .text-muted
+
+    %hr
+
+    .card.card-dark.mb-3
+      .card-header Card Dark 
+      .card-body.border-bottom
+        %h5.card-title .card.card-dark
+        %p.card-text 
+          This .card-body has .border-bottom added to it, you could also add .border-top
+      .card-body
+        %h5.card-title 2nd Card body
+        %p Below is a %hr between the paras.
+        %hr
+        %p Normal para. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed est tortor, consectetur a neque sed.
+      .card-footer
+        Card Footer / 
+        %span.text-muted .text-muted
+
+
+  / Outline Versions
+  .col-sm-6
+    .card.card-sard.outline.mb-3
+      .card-header Card Sard / Default Outline
+      .card-body.border-bottom
+        %h5.card-title .card.card-sard.outline
+        %p.card-text  
+          This can also be classed as 
+          %br
+          %span.bold .card.card-default.outline.
+          %br
+          This .card-body has .border-bottom added to it, you could also add .border-top
+      .card-body
+        %h5.card-title 2nd Card body
+        %p Below is a %hr between the paras.
+        %hr
+        %p Normal para. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed est tortor, consectetur a neque sed.
+      .card-footer
+        Card Footer / 
+        %span.text-muted .text-muted
+
+    .card.card-primary.outline.mb-3
+      .card-header Card Primary Outline
+      .card-body.border-bottom
+        %h5.card-title .card.card-primary
+        %p.card-text 
+          This .card-body has .border-bottom added to it, you could also add .border-top
+      .card-body
+        %h5.card-title 2nd Card body
+        %p Below is a %hr between the paras.
+        %hr
+        %p Normal para. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed est tortor, consectetur a neque sed.
+      .card-footer
+        Card Footer / 
+        %span.text-muted .text-muted
+
+    .card.card-success.outline.mb-3
+      .card-header Card Success Outline
+      .card-body.border-bottom
+        %h5.card-title .card.card-success
+        %p.card-text 
+          This .card-body has .border-bottom added to it, you could also add .border-top
+      .card-body
+        %h5.card-title 2nd Card body
+        %p Below is a %hr between the paras.
+        %hr
+        %p Normal para. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed est tortor, consectetur a neque sed.
+      .card-footer
+        Card Footer / 
+        %span.text-muted .text-muted
+
+
+    .card.card-danger.outline.mb-3
+      .card-header Card Danger Outline
+      .card-body.border-bottom
+        %h5.card-title .card.card-danger
+        %p.card-text 
+          This .card-body has .border-bottom added to it, you could also add .border-top
+      .card-body
+        %h5.card-title 2nd Card body
+        %p Below is a %hr between the paras.
+        %hr
+        %p Normal para. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed est tortor, consectetur a neque sed.
+      .card-footer
+        Card Footer / 
+        %span.text-muted .text-muted
+
+    .card.card-warning.outline.mb-3
+      .card-header Card Warning Outline
+      .card-body.border-bottom
+        %h5.card-title .card.card-warning
+        %p.card-text 
+          This .card-body has .border-bottom added to it, you could also add .border-top
+      .card-body
+        %h5.card-title 2nd Card body
+        %p Below is a %hr between the paras.
+        %hr
+        %p Normal para. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed est tortor, consectetur a neque sed.
+      .card-footer
+        Card Footer / 
+        %span.text-muted .text-muted
+
+    .card.card-info.outline.mb-3
+      .card-header Card Info Outline
+      .card-body.border-bottom
+        %h5.card-title .card.card-info
+        %p.card-text 
+          This .card-body has .border-bottom added to it, you could also add .border-top
+      .card-body
+        %h5.card-title 2nd Card body
+        %p Below is a %hr between the paras.
+        %hr
+        %p Normal para. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed est tortor, consectetur a neque sed.
+      .card-footer
+        Card Footer / 
+        %span.text-muted .text-muted
+
+
+    %hr
+
+    .card.card-dark.outline.mb-3
+      .card-header Card Dark Outline
+      .card-body.border-bottom
+        %h5.card-title .card.card-dark
+        %p.card-text 
+          This .card-body has .border-bottom added to it, you could also add .border-top
+      .card-body
+        %h5.card-title 2nd Card body
+        %p Below is a %hr between the paras.
+        %hr
+        %p Normal para. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed est tortor, consectetur a neque sed.
+      .card-footer
+        Card Footer / 
+        %span.text-muted .text-muted
+
+
+%hr
+.row
+  .col-sm-12
+    .card.card-sard
+      .card-body
+        %h5 White cards
+        .row
+          .col-sm-6
+            .card.card-white
+              .card-header Card White 
+              .card-body.border-bottom
+                %h5.card-title .card.card-white
+                %p.card-text 
+                  This .card-body has .border-bottom added to it, you could also add .border-top
+              .card-body
+                %h5.card-title 2nd Card body
+                %p Below is a %hr between the paras.
+                %hr
+                %p Normal para. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed est tortor, consectetur a neque sed.
+              .card-footer
+                Card Footer / 
+                %span.text-muted .text-muted
+          .col-sm-6
+            .card.card-white.outline
+              .card-header Card White Outline
+              .card-body.border-bottom
+                %h5.card-title .card.card-white
+                %p.card-text 
+                  This .card-body has .border-bottom added to it, you could also add .border-top
+              .card-body
+                %h5.card-title 2nd Card body
+                %p Below is a %hr between the paras.
+                %hr
+                %p Normal para. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed est tortor, consectetur a neque sed.
+              .card-footer
+                Card Footer / 
+                %span.text-muted .text-muted
+
 
 %hr
 
+
 %h4 Card Groups
 .card-group
-  .card
+  .card.card-sard
     %img.card-img-top{:alt => "...", :src => "..."}/
     .card-body
       %h5.card-title Card title
       %p.card-text This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
     .card-footer
       %small.text-muted Last updated 3 mins ago
-  .card
+  .card.card-sard
     %img.card-img-top{:alt => "...", :src => "..."}/
     .card-body
       %h5.card-title Card title
       %p.card-text This card has supporting text below as a natural lead-in to additional content.
     .card-footer
       %small.text-muted Last updated 3 mins ago
-  .card
+  .card.card-sard
     %img.card-img-top{:alt => "...", :src => "..."}/
     .card-body
       %h5.card-title Card title
@@ -188,74 +373,74 @@
 
 %h4 Card Decks
 .card-deck
-  .card
+  .card.card-sard
     %img.card-img-top{:alt => "...", :src => "..."}/
     .card-body
       %h5.card-title Card title
       %p.card-text This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
     .card-footer
-      %small.text-muted Last updated 3 mins ago
-  .card
+      %small Last updated 3 mins ago
+  .card.card-sard
     %img.card-img-top{:alt => "...", :src => "..."}/
     .card-body
       %h5.card-title Card title
       %p.card-text This card has supporting text below as a natural lead-in to additional content.
     .card-footer
-      %small.text-muted Last updated 3 mins ago
-  .card
+      %small Last updated 3 mins ago
+  .card.card-sard
     %img.card-img-top{:alt => "...", :src => "..."}/
     .card-body
       %h5.card-title Card title
       %p.card-text This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.
     .card-footer
-      %small.text-muted Last updated 3 mins ago
+      %small.text-muted .text-muted
 
 %hr
 
 %h4 Card Columns
 .card-columns
-  .card
+  .card.card-sard
     %img.card-img-top{:alt => "...", :src => "..."}/
     .card-body
       %h5.card-title Card title that wraps to a new line
       %p.card-text This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
-  .card.p-3
+  .card.card-sard.p-3
     %blockquote.blockquote.mb-0.card-body
       %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
       %footer.blockquote-footer
         %small.text-muted
           Someone famous in
           %cite{:title => "Source Title"} Source Title
-  .card
+  .card.card-sard
     %img.card-img-top{:alt => "...", :src => "..."}/
     .card-body
       %h5.card-title Card title
       %p.card-text This card has supporting text below as a natural lead-in to additional content.
       %p.card-text
         %small.text-muted Last updated 3 mins ago
-  .card.bg-primary.text-white.text-center.p-3
+  .card.card-sard.text-center.p-3
     %blockquote.blockquote.mb-0
       %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat.
-      %footer.blockquote-footer.text-white
+      %footer.blockquote-footer
         %small
           Someone famous in
           %cite{:title => "Source Title"} Source Title
-  .card.text-center
+  .card.card-sard.text-center
     .card-body
       %h5.card-title Card title
       %p.card-text This card has a regular title and short paragraphy of text below it.
       %p.card-text
         %small.text-muted Last updated 3 mins ago
-  .card
+  .card.card-sard
     %img.card-img-top{:alt => "...", :src => "..."}/
-  .card.p-3.text-right
+  .card.card-sard.p-3.text-right
     %blockquote.blockquote.mb-0
       %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
       %footer.blockquote-footer
         %small.text-muted
           Someone famous in
           %cite{:title => "Source Title"} Source Title
-  .card
+  .card.card-sard
     .card-body
       %h5.card-title Card title
       %p.card-text This is another card with title and supporting text below. This card has some additional content to make it slightly taller overall.
