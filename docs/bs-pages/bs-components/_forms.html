@@ -132,7 +132,7 @@ Disabled radio
 </div>
 <hr>
 <h4>Form Groups</h4>
-<p>The .form-group class is the easiest way to add some structure to forms. It provides a flexible class that encourages proper grouping of labels, controls, optional help text, and form validation messaging. By default it only applies margin-bottom, but it picks up additional styles in .form-inline as needed. Use it with <fieldset>s, <div>s, or nearly any other element.</p>
+<p>The .form-group class is the easiest way to add some structure to forms. It provides a flexible class that encourages proper grouping of labels, controls, optional help text, and form validation messaging. By default it only applies margin-bottom, but it picks up additional styles in .form-inline as needed. Use it with fieldsets, divs, or nearly any other element.</p>
 <form>
 <div class='form-group'>
 <label for='formGroupExampleInput'>Example label</label>
@@ -234,9 +234,9 @@ At times, you maybe need to use margin or padding utilities to create that perfe
 <input class='form-control' id='inputPassword3' placeholder='Password' type='password'>
 </div>
 </div>
-<fieldset class='form-group'>
+<div class='form-group'>
 <div class='row'>
-<legend class='col-form-label col-sm-2 pt-0'>Radios</legend>
+<div class='col-form-label col-sm-2 pt-0'>Radios</div>
 <div class='col-sm-10'>
 <div class='form-check'>
 <input checked='checked' class='form-check-input' id='gridRadios1' name='gridRadios' type='radio' value='option1'>
@@ -258,7 +258,7 @@ Third disabled radio
 </div>
 </div>
 </div>
-</fieldset>
+</div>
 <div class='form-group row'>
 <div class='col-sm-2'>Checkbox</div>
 <div class='col-sm-10'>
@@ -276,3 +276,159 @@ Example checkbox
 </div>
 </div>
 </form>
+<hr>
+<h2>Forms within Cards, Panels and Fieldsets</h2>
+<p>These are designed so they look identical, whichever you use.</p>
+<div class='row'>
+<div class='col-sm-6'>
+<h4>Card</h4>
+<div class='card card-sard'>
+<div class='card-header'>Form within Card</div>
+<form accept-charset='UTF-8' action='/users/sign_in' class='new_user' id='new_user' method='post'>
+<div class='card-body'>
+<legend>This is an example of a legend, it can go over multiple lines of text without an issue.</legend>
+<div class='form-group'>
+<label for='user_login'>Email</label>
+<input class='form-control' id='user_login' name='user[login]' size='30' type='text'>
+<label for='user_password'>Password</label>
+<input class='form-control' id='user_password' name='user[password]' size='30' type='password'>
+<a href='/users/password/new'>Forgot your password?</a>
+<br>
+</div>
+</div>
+<div class='card-body'>
+<div class='form-group no-border login-btns'>
+<input class='btn btn-client btn-bold pull-right' name='commit' type='submit' value='Sign in'>
+<button class='btn btn-primary' type='submit'>Submit</button>
+</div>
+</div>
+</form>
+</div>
+</div>
+<div class='col-sm-6'>
+<h4>Panel</h4>
+<div class='panel panel-sard'>
+<div class='panel-heading'>
+<h3>Form within Panel</h3>
+</div>
+<div class='panel-body'>
+<form>
+<div class='form-group'>
+<label for='exampleFormControlInput1'>Email address</label>
+<input class='form-control' id='exampleFormControlInput1' placeholder='name@example.com' type='email'>
+</div>
+<div class='form-group'>
+<label for='exampleFormControlSelect1'>Example select</label>
+<select class='form-control' id='exampleFormControlSelect1'>
+<option>1</option>
+<option>2</option>
+<option>3</option>
+<option>4</option>
+<option>5</option>
+</select>
+</div>
+<div class='form-group'>
+<label for='exampleFormControlSelect2'>Example multiple select</label>
+<select class='form-control' id='exampleFormControlSelect2' multiple='multiple'>
+<option>1</option>
+<option>2</option>
+<option>3</option>
+<option>4</option>
+<option>5</option>
+</select>
+</div>
+<div class='form-group'>
+<label for='exampleFormControlTextarea1'>Example textarea</label>
+<textarea class='form-control' id='exampleFormControlTextarea1' rows='3'></textarea>
+</div>
+<div class='form-group form-check'>
+<input class='form-check-input' id='exampleCheck1' type='checkbox'>
+<label class='form-check-label' for='exampleCheck1'>Check me out</label>
+</div>
+<button class='btn btn-primary' type='submit'>Submit</button>
+</form>
+</div>
+</div>
+</div>
+<div class='col-sm-6'>
+<div class='card card-sard'>
+<div class='card-header'>Form within Card using Fieldsets</div>
+<div class='card-body'>
+<form accept-charset='UTF-8' action='/users/sign_in' class='new_user' id='new_user' method='post'>
+<fieldset>
+<legend>This is an example of a legend</legend>
+<div class='form-group'>
+<label for='user_login'>Email</label>
+<input class='form-control' id='user_login' name='user[login]' size='30' type='text'>
+</div>
+<hr>
+<div class='form-group'>
+<label for='user_password'>Password</label>
+<input class='form-control' id='user_password' name='user[password]' size='30' type='password'>
+<a href='/users/password/new'>Forgot your password?</a>
+<br>
+</div>
+</fieldset>
+<fieldset>
+<div class='form-group no-border login-btns'>
+<input class='btn btn-client btn-bold pull-right' name='commit' type='submit' value='Sign in'>
+<button class='btn btn-primary' type='submit'>Submit</button>
+</div>
+</fieldset>
+</form>
+</div>
+</div>
+</div>
+<div class='col-sm-6'>
+<div class='panel panel-sard'>
+<div class='panel-header'>Form within Card using Fieldsets</div>
+<div class='panel-body'>
+<form accept-charset='UTF-8' action='/users/sign_in' class='new_user' id='new_user' method='post'>
+<fieldset>
+<legend>Welcome to Strengthened Appraisal & Revalidation Database</legend>
+<div class='form-group'>
+<label for='user_login'>Email</label>
+<input class='form-control' id='user_login' name='user[login]' size='30' type='text'>
+</div>
+<hr>
+<div class='form-group'>
+<label for='user_password'>Password</label>
+<input class='form-control' id='user_password' name='user[password]' size='30' type='password'>
+<a href='/users/password/new'>Forgot your password?</a>
+<br>
+</div>
+</fieldset>
+<fieldset>
+<div class='form-group no-border login-btns'>
+<input class='btn btn-client btn-bold pull-right' name='commit' type='submit' value='Sign in'>
+<button class='btn btn-primary' type='submit'>Submit</button>
+</div>
+</fieldset>
+</form>
+</div>
+</div>
+</div>
+<div class='col-sm-6'>
+<form accept-charset='UTF-8' action='/users/sign_in' class='new_user' id='new_user' method='post'>
+<fieldset class='sa-fieldset'>
+<legend>Stand alone fieldset</legend>
+<div class='form-group border-bottom'>
+<label for='user_login'>Email</label>
+<input class='form-control' id='user_login' name='user[login]' size='30' type='text'>
+</div>
+<div class='form-group'>
+<label for='user_password'>Password</label>
+<input class='form-control' id='user_password' name='user[password]' size='30' type='password'>
+<a href='/users/password/new'>Forgot your password?</a>
+<br>
+</div>
+</fieldset>
+<fieldset>
+<div class='form-group no-border login-btns'>
+<input class='btn btn-client btn-bold pull-right' name='commit' type='submit' value='Sign in'>
+<button class='btn btn-primary' type='submit'>Submit</button>
+</div>
+</fieldset>
+</form>
+</div>
+</div>

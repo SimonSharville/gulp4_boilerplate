@@ -118,7 +118,7 @@
 
 %hr
 %h4 Form Groups
-%p The .form-group class is the easiest way to add some structure to forms. It provides a flexible class that encourages proper grouping of labels, controls, optional help text, and form validation messaging. By default it only applies margin-bottom, but it picks up additional styles in .form-inline as needed. Use it with <fieldset>s, <div>s, or nearly any other element.
+%p The .form-group class is the easiest way to add some structure to forms. It provides a flexible class that encourages proper grouping of labels, controls, optional help text, and form validation messaging. By default it only applies margin-bottom, but it picks up additional styles in .form-inline as needed. Use it with fieldsets, divs, or nearly any other element.
 %form
   .form-group
     %label{:for => "formGroupExampleInput"} Example label
@@ -198,9 +198,9 @@ At times, you maybe need to use margin or padding utilities to create that perfe
     %label.col-sm-2.col-form-label{:for => "inputPassword3"} Password
     .col-sm-10
       %input#inputPassword3.form-control{:placeholder => "Password", :type => "password"}/
-  %fieldset.form-group
+  .form-group
     .row
-      %legend.col-form-label.col-sm-2.pt-0 Radios
+      .col-form-label.col-sm-2.pt-0 Radios
       .col-sm-10
         .form-check
           %input#gridRadios1.form-check-input{:checked => "checked", :name => "gridRadios", :type => "radio", :value => "option1"}/
@@ -227,3 +227,121 @@ At times, you maybe need to use margin or padding utilities to create that perfe
 
 
 
+%hr
+%h2 Forms within Cards, Panels and Fieldsets
+%p These are designed so they look identical, whichever you use.
+.row
+  .col-sm-6
+    %h4 Card
+    .card.card-sard
+      .card-header Form within Card
+      %form#new_user.new_user{"accept-charset" => "UTF-8", :action => "/users/sign_in", :method => "post"}
+        .card-body
+          %legend This is an example of a legend, it can go over multiple lines of text without an issue.
+          .form-group
+            %label{:for => "user_login"} Email
+            %input#user_login.form-control{:name => "user[login]", :size => "30", :type => "text"}/
+            %label{:for => "user_password"} Password
+            %input#user_password.form-control{:name => "user[password]", :size => "30", :type => "password"}/
+            %a{:href => "/users/password/new"} Forgot your password?
+            %br/
+        .card-body
+          .form-group.no-border.login-btns
+            %input.btn.btn-client.btn-bold.pull-right{:name => "commit", :type => "submit", :value => "Sign in"}/
+            %button.btn.btn-primary{:type => "submit"} Submit
+
+  .col-sm-6
+    %h4 Panel
+    .panel.panel-sard
+      .panel-heading
+        %h3 Form within Panel
+      .panel-body
+        %form
+          .form-group
+            %label{:for => "exampleFormControlInput1"} Email address
+            %input#exampleFormControlInput1.form-control{:placeholder => "name@example.com", :type => "email"}/
+          .form-group
+            %label{:for => "exampleFormControlSelect1"} Example select
+            %select#exampleFormControlSelect1.form-control
+              %option 1
+              %option 2
+              %option 3
+              %option 4
+              %option 5
+          .form-group
+            %label{:for => "exampleFormControlSelect2"} Example multiple select
+            %select#exampleFormControlSelect2.form-control{:multiple => "multiple"}
+              %option 1
+              %option 2
+              %option 3
+              %option 4
+              %option 5
+          .form-group
+            %label{:for => "exampleFormControlTextarea1"} Example textarea
+            %textarea#exampleFormControlTextarea1.form-control{:rows => "3"}
+          .form-group.form-check
+            %input#exampleCheck1.form-check-input{:type => "checkbox"}/
+            %label.form-check-label{:for => "exampleCheck1"} Check me out
+          %button.btn.btn-primary{:type => "submit"} Submit
+
+
+  .col-sm-6
+    .card.card-sard
+      .card-header Form within Card using Fieldsets
+      .card-body
+        %form#new_user.new_user{"accept-charset" => "UTF-8", :action => "/users/sign_in", :method => "post"}
+          %fieldset
+            %legend This is an example of a legend
+            .form-group
+              %label{:for => "user_login"} Email
+              %input#user_login.form-control{:name => "user[login]", :size => "30", :type => "text"}/
+            %hr
+            .form-group
+              %label{:for => "user_password"} Password
+              %input#user_password.form-control{:name => "user[password]", :size => "30", :type => "password"}/
+              %a{:href => "/users/password/new"} Forgot your password?
+              %br/
+          %fieldset
+            .form-group.no-border.login-btns
+              %input.btn.btn-client.btn-bold.pull-right{:name => "commit", :type => "submit", :value => "Sign in"}/
+              %button.btn.btn-primary{:type => "submit"} Submit
+
+  .col-sm-6
+    .panel.panel-sard
+      .panel-header Form within Card using Fieldsets
+      .panel-body
+        %form#new_user.new_user{"accept-charset" => "UTF-8", :action => "/users/sign_in", :method => "post"}
+          %fieldset
+            %legend Welcome to Strengthened Appraisal & Revalidation Database
+            .form-group
+              %label{:for => "user_login"} Email
+              %input#user_login.form-control{:name => "user[login]", :size => "30", :type => "text"}/
+            %hr
+            .form-group
+              %label{:for => "user_password"} Password
+              %input#user_password.form-control{:name => "user[password]", :size => "30", :type => "password"}/
+              %a{:href => "/users/password/new"} Forgot your password?
+              %br/
+          %fieldset
+            .form-group.no-border.login-btns
+              %input.btn.btn-client.btn-bold.pull-right{:name => "commit", :type => "submit", :value => "Sign in"}/
+              %button.btn.btn-primary{:type => "submit"} Submit
+
+
+  .col-sm-6
+    %form#new_user.new_user{"accept-charset" => "UTF-8", :action => "/users/sign_in", :method => "post"}
+      %fieldset.sa-fieldset
+        %legend Stand alone fieldset
+        .form-group.border-bottom
+          %label{:for => "user_login"} Email
+          %input#user_login.form-control{:name => "user[login]", :size => "30", :type => "text"}/
+        
+        .form-group
+          %label{:for => "user_password"} Password
+          %input#user_password.form-control{:name => "user[password]", :size => "30", :type => "password"}/
+          %a{:href => "/users/password/new"} Forgot your password?
+          %br/
+      %fieldset
+        .form-group.no-border.login-btns
+          %input.btn.btn-client.btn-bold.pull-right{:name => "commit", :type => "submit", :value => "Sign in"}/
+          %button.btn.btn-primary{:type => "submit"} Submit

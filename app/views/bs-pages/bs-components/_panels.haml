@@ -1,6 +1,6 @@
 .row
   .col-sm-6
-    .panel.mb-3
+    .panel
       .panel-heading
         %h3 Panel Heading H3
       .panel-body
@@ -11,7 +11,7 @@
         Lorem ipsum dolor
 
   .col-sm-6
-    .panel.mb-3
+    .panel
       .panel-heading
         Panel Heading
       .panel-body
@@ -41,10 +41,10 @@
 .row
   .col-sm-12
     %hr
-    %h3 Cards and Fieldsets for comparison.
+    %h3 Cards and Panels for comparison.
   .col-sm-6
     %h4 Card
-    .card.card-sard.mb-3
+    .card.card-sard
       .card-header Card Sard / Default
       .card-body.border-bottom
         %h5.card-title .card.card-sard
@@ -61,7 +61,7 @@
       .card-footer
         Card Footer
 
-    .card.card-sard.outline.mb-3
+    .card.card-sard.outline
       .card-header Card Sard / Default Outline
       .card-body.border-bottom
         %h5.card-title .card.card-sard.outline
@@ -80,7 +80,7 @@
 
   .col-sm-6
     %h4 Panel
-    .panel.panel-sard.mb-3
+    .panel.panel-sard
       .panel-heading Panel Sard / Default
       .panel-body.border-bottom
         %h5.panel-title .panel.panel-sard
@@ -97,7 +97,7 @@
       .panel-footer
         Panel Footer
 
-    .panel.panel-sard.outline.mb-3
+    .panel.panel-sard.outline
       .panel-heading Panel Sard / Default Outline
       .panel-body.border-bottom
         %h5.panel-title .panel.panel-sard
@@ -114,74 +114,3 @@
       .panel-footer
         Panel Footer
 
-
-  .col-sm-6
-    %h4 Panel
-    .panel.panel-sard.mb-3
-      .panel-heading
-        %h3 Form within Panel
-      .panel-body
-        %form
-          .form-group
-            %label{:for => "exampleFormControlInput1"} Email address
-            %input#exampleFormControlInput1.form-control{:placeholder => "name@example.com", :type => "email"}/
-          .form-group
-            %label{:for => "exampleFormControlSelect1"} Example select
-            %select#exampleFormControlSelect1.form-control
-              %option 1
-              %option 2
-              %option 3
-              %option 4
-              %option 5
-          .form-group
-            %label{:for => "exampleFormControlSelect2"} Example multiple select
-            %select#exampleFormControlSelect2.form-control{:multiple => "multiple"}
-              %option 1
-              %option 2
-              %option 3
-              %option 4
-              %option 5
-          .form-group
-            %label{:for => "exampleFormControlTextarea1"} Example textarea
-            %textarea#exampleFormControlTextarea1.form-control{:rows => "3"}
-          .form-group.form-check
-            %input#exampleCheck1.form-check-input{:type => "checkbox"}/
-            %label.form-check-label{:for => "exampleCheck1"} Check me out
-          %button.btn.btn-primary{:type => "submit"} Submit
-
-  .col-sm-6
-    .card.card-sard.mb-3
-      .card-header Form within Card
-      %form#new_user.new_user{"accept-charset" => "UTF-8", :action => "/users/sign_in", :method => "post"}
-        .card-body
-          %legend Welcome to Strengthened Appraisal & Revalidation Database
-          .form-group
-            %label{:for => "user_login"} Email
-            %input#user_login.form-control{:name => "user[login]", :size => "30", :type => "text"}/
-            %label{:for => "user_password"} Password
-            %input#user_password.form-control{:name => "user[password]", :size => "30", :type => "password"}/
-            %a{:href => "/users/password/new"} Forgot your password?
-            %br/
-        .card-body
-          .form-group.no-border.login-btns
-            %input.btn.btn-client.btn-bold.pull-right{:name => "commit", :type => "submit", :value => "Sign in"}/
-            %button.btn.btn-primary{:type => "submit"} Submit
-
-  .col-sm-6
-    .card.card-sard.mb-3
-      .card-header Form within Card using Fieldsets
-      .card-body
-        %form#new_user.new_user{"accept-charset" => "UTF-8", :action => "/users/sign_in", :method => "post"}
-          %fieldset
-            %legend Welcome to Strengthened Appraisal & Revalidation Database
-            .form-group
-              %label{:for => "user_login"} Email
-              %input#user_login.form-control{:name => "user[login]", :size => "30", :type => "text"}/
-              %label{:for => "user_password"} Password
-              %input#user_password.form-control{:name => "user[password]", :size => "30", :type => "password"}/
-              %a{:href => "/users/password/new"} Forgot your password?
-              %br/
-          %fieldset
-            .form-group.no-border.login-btns
-              %input.btn.btn-client.btn-bold.pull-right{:name => "commit", :type => "submit", :value => "Sign in"}/
-              %button.btn.btn-primary{:type => "submit"} Submit
