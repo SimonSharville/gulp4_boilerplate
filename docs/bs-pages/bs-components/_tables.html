@@ -1,143 +1,414 @@
 <div class='row'>
 <div class='col-sm-12'>
-<h4>Basic Table</h4>
-<table class='table'>
-<thead>
-<tr>
-<th scope='col'>#</th>
-<th scope='col'>First</th>
-<th scope='col'>Last</th>
-<th scope='col'>Handle</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<th scope='row'>1</th>
-<td>Mark</td>
-<td>Otto</td>
-<td>@mdo</td>
-</tr>
-<tr>
-<th scope='row'>2</th>
-<td>Jacob</td>
-<td>Thornton</td>
-<td>@fat</td>
-</tr>
-<tr>
-<th scope='row'>3</th>
-<td>Larry</td>
-<td>the Bird</td>
-<td>@twitter</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<hr>
-<div class='row'>
-<div class='col-sm-12'>
-<h4>Inverted Basic Table</h4>
 <p>
-You can also invert the colors—with light text on dark backgrounds—with
-<code class='highlighter-rouge'>.table-dark</code>.
+These are the Bootstrap tables with the class of
+<code class='strong'>.table-sard</code>
+<br>
+Sard tables are designed to always sit withing a
+<code class='strong'>.panel-body</code>
+or a
+<code class='strong'>.card-body.</code>
 </p>
-<table class='table table-dark'>
+<h4>Basic Sard Table</h4>
+<div class='panel panel-sard'>
+<div class='panel-heading'>Panel Heading</div>
+<div class='panel-body'>
+<table class='table table-sard'>
+<caption>
+This is an example of a
+<strong>caption</strong>
+</caption>
 <thead>
 <tr>
-<th scope='col'>#</th>
-<th scope='col'>First</th>
-<th scope='col'>Last</th>
-<th scope='col'>Handle</th>
+<th>thead/tr/th</th>
+<th>th</th>
+<th>th</th>
+<th>th</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<th scope='row'>1</th>
-<td>Mark</td>
-<td>Otto</td>
-<td>@mdo</td>
+<th>tbody/tr/th</th>
+<td>td</td>
+<td>td</td>
+<td>td</td>
 </tr>
 <tr>
-<th scope='row'>2</th>
-<td>Jacob</td>
-<td>Thornton</td>
-<td>@fat</td>
+<th>tr/th</th>
+<td>td</td>
+<td>td</td>
+<td>td</td>
 </tr>
 <tr>
-<th scope='row'>3</th>
-<td>Larry</td>
-<td>the Bird</td>
-<td>@twitter</td>
+<th>tr/th</th>
+<td>td</td>
+<td>td</td>
+<td>td</td>
+</tr>
+</tbody>
+<caption class='caption-bottom'>
+This is an example of a
+<strong>caption.caption-bottom</strong>
+</caption>
+</table>
+</div>
+</div>
+</div>
+<div class='col-sm-6'>
+<h4 class='base'>Basic Sard Table - small</h4>
+<p>
+Add the class
+<code class='highlighter-rouge'>.table-sm</code>
+to reduce the cell padding.
+</p>
+<div class='panel panel-sard'>
+<div class='panel-heading'>Panel Heading</div>
+<div class='panel-body'>
+<table class='table table-sard table-sm'>
+<thead>
+<tr>
+<th>thead/tr/th</th>
+<th>th</th>
+<th>th</th>
+<th>th</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>tbody/tr/th</th>
+<td>td</td>
+<td>td</td>
+<td>td</td>
+</tr>
+<tr>
+<th>tr/th</th>
+<td>td</td>
+<td>td</td>
+<td>td</td>
+</tr>
+<tr>
+<th>tr/th</th>
+<td>td</td>
+<td>td</td>
+<td>td</td>
 </tr>
 </tbody>
 </table>
 </div>
 </div>
-<hr>
-<div class='row'>
-<div class='col-sm-12'>
-<h4>Table head options</h4>
+</div>
+<div class='col-sm-6'>
+<h4 class='base'>Basic Sard Hoverable Table</h4>
 <p>
-Similar to tables and dark tables, use the modifier classes
+Add the class
+<code class='highlighter-rouge'>.table-hover</code>
+</p>
+<div class='panel panel-sard'>
+<div class='panel-heading'>Panel Heading</div>
+<div class='panel-body'>
+<table class='table table-sard table-hover'>
+<thead>
+<tr>
+<th>thead/tr/th</th>
+<th>th</th>
+<th>th</th>
+<th>th</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>tbody/tr/th</th>
+<td>td</td>
+<td>td</td>
+<td>td</td>
+</tr>
+<tr>
+<th>tr/th</th>
+<td>td</td>
+<td>td</td>
+<td>td</td>
+</tr>
+<tr>
+<th>tr/th</th>
+<td>td</td>
+<td>td</td>
+<td>td</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class='col-sm-6'>
+<h4 class='base'>Basic Sard Striped Table, with hover</h4>
+<p>
+Add the class
+<code class='highlighter-rouge'>.table-striped</code>
+</p>
+<div class='panel panel-sard'>
+<div class='panel-heading'>Panel Heading</div>
+<div class='panel-body'>
+<table class='table table-sard table-striped table-hover'>
+<thead>
+<tr>
+<th>thead/tr/th</th>
+<th>th</th>
+<th>th</th>
+<th>th</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>tbody/tr/th</th>
+<td>td</td>
+<td>td</td>
+<td>td</td>
+</tr>
+<tr>
+<th>tr/th</th>
+<td>td</td>
+<td>td</td>
+<td>td</td>
+</tr>
+<tr>
+<th>tr/th</th>
+<td>td</td>
+<td>td</td>
+<td>td</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class='col-sm-6'>
+<h4 class='base'>Basic Sard Bordered Table</h4>
+<p>
+Add the class
+<code class='highlighter-rouge'>.table-bordered</code>
+</p>
+<div class='panel panel-sard'>
+<div class='panel-heading'>Panel Heading</div>
+<div class='panel-body'>
+<table class='table table-sard table-bordered'>
+<thead>
+<tr>
+<th>thead/tr/th</th>
+<th>th</th>
+<th>th</th>
+<th>th</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>tbody/tr/th</th>
+<td>td</td>
+<td>td</td>
+<td>td</td>
+</tr>
+<tr>
+<th>tr/th</th>
+<td>td</td>
+<td>td</td>
+<td>td</td>
+</tr>
+<tr>
+<th>tr/th</th>
+<td>td</td>
+<td>td</td>
+<td>td</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class='col-sm-6'>
+<h4 class='base'>Inverted Sard Table</h4>
+<p>
+Add the class
+<code class='highlighter-rouge'>.table-dark</code>
+</p>
+<div class='panel panel-sard panel-dark'>
+<div class='panel-heading'>Panel Heading</div>
+<div class='panel-body'>
+<table class='table table-sard table-dark'>
+<thead>
+<tr>
+<th>thead/tr/th</th>
+<th>thead/tr/th</th>
+<th>thead/tr/th</th>
+<th>thead/tr/th</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>tbody/tr/th</th>
+<td>td</td>
+<td>td</td>
+<td>td</td>
+</tr>
+<tr>
+<th>tr/th</th>
+<td>td</td>
+<td>td</td>
+<td>td</td>
+</tr>
+<tr>
+<th>tr/th</th>
+<td>td</td>
+<td>td</td>
+<td>td</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class='col-sm-6'>
+<h4 class='base'>Table head options</h4>
+<p>
+Use the modifier classes
 <code class='highlighter-rouge'>.thead-light</code>
-or
+,
 <code class='highlighter-rouge'>.thead-dark</code>
-to make the head appear ligh or dark grey.
+,
+<code class='highlighter-rouge'>.thead-white</code>
+,
+<code class='highlighter-rouge'>.thead-info</code>
+to make the table head appear lighter, darker or another colour.
 </p>
-<table class='table'>
-<thead class='thead-dark'>
+<div class='panel panel-sard'>
+<div class='panel-heading'>Panel Heading</div>
+<div class='panel-body'>
+<table class='table table-sard'>
+<thead>
 <tr>
-<th scope='col'>#</th>
-<th scope='col'>First</th>
-<th scope='col'>Last</th>
-<th scope='col'>Handle</th>
+<th>Normal</th>
+<th>First</th>
+<th>Last</th>
+<th>Handle</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<th scope='row'>1</th>
-<td>Mark</td>
-<td>Otto</td>
-<td>@mdo</td>
-</tr>
-<tr>
-<th scope='row'>2</th>
-<td>Jacob</td>
-<td>Thornton</td>
-<td>@fat</td>
-</tr>
-<tr>
-<th scope='row'>3</th>
-<td>Larry</td>
-<td>the Bird</td>
-<td>@twitter</td>
-</tr>
-</tbody>
-</table>
-<table class='table'>
 <thead class='thead-light'>
 <tr>
-<th scope='col'>#</th>
-<th scope='col'>First</th>
-<th scope='col'>Last</th>
-<th scope='col'>Handle</th>
+<th>.thead-light</th>
+<th>First</th>
+<th>Last</th>
+<th>Handle</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<th scope='row'>1</th>
+<th>1</th>
 <td>Mark</td>
 <td>Otto</td>
 <td>@mdo</td>
 </tr>
 <tr>
-<th scope='row'>2</th>
+<th>2</th>
 <td>Jacob</td>
 <td>Thornton</td>
 <td>@fat</td>
 </tr>
 <tr>
-<th scope='row'>3</th>
+<th>3</th>
+<td>Larry</td>
+<td>the Bird</td>
+<td>@twitter</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class='panel-body'>
+<table class='table table-sard'>
+<thead class='thead-dark'>
+<tr>
+<th>.thead-dark</th>
+<th>First</th>
+<th>Last</th>
+<th>Handle</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>1</th>
+<td>Mark</td>
+<td>Otto</td>
+<td>@mdo</td>
+</tr>
+<tr>
+<th>2</th>
+<td>Jacob</td>
+<td>Thornton</td>
+<td>@fat</td>
+</tr>
+<tr>
+<th>3</th>
+<td>Larry</td>
+<td>the Bird</td>
+<td>@twitter</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class='panel-body'>
+<table class='table table-sard'>
+<thead class='thead-white'>
+<tr>
+<th>.thead-white</th>
+<th>First</th>
+<th>Last</th>
+<th>Handle</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>1</th>
+<td>Mark</td>
+<td>Otto</td>
+<td>@mdo</td>
+</tr>
+<tr>
+<th>2</th>
+<td>Jacob</td>
+<td>Thornton</td>
+<td>@fat</td>
+</tr>
+<tr>
+<th>3</th>
+<td>Larry</td>
+<td>the Bird</td>
+<td>@twitter</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class='panel-body'>
+<table class='table table-sard'>
+<thead class='thead-info'>
+<tr>
+<th>.thead-info</th>
+<th>First</th>
+<th>Last</th>
+<th>Handle</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>1</th>
+<td>Mark</td>
+<td>Otto</td>
+<td>@mdo</td>
+</tr>
+<tr>
+<th>2</th>
+<td>Jacob</td>
+<td>Thornton</td>
+<td>@fat</td>
+</tr>
+<tr>
+<th>3</th>
 <td>Larry</td>
 <td>the Bird</td>
 <td>@twitter</td>
@@ -146,427 +417,104 @@ to make the head appear ligh or dark grey.
 </table>
 </div>
 </div>
-<hr>
-<h4>Striped rows</h4>
-<p>
-Use
-<code class='highlighter-rouge'>.table-striped</code>
-to add zebra-striping to any table row within the Body
-</p>
-<div class='row'>
-<div class='col-sm-6'>
-<table class='table table-striped'>
-<thead>
-<tr>
-<th scope='col'>#</th>
-<th scope='col'>First</th>
-<th scope='col'>Last</th>
-<th scope='col'>Handle</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<th scope='row'>1</th>
-<td>Mark</td>
-<td>Otto</td>
-<td>@mdo</td>
-</tr>
-<tr>
-<th scope='row'>2</th>
-<td>Jacob</td>
-<td>Thornton</td>
-<td>@fat</td>
-</tr>
-<tr>
-<th scope='row'>3</th>
-<td>Larry</td>
-<td>the Bird</td>
-<td>@twitter</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class='col-sm-6'>
-<table class='table table-striped table-dark'>
-<thead>
-<tr>
-<th scope='col'>#</th>
-<th scope='col'>First</th>
-<th scope='col'>Last</th>
-<th scope='col'>Handle</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<th scope='row'>1</th>
-<td>Mark</td>
-<td>Otto</td>
-<td>@mdo</td>
-</tr>
-<tr>
-<th scope='row'>2</th>
-<td>Jacob</td>
-<td>Thornton</td>
-<td>@fat</td>
-</tr>
-<tr>
-<th scope='row'>3</th>
-<td>Larry</td>
-<td>the Bird</td>
-<td>@twitter</td>
-</tr>
-</tbody>
-</table>
 </div>
 </div>
 <hr>
-<h4>Bordered table</h4>
-<p>
-Add
-<code class='highlighter-rouge'>.table-bordered</code>
-for borders on all sides of the table and cells.
-</p>
-<div class='row'>
-<div class='col-sm-6'>
-<table class='table table-bordered'>
-<thead>
-<tr>
-<th scope='col'>#</th>
-<th scope='col'>First</th>
-<th scope='col'>Last</th>
-<th scope='col'>Handle</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<th scope='row'>1</th>
-<td>Mark</td>
-<td>Otto</td>
-<td>@mdo</td>
-</tr>
-<tr>
-<th scope='row'>2</th>
-<td>Jacob</td>
-<td>Thornton</td>
-<td>@fat</td>
-</tr>
-<tr>
-<th scope='row'>3</th>
-<td colspan='2'>Larry the Bird</td>
-<td>@twitter</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class='col-sm-6'>
-<table class='table table-bordered table-dark'>
-<thead>
-<tr>
-<th scope='col'>#</th>
-<th scope='col'>First</th>
-<th scope='col'>Last</th>
-<th scope='col'>Handle</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<th scope='row'>1</th>
-<td>Mark</td>
-<td>Otto</td>
-<td>@mdo</td>
-</tr>
-<tr>
-<th scope='row'>2</th>
-<td>Jacob</td>
-<td>Thornton</td>
-<td>@fat</td>
-</tr>
-<tr>
-<th scope='row'>3</th>
-<td colspan='2'>Larry the Bird</td>
-<td>@twitter</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<hr>
-<h4>Hoverable rows</h4>
-<p>
-Add
-<code class='highlighter-rouge'>.table-hover</code>
-to enable a hover state on table rows within a body.
-</p>
-<div class='row'>
-<div class='col-sm-6'>
-<table class='table table-hover'>
-<thead>
-<tr>
-<th scope='col'>#</th>
-<th scope='col'>First</th>
-<th scope='col'>Last</th>
-<th scope='col'>Handle</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<th scope='row'>1</th>
-<td>Mark</td>
-<td>Otto</td>
-<td>@mdo</td>
-</tr>
-<tr>
-<th scope='row'>2</th>
-<td>Jacob</td>
-<td>Thornton</td>
-<td>@fat</td>
-</tr>
-<tr>
-<th scope='row'>3</th>
-<td colspan='2'>Larry the Bird</td>
-<td>@twitter</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class='col-sm-6'>
-<table class='table table-hover table-dark'>
-<thead>
-<tr>
-<th scope='col'>#</th>
-<th scope='col'>First</th>
-<th scope='col'>Last</th>
-<th scope='col'>Handle</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<th scope='row'>1</th>
-<td>Mark</td>
-<td>Otto</td>
-<td>@mdo</td>
-</tr>
-<tr>
-<th scope='row'>2</th>
-<td>Jacob</td>
-<td>Thornton</td>
-<td>@fat</td>
-</tr>
-<tr>
-<th scope='row'>3</th>
-<td colspan='2'>Larry the Bird</td>
-<td>@twitter</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<hr>
-<h4>Small table</h4>
-<p>
-Add
-<code class='highlighter-rouge'>.table-sm</code>
-to make tables more compact by cutting cell padding in half.
-</p>
-<div class='row'>
-<div class='col-sm-6'>
-<table class='table table-sm'>
-<thead>
-<tr>
-<th scope='col'>#</th>
-<th scope='col'>First</th>
-<th scope='col'>Last</th>
-<th scope='col'>Handle</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<th scope='row'>1</th>
-<td>Mark</td>
-<td>Otto</td>
-<td>@mdo</td>
-</tr>
-<tr>
-<th scope='row'>2</th>
-<td>Jacob</td>
-<td>Thornton</td>
-<td>@fat</td>
-</tr>
-<tr>
-<th scope='row'>3</th>
-<td colspan='2'>Larry the Bird</td>
-<td>@twitter</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class='col-sm-6'>
-<table class='table table-sm table-dark'>
-<thead>
-<tr>
-<th scope='col'>#</th>
-<th scope='col'>First</th>
-<th scope='col'>Last</th>
-<th scope='col'>Handle</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<th scope='row'>1</th>
-<td>Mark</td>
-<td>Otto</td>
-<td>@mdo</td>
-</tr>
-<tr>
-<th scope='row'>2</th>
-<td>Jacob</td>
-<td>Thornton</td>
-<td>@fat</td>
-</tr>
-<tr>
-<th scope='row'>3</th>
-<td colspan='2'>Larry the Bird</td>
-<td>@twitter</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<hr>
-<h4>Captions</h4>
-<p>
-A
-<code class='highlighter-rouge'>caption</code>
-functions like a heading for a table. It helps users with screen readers to find a table and understand what it’s about and decide if they want to read it.
-</p>
-<div class='row'>
-<div class='col-sm-6'>
-<table class='table'>
-<caption>List of users</caption>
-<thead>
-<tr>
-<th scope='col'>#</th>
-<th scope='col'>First</th>
-<th scope='col'>Last</th>
-<th scope='col'>Handle</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<th scope='row'>1</th>
-<td>Mark</td>
-<td>Otto</td>
-<td>@mdo</td>
-</tr>
-<tr>
-<th scope='row'>2</th>
-<td>Jacob</td>
-<td>Thornton</td>
-<td>@fat</td>
-</tr>
-<tr>
-<th scope='row'>3</th>
-<td>Larry</td>
-<td>the Bird</td>
-<td>@twitter</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<hr>
-<h4>Responsive tables</h4>
+<h2>Responsive tables</h2>
 <p>
 Responsive tables allow tables to be scrolled horizontally with ease. Make any table responsive across all viewports by wrapping a
 <code class='highlighter-rouge'>.table</code>
 with
 <code class='highlighter-rouge'>.table-responsive</code>.
-<code class='highlighter-rouge'>.table-responsive{-sm|-md|-lg|-xl}</code>.
 </p>
 <div class='row'>
 <div class='col-sm-6'>
-<div class='table-responsive mb-3'>
-<table class='table'>
+<h4 class='base'>Basic Sard Responsive Table</h4>
+<p>
+Wrap in a
+<code class='highlighter-rouge'>.table-responsive</code>
+</p>
+<div class='panel panel-sard'>
+<div class='panel-heading'>Panel Heading</div>
+<div class='panel-body'>
+<div class='table-responsive'>
+<table class='table table-sard'>
 <thead>
 <tr>
-<th scope='col'>#</th>
-<th scope='col'>Heading</th>
-<th scope='col'>Heading</th>
-<th scope='col'>Heading</th>
-<th scope='col'>Heading</th>
-<th scope='col'>Heading</th>
-<th scope='col'>Heading</th>
-<th scope='col'>Heading</th>
-<th scope='col'>Heading</th>
-<th scope='col'>Heading</th>
+<th>thead/tr/th</th>
+<th>thead/tr/th</th>
+<th>thead/tr/th</th>
+<th>thead/tr/th</th>
+<th>thead/tr/th</th>
+<th>thead/tr/th</th>
+<th>thead/tr/th</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<th scope='row'>1</th>
-<td>Cell</td>
-<td>Cell</td>
-<td>Cell</td>
-<td>Cell</td>
-<td>Cell</td>
-<td>Cell</td>
-<td>Cell</td>
-<td>Cell</td>
-<td>Cell</td>
+<th>tbody/tr/th</th>
+<td>td</td>
+<td>td</td>
+<td>td</td>
+<td>td</td>
+<td>td</td>
+<td>td</td>
 </tr>
 <tr>
-<th scope='row'>2</th>
-<td>Cell</td>
-<td>Cell</td>
-<td>Cell</td>
-<td>Cell</td>
-<td>Cell</td>
-<td>Cell</td>
-<td>Cell</td>
-<td>Cell</td>
-<td>Cell</td>
+<th>tr/th</th>
+<td>td</td>
+<td>td</td>
+<td>td</td>
+<td>td</td>
+<td>td</td>
+<td>td</td>
 </tr>
 <tr>
-<th scope='row'>3</th>
-<td>Cell</td>
-<td>Cell</td>
-<td>Cell</td>
-<td>Cell</td>
-<td>Cell</td>
-<td>Cell</td>
-<td>Cell</td>
-<td>Cell</td>
-<td>Cell</td>
+<th>tr/th</th>
+<td>td</td>
+<td>td</td>
+<td>td</td>
+<td>td</td>
+<td>td</td>
+<td>td</td>
 </tr>
 </tbody>
 </table>
+</div>
+</div>
 </div>
 </div>
 </div>
 <h4>Breakpoint specific</h4>
 <p>
-Use
+Add
 <code class='highlighter-rouge'>.table-responsive{-sm|-md|-lg|-xl}</code>
 as needed to create responsive tables up to a particular breakpoint. From that breakpoint and up, the table will behave normally and not scroll horizontally.
 </p>
 <div class='row'>
 <div class='col'>
-<h5>Small</h5>
-<div class='table-responsive-sm'>
-<table class='table'>
+<h5 class='base'>Up to Small</h5>
+<p>
+<code class='highlighter-rouge'>.table-responsive.table-responsive-sm</code>
+</p>
+<div class='panel panel-sard'>
+<div class='panel-heading'>Panel Heading</div>
+<div class='panel-body'>
+<div class='table-responsive table-responsive-sm'>
+<table class='table table-sard'>
 <thead>
 <tr>
-<th scope='col'>#</th>
-<th scope='col'>Heading</th>
-<th scope='col'>Heading</th>
-<th scope='col'>Heading</th>
-<th scope='col'>Heading</th>
-<th scope='col'>Heading</th>
+<th>#</th>
+<th>Heading</th>
+<th>Heading</th>
+<th>Heading</th>
+<th>Heading</th>
+<th>Heading</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<th scope='row'>1</th>
+<th>1</th>
 <td>Cell</td>
 <td>Cell</td>
 <td>Cell</td>
@@ -574,7 +522,7 @@ as needed to create responsive tables up to a particular breakpoint. From that b
 <td>Cell</td>
 </tr>
 <tr>
-<th scope='row'>2</th>
+<th>2</th>
 <td>Cell</td>
 <td>Cell</td>
 <td>Cell</td>
@@ -582,7 +530,7 @@ as needed to create responsive tables up to a particular breakpoint. From that b
 <td>Cell</td>
 </tr>
 <tr>
-<th scope='row'>3</th>
+<th>3</th>
 <td>Cell</td>
 <td>Cell</td>
 <td>Cell</td>
@@ -592,22 +540,30 @@ as needed to create responsive tables up to a particular breakpoint. From that b
 </tbody>
 </table>
 </div>
-<h5>Medium</h5>
-<div class='table-responsive-md'>
-<table class='table'>
+</div>
+</div>
+<h5 class='base'>Up to Medium</h5>
+<p>
+<code class='highlighter-rouge'>.table-responsive.table-responsive-md</code>
+</p>
+<div class='panel panel-sard'>
+<div class='panel-heading'>Panel Heading</div>
+<div class='panel-body'>
+<div class='table-responsive table-responsive-md'>
+<table class='table table-sard'>
 <thead>
 <tr>
-<th scope='col'>#</th>
-<th scope='col'>Heading</th>
-<th scope='col'>Heading</th>
-<th scope='col'>Heading</th>
-<th scope='col'>Heading</th>
-<th scope='col'>Heading</th>
+<th>#</th>
+<th>Heading</th>
+<th>Heading</th>
+<th>Heading</th>
+<th>Heading</th>
+<th>Heading</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<th scope='row'>1</th>
+<th>1</th>
 <td>Cell</td>
 <td>Cell</td>
 <td>Cell</td>
@@ -615,7 +571,7 @@ as needed to create responsive tables up to a particular breakpoint. From that b
 <td>Cell</td>
 </tr>
 <tr>
-<th scope='row'>2</th>
+<th>2</th>
 <td>Cell</td>
 <td>Cell</td>
 <td>Cell</td>
@@ -623,7 +579,7 @@ as needed to create responsive tables up to a particular breakpoint. From that b
 <td>Cell</td>
 </tr>
 <tr>
-<th scope='row'>3</th>
+<th>3</th>
 <td>Cell</td>
 <td>Cell</td>
 <td>Cell</td>
@@ -633,22 +589,30 @@ as needed to create responsive tables up to a particular breakpoint. From that b
 </tbody>
 </table>
 </div>
-<h5>Large</h5>
-<div class='table-responsive-lg'>
-<table class='table'>
+</div>
+</div>
+<h5 class='base'>Up to Large</h5>
+<p>
+<code class='highlighter-rouge'>.table-responsive.table-responsive-lg</code>
+</p>
+<div class='panel panel-sard'>
+<div class='panel-heading'>Panel Heading</div>
+<div class='panel-body'>
+<div class='table-responsive table-responsive-lg'>
+<table class='table table-sard'>
 <thead>
 <tr>
-<th scope='col'>#</th>
-<th scope='col'>Heading</th>
-<th scope='col'>Heading</th>
-<th scope='col'>Heading</th>
-<th scope='col'>Heading</th>
-<th scope='col'>Heading</th>
+<th>#</th>
+<th>Heading</th>
+<th>Heading</th>
+<th>Heading</th>
+<th>Heading</th>
+<th>Heading</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<th scope='row'>1</th>
+<th>1</th>
 <td>Cell</td>
 <td>Cell</td>
 <td>Cell</td>
@@ -656,7 +620,7 @@ as needed to create responsive tables up to a particular breakpoint. From that b
 <td>Cell</td>
 </tr>
 <tr>
-<th scope='row'>2</th>
+<th>2</th>
 <td>Cell</td>
 <td>Cell</td>
 <td>Cell</td>
@@ -664,7 +628,7 @@ as needed to create responsive tables up to a particular breakpoint. From that b
 <td>Cell</td>
 </tr>
 <tr>
-<th scope='row'>3</th>
+<th>3</th>
 <td>Cell</td>
 <td>Cell</td>
 <td>Cell</td>
@@ -674,22 +638,30 @@ as needed to create responsive tables up to a particular breakpoint. From that b
 </tbody>
 </table>
 </div>
-<h5>Extra Large</h5>
-<div class='table-responsive-xl'>
-<table class='table'>
+</div>
+</div>
+<h5 class='base'>Up to Extra Large</h5>
+<p>
+<code class='highlighter-rouge'>.table-responsive.table-responsive-xl</code>
+</p>
+<div class='panel panel-sard'>
+<div class='panel-heading'>Panel Heading</div>
+<div class='panel-body'>
+<div class='table-responsive table-responsive-xl'>
+<table class='table table-sard'>
 <thead>
 <tr>
-<th scope='col'>#</th>
-<th scope='col'>Heading</th>
-<th scope='col'>Heading</th>
-<th scope='col'>Heading</th>
-<th scope='col'>Heading</th>
-<th scope='col'>Heading</th>
+<th>#</th>
+<th>Heading</th>
+<th>Heading</th>
+<th>Heading</th>
+<th>Heading</th>
+<th>Heading</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<th scope='row'>1</th>
+<th>1</th>
 <td>Cell</td>
 <td>Cell</td>
 <td>Cell</td>
@@ -697,7 +669,7 @@ as needed to create responsive tables up to a particular breakpoint. From that b
 <td>Cell</td>
 </tr>
 <tr>
-<th scope='row'>2</th>
+<th>2</th>
 <td>Cell</td>
 <td>Cell</td>
 <td>Cell</td>
@@ -705,7 +677,7 @@ as needed to create responsive tables up to a particular breakpoint. From that b
 <td>Cell</td>
 </tr>
 <tr>
-<th scope='row'>3</th>
+<th>3</th>
 <td>Cell</td>
 <td>Cell</td>
 <td>Cell</td>
@@ -714,6 +686,8 @@ as needed to create responsive tables up to a particular breakpoint. From that b
 </tr>
 </tbody>
 </table>
+</div>
+</div>
 </div>
 </div>
 </div>
