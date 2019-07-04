@@ -20,17 +20,18 @@
   },
   "homepage": "https://github.com/SimonSharville/bootstrap4_boilerplate#readme",
   "dependencies": {
-    "gulp": "^4.0.0"
+    "gulp": "^4.0.2",
+    "lodash": "^4.17.11"
   },
   "devDependencies": {
-    "browser-sync": "^2.26.3",
-    "del": "^4.1.1",
-    "gulp-autoprefixer": "^6.0.0",
-    "gulp-changed": "^3.2.0",
-    "gulp-clean-css": "^4.0.0",
+    "browser-sync": "^2.26.7",
+    "del": "^5.0.0",
+    "gulp-autoprefixer": "^6.1.0",
+    "gulp-changed": "^4.0.0",
+    "gulp-clean-css": "^4.2.0",
     "gulp-concat": "^2.6.1",
     "gulp-haml": "^1.0.1",
-    "gulp-imagemin": "^5.0.3",
+    "gulp-imagemin": "^6.0.0",
     "gulp-include": "^2.4.1",
     "gulp-inject-partials": "^1.0.5",
     "gulp-line-ending-corrector": "^1.0.3",

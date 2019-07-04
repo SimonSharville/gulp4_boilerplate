@@ -105,8 +105,10 @@ Install Process
     
     UPDATING PACKAGES
     https://bytearcher.com/articles/using-npm-update-and-npm-outdated-to-update-dependencies/
+    https://60devs.com/npm-install-specific-version.html
     npm update                                          (Updates any out of date packages)
     npm outdated                                        (Checks for outdated packages)
+    npm install PACKAGENAME@latest --save               (Updates specific page to latest)
 
 
 
