@@ -12,8 +12,36 @@ TO USE
   and type:
   gulp
 
-  Always work within the 'app' folder, this will render into the 'div' and the the 'docs' folder. The 'docs' folder will be the live stuff.
 
+HOW TO USE ==========================================================
+Always work within the 'app' folder, this will render into the 'docs' folder. 
+The 'docs' folder will be the live stuff.
+
+
+TO DUPLICATE PROJECT ================================================
+    To Duplicate poject, Copy project, rename it and in terminal type:
+      npm install
+
+
+
+BUILD NOTES =========================================================
+This was created using Gulp 4. 
+Bootstrap is installed in the node_modules through gulp.
+Bootstrap Variables Overrides and other Overrides are creates in the SCSS folder.
+Roboto is installed by linking to their googleapis.com.
+FontAwesome is installed by linking to their cdn.
+SARD Icons are self built and linked to the 'assets/sard-icons' folder in docs.
+
+Gulp compiles:
+- All SCSS files into 'remote-sard-styles.min.css' in the 'docs/assets/css' folder.
+- All JS files into 'remote-sard-scripts' in the 'docs/assets/js' folder.
+-All .haml files into .html files in the 'docs' folder.
+
+The 'docs' folder is the public folder (GitHub Pages) on github.
+
+
+
+HISTORY =============================================================
 
 Based on the following tutorials: 
   https://www.youtube.com/watch?v=1rw9MfIleEg
@@ -28,6 +56,7 @@ Based on the following tutorials:
   https://www.youtube.com/watch?v=QgMQeLymAdU
   https://www.youtube.com/watch?v=4y8Iw85__Xk
   https://www.youtube.com/watch?v=yowgoHo_IZk
+  https://www.youtube.com/watch?time_continue=696&v=hnCmSXCZEpU
 
 
 Install Process
@@ -69,30 +98,13 @@ Install Process
     npm install --save-dev gulp-sourcemaps              (Allows to find original file in development)
     npm install --save-dev del                          (Delete files and folder)
 
+    // Bootstrap
+    https://www.youtube.com/watch?v=6Ovw43Dkp44
+    npm install --save-dev bootstrap 
+    npm install --save-dev jquery
+    npm install --save-dev popper.js                    
+
     NOTES
     npm rm gulp-NAME                                    (To remove a package)
-
-
-To Duplicate Project
-    To Duplicate poject, Copy project, rename it and in terminal type:
-      npm install
-
-
-
-SARD Styles and Scripts =======
-  This Boilerpleate has no Bootstrap or JQuery installed, instead it links to a remote set of bootstrap styles and scripts. To change Bootstrap variables and components you MUST use the remote set. To add new styles that are only specific to this project, you can add them to the assets folder.
-
-===================================================================
-Testing
-2019-05-28
-Basic Bootstrap components
-IE11 - Win7       – OK
-IE10 - Win7       - OK - Popover & tooltip bottom, showing on top.
-IE9 - Win7        - We don't support IE 9 any more. And it all looks shit anyway.
-MSEdge - Win10    - OK
-IE11 - Win81      - OK - Type a little shit but readable.
-WinDev1811Eval    - OK
-
-
 
 
