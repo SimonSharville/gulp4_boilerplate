@@ -12,19 +12,34 @@
 
 
     .container
-      %h1 SARD Gulp 4 - Boilerplate X
-
+      %h1 SARD Gulp 4 - Boilerplate
       %p.lead This boilerplate is built using Gulp 4.
+
+      %p.lead It has NO Bootstrap, Roboto Font or Icons (fontawesome and Sard Icons) installed, instead it takes them from the SARD Remote styles. 
+      
       %p.lead All the styles for Bootstrap Components, Fonts, Colours, Sard Icons and Font Awesome Icons are loaded from a remote site, as well as any core Javerscript.
 
-      %h6 Adding styles
-      %p To add new styles, add them within the "scss/local-styles" folder. and import them into the "scss/_local-overrides.scss" file.
+      %h4 Build and Compile 
+      %p To build on this site, work ONLY in the 'app' folder, Gulp will compile everything into the 'docs' folder, which is the public folder on github.
 
-      %h6 Adding scripts
+      %h4 Local styles and scripts
+      %h6 Adding local styles
+      %p To add new styles, add them within the "scss/local-styles" folder. and import them into the "scss/_local-overrides.scss" file. Gulp will compile this with the remote styles and create one minified css file 'sard-styles.min.css'.
+
+      %h6 Adding local scripts
       %p When adding scripts, there are 2 options:
       %p 1.  You can add a script to the scripts folder and then add it in the gulpfile.js file, This will add it to the global 'local-scripts.js' file on all pages.
       %p or
       %p 2.  You can add it to the scripts folder and link to it from a specific page. These will NOT be included in the global 'local-scripts.js' file on all pages.
+
+      %h4 Duplicating this project
+      %p To create a project, duplicate or fork this project and rename it. 
+      %p 
+        You should only need to open up terminal, navigate to the new project folder and type gulp, It should open up a new browser window and you can start working, if it doesn't you may need to first run 
+        %span.bold npm install
+         in terminal before you run gulp.
+
+
 
 
 

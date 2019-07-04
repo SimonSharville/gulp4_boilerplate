@@ -26,15 +26,15 @@ TO DUPLICATE PROJECT ================================================
 
 BUILD NOTES =========================================================
 This was created using Gulp 4. 
-Bootstrap is installed in the node_modules through gulp.
-Bootstrap Variables Overrides and other Overrides are creates in the SCSS folder.
-Roboto is installed by linking to their googleapis.com.
-FontAwesome is installed by linking to their cdn.
-SARD Icons are self built and linked to the 'assets/sard-icons' folder in docs.
+There is NO Bootstrap, fontawesome, sard-icons or Reboto fonts installed, They are all imported through the 'remote styles'. Local styles can be added on top of that. See Index Page for instructions.
+
+The core JS for Bootstrap and global JS for SARD are also linked to remotely. If you need local scripts, thay can be added, again see Index Page for instructions.
 
 Gulp compiles:
-- All SCSS files into 'remote-sard-styles.min.css' in the 'docs/assets/css' folder.
-- All JS files into 'remote-sard-scripts' in the 'docs/assets/js' folder.
+- All SCSS files into 'sard-styles.min.css' in the 'docs/assets/css' folder. This includes the remote styles.
+
+- All JS files into 'local-scripts' in the 'docs/assets/js' folder. (See Index Page for instructions for adding more).
+
 -All .haml files into .html files in the 'docs' folder.
 
 The 'docs' folder is the public folder (GitHub Pages) on github.
@@ -91,11 +91,7 @@ Install Process
     npm install --save-dev gulp-rename                  (Renames files)
     npm install --save-dev gulp-ruby-haml               (Compiles haml to html)
     npm install --save-dev gulp-inject-partials         (Injects partials)
-    npm install --save-dev gulp-include-html            DIDN'T WORK - Removed
-    npm install --save-dev gulp-html-partial            DIDN'T WORK - Removed
-    npm install --save-dev gulp-file-include            DIDN'T WORK - Removed
     npm install --save-dev gulp-include                 (Include Partials into HAML files)
-    npm install --save-dev gulp-sourcemaps              (Allows to find original file in development)
     npm install --save-dev del                          (Delete files and folder)
 
     // Bootstrap
@@ -106,5 +102,12 @@ Install Process
 
     NOTES
     npm rm gulp-NAME                                    (To remove a package)
+    
+    UPDATING PACKAGES
+    https://bytearcher.com/articles/using-npm-update-and-npm-outdated-to-update-dependencies/
+    npm update                                          (Updates any out of date packages)
+    npm outdated                                        (Checks for outdated packages)
+
+
 
 

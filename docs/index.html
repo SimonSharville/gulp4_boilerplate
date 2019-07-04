@@ -73,16 +73,27 @@ BS Components
 </nav>
 </header>
 <div class='container'>
-<h1>SARD Gulp 4 - Boilerplate X</h1>
+<h1>SARD Gulp 4 - Boilerplate</h1>
 <p class='lead'>This boilerplate is built using Gulp 4.</p>
+<p class='lead'>It has NO Bootstrap, Roboto Font or Icons (fontawesome and Sard Icons) installed, instead it takes them from the SARD Remote styles.</p>
 <p class='lead'>All the styles for Bootstrap Components, Fonts, Colours, Sard Icons and Font Awesome Icons are loaded from a remote site, as well as any core Javerscript.</p>
-<h6>Adding styles</h6>
-<p>To add new styles, add them within the "scss/local-styles" folder. and import them into the "scss/_local-overrides.scss" file.</p>
-<h6>Adding scripts</h6>
+<h4>Build and Compile</h4>
+<p>To build on this site, work ONLY in the 'app' folder, Gulp will compile everything into the 'docs' folder, which is the public folder on github.</p>
+<h4>Local styles and scripts</h4>
+<h6>Adding local styles</h6>
+<p>To add new styles, add them within the "scss/local-styles" folder. and import them into the "scss/_local-overrides.scss" file. Gulp will compile this with the remote styles and create one minified css file 'sard-styles.min.css'.</p>
+<h6>Adding local scripts</h6>
 <p>When adding scripts, there are 2 options:</p>
 <p>1.  You can add a script to the scripts folder and then add it in the gulpfile.js file, This will add it to the global 'local-scripts.js' file on all pages.</p>
 <p>or</p>
 <p>2.  You can add it to the scripts folder and link to it from a specific page. These will NOT be included in the global 'local-scripts.js' file on all pages.</p>
+<h4>Duplicating this project</h4>
+<p>To create a project, duplicate or fork this project and rename it.</p>
+<p>
+You should only need to open up terminal, navigate to the new project folder and type gulp, It should open up a new browser window and you can start working, if it doesn't you may need to first run
+<span class='bold'>npm install</span>
+before you run gulp.
+</p>
 </div>
 <!-- Scripts ================================ -->
 <!-- Remote Scripts -->
