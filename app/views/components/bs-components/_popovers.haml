@@ -1,0 +1,28 @@
+.row
+  .col-sm-12
+    %h1#popovers.bs-anchor Popovers
+
+    %button.btn.btn-lg.btn-danger{"data-content" => "And here's some amazing content. It's very engaging. Right?", "data-toggle" => "popover", :title => "Popover title", :type => "button"} Click to toggle popover
+
+    %hr
+
+    %h4 Directional
+    %button.btn.btn-secondary{"data-container" => "body", "data-content" => "Vivamus sagittis lacus vel augue laoreet rutrum faucibus.", "data-placement" => "top", "data-toggle" => "popover", :type => "button"}
+      Popover on top
+    %button.btn.btn-secondary{"data-container" => "body", "data-content" => "Vivamus sagittis lacus vel augue laoreet rutrum faucibus.", "data-placement" => "right", "data-toggle" => "popover", :type => "button"}
+      Popover on right
+    %button.btn.btn-secondary{"data-container" => "body", "data-content" => "Vivamus\r\nsagittis lacus vel augue laoreet rutrum faucibus.", "data-placement" => "bottom", "data-toggle" => "popover", :type => "button"}
+      Popover on bottom
+    %button.btn.btn-secondary{"data-container" => "body", "data-content" => "Vivamus sagittis lacus vel augue laoreet rutrum faucibus.", "data-placement" => "left", "data-toggle" => "popover", :type => "button"}
+      Popover on left
+
+
+    %hr
+
+    %h4 Dismiss on next click
+    %p Use the focus trigger to dismiss popovers on the user’s next click of a different element than the toggle element.
+    %p Specific markup required for dismiss-on-next-click.
+    %p For proper cross-browser and cross-platform behavior, you must use the (a) tag, not the (button) tag, and you also must include a tabindex attribute.
+
+    %a.btn.btn-lg.btn-danger{"data-content" => "And here's some amazing content. It's very engaging. Right?", "data-toggle" => "popover", "data-trigger" => "focus", :role => "button", :tabindex => "0", :title => "Dismissible popover"} Dismissible popover
+

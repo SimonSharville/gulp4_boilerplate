@@ -1,0 +1,354 @@
+.row
+  .col-sm-12
+    %h1#forms.bs-anchor Forms
+
+
+    %form
+      .form-group
+        %label{:for => "exampleInputEmail1"} Email address
+        %input#exampleInputEmail1.form-control{"aria-describedby" => "emailHelp", :placeholder => "Enter email", :type => "email"}/
+        %small#emailHelp.form-text.text-muted We'll never share your email with anyone else.
+      .form-group
+        %label{:for => "exampleInputPassword1"} Password
+        %input#exampleInputPassword1.form-control{:placeholder => "Password", :type => "password"}/
+      .form-group.form-check
+        %input#exampleCheck1.form-check-input{:type => "checkbox"}/
+        %label.form-check-label{:for => "exampleCheck1"} Check me out
+      %button.btn.btn-primary{:type => "submit"} Submit
+
+    %hr
+
+    %h4 Form Controls
+    %form
+      .form-group
+        %label{:for => "exampleFormControlInput1"} Email address
+        %input#exampleFormControlInput1.form-control{:placeholder => "name@example.com", :type => "email"}/
+      .form-group
+        %label{:for => "exampleFormControlSelect1"} Example select
+        %select#exampleFormControlSelect1.form-control
+          %option 1
+          %option 2
+          %option 3
+          %option 4
+          %option 5
+      .form-group
+        %label{:for => "exampleFormControlSelect2"} Example multiple select
+        %select#exampleFormControlSelect2.form-control{:multiple => "multiple"}
+          %option 1
+          %option 2
+          %option 3
+          %option 4
+          %option 5
+      .form-group
+        %label{:for => "exampleFormControlTextarea1"} Example textarea
+        %textarea#exampleFormControlTextarea1.form-control{:rows => "3"}
+
+    %hr
+
+    %h4 Sizing
+    %select.mb-3.form-control.form-control-lg
+      %option Large select
+
+    %select.mb-3.form-control
+      %option Default select
+
+    %select.form-control.form-control-sm
+      %option Small select
+
+    %hr
+
+    %h4 File Imports
+    %p For file inputs, swap the .form-control for .form-control-file.
+    %form
+      .form-group
+        %label{:for => "exampleFormControlFile1"} Example file input
+        %input#exampleFormControlFile1.form-control-file{:type => "file"}/
+
+    %hr
+
+    %h4 Range Inputs
+    %p Set horizontally scrollable range inputs using .form-control-range.
+    %form
+      .form-group
+        %label{:for => "formControlRange"} Example Range input
+        %input#formControlRange.form-control-range{:type => "range"}/
+
+
+    %hr
+
+    %h4 Checkboxes and radios
+    %p Default checkboxes and radios are improved upon with the help of .form-check, a single class for both input types that improves the layout and behavior of their HTML elements. Checkboxes are for selecting one or several options in a list, while radios are for selecting one option from many.
+
+    %h4 Default (stacked)
+    .form-check.mb-3
+      %input#defaultCheck1.form-check-input{:type => "checkbox", :value => ""}/
+      %label.form-check-label{:for => "defaultCheck1"}
+        Default checkbox
+    .form-check
+      %input#defaultCheck2.form-check-input{:disabled => "disabled", :type => "checkbox", :value => ""}/
+      %label.form-check-label{:for => "defaultCheck2"}
+        Disabled checkbox
+
+    .form-check.mb-3
+      %input#exampleRadios1.form-check-input{:checked => "checked", :name => "exampleRadios", :type => "radio", :value => "option1"}/
+      %label.form-check-label{:for => "exampleRadios1"}
+        Default radio
+    .form-check
+      %input#exampleRadios2.form-check-input{:name => "exampleRadios", :type => "radio", :value => "option2"}/
+      %label.form-check-label{:for => "exampleRadios2"}
+        Second default radio
+    .form-check.mb-3
+      %input#exampleRadios3.form-check-input{:disabled => "disabled", :name => "exampleRadios", :type => "radio", :value => "option3"}/
+      %label.form-check-label{:for => "exampleRadios3"}
+        Disabled radio
+
+    %h4 Inline
+    .form-check.form-check-inline.mb-3
+      %input#inlineRadio1.form-check-input{:name => "inlineRadioOptions", :type => "radio", :value => "option1"}/
+      %label.form-check-label{:for => "inlineRadio1"} 1
+    .form-check.form-check-inline
+      %input#inlineRadio2.form-check-input{:name => "inlineRadioOptions", :type => "radio", :value => "option2"}/
+      %label.form-check-label{:for => "inlineRadio2"} 2
+    .form-check.form-check-inline
+      %input#inlineRadio3.form-check-input{:disabled => "disabled", :name => "inlineRadioOptions", :type => "radio", :value => "option3"}/
+      %label.form-check-label{:for => "inlineRadio3"} 3 (disabled)
+
+    %h4 Without labels
+    %p Add .position-static to inputs within .form-check that don’t have any label text. Remember to still provide some form of label for assistive technologies (for instance, using aria-label).
+
+    .form-check
+      %input#blankCheckbox.form-check-input.position-static{"aria-label" => "...", :type => "checkbox", :value => "option1"}/
+    .form-check
+      %input#blankRadio1.form-check-input.position-static{"aria-label" => "...", :name => "blankRadio", :type => "radio", :value => "option1"}/
+
+    %hr
+    %h4 Form Groups
+    %p The .form-group class is the easiest way to add some structure to forms. It provides a flexible class that encourages proper grouping of labels, controls, optional help text, and form validation messaging. By default it only applies margin-bottom, but it picks up additional styles in .form-inline as needed. Use it with fieldsets, divs, or nearly any other element.
+    %form
+      .form-group
+        %label{:for => "formGroupExampleInput"} Example label
+        %input#formGroupExampleInput.form-control{:placeholder => "Example input", :type => "text"}/
+      .form-group
+        %label{:for => "formGroupExampleInput2"} Another label
+        %input#formGroupExampleInput2.form-control{:placeholder => "Another input", :type => "text"}/
+
+    %hr
+    %h4 Form Grid
+    %p More complex forms can be built using our grid classes. Use these for form layouts that require multiple columns, varied widths, and additional alignment options.
+    %form
+      .row
+        .col
+          %input.form-control{:placeholder => "First name", :type => "text"}/
+        .col
+          %input.form-control{:placeholder => "Last name", :type => "text"}/
+
+    %hr
+    %h4 Form Row
+    %p You may also swap .row for .form-row, a variation of our standard grid row that overrides the default column gutters for tighter and more compact layouts.
+
+    %form
+      .form-row
+        .col
+          %input.form-control{:placeholder => "First name", :type => "text"}/
+        .col
+          %input.form-control{:placeholder => "Last name", :type => "text"}/
+
+    %hr
+    %p More complex layouts can also be created with the grid system.
+    %form
+      .form-row
+        .form-group.col-md-6
+          %label{:for => "inputEmail4"} Email
+          %input#inputEmail4.form-control{:placeholder => "Email", :type => "email"}/
+        .form-group.col-md-6
+          %label{:for => "inputPassword4"} Password
+          %input#inputPassword4.form-control{:placeholder => "Password", :type => "password"}/
+      .form-group
+        %label{:for => "inputAddress"} Address
+        %input#inputAddress.form-control{:placeholder => "1234 Main St", :type => "text"}/
+      .form-group
+        %label{:for => "inputAddress2"} Address 2
+        %input#inputAddress2.form-control{:placeholder => "Apartment, studio, or floor", :type => "text"}/
+      .form-row
+        .form-group.col-md-6
+          %label{:for => "inputCity"} City
+          %input#inputCity.form-control{:type => "text"}/
+        .form-group.col-md-4
+          %label{:for => "inputState"} State
+          %select#inputState.form-control
+            %option{:selected => "selected"} Choose...
+            %option ...
+        .form-group.col-md-2
+          %label{:for => "inputZip"} Zip
+          %input#inputZip.form-control{:type => "text"}/
+      .form-group
+        .form-check
+          %input#gridCheck.form-check-input{:type => "checkbox"}/
+          %label.form-check-label{:for => "gridCheck"}
+            Check me out
+      %button.btn.btn-primary{:type => "submit"} Sign in
+
+    %hr
+    %h4 Horizontal form
+    %p Create horizontal forms with the grid by adding the .row class to form groups and using the .col-*-* classes to specify the width of your labels and controls. Be sure to add .col-form-label to your <label>s as well so they’re vertically centered with their associated form controls.
+
+    At times, you maybe need to use margin or padding utilities to create that perfect alignment you need. For example, we’ve removed the padding-top on our stacked radio inputs label to better align the text baseline.
+
+    %form
+      .form-group.row
+        %label.col-sm-2.col-form-label{:for => "inputEmail3"} Email
+        .col-sm-10
+          %input#inputEmail3.form-control{:placeholder => "Email", :type => "email"}/
+      .form-group.row
+        %label.col-sm-2.col-form-label{:for => "inputPassword3"} Password
+        .col-sm-10
+          %input#inputPassword3.form-control{:placeholder => "Password", :type => "password"}/
+      .form-group
+        .row
+          .col-form-label.col-sm-2.pt-0 Radios
+          .col-sm-10
+            .form-check
+              %input#gridRadios1.form-check-input{:checked => "checked", :name => "gridRadios", :type => "radio", :value => "option1"}/
+              %label.form-check-label{:for => "gridRadios1"}
+                First radio
+            .form-check
+              %input#gridRadios2.form-check-input{:name => "gridRadios", :type => "radio", :value => "option2"}/
+              %label.form-check-label{:for => "gridRadios2"}
+                Second radio
+            .form-check.disabled
+              %input#gridRadios3.form-check-input{:disabled => "disabled", :name => "gridRadios", :type => "radio", :value => "option3"}/
+              %label.form-check-label{:for => "gridRadios3"}
+                Third disabled radio
+      .form-group.row
+        .col-sm-2 Checkbox
+        .col-sm-10
+          .form-check
+            %input#gridCheck1.form-check-input{:type => "checkbox"}/
+            %label.form-check-label{:for => "gridCheck1"}
+              Example checkbox
+      .form-group.row
+        .col-sm-10
+          %button.btn.btn-primary{:type => "submit"} Sign in
+
+
+
+%hr
+.row
+  .col-sm-12
+    %h2 Forms within Cards, Panels and Fieldsets
+    %p These are designed so they look identical, whichever you use.
+.row
+  .col-sm-6
+    %h4 Card
+    .card.card-sard
+      .card-header Form within Card
+      %form#new_user.new_user{"accept-charset" => "UTF-8", :action => "/users/sign_in", :method => "post"}
+        .card-body
+          %legend This is an example of a legend, it can go over multiple lines of text without an issue.
+          .form-group
+            %label{:for => "user_login"} Email
+            %input#user_login.form-control{:name => "user[login]", :size => "30", :type => "text"}/
+            %label{:for => "user_password"} Password
+            %input#user_password.form-control{:name => "user[password]", :size => "30", :type => "password"}/
+            %a{:href => "/users/password/new"} Forgot your password?
+            %br/
+        .card-body
+          .form-group.no-border.login-btns
+            %input.btn.btn-client.btn-bold.pull-right{:name => "commit", :type => "submit", :value => "Sign in"}/
+            %button.btn.btn-primary{:type => "submit"} Submit
+
+  .col-sm-6
+    %h4 Panel
+    .panel.panel-sard
+      .panel-heading
+        %h3 Form within Panel
+      .panel-body
+        %form
+          .form-group
+            %label{:for => "exampleFormControlInput1"} Email address
+            %input#exampleFormControlInput1.form-control{:placeholder => "name@example.com", :type => "email"}/
+          .form-group
+            %label{:for => "exampleFormControlSelect1"} Example select
+            %select#exampleFormControlSelect1.form-control
+              %option 1
+              %option 2
+              %option 3
+              %option 4
+              %option 5
+          .form-group
+            %label{:for => "exampleFormControlSelect2"} Example multiple select
+            %select#exampleFormControlSelect2.form-control{:multiple => "multiple"}
+              %option 1
+              %option 2
+              %option 3
+              %option 4
+              %option 5
+          .form-group
+            %label{:for => "exampleFormControlTextarea1"} Example textarea
+            %textarea#exampleFormControlTextarea1.form-control{:rows => "3"}
+          .form-group.form-check
+            %input#exampleCheck1.form-check-input{:type => "checkbox"}/
+            %label.form-check-label{:for => "exampleCheck1"} Check me out
+          %button.btn.btn-primary{:type => "submit"} Submit
+
+
+  .col-sm-6
+    .card.card-sard
+      .card-header Form within Card using Fieldsets
+      .card-body
+        %form#new_user.new_user{"accept-charset" => "UTF-8", :action => "/users/sign_in", :method => "post"}
+          %fieldset
+            %legend This is an example of a legend
+            .form-group
+              %label{:for => "user_login"} Email
+              %input#user_login.form-control{:name => "user[login]", :size => "30", :type => "text"}/
+            %hr
+            .form-group
+              %label{:for => "user_password"} Password
+              %input#user_password.form-control{:name => "user[password]", :size => "30", :type => "password"}/
+              %a{:href => "/users/password/new"} Forgot your password?
+              %br/
+          %fieldset
+            .form-group.no-border.login-btns
+              %input.btn.btn-client.btn-bold.pull-right{:name => "commit", :type => "submit", :value => "Sign in"}/
+              %button.btn.btn-primary{:type => "submit"} Submit
+
+  .col-sm-6
+    .panel.panel-sard
+      .panel-header Form within Card using Fieldsets
+      .panel-body
+        %form#new_user.new_user{"accept-charset" => "UTF-8", :action => "/users/sign_in", :method => "post"}
+          %fieldset
+            %legend Welcome to Strengthened Appraisal & Revalidation Database
+            .form-group
+              %label{:for => "user_login"} Email
+              %input#user_login.form-control{:name => "user[login]", :size => "30", :type => "text"}/
+            %hr
+            .form-group
+              %label{:for => "user_password"} Password
+              %input#user_password.form-control{:name => "user[password]", :size => "30", :type => "password"}/
+              %a{:href => "/users/password/new"} Forgot your password?
+              %br/
+          %fieldset
+            .form-group.no-border.login-btns
+              %input.btn.btn-client.btn-bold.pull-right{:name => "commit", :type => "submit", :value => "Sign in"}/
+              %button.btn.btn-primary{:type => "submit"} Submit
+
+
+  .col-sm-6
+    %form#new_user.new_user{"accept-charset" => "UTF-8", :action => "/users/sign_in", :method => "post"}
+      %fieldset.sa-fieldset
+        %legend Stand alone fieldset
+        .form-group.border-bottom
+          %label{:for => "user_login"} Email
+          %input#user_login.form-control{:name => "user[login]", :size => "30", :type => "text"}/
+        
+        .form-group
+          %label{:for => "user_password"} Password
+          %input#user_password.form-control{:name => "user[password]", :size => "30", :type => "password"}/
+          %a{:href => "/users/password/new"} Forgot your password?
+          %br/
+      %fieldset
+        .form-group.no-border.login-btns
+          %input.btn.btn-client.btn-bold.pull-right{:name => "commit", :type => "submit", :value => "Sign in"}/
+          %button.btn.btn-primary{:type => "submit"} Submit

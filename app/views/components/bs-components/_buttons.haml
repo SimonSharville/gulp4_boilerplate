@@ -1,0 +1,116 @@
+.row
+  .col-sm-12
+    %h1#buttons.bs-anchor Buttons
+
+    %button.btn.btn-primary{:type => "button"} Primary
+    %button.btn.btn-secondary{:type => "button"} Secondary
+    %button.btn.btn-success{:type => "button"} Success
+    %button.btn.btn-danger{:type => "button"} Danger
+    %button.btn.btn-warning{:type => "button"} Warning
+    %button.btn.btn-info{:type => "button"} Info
+    %button.btn.btn-light{:type => "button"} Light
+    %button.btn.btn-dark{:type => "button"} Dark
+    %button.btn.btn-link{:type => "button"} Link
+
+    %hr
+
+    %button.btn.btn-outline-primary{:type => "button"} Primary
+    %button.btn.btn-outline-secondary{:type => "button"} Secondary
+    %button.btn.btn-outline-success{:type => "button"} Success
+    %button.btn.btn-outline-danger{:type => "button"} Danger
+    %button.btn.btn-outline-warning{:type => "button"} Warning
+    %button.btn.btn-outline-info{:type => "button"} Info
+    %button.btn.btn-outline-light{:type => "button"} Light
+    %button.btn.btn-outline-dark{:type => "button"} Dark
+
+    %hr
+
+    %button.btn.btn-primary.btn-lg{:type => "button"} Large button
+    %button.btn.btn-secondary.btn-lg{:type => "button"} Large button
+
+    %hr
+
+    %button.btn.btn-primary.btn-sm{:type => "button"} Small button
+    %button.btn.btn-secondary.btn-sm{:type => "button"} Small button
+
+
+    %hr
+
+    %button.btn.btn-primary.btn-xs{:type => "button"} Extra small button
+    %button.btn.btn-secondary.btn-xs{:type => "button"} Extra small button
+
+    %hr
+
+    %h4 SARD button colours
+    %button.btn.btn-client{:type => "button"} .btn-client
+    %button.btn.btn-client-dark{:type => "button"} .btn-client-dark
+    %button.btn.btn-client-2{:type => "button"} .btn-client-2
+    %button.btn.btn-client-2-dark{:type => "button"} .btn-client-2-dark
+    %br
+    %br
+    %button.btn.btn-admin{:type => "button"} .btn-admin
+    %button.btn.btn-admin-dark{:type => "button"} .btn-admin-dark
+    %button.btn.btn-admin-2{:type => "button"} .btn-admin-2
+    %button.btn.btn-admin-2-dark{:type => "button"} .btn-admin-2-dark
+    %br
+    %br
+    %button.btn.btn-default{:type => "button"} .btn-default
+
+
+    %hr
+
+    %h4 Checkbox and radio buttons
+
+    .btn-group-toggle{"data-toggle" => "buttons"}
+      %label.btn.btn-secondary.active
+        %input{:autocomplete => "off", :checked => "checked", :type => "checkbox"}/
+        Checked
+    %br
+    %br
+    .btn-group.btn-group-toggle{"data-toggle" => "buttons"}
+      %label.btn.btn-secondary.active
+        %input#option1{:autocomplete => "off", :checked => "checked", :name => "options", :type => "radio"}/
+        Active
+      %label.btn.btn-secondary
+        %input#option2{:autocomplete => "off", :name => "options", :type => "radio"}/
+        Radio
+      %label.btn.btn-secondary
+        %input#option3{:autocomplete => "off", :name => "options", :type => "radio"}/
+        Radio
+
+    %hr
+
+    %h4 Button group
+    .btn-group{"aria-label" => "Basic example", :role => "group"}
+      %button.btn.btn-secondary{:type => "button"} Left
+      %button.btn.btn-secondary{:type => "button"} Middle
+      %button.btn.btn-secondary{:type => "button"} Right
+
+    %hr
+    %h4 Button toolbar
+    .btn-group{"aria-label" => "Basic example", :role => "group"}
+      %button.btn.btn-secondary{:type => "button"} Left
+      %button.btn.btn-secondary{:type => "button"} Middle
+      %button.btn.btn-secondary{:type => "button"} Right
+
+    %hr
+    .btn-toolbar.mb-3{"aria-label" => "Toolbar with button groups", :role => "toolbar"}
+      .btn-group.mr-2{"aria-label" => "First group", :role => "group"}
+        %button.btn.btn-secondary{:type => "button"} 1
+        %button.btn.btn-secondary{:type => "button"} 2
+        %button.btn.btn-secondary{:type => "button"} 3
+        %button.btn.btn-secondary{:type => "button"} 4
+      .input-group
+        .input-group-prepend
+          #btnGroupAddon.input-group-text @
+        %input.form-control{"aria-describedby" => "btnGroupAddon", "aria-label" => "Input group example", :placeholder => "Input group example", :type => "text"}/
+    .btn-toolbar.justify-content-between{"aria-label" => "Toolbar with button groups", :role => "toolbar"}
+      .btn-group{"aria-label" => "First group", :role => "group"}
+        %button.btn.btn-secondary{:type => "button"} 1
+        %button.btn.btn-secondary{:type => "button"} 2
+        %button.btn.btn-secondary{:type => "button"} 3
+        %button.btn.btn-secondary{:type => "button"} 4
+      .input-group
+        .input-group-prepend
+          #btnGroupAddon2.input-group-text @
+        %input.form-control{"aria-describedby" => "btnGroupAddon2", "aria-label" => "Input group example", :placeholder => "Input group example", :type => "text"}/

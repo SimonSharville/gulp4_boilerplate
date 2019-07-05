@@ -1,0 +1,139 @@
+.row
+  .col-sm-12
+    %h1#modal.bs-anchor Modals
+
+    %h4 Basic Modal
+    / Button trigger modal
+    %button.btn.btn-primary{"data-target" => "#exampleModal", "data-toggle" => "modal", :type => "button"}
+      Launch demo modal
+    / Modal
+    #exampleModal.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "exampleModalLabel", :role => "dialog", :tabindex => "-1"}
+      .modal-dialog{:role => "document"}
+        .modal-content
+          .modal-header
+            %h5#exampleModalLabel.modal-title Modal title
+            %button.close{"aria-label" => "Close", "data-dismiss" => "modal", :type => "button"}
+              %span{"aria-hidden" => "true"} ×
+          .modal-body
+            \...
+          .modal-footer
+            %button.btn.btn-secondary{"data-dismiss" => "modal", :type => "button"} Close
+            %button.btn.btn-primary{:type => "button"} Save changes
+
+    %hr
+
+    %h4 Scrolling long content
+    %p When modals become too long for the user’s viewport or device, they scroll independent of the page itself. Try the demo below to see what we mean.
+
+    / Button trigger modal
+    %button.btn.btn-primary{"data-target" => "#exampleModalLong", "data-toggle" => "modal", :type => "button"}
+      Scrolling long content
+    / Modal
+    #exampleModalLong.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "exampleModalLongTitle", :role => "dialog", :tabindex => "-1"}
+      .modal-dialog{:role => "document"}
+        .modal-content
+          .modal-header
+            %h5#exampleModalLongTitle.modal-title Scrolling long content
+            %button.close{"aria-label" => "Close", "data-dismiss" => "modal", :type => "button"}
+              %span{"aria-hidden" => "true"} ×
+          .modal-body
+            %p
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed tortor id eros pulvinar iaculis posuere sit amet nulla. Aenean malesuada lacus id libero rutrum, eu elementum mauris ultrices. Cras vel imperdiet ante. Sed eget nisi ante. Aenean dapibus arcu vel ex molestie convallis sit amet vel sem. Vivamus vitae magna non dolor pulvinar mollis. Suspendisse lacinia tortor sed cursus finibus. Aenean tellus turpis, accumsan a egestas ac, faucibus eget lorem. Duis odio diam, iaculis eget est sed, tincidunt malesuada arcu. Nulla facilisi. Donec porttitor, diam quis feugiat vestibulum, leo eros malesuada arcu, id congue magna diam molestie est. In eget accumsan justo. Aliquam id sapien porta, tempor est sit amet, varius lectus. Vestibulum maximus consequat quam, a mollis ante finibus vel.
+
+            %p
+              Vivamus mattis nunc a quam ultricies, vitae posuere elit malesuada. Aliquam erat volutpat. In mauris nulla, molestie ac fermentum et, pellentesque non lacus. Fusce lacinia felis at venenatis efficitur. Sed facilisis metus sit amet urna pretium efficitur. Aenean eros orci, rhoncus quis suscipit a, fringilla sed ipsum. Nunc nec odio euismod, convallis nunc sed, sollicitudin lacus. Vestibulum vulputate ante nunc, vel ultricies lorem consectetur in. Duis dignissim suscipit massa sed blandit. Aenean a fringilla neque. Pellentesque suscipit quis diam at posuere. Vivamus ac orci rutrum, lacinia nulla eget, pellentesque libero. Pellentesque et dapibus ligula. Donec egestas rhoncus risus, elementum fringilla odio interdum sit amet. Fusce sollicitudin dolor eget enim eleifend fringilla.
+            %p
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed tortor id eros pulvinar iaculis posuere sit amet nulla. Aenean malesuada lacus id libero rutrum, eu elementum mauris ultrices. Cras vel imperdiet ante. Sed eget nisi ante. Aenean dapibus arcu vel ex molestie convallis sit amet vel sem. Vivamus vitae magna non dolor pulvinar mollis. Suspendisse lacinia tortor sed cursus finibus. Aenean tellus turpis, accumsan a egestas ac, faucibus eget lorem. Duis odio diam, iaculis eget est sed, tincidunt malesuada arcu. Nulla facilisi. Donec porttitor, diam quis feugiat vestibulum, leo eros malesuada arcu, id congue magna diam molestie est. In eget accumsan justo. Aliquam id sapien porta, tempor est sit amet, varius lectus. Vestibulum maximus consequat quam, a mollis ante finibus vel.
+
+            %p
+              Vivamus mattis nunc a quam ultricies, vitae posuere elit malesuada. Aliquam erat volutpat. In mauris nulla, molestie ac fermentum et, pellentesque non lacus. Fusce lacinia felis at venenatis efficitur. Sed facilisis metus sit amet urna pretium efficitur. Aenean eros orci, rhoncus quis suscipit a, fringilla sed ipsum. Nunc nec odio euismod, convallis nunc sed, sollicitudin lacus. Vestibulum vulputate ante nunc, vel ultricies lorem consectetur in. Duis dignissim suscipit massa sed blandit. Aenean a fringilla neque. Pellentesque suscipit quis diam at posuere. Vivamus ac orci rutrum, lacinia nulla eget, pellentesque libero. Pellentesque et dapibus ligula. Donec egestas rhoncus risus, elementum fringilla odio interdum sit amet. Fusce sollicitudin dolor eget enim eleifend fringilla.
+          .modal-footer
+            %button.btn.btn-secondary{"data-dismiss" => "modal", :type => "button"} Close
+            %button.btn.btn-primary{:type => "button"} Save changes
+
+    %hr
+
+    %h4 Scrollable Modal
+    %p You can also create a scrollable modal that allows scroll the modal body by adding .modal-dialog-scrollable to .modal-dialog.
+    / Button trigger modal
+    %button.btn.btn-primary{"data-target" => "#exampleModalScrollable", "data-toggle" => "modal", :type => "button"}
+      Scrollable Modal
+    / Modal
+    #exampleModalScrollable.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "exampleModalScrollableTitle", :role => "dialog", :tabindex => "-1"}
+      .modal-dialog.modal-dialog-scrollable{:role => "document"}
+        .modal-content
+          .modal-header
+            %h5#exampleModalScrollableTitle.modal-title Scrollable Modal
+            %button.close{"aria-label" => "Close", "data-dismiss" => "modal", :type => "button"}
+              %span{"aria-hidden" => "true"} ×
+          .modal-body
+            %p
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed tortor id eros pulvinar iaculis posuere sit amet nulla. Aenean malesuada lacus id libero rutrum, eu elementum mauris ultrices. Cras vel imperdiet ante. Sed eget nisi ante. Aenean dapibus arcu vel ex molestie convallis sit amet vel sem. Vivamus vitae magna non dolor pulvinar mollis. Suspendisse lacinia tortor sed cursus finibus. Aenean tellus turpis, accumsan a egestas ac, faucibus eget lorem. Duis odio diam, iaculis eget est sed, tincidunt malesuada arcu. Nulla facilisi. Donec porttitor, diam quis feugiat vestibulum, leo eros malesuada arcu, id congue magna diam molestie est. In eget accumsan justo. Aliquam id sapien porta, tempor est sit amet, varius lectus. Vestibulum maximus consequat quam, a mollis ante finibus vel.
+
+            %p
+              Vivamus mattis nunc a quam ultricies, vitae posuere elit malesuada. Aliquam erat volutpat. In mauris nulla, molestie ac fermentum et, pellentesque non lacus. Fusce lacinia felis at venenatis efficitur. Sed facilisis metus sit amet urna pretium efficitur. Aenean eros orci, rhoncus quis suscipit a, fringilla sed ipsum. Nunc nec odio euismod, convallis nunc sed, sollicitudin lacus. Vestibulum vulputate ante nunc, vel ultricies lorem consectetur in. Duis dignissim suscipit massa sed blandit. Aenean a fringilla neque. Pellentesque suscipit quis diam at posuere. Vivamus ac orci rutrum, lacinia nulla eget, pellentesque libero. Pellentesque et dapibus ligula. Donec egestas rhoncus risus, elementum fringilla odio interdum sit amet. Fusce sollicitudin dolor eget enim eleifend fringilla.
+            %p
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed tortor id eros pulvinar iaculis posuere sit amet nulla. Aenean malesuada lacus id libero rutrum, eu elementum mauris ultrices. Cras vel imperdiet ante. Sed eget nisi ante. Aenean dapibus arcu vel ex molestie convallis sit amet vel sem. Vivamus vitae magna non dolor pulvinar mollis. Suspendisse lacinia tortor sed cursus finibus. Aenean tellus turpis, accumsan a egestas ac, faucibus eget lorem. Duis odio diam, iaculis eget est sed, tincidunt malesuada arcu. Nulla facilisi. Donec porttitor, diam quis feugiat vestibulum, leo eros malesuada arcu, id congue magna diam molestie est. In eget accumsan justo. Aliquam id sapien porta, tempor est sit amet, varius lectus. Vestibulum maximus consequat quam, a mollis ante finibus vel.
+
+            %p
+              Vivamus mattis nunc a quam ultricies, vitae posuere elit malesuada. Aliquam erat volutpat. In mauris nulla, molestie ac fermentum et, pellentesque non lacus. Fusce lacinia felis at venenatis efficitur. Sed facilisis metus sit amet urna pretium efficitur. Aenean eros orci, rhoncus quis suscipit a, fringilla sed ipsum. Nunc nec odio euismod, convallis nunc sed, sollicitudin lacus. Vestibulum vulputate ante nunc, vel ultricies lorem consectetur in. Duis dignissim suscipit massa sed blandit. Aenean a fringilla neque. Pellentesque suscipit quis diam at posuere. Vivamus ac orci rutrum, lacinia nulla eget, pellentesque libero. Pellentesque et dapibus ligula. Donec egestas rhoncus risus, elementum fringilla odio interdum sit amet. Fusce sollicitudin dolor eget enim eleifend fringilla.
+          .modal-footer
+            %button.btn.btn-secondary{"data-dismiss" => "modal", :type => "button"} Close
+            %button.btn.btn-primary{:type => "button"} Save changes
+
+    %hr
+
+    %h4 Vertically centered
+    %p Add .modal-dialog-centered to .modal-dialog to vertically center the modal.
+    / Button trigger modal
+    %button.btn.btn-primary{"data-target" => "#exampleModalCenter", "data-toggle" => "modal", :type => "button"}
+      Vertically centered
+    / Modal
+    #exampleModalCenter.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "exampleModalCenterTitle", :role => "dialog", :tabindex => "-1"}
+      .modal-dialog.modal-dialog-centered{:role => "document"}
+        .modal-content
+          .modal-header
+            %h5#exampleModalCenterTitle.modal-title Vertically centered
+            %button.close{"aria-label" => "Close", "data-dismiss" => "modal", :type => "button"}
+              %span{"aria-hidden" => "true"} ×
+          .modal-body
+            \...
+          .modal-footer
+            %button.btn.btn-secondary{"data-dismiss" => "modal", :type => "button"} Close
+            %button.btn.btn-primary{:type => "button"} Save changes
+
+    %hr
+
+    %h4 Tooltips and popovers
+    %p Tooltips and popovers can be placed within modals as needed. When modals are closed, any tooltips and popovers within are also automatically dismissed.
+
+    / Button trigger modal
+    %button.btn.btn-primary{"data-target" => "#exampleModalToolTips", "data-toggle" => "modal", :type => "button"}
+      Tooltips and popovers
+    / Modal
+    #exampleModalToolTips.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "exampleModalToolTipTitle", :role => "dialog", :tabindex => "-1"}
+      .modal-dialog.modal-dialog-centered{:role => "document"}
+        .modal-content
+          .modal-header
+            %h5#exampleModalToolTipTitle.modal-title Tooltips and popovers
+            %button.close{"aria-label" => "Close", "data-dismiss" => "modal", :type => "button"}
+              %span{"aria-hidden" => "true"} ×
+          .modal-body
+            %h5 Popover in a modal
+            %p
+              This
+              %a.btn.btn-secondary.popover-test{"aria-describedby" => "popover166647", "data-container" => "#exampleModalPopovers", "data-content" => "Popover body content is set in this attribute.", "data-original-title" => "Popover title", :href => "#", :role => "button", :title => ""} button
+              triggers a popover on click.
+            %hr/
+            %h5 Tooltips in a modal
+            %p
+              %a.tooltip-test{"data-container" => "#exampleModalPopovers", "data-original-title" => "Tooltip", :href => "#", :title => ""} This link
+              and
+              %a.tooltip-test{"data-container" => "#exampleModalPopovers", "data-original-title" => "Tooltip", :href => "#", :title => ""} that link
+              have tooltips on hover.
+          .modal-footer
+            %button.btn.btn-secondary{"data-dismiss" => "modal", :type => "button"} Close
+            %button.btn.btn-primary{:type => "button"} Save changes
+
+
+

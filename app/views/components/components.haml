@@ -1,0 +1,110 @@
+!!!
+%html.no-js{:lang => "en"}
+  %head
+    %title Bootstrap 4 Layout - BS Components
+    %meta{:content => "ie=edge", "http-equiv" => "x-ua-compatible"}/
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+    %link{:href => "../assets/css/sard-styles.min.css", :rel => "stylesheet"}/
+ 
+  %body
+    //=include ../navbars/_navbar-x1.haml
+
+
+    .container.first
+      .row
+        .col-12
+          %h1.display-4 Components
+          %p.lead These are default Bootstrap Components styled for SARD.
+
+      //=include bs-components/_alerts.haml
+
+      %hr.black
+
+      //=include bs-components/_badges.haml
+
+      %hr.black
+
+      //=include bs-components/_breadcrumbs.haml
+
+      %hr.black
+
+      //=include bs-components/_buttons.haml
+
+      %hr.black
+
+      //=include bs-components/_cards.haml
+
+      %hr.black
+
+      //=include bs-components/_collapse.haml
+
+      %hr.black
+
+      //=include bs-components/_dropdowns.haml
+
+      %hr.black
+
+      //=include bs-components/_forms.haml
+
+      %hr.black
+
+      //=include bs-components/_input-group.haml
+
+      %hr.black
+
+      //=include bs-components/_links.haml
+
+      %hr.black
+
+      //=include bs-components/_list-group.haml
+
+      %hr.black
+
+      //=include bs-components/_modal.haml
+
+      %hr.black
+
+      //=include bs-components/_navbar.haml
+
+      %hr.black
+
+      //=include bs-components/_navs.haml
+
+      %hr.black
+
+      //=include bs-components/_pagination.haml
+
+      %hr.black
+
+      //=include bs-components/_popovers.haml
+
+      %hr.black
+
+      //=include bs-components/_progress.haml
+
+      %hr.black
+
+      //=include bs-components/_searchbars.haml
+
+      %hr.black
+
+      //=include bs-components/_tables.haml
+
+      %hr.black
+
+      //=include bs-components/_tooltips.haml
+
+
+      %hr.black
+      .bs-anchor
+        %h1.display-4 Bootstrap 3 Components
+
+      //=include bs-components/_panels.haml
+
+
+    / Scripts
+
+    / Remote Scripts
+    %script{:src => "https://simonsharville.github.io/gulp4_bootstrap4_boilerplate/assets/js/remote-sard-scripts.min.js"}
+    / Local Scripts
+    %script{:src => "../assets/js/local-scripts.min.js"}

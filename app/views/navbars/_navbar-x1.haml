@@ -1,5 +1,5 @@
 %header
-  %nav.navbar.fixed-top.navbar-expand-lg.navbar-dark.bg-dark
+  %nav.navbar.fixed-top.navbar-expand-lg.navbar-sard
     .container
       %a.navbar-brand{:href => "../index.html"} Navbar
       %button.navbar-toggler{"aria-controls" => "navbarSupportedContent", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbarSupportedContent", "data-toggle" => "collapse", :type => "button"}
@@ -14,36 +14,40 @@
             %a#sardUI.nav-link.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
               Sard UI
             .dropdown-menu{"aria-labelledby" => "sardUI"}
-              %a.dropdown-item{:href => "../sa-pages/sa-typography.html"} Typography
-              %a.dropdown-item{:href => "../sa-pages/sa-icons.html"} Icons
-              %a.dropdown-item{:href => "../sa-pages/sa-colours.html"} Colours
+              %a.dropdown-item{:href => "../sard-ui/sa-typography.html"} Typography
+              %a.dropdown-item{:href => "../sard-ui/sa-icons.html"} Icons
+              %a.dropdown-item{:href => "../sard-ui/sa-colours.html"} Colours
           %li.nav-item.dropdown
             %a#bsComponents.nav-link.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
-              BS Components
+              Components
             .dropdown-menu{"aria-labelledby" => "bsComponents"}
-              %a.dropdown-item{:href => "../bs-pages/bs-components.html#alerts"} Alerts
-              %a.dropdown-item{:href => "../bs-pages/bs-components.html#badges"} Badges
-              %a.dropdown-item{:href => "../bs-pages/bs-components.html#breadcrumbs"} Breadcrumbs
-              %a.dropdown-item{:href => "../bs-pages/bs-components.html#buttons"} Buttons
-              %a.dropdown-item{:href => "../bs-pages/bs-components.html#cards"} Cards
-              %a.dropdown-item{:href => "../bs-pages/bs-components.html#collapse"} Collapse
-              %a.dropdown-item{:href => "../bs-pages/bs-components.html#dropdowns"} Dropdowns
-              %a.dropdown-item{:href => "../bs-pages/bs-components.html#forms"} Forms
-              %a.dropdown-item{:href => "../bs-pages/bs-components.html#input-group"} Input Group
-              %a.dropdown-item{:href => "../bs-pages/bs-components.html#list-group"} List Group
-              %a.dropdown-item{:href => "../bs-pages/bs-components.html#modal"} Modal
-              %a.dropdown-item{:href => "../bs-pages/bs-components.html#navs"} Navs
-              %a.dropdown-item{:href => "../bs-pages/bs-components.html#navbar"} Navbar
-              %a.dropdown-item{:href => "../bs-pages/bs-components.html#pagination"} Pagination
-              %a.dropdown-item{:href => "../bs-pages/bs-components.html#popovers"} Popovers
-              %a.dropdown-item{:href => "../bs-pages/bs-components.html#progress"} Progress
-              %a.dropdown-item{:href => "../bs-pages/bs-components.html#tables"} Tables
-              %a.dropdown-item{:href => "../bs-pages/bs-components.html#tooltips"} Tooltips
+              %a.dropdown-item{:href => "../components/components.html#alerts"} Alerts
+              %a.dropdown-item{:href => "../components/components.html#badges"} Badges
+              %a.dropdown-item{:href => "../components/components.html#breadcrumbs"} Breadcrumbs
+              %a.dropdown-item{:href => "../components/components.html#buttons"} Buttons
+              %a.dropdown-item{:href => "../components/components.html#cards"} Cards
+              %a.dropdown-item{:href => "../components/components.html#collapse"} Collapse
+              %a.dropdown-item{:href => "../components/components.html#dropdowns"} Dropdowns
+              %a.dropdown-item{:href => "../components/components.html#forms"} Forms
+              %a.dropdown-item{:href => "../components/components.html#input-group"} Input Groups
+              %a.dropdown-item{:href => "../components/components.html#links"} Links
+              %a.dropdown-item{:href => "../components/components.html#list-group"} List Groups
+              %a.dropdown-item{:href => "../components/components.html#modal"} Modal
+              %a.dropdown-item{:href => "../components/components.html#navbar"} Navbar
+              %a.dropdown-item{:href => "../components/components.html#navs"} Navs
+              %a.dropdown-item{:href => "../components/components.html#pagination"} Pagination
+              %a.dropdown-item{:href => "../components/components.html#popovers"} Popovers
+              %a.dropdown-item{:href => "../components/components.html#progress"} Progress Bars
+              %a.dropdown-item{:href => "../components/components.html#searchbars"} Searchbars
+              %a.dropdown-item{:href => "../components/components.html#tables"} Tables
+              %a.dropdown-item{:href => "../components/components.html#tooltips"} Tooltips
 
               .dropdown-divider
-              %a.dropdown-item{:href => "../bs-pages/bs-components.html#panels"} BS3 Panels
+              .dropdown-header BS3 Components
+              %a.dropdown-item{:href => "../components/components.html#panels"} Panels
           %li.nav-item
             %a.nav-link.disabled{"aria-disabled" => "true", :href => "#", :tabindex => "-1"} Disabled
-        %form.form-inline.my-2.my-lg-0
-          %input.form-control.mr-sm-2{"aria-label" => "Search", :placeholder => "Search", :type => "search"}/
-          %button.btn.btn-outline-success.my-2.my-sm-0{:type => "submit"} Search
+        %form.form-inline.input-group.searchbar-sard
+          %input.form-control{"aria-label" => "Search", :placeholder => "Search", :type => "search"}/
+          .input-group-append
+            %button.btn.btn-navbar{:type => "submit"} Search

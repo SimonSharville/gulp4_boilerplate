@@ -1,0 +1,443 @@
+<div class='row'>
+<div class='col-sm-12'>
+<h1 class='bs-anchor' id='forms'>Forms</h1>
+<form>
+<div class='form-group'>
+<label for='exampleInputEmail1'>Email address</label>
+<input aria-describedby='emailHelp' class='form-control' id='exampleInputEmail1' placeholder='Enter email' type='email'>
+<small class='form-text text-muted' id='emailHelp'>We'll never share your email with anyone else.</small>
+</div>
+<div class='form-group'>
+<label for='exampleInputPassword1'>Password</label>
+<input class='form-control' id='exampleInputPassword1' placeholder='Password' type='password'>
+</div>
+<div class='form-group form-check'>
+<input class='form-check-input' id='exampleCheck1' type='checkbox'>
+<label class='form-check-label' for='exampleCheck1'>Check me out</label>
+</div>
+<button class='btn btn-primary' type='submit'>Submit</button>
+</form>
+<hr>
+<h4>Form Controls</h4>
+<form>
+<div class='form-group'>
+<label for='exampleFormControlInput1'>Email address</label>
+<input class='form-control' id='exampleFormControlInput1' placeholder='name@example.com' type='email'>
+</div>
+<div class='form-group'>
+<label for='exampleFormControlSelect1'>Example select</label>
+<select class='form-control' id='exampleFormControlSelect1'>
+<option>1</option>
+<option>2</option>
+<option>3</option>
+<option>4</option>
+<option>5</option>
+</select>
+</div>
+<div class='form-group'>
+<label for='exampleFormControlSelect2'>Example multiple select</label>
+<select class='form-control' id='exampleFormControlSelect2' multiple='multiple'>
+<option>1</option>
+<option>2</option>
+<option>3</option>
+<option>4</option>
+<option>5</option>
+</select>
+</div>
+<div class='form-group'>
+<label for='exampleFormControlTextarea1'>Example textarea</label>
+<textarea class='form-control' id='exampleFormControlTextarea1' rows='3'></textarea>
+</div>
+</form>
+<hr>
+<h4>Sizing</h4>
+<select class='mb-3 form-control form-control-lg'>
+<option>Large select</option>
+</select>
+<select class='mb-3 form-control'>
+<option>Default select</option>
+</select>
+<select class='form-control form-control-sm'>
+<option>Small select</option>
+</select>
+<hr>
+<h4>File Imports</h4>
+<p>For file inputs, swap the .form-control for .form-control-file.</p>
+<form>
+<div class='form-group'>
+<label for='exampleFormControlFile1'>Example file input</label>
+<input class='form-control-file' id='exampleFormControlFile1' type='file'>
+</div>
+</form>
+<hr>
+<h4>Range Inputs</h4>
+<p>Set horizontally scrollable range inputs using .form-control-range.</p>
+<form>
+<div class='form-group'>
+<label for='formControlRange'>Example Range input</label>
+<input class='form-control-range' id='formControlRange' type='range'>
+</div>
+</form>
+<hr>
+<h4>Checkboxes and radios</h4>
+<p>Default checkboxes and radios are improved upon with the help of .form-check, a single class for both input types that improves the layout and behavior of their HTML elements. Checkboxes are for selecting one or several options in a list, while radios are for selecting one option from many.</p>
+<h4>Default (stacked)</h4>
+<div class='form-check mb-3'>
+<input class='form-check-input' id='defaultCheck1' type='checkbox' value=''>
+<label class='form-check-label' for='defaultCheck1'>
+Default checkbox
+</label>
+</div>
+<div class='form-check'>
+<input class='form-check-input' disabled='disabled' id='defaultCheck2' type='checkbox' value=''>
+<label class='form-check-label' for='defaultCheck2'>
+Disabled checkbox
+</label>
+</div>
+<div class='form-check mb-3'>
+<input checked='checked' class='form-check-input' id='exampleRadios1' name='exampleRadios' type='radio' value='option1'>
+<label class='form-check-label' for='exampleRadios1'>
+Default radio
+</label>
+</div>
+<div class='form-check'>
+<input class='form-check-input' id='exampleRadios2' name='exampleRadios' type='radio' value='option2'>
+<label class='form-check-label' for='exampleRadios2'>
+Second default radio
+</label>
+</div>
+<div class='form-check mb-3'>
+<input class='form-check-input' disabled='disabled' id='exampleRadios3' name='exampleRadios' type='radio' value='option3'>
+<label class='form-check-label' for='exampleRadios3'>
+Disabled radio
+</label>
+</div>
+<h4>Inline</h4>
+<div class='form-check form-check-inline mb-3'>
+<input class='form-check-input' id='inlineRadio1' name='inlineRadioOptions' type='radio' value='option1'>
+<label class='form-check-label' for='inlineRadio1'>1</label>
+</div>
+<div class='form-check form-check-inline'>
+<input class='form-check-input' id='inlineRadio2' name='inlineRadioOptions' type='radio' value='option2'>
+<label class='form-check-label' for='inlineRadio2'>2</label>
+</div>
+<div class='form-check form-check-inline'>
+<input class='form-check-input' disabled='disabled' id='inlineRadio3' name='inlineRadioOptions' type='radio' value='option3'>
+<label class='form-check-label' for='inlineRadio3'>3 (disabled)</label>
+</div>
+<h4>Without labels</h4>
+<p>Add .position-static to inputs within .form-check that don’t have any label text. Remember to still provide some form of label for assistive technologies (for instance, using aria-label).</p>
+<div class='form-check'>
+<input aria-label='...' class='form-check-input position-static' id='blankCheckbox' type='checkbox' value='option1'>
+</div>
+<div class='form-check'>
+<input aria-label='...' class='form-check-input position-static' id='blankRadio1' name='blankRadio' type='radio' value='option1'>
+</div>
+<hr>
+<h4>Form Groups</h4>
+<p>The .form-group class is the easiest way to add some structure to forms. It provides a flexible class that encourages proper grouping of labels, controls, optional help text, and form validation messaging. By default it only applies margin-bottom, but it picks up additional styles in .form-inline as needed. Use it with fieldsets, divs, or nearly any other element.</p>
+<form>
+<div class='form-group'>
+<label for='formGroupExampleInput'>Example label</label>
+<input class='form-control' id='formGroupExampleInput' placeholder='Example input' type='text'>
+</div>
+<div class='form-group'>
+<label for='formGroupExampleInput2'>Another label</label>
+<input class='form-control' id='formGroupExampleInput2' placeholder='Another input' type='text'>
+</div>
+</form>
+<hr>
+<h4>Form Grid</h4>
+<p>More complex forms can be built using our grid classes. Use these for form layouts that require multiple columns, varied widths, and additional alignment options.</p>
+<form>
+<div class='row'>
+<div class='col'>
+<input class='form-control' placeholder='First name' type='text'>
+</div>
+<div class='col'>
+<input class='form-control' placeholder='Last name' type='text'>
+</div>
+</div>
+</form>
+<hr>
+<h4>Form Row</h4>
+<p>You may also swap .row for .form-row, a variation of our standard grid row that overrides the default column gutters for tighter and more compact layouts.</p>
+<form>
+<div class='form-row'>
+<div class='col'>
+<input class='form-control' placeholder='First name' type='text'>
+</div>
+<div class='col'>
+<input class='form-control' placeholder='Last name' type='text'>
+</div>
+</div>
+</form>
+<hr>
+<p>More complex layouts can also be created with the grid system.</p>
+<form>
+<div class='form-row'>
+<div class='form-group col-md-6'>
+<label for='inputEmail4'>Email</label>
+<input class='form-control' id='inputEmail4' placeholder='Email' type='email'>
+</div>
+<div class='form-group col-md-6'>
+<label for='inputPassword4'>Password</label>
+<input class='form-control' id='inputPassword4' placeholder='Password' type='password'>
+</div>
+</div>
+<div class='form-group'>
+<label for='inputAddress'>Address</label>
+<input class='form-control' id='inputAddress' placeholder='1234 Main St' type='text'>
+</div>
+<div class='form-group'>
+<label for='inputAddress2'>Address 2</label>
+<input class='form-control' id='inputAddress2' placeholder='Apartment, studio, or floor' type='text'>
+</div>
+<div class='form-row'>
+<div class='form-group col-md-6'>
+<label for='inputCity'>City</label>
+<input class='form-control' id='inputCity' type='text'>
+</div>
+<div class='form-group col-md-4'>
+<label for='inputState'>State</label>
+<select class='form-control' id='inputState'>
+<option selected='selected'>Choose...</option>
+<option>...</option>
+</select>
+</div>
+<div class='form-group col-md-2'>
+<label for='inputZip'>Zip</label>
+<input class='form-control' id='inputZip' type='text'>
+</div>
+</div>
+<div class='form-group'>
+<div class='form-check'>
+<input class='form-check-input' id='gridCheck' type='checkbox'>
+<label class='form-check-label' for='gridCheck'>
+Check me out
+</label>
+</div>
+</div>
+<button class='btn btn-primary' type='submit'>Sign in</button>
+</form>
+<hr>
+<h4>Horizontal form</h4>
+<p>Create horizontal forms with the grid by adding the .row class to form groups and using the .col-*-* classes to specify the width of your labels and controls. Be sure to add .col-form-label to your <label>s as well so they’re vertically centered with their associated form controls.</p>
+At times, you maybe need to use margin or padding utilities to create that perfect alignment you need. For example, we’ve removed the padding-top on our stacked radio inputs label to better align the text baseline.
+<form>
+<div class='form-group row'>
+<label class='col-sm-2 col-form-label' for='inputEmail3'>Email</label>
+<div class='col-sm-10'>
+<input class='form-control' id='inputEmail3' placeholder='Email' type='email'>
+</div>
+</div>
+<div class='form-group row'>
+<label class='col-sm-2 col-form-label' for='inputPassword3'>Password</label>
+<div class='col-sm-10'>
+<input class='form-control' id='inputPassword3' placeholder='Password' type='password'>
+</div>
+</div>
+<div class='form-group'>
+<div class='row'>
+<div class='col-form-label col-sm-2 pt-0'>Radios</div>
+<div class='col-sm-10'>
+<div class='form-check'>
+<input checked='checked' class='form-check-input' id='gridRadios1' name='gridRadios' type='radio' value='option1'>
+<label class='form-check-label' for='gridRadios1'>
+First radio
+</label>
+</div>
+<div class='form-check'>
+<input class='form-check-input' id='gridRadios2' name='gridRadios' type='radio' value='option2'>
+<label class='form-check-label' for='gridRadios2'>
+Second radio
+</label>
+</div>
+<div class='form-check disabled'>
+<input class='form-check-input' disabled='disabled' id='gridRadios3' name='gridRadios' type='radio' value='option3'>
+<label class='form-check-label' for='gridRadios3'>
+Third disabled radio
+</label>
+</div>
+</div>
+</div>
+</div>
+<div class='form-group row'>
+<div class='col-sm-2'>Checkbox</div>
+<div class='col-sm-10'>
+<div class='form-check'>
+<input class='form-check-input' id='gridCheck1' type='checkbox'>
+<label class='form-check-label' for='gridCheck1'>
+Example checkbox
+</label>
+</div>
+</div>
+</div>
+<div class='form-group row'>
+<div class='col-sm-10'>
+<button class='btn btn-primary' type='submit'>Sign in</button>
+</div>
+</div>
+</form>
+</div>
+</div>
+<hr>
+<div class='row'>
+<div class='col-sm-12'>
+<h2>Forms within Cards, Panels and Fieldsets</h2>
+<p>These are designed so they look identical, whichever you use.</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-6'>
+<h4>Card</h4>
+<div class='card card-sard'>
+<div class='card-header'>Form within Card</div>
+<form accept-charset='UTF-8' action='/users/sign_in' class='new_user' id='new_user' method='post'>
+<div class='card-body'>
+<legend>This is an example of a legend, it can go over multiple lines of text without an issue.</legend>
+<div class='form-group'>
+<label for='user_login'>Email</label>
+<input class='form-control' id='user_login' name='user[login]' size='30' type='text'>
+<label for='user_password'>Password</label>
+<input class='form-control' id='user_password' name='user[password]' size='30' type='password'>
+<a href='/users/password/new'>Forgot your password?</a>
+<br>
+</div>
+</div>
+<div class='card-body'>
+<div class='form-group no-border login-btns'>
+<input class='btn btn-client btn-bold pull-right' name='commit' type='submit' value='Sign in'>
+<button class='btn btn-primary' type='submit'>Submit</button>
+</div>
+</div>
+</form>
+</div>
+</div>
+<div class='col-sm-6'>
+<h4>Panel</h4>
+<div class='panel panel-sard'>
+<div class='panel-heading'>
+<h3>Form within Panel</h3>
+</div>
+<div class='panel-body'>
+<form>
+<div class='form-group'>
+<label for='exampleFormControlInput1'>Email address</label>
+<input class='form-control' id='exampleFormControlInput1' placeholder='name@example.com' type='email'>
+</div>
+<div class='form-group'>
+<label for='exampleFormControlSelect1'>Example select</label>
+<select class='form-control' id='exampleFormControlSelect1'>
+<option>1</option>
+<option>2</option>
+<option>3</option>
+<option>4</option>
+<option>5</option>
+</select>
+</div>
+<div class='form-group'>
+<label for='exampleFormControlSelect2'>Example multiple select</label>
+<select class='form-control' id='exampleFormControlSelect2' multiple='multiple'>
+<option>1</option>
+<option>2</option>
+<option>3</option>
+<option>4</option>
+<option>5</option>
+</select>
+</div>
+<div class='form-group'>
+<label for='exampleFormControlTextarea1'>Example textarea</label>
+<textarea class='form-control' id='exampleFormControlTextarea1' rows='3'></textarea>
+</div>
+<div class='form-group form-check'>
+<input class='form-check-input' id='exampleCheck1' type='checkbox'>
+<label class='form-check-label' for='exampleCheck1'>Check me out</label>
+</div>
+<button class='btn btn-primary' type='submit'>Submit</button>
+</form>
+</div>
+</div>
+</div>
+<div class='col-sm-6'>
+<div class='card card-sard'>
+<div class='card-header'>Form within Card using Fieldsets</div>
+<div class='card-body'>
+<form accept-charset='UTF-8' action='/users/sign_in' class='new_user' id='new_user' method='post'>
+<fieldset>
+<legend>This is an example of a legend</legend>
+<div class='form-group'>
+<label for='user_login'>Email</label>
+<input class='form-control' id='user_login' name='user[login]' size='30' type='text'>
+</div>
+<hr>
+<div class='form-group'>
+<label for='user_password'>Password</label>
+<input class='form-control' id='user_password' name='user[password]' size='30' type='password'>
+<a href='/users/password/new'>Forgot your password?</a>
+<br>
+</div>
+</fieldset>
+<fieldset>
+<div class='form-group no-border login-btns'>
+<input class='btn btn-client btn-bold pull-right' name='commit' type='submit' value='Sign in'>
+<button class='btn btn-primary' type='submit'>Submit</button>
+</div>
+</fieldset>
+</form>
+</div>
+</div>
+</div>
+<div class='col-sm-6'>
+<div class='panel panel-sard'>
+<div class='panel-header'>Form within Card using Fieldsets</div>
+<div class='panel-body'>
+<form accept-charset='UTF-8' action='/users/sign_in' class='new_user' id='new_user' method='post'>
+<fieldset>
+<legend>Welcome to Strengthened Appraisal & Revalidation Database</legend>
+<div class='form-group'>
+<label for='user_login'>Email</label>
+<input class='form-control' id='user_login' name='user[login]' size='30' type='text'>
+</div>
+<hr>
+<div class='form-group'>
+<label for='user_password'>Password</label>
+<input class='form-control' id='user_password' name='user[password]' size='30' type='password'>
+<a href='/users/password/new'>Forgot your password?</a>
+<br>
+</div>
+</fieldset>
+<fieldset>
+<div class='form-group no-border login-btns'>
+<input class='btn btn-client btn-bold pull-right' name='commit' type='submit' value='Sign in'>
+<button class='btn btn-primary' type='submit'>Submit</button>
+</div>
+</fieldset>
+</form>
+</div>
+</div>
+</div>
+<div class='col-sm-6'>
+<form accept-charset='UTF-8' action='/users/sign_in' class='new_user' id='new_user' method='post'>
+<fieldset class='sa-fieldset'>
+<legend>Stand alone fieldset</legend>
+<div class='form-group border-bottom'>
+<label for='user_login'>Email</label>
+<input class='form-control' id='user_login' name='user[login]' size='30' type='text'>
+</div>
+<div class='form-group'>
+<label for='user_password'>Password</label>
+<input class='form-control' id='user_password' name='user[password]' size='30' type='password'>
+<a href='/users/password/new'>Forgot your password?</a>
+<br>
+</div>
+</fieldset>
+<fieldset>
+<div class='form-group no-border login-btns'>
+<input class='btn btn-client btn-bold pull-right' name='commit' type='submit' value='Sign in'>
+<button class='btn btn-primary' type='submit'>Submit</button>
+</div>
+</fieldset>
+</form>
+</div>
+</div>

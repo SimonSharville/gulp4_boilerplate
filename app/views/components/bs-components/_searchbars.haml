@@ -1,0 +1,21 @@
+.row
+  .col-sm-12.mb-3
+    %h1#searchbars.bs-anchor Searchbars
+
+    %h4 Standard Searchbar
+    %form.form-inline.input-group.searchbar-sard
+      %input.form-control{"aria-label" => "Search", :placeholder => "Search", :type => "search"}/
+      .input-group-append
+        %button.btn.btn-success{:type => "submit"} Search
+
+  .col-sm-12.mb-3
+    .input-group
+      .input-group-prepend
+        %span#basic-addon1.input-group-text @
+      %input.form-control{"aria-describedby" => "basic-addon1", "aria-label" => "Username", :placeholder => "Username", :type => "text"}/
+
+  .col-sm-12
+    .input-group
+      %input.form-control{"aria-describedby" => "basic-addon2", "aria-label" => "Recipient's username", :placeholder => "Recipient's username", :type => "text"}/
+      .input-group-append
+        %span#basic-addon2.input-group-text @example.com
