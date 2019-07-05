@@ -80,6 +80,7 @@ function hamlHTML (done) {
     .pipe(include().on('error', function(d) { console.log(d.message); })) // Includes partials
     .pipe(haml().on('error', function(e) { console.log(e.message); }))
     .pipe(gulp.dest('docs'))
+    .pipe(browserSync.stream())
     done();
 };
 
