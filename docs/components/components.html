@@ -76,6 +76,21 @@ Components
 </div>
 </nav>
 </header>
+<div class='fixed-top' id='breadcrumb-top'>
+<div class='container'>
+<nav aria-label='breadcrumb'>
+<ol class='breadcrumb'>
+<li class='breadcrumb-item'>
+<a href='#/'>Home</a>
+</li>
+<li class='breadcrumb-item'>
+<a href='#/'>Library</a>
+</li>
+<li aria-current='page' class='breadcrumb-item active'>Data</li>
+</ol>
+</nav>
+</div>
+</div>
 <div class='container first'>
 <div class='row'>
 <div class='col-12'>
@@ -246,13 +261,21 @@ Notifications
 <div class='row'>
 <div class='col-sm-12'>
 <h1 class='bs-anchor' id='breadcrumbs'>Breadcrumbs</h1>
+<p>
+At the top of this page you will see an example of breadcrumbs fixed below the navbar. To achieve that should wrap the
+<code>%nav %ol.breadcrumb</code>
+within
+<code>#breadcrumbs.fixed-top</code>
+and
+<code>.container</code>
+</p>
 <nav aria-label='breadcrumb'>
 <ol class='breadcrumb'>
 <li class='breadcrumb-item'>
-<a href='#'>Home</a>
+<a href='#/'>Home</a>
 </li>
 <li class='breadcrumb-item'>
-<a href='#'>Library</a>
+<a href='#/'>Library</a>
 </li>
 <li aria-current='page' class='breadcrumb-item active'>Data</li>
 </ol>

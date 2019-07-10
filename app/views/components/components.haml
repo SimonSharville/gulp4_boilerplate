@@ -9,6 +9,16 @@
   %body
     //=include ../navbars/_navbar-x1.haml
 
+    #breadcrumb-top.fixed-top
+      .container
+        %nav{"aria-label" => "breadcrumb"}
+          %ol.breadcrumb
+            %li.breadcrumb-item
+              %a{:href => "#/"} Home
+            %li.breadcrumb-item
+              %a{:href => "#/"} Library
+            %li.breadcrumb-item.active{"aria-current" => "page"} Data
+
 
     .container.first
       .row
