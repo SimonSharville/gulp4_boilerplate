@@ -1,96 +1,289 @@
 .row
   .col-sm-12
     %h1#checkboxes-anchor.bs-anchor Checkboxes and Radios
-    %p Standard Checkboxes and Radios are by default quite small. We have created a new set, that with a little bit of extra code added, will make them stand are out better.
-    %p Below you will see the Default and SARD styles next to each other.
+    %p Standard Checkboxes and Radios are by default quite small. We have created a new set, that with a little bit of extra code added, will make them stand out better.
+
+    %h3 Build Notes
+    %p
+      %span.bold Note! 
+      Bootstrap 4 for has introduced the class of 
+      %code .form-check 
+      This is uses as a wrapper for Checkboxes and Radios. However, some of the earlier SARD project were built in BS3, These have their own wrappers (.sa-checkbox and .sa-radio-buttons), Which if using BS4 should be added to .form-check.
+
+    %h5.base Checkboxes
+    %p
+      To create the SARD Checkboxes add 
+      %code .sa-checkbox
+      to the class of .form-check, and 
+      %span.bold ADD 
+      %code %span.checkbox 
+      %span.bold INSIDE 
+      the label.
+      %br/
+      You can instead use 
+      %code .sa-checkbox-after
+      to have the checkbox after the label.
+    
+    %h5.base Radios
+    %p
+      To create SARD Radios add 
+      %code .sa-radio-buttons
+      to the class of .form-check, and 
+      %span.bold ADD 
+      %code .radio-button
+      %span.bold TO 
+      the label.
+      %br/
+      You can instead use 
+      %code .sa-radio-buttons-after
+      to have the button after the label. 
+    
+    %p Below you will see the Standard and SARD styles next to each other.
+
+
 
   -# Standard =====
   .col-sm-6
-    %h3 Standard Style
-    %h4 Default (stacked)
-    .form-check.mb-3
-      %input#defaultCheck1.form-check-input{:type => "checkbox", :value => ""}/
-      %label.form-check-label{:for => "defaultCheck1"}
-        Default checkbox
-    .form-check
-      %input#defaultCheck2.form-check-input{:disabled => "disabled", :type => "checkbox", :value => ""}/
-      %label.form-check-label{:for => "defaultCheck2"}
-        Disabled checkbox
+    .card.card-sard
+      .card-header Standard Style
+      .card-body.border-bottom
+        %h5.card-title Default (stacked)
+        .form-check
+          %input#defaultCheck1.form-check-input{:type => "checkbox", :value => ""}/
+          %label.form-check-label{:for => "defaultCheck1"}
+            Default checkbox
+        .form-check
+          %input#defaultCheck2.form-check-input{:disabled => "disabled", :type => "checkbox", :value => ""}/
+          %label.form-check-label{:for => "defaultCheck2"}
+            Disabled checkbox
+      .card-body.border-bottom
+        %h5.card-title Radios
+        .form-check
+          %input#exampleRadios1.form-check-input{:checked => "checked", :name => "exampleRadios", :type => "radio", :value => "option1"}/
+          %label.form-check-label{:for => "exampleRadios1"}
+            Default radio
+        .form-check
+          %input#exampleRadios2.form-check-input{:name => "exampleRadios", :type => "radio", :value => "option2"}/
+          %label.form-check-label{:for => "exampleRadios2"}
+            Second default radio
+        .form-check
+          %input#exampleRadios3.form-check-input{:disabled => "disabled", :name => "exampleRadios", :type => "radio", :value => "option3"}/
+          %label.form-check-label{:for => "exampleRadios3"}
+            Disabled radio
 
-    .form-check.mb-3
-      %input#exampleRadios1.form-check-input{:checked => "checked", :name => "exampleRadios", :type => "radio", :value => "option1"}/
-      %label.form-check-label{:for => "exampleRadios1"}
-        Default radio
-    .form-check
-      %input#exampleRadios2.form-check-input{:name => "exampleRadios", :type => "radio", :value => "option2"}/
-      %label.form-check-label{:for => "exampleRadios2"}
-        Second default radio
-    .form-check.mb-3
-      %input#exampleRadios3.form-check-input{:disabled => "disabled", :name => "exampleRadios", :type => "radio", :value => "option3"}/
-      %label.form-check-label{:for => "exampleRadios3"}
-        Disabled radio
+      .card-body.border-bottom
+        %h5.card-title Inline
+        .form-check.form-check-inline
+          %input#inlineRadio1.form-check-input{:name => "inlineRadioOptions", :type => "radio", :value => "option1"}/
+          %label.form-check-label{:for => "inlineRadio1"} 1
+        .form-check.form-check-inline
+          %input#inlineRadio2.form-check-input{:name => "inlineRadioOptions", :type => "radio", :value => "option2"}/
+          %label.form-check-label{:for => "inlineRadio2"} 2
+        .form-check.form-check-inline
+          %input#inlineRadio3.form-check-input{:disabled => "disabled", :name => "inlineRadioOptions", :type => "radio", :value => "option3"}/
+          %label.form-check-label{:for => "inlineRadio3"} 3 (disabled)
 
-    %h4 Inline
-    .form-check.form-check-inline.mb-3
-      %input#inlineRadio1.form-check-input{:name => "inlineRadioOptions", :type => "radio", :value => "option1"}/
-      %label.form-check-label{:for => "inlineRadio1"} 1
-    .form-check.form-check-inline
-      %input#inlineRadio2.form-check-input{:name => "inlineRadioOptions", :type => "radio", :value => "option2"}/
-      %label.form-check-label{:for => "inlineRadio2"} 2
-    .form-check.form-check-inline
-      %input#inlineRadio3.form-check-input{:disabled => "disabled", :name => "inlineRadioOptions", :type => "radio", :value => "option3"}/
-      %label.form-check-label{:for => "inlineRadio3"} 3 (disabled)
+      .card-body
+        %h5.card-title Without labels
+        %p Add .position-static to inputs within .form-check that don’t have any label text. Remember to still provide some form of label for assistive technologies (for instance, using aria-label).
 
-    %h4 Without labels
-    %p Add .position-static to inputs within .form-check that don’t have any label text. Remember to still provide some form of label for assistive technologies (for instance, using aria-label).
+        .form-check
+          %input#blankCheckbox.form-check-input.position-static{"aria-label" => "...", :type => "checkbox", :value => "option1"}/
+        .form-check
+          %input#blankRadio1.form-check-input.position-static{"aria-label" => "...", :name => "blankRadio", :type => "radio", :value => "option1"}/
 
-    .form-check
-      %input#blankCheckbox.form-check-input.position-static{"aria-label" => "...", :type => "checkbox", :value => "option1"}/
-    .form-check
-      %input#blankRadio1.form-check-input.position-static{"aria-label" => "...", :name => "blankRadio", :type => "radio", :value => "option1"}/
+
+
+
+
+
 
   -# SARD =========
   .col-sm-6
-    %h3 SARD style
-    %h4 Default (stacked)
-    .form-check.mb-3
-      %input#defaultCheck1.form-check-input{:type => "checkbox", :value => ""}/
-      %label.form-check-label{:for => "defaultCheck1"}
-        Default checkbox
-    .form-check
-      %input#defaultCheck2.form-check-input{:disabled => "disabled", :type => "checkbox", :value => ""}/
-      %label.form-check-label{:for => "defaultCheck2"}
-        Disabled checkbox
+    .card.card-sard
+      .card-header SARD style
+      .card-body.border-bottom
+        %h5.card-title .sa-checkbox
+        .form-check.sa-checkbox
+          %input#defaultCheck2-1.form-check-input{:type => "checkbox", :value => ""}/
+          %label.form-check-label.checkbox{:for => "defaultCheck2-1"}
+            %span.checkbox sa-checkbox
 
-    .form-check.mb-3
-      %input#exampleRadios1.form-check-input{:checked => "checked", :name => "exampleRadios", :type => "radio", :value => "option1"}/
-      %label.form-check-label{:for => "exampleRadios1"}
-        Default radio
-    .form-check
-      %input#exampleRadios2.form-check-input{:name => "exampleRadios", :type => "radio", :value => "option2"}/
-      %label.form-check-label{:for => "exampleRadios2"}
-        Second default radio
-    .form-check.mb-3
-      %input#exampleRadios3.form-check-input{:disabled => "disabled", :name => "exampleRadios", :type => "radio", :value => "option3"}/
-      %label.form-check-label{:for => "exampleRadios3"}
-        Disabled radio
+        .form-check.sa-checkbox
+          %input#defaultCheck2-2.form-check-input{:disabled => "disabled", :type => "checkbox", :value => ""}/
+          %label.form-check-label.checkbox{:for => "defaultCheck2-2"}
+            %span.checkbox Disabled sa-checkbox
+        
+      .card-body.border-bottom
+        %h5.card-title .sa-checkbox-after
+        .right
+          .form-check.sa-checkbox-after
+            %input#defaultCheck2-1-1.form-check-input{:type => "checkbox", :value => ""}/
+            %label.form-check-label{:for => "defaultCheck2-1-1"}
+              %span.checkbox sa-checkbox-after
 
-    %h4 Inline
-    .form-check.form-check-inline.mb-3
-      %input#inlineRadio1.form-check-input{:name => "inlineRadioOptions", :type => "radio", :value => "option1"}/
-      %label.form-check-label{:for => "inlineRadio1"} 1
-    .form-check.form-check-inline
-      %input#inlineRadio2.form-check-input{:name => "inlineRadioOptions", :type => "radio", :value => "option2"}/
-      %label.form-check-label{:for => "inlineRadio2"} 2
-    .form-check.form-check-inline
-      %input#inlineRadio3.form-check-input{:disabled => "disabled", :name => "inlineRadioOptions", :type => "radio", :value => "option3"}/
-      %label.form-check-label{:for => "inlineRadio3"} 3 (disabled)
+          .form-check.sa-checkbox-after
+            %input#defaultCheck2-2-2.form-check-input{:disabled => "disabled", :type => "checkbox", :value => ""}/
+            %label.form-check-label{:for => "defaultCheck2-2-2"}
+              %span.checkbox Disabled sa-checkbox-after
 
-    %h4 Without labels
-    %p Add .position-static to inputs within .form-check that don’t have any label text. Remember to still provide some form of label for assistive technologies (for instance, using aria-label).
 
-    .form-check
-      %input#blankCheckbox.form-check-input.position-static{"aria-label" => "...", :type => "checkbox", :value => "option1"}/
-    .form-check
-      %input#blankRadio1.form-check-input.position-static{"aria-label" => "...", :name => "blankRadio", :type => "radio", :value => "option1"}/
+      .card-body.border-bottom
+        %h5.card-title .sa-radio-buttons
+        .form-check.sa-radio-buttons
+          %input#exampleRadios2-1.form-check-input{:checked => "checked", :name => "exampleRadios-sa", :type => "radio", :value => "option1"}/
+          %label.radio-button.form-check-label{:for => "exampleRadios2-1"}
+            %span Default radio
 
+        .form-check.sa-radio-buttons
+          %input#exampleRadios2-2.form-check-input{:name => "exampleRadios-sa", :type => "radio", :value => "option2"}/
+          %label.radio-button.form-check-label{:for => "exampleRadios2-2"}
+            Second default radio
+        .form-check.sa-radio-buttons
+          %input#exampleRadios2-3.form-check-input{:disabled => "disabled", :name => "exampleRadios", :type => "radio", :value => "option3"}/
+          %label.radio-button.form-check-label{:for => "exampleRadios2-3"}
+            Disabled radio
+
+      .card-body.border-bottom
+        %h5.card-title .sa-radio-buttons-after
+        .right
+          .form-check.sa-radio-buttons-after
+            %input#exampleRadios2-1-1.form-check-input{:checked => "checked", :name => "exampleRadios-right", :type => "radio", :value => "option1"}/
+            %label.radio-button.form-check-label{:for => "exampleRadios2-1-1"}
+              %span Default radio
+
+          .form-check.sa-radio-buttons-after
+            %input#exampleRadios2-2-2.form-check-input{:name => "exampleRadios-right", :type => "radio", :value => "option2"}/
+            %label.radio-button.form-check-label{:for => "exampleRadios2-2-2"}
+              Second default radio
+          .form-check.sa-radio-buttons-after
+            %input#exampleRadios2-3-3.form-check-input{:disabled => "disabled", :name => "exampleRadios-right", :type => "radio", :value => "option3"}/
+            %label.radio-button.form-check-label{:for => "exampleRadios2-3-3"}
+              Disabled radio
+        
+      .card-body.border-bottom
+        %h5.card-title .sa-radio-buttons (inline)
+        .form-check.form-check-inline.sa-radio-buttons
+          %input#inlineRadio2-1.form-check-input{:name => "inlineRadioOptions", :type => "radio", :value => "option1"}/
+          %label.form-check-label.radio-button{:for => "inlineRadio2-1"} 1
+        .form-check.form-check-inline.sa-radio-buttons
+          %input#inlineRadio2-2.form-check-input{:name => "inlineRadioOptions", :type => "radio", :value => "option2"}/
+          %label.form-check-label.radio-button{:for => "inlineRadio2-2"} 2
+        .form-check.form-check-inline.sa-radio-buttons
+          %input#inlineRadio2-3.form-check-input{:disabled => "disabled", :name => "inlineRadioOptions", :type => "radio", :value => "option3"}/
+          %label.form-check-label.radio-button{:for => "inlineRadio2-3"} 3 (disabled)
+
+      .card-body.border-bottom
+        %h5.card-title .sa-radio-buttons-after (inline)
+        .right
+          .form-check.form-check-inline.sa-radio-buttons-after
+            %input#inlineRadio-right-2-1-1.form-check-input{:name => "inlineRadioOptions-right", :type => "radio", :value => "option1"}/
+            %label.form-check-label.radio-button{:for => "inlineRadio-right-2-1-1"} 1
+          .form-check.form-check-inline.sa-radio-buttons-after
+            %input#inlineRadio-right-2-2-2.form-check-input{:name => "inlineRadioOptions-right", :type => "radio", :value => "option2"}/
+            %label.form-check-label.radio-button{:for => "inlineRadio-right-2-2-2"} 2
+          .form-check.form-check-inline.sa-radio-buttons-after
+            %input#inlineRadio-right-2-3-3.form-check-input{:disabled => "disabled", :name => "inlineRadioOptions-right", :type => "radio", :value => "option3"}/
+            %label.form-check-label.radio-button{:for => "inlineRadio-right-2-3-3"} 3 (disabled)
+
+      .card-body
+        %h5.card-title Without labels
+        %p.base With SARD styles you DON'T need to add .position-static to inputs within .form-check that don’t have any label text. Remember to still provide some form of label for assistive technologies (for instance, using aria-label).
+
+        .form-check.sa-checkbox
+          %input#blankCheckbox-2.form-check-input{"aria-label" => "...", :type => "checkbox", :value => "option1"}/
+          %label.form-check-label{:for => "blankCheckbox-2"}
+            %span.checkbox
+        
+        .form-check.sa-radio-buttons
+          %input#blankRadio2-1.form-check-input{"aria-label" => "...", :name => "blankRadio", :type => "radio", :value => "option1"}/
+          %label.form-check-label.radio-button{:for => "blankRadio2-1"}
+            %span
+
+
+
+  .col-sm-12
+    %hr/
+    %h3 Toggle Switches
+    %p
+      Toggle Switches are based on Checkboxes or Radios. Each has a specific purpose and each is written slighly differently. 
+    .card.card-sard
+      .card-header Toggle Switches
+      .card-body
+        .row  
+          .col-sm-6
+            .sa-toggle-switch
+              %input#advanced_when_toggle{type: 'checkbox', name: 'advanced_when', class: 'advanced_when'}
+              %label{:for => "advanced_when_toggle"} 
+                %span.slider .sa-toggle-switch
+          .col-sm-6
+            .sa-toggle-switch-right
+              %input#advanced_when_toggle_right{type: 'checkbox', name: 'advanced_when', class: 'advanced_when'}
+              %label{:for => "advanced_when_toggle_right"} 
+                %span.slider .sa-toggle-switch-right
+      .card-body
+        %p 
+          %code .sa-toggle-switch 
+          is a form of checkbox. 
+          %br/
+          They can be arranged either left (default) or right by using the class of
+          %code .sa-toggle-switch-right
+          instead.
+
+
+    .card.card-sard
+      .card-header Radio Toggles
+      .card-body
+        .row
+          .col-sm-6
+            .sa-radio-toggle
+              %input#sa-radio-toggle-one{:checked => "checked", :name => "user", :type => "radio", :value => "false"}/
+              %label{:for => "sa-radio-toggle-one"}
+                %span.radio Top
+            .sa-radio-toggle
+              %input#sa-radio-toggle-two{:name => "user", :type => "radio", :value => "true"}/
+              %label{:for => "sa-radio-toggle-two"}
+                %span.radio Bottom
+          .col-sm-6
+            .sa-radio-toggle-right
+              %input#sa-radio-toggle-three{:checked => "checked", :name => "user2", :type => "radio", :value => "false"}/
+              %label{:for => "sa-radio-toggle-three"}
+                %span.radio Top
+            .sa-radio-toggle-right
+              %input#sa-radio-toggle-four{:name => "user2", :type => "radio", :value => "true"}/
+              %label{:for => "sa-radio-toggle-four"}
+                %span.radio Bottom
+      .card-body
+        %p 
+          %code .sa-radio-toggle 
+          is a set of radio buttons, when one is selected, the other is de-selected. 
+          %br/
+          They can be arranged either left (default) or right by using the class of
+          %code .sa-radio-toggle-right
+          instead.
+
+
+    .card.card-sard
+      .card-header Toggle Check
+      .card-body
+        .row
+          .col-sm-6
+            .sa-toggle-check
+              %label
+                %input.toggle-check-input{:type => "checkbox", id: "own_cpd_record", class: "have_own_cpd", name: "own_cpd_record", value: "true", checked: "checked"}/
+                %span.toggle-check-text
+          .col-sm-6
+            .sa-toggle-check-right
+              %label
+                %input.toggle-check-input{:type => "checkbox", id: "own_cpd_record", class: "have_own_cpd", name: "own_cpd_record", value: "true", checked: "checked"}/
+                %span.toggle-check-text
+      .card-body
+        %p 
+          %code .sa-toggle-check 
+          is a single checkbox, with a YES / NO Statement.
+          %br/
+          They can be arranged either left (default) or right by using the class of
+          %code .sa-toggle-check-right
+          instead.
+
+        

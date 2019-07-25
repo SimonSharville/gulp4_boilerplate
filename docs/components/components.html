@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class='no-js' lang='en'>
 <head>
-<title>Bootstrap 4 Layout - BS Components</title>
+<title>Gulp 4 Boilerplate - Components</title>
 <meta content='ie=edge' http-equiv='x-ua-compatible'>
 <meta content='width=device-width, initial-scale=1.0' name='viewport'>
 <link href='../assets/css/sard-styles.min.css' rel='stylesheet'>
@@ -1003,13 +1003,50 @@ Someone famous in
 <div class='row'>
 <div class='col-sm-12'>
 <h1 class='bs-anchor' id='checkboxes-anchor'>Checkboxes and Radios</h1>
-<p>Standard Checkboxes and Radios are by default quite small. We have created a new set, that with a little bit of extra code added, will make them stand are out better.</p>
-<p>Below you will see the Default and SARD styles next to each other.</p>
+<p>Standard Checkboxes and Radios are by default quite small. We have created a new set, that with a little bit of extra code added, will make them stand out better.</p>
+<h3>Build Notes</h3>
+<p>
+<span class='bold'>Note!</span>
+Bootstrap 4 for has introduced the class of
+<code>.form-check</code>
+This is uses as a wrapper for Checkboxes and Radios. However, some of the earlier SARD project were built in BS3, These have their own wrappers (.sa-checkbox and .sa-radio-buttons), Which if using BS4 should be added to .form-check.
+</p>
+<h5 class='base'>Checkboxes</h5>
+<p>
+To create the SARD Checkboxes add
+<code>.sa-checkbox</code>
+to the class of .form-check, and
+<span class='bold'>ADD</span>
+<code>%span.checkbox</code>
+<span class='bold'>INSIDE</span>
+the label.
+<br>
+You can instead use
+<code>.sa-checkbox-after</code>
+to have the checkbox after the label.
+</p>
+<h5 class='base'>Radios</h5>
+<p>
+To create SARD Radios add
+<code>.sa-radio-buttons</code>
+to the class of .form-check, and
+<span class='bold'>ADD</span>
+<code>.radio-button</code>
+<span class='bold'>TO</span>
+the label.
+<br>
+You can instead use
+<code>.sa-radio-buttons-after</code>
+to have the button after the label.
+</p>
+<p>Below you will see the Standard and SARD styles next to each other.</p>
 </div>
 <div class='col-sm-6'>
-<h3>Standard Style</h3>
-<h4>Default (stacked)</h4>
-<div class='form-check mb-3'>
+<div class='card card-sard'>
+<div class='card-header'>Standard Style</div>
+<div class='card-body border-bottom'>
+<h5 class='card-title'>Default (stacked)</h5>
+<div class='form-check'>
 <input class='form-check-input' id='defaultCheck1' type='checkbox' value=''>
 <label class='form-check-label' for='defaultCheck1'>
 Default checkbox
@@ -1021,7 +1058,10 @@ Default checkbox
 Disabled checkbox
 </label>
 </div>
-<div class='form-check mb-3'>
+</div>
+<div class='card-body border-bottom'>
+<h5 class='card-title'>Radios</h5>
+<div class='form-check'>
 <input checked='checked' class='form-check-input' id='exampleRadios1' name='exampleRadios' type='radio' value='option1'>
 <label class='form-check-label' for='exampleRadios1'>
 Default radio
@@ -1033,14 +1073,16 @@ Default radio
 Second default radio
 </label>
 </div>
-<div class='form-check mb-3'>
+<div class='form-check'>
 <input class='form-check-input' disabled='disabled' id='exampleRadios3' name='exampleRadios' type='radio' value='option3'>
 <label class='form-check-label' for='exampleRadios3'>
 Disabled radio
 </label>
 </div>
-<h4>Inline</h4>
-<div class='form-check form-check-inline mb-3'>
+</div>
+<div class='card-body border-bottom'>
+<h5 class='card-title'>Inline</h5>
+<div class='form-check form-check-inline'>
 <input class='form-check-input' id='inlineRadio1' name='inlineRadioOptions' type='radio' value='option1'>
 <label class='form-check-label' for='inlineRadio1'>1</label>
 </div>
@@ -1052,68 +1094,264 @@ Disabled radio
 <input class='form-check-input' disabled='disabled' id='inlineRadio3' name='inlineRadioOptions' type='radio' value='option3'>
 <label class='form-check-label' for='inlineRadio3'>3 (disabled)</label>
 </div>
-<h4>Without labels</h4>
+</div>
+<div class='card-body'>
+<h5 class='card-title'>Without labels</h5>
 <p>Add .position-static to inputs within .form-check that don’t have any label text. Remember to still provide some form of label for assistive technologies (for instance, using aria-label).</p>
 <div class='form-check'>
 <input aria-label='...' class='form-check-input position-static' id='blankCheckbox' type='checkbox' value='option1'>
 </div>
 <div class='form-check'>
 <input aria-label='...' class='form-check-input position-static' id='blankRadio1' name='blankRadio' type='radio' value='option1'>
+</div>
+</div>
 </div>
 </div>
 <div class='col-sm-6'>
-<h3>SARD style</h3>
-<h4>Default (stacked)</h4>
-<div class='form-check mb-3'>
-<input class='form-check-input' id='defaultCheck1' type='checkbox' value=''>
-<label class='form-check-label' for='defaultCheck1'>
-Default checkbox
+<div class='card card-sard'>
+<div class='card-header'>SARD style</div>
+<div class='card-body border-bottom'>
+<h5 class='card-title'>.sa-checkbox</h5>
+<div class='form-check sa-checkbox'>
+<input class='form-check-input' id='defaultCheck2-1' type='checkbox' value=''>
+<label class='form-check-label checkbox' for='defaultCheck2-1'>
+<span class='checkbox'>sa-checkbox</span>
 </label>
 </div>
-<div class='form-check'>
-<input class='form-check-input' disabled='disabled' id='defaultCheck2' type='checkbox' value=''>
-<label class='form-check-label' for='defaultCheck2'>
-Disabled checkbox
+<div class='form-check sa-checkbox'>
+<input class='form-check-input' disabled='disabled' id='defaultCheck2-2' type='checkbox' value=''>
+<label class='form-check-label checkbox' for='defaultCheck2-2'>
+<span class='checkbox'>Disabled sa-checkbox</span>
 </label>
 </div>
-<div class='form-check mb-3'>
-<input checked='checked' class='form-check-input' id='exampleRadios1' name='exampleRadios' type='radio' value='option1'>
-<label class='form-check-label' for='exampleRadios1'>
-Default radio
+</div>
+<div class='card-body border-bottom'>
+<h5 class='card-title'>.sa-checkbox-after</h5>
+<div class='right'>
+<div class='form-check sa-checkbox-after'>
+<input class='form-check-input' id='defaultCheck2-1-1' type='checkbox' value=''>
+<label class='form-check-label' for='defaultCheck2-1-1'>
+<span class='checkbox'>sa-checkbox-after</span>
 </label>
 </div>
-<div class='form-check'>
-<input class='form-check-input' id='exampleRadios2' name='exampleRadios' type='radio' value='option2'>
-<label class='form-check-label' for='exampleRadios2'>
+<div class='form-check sa-checkbox-after'>
+<input class='form-check-input' disabled='disabled' id='defaultCheck2-2-2' type='checkbox' value=''>
+<label class='form-check-label' for='defaultCheck2-2-2'>
+<span class='checkbox'>Disabled sa-checkbox-after</span>
+</label>
+</div>
+</div>
+</div>
+<div class='card-body border-bottom'>
+<h5 class='card-title'>.sa-radio-buttons</h5>
+<div class='form-check sa-radio-buttons'>
+<input checked='checked' class='form-check-input' id='exampleRadios2-1' name='exampleRadios-sa' type='radio' value='option1'>
+<label class='radio-button form-check-label' for='exampleRadios2-1'>
+<span>Default radio</span>
+</label>
+</div>
+<div class='form-check sa-radio-buttons'>
+<input class='form-check-input' id='exampleRadios2-2' name='exampleRadios-sa' type='radio' value='option2'>
+<label class='radio-button form-check-label' for='exampleRadios2-2'>
 Second default radio
 </label>
 </div>
-<div class='form-check mb-3'>
-<input class='form-check-input' disabled='disabled' id='exampleRadios3' name='exampleRadios' type='radio' value='option3'>
-<label class='form-check-label' for='exampleRadios3'>
+<div class='form-check sa-radio-buttons'>
+<input class='form-check-input' disabled='disabled' id='exampleRadios2-3' name='exampleRadios' type='radio' value='option3'>
+<label class='radio-button form-check-label' for='exampleRadios2-3'>
 Disabled radio
 </label>
 </div>
-<h4>Inline</h4>
-<div class='form-check form-check-inline mb-3'>
-<input class='form-check-input' id='inlineRadio1' name='inlineRadioOptions' type='radio' value='option1'>
-<label class='form-check-label' for='inlineRadio1'>1</label>
 </div>
-<div class='form-check form-check-inline'>
-<input class='form-check-input' id='inlineRadio2' name='inlineRadioOptions' type='radio' value='option2'>
-<label class='form-check-label' for='inlineRadio2'>2</label>
+<div class='card-body border-bottom'>
+<h5 class='card-title'>.sa-radio-buttons-after</h5>
+<div class='right'>
+<div class='form-check sa-radio-buttons-after'>
+<input checked='checked' class='form-check-input' id='exampleRadios2-1-1' name='exampleRadios-right' type='radio' value='option1'>
+<label class='radio-button form-check-label' for='exampleRadios2-1-1'>
+<span>Default radio</span>
+</label>
 </div>
-<div class='form-check form-check-inline'>
-<input class='form-check-input' disabled='disabled' id='inlineRadio3' name='inlineRadioOptions' type='radio' value='option3'>
-<label class='form-check-label' for='inlineRadio3'>3 (disabled)</label>
+<div class='form-check sa-radio-buttons-after'>
+<input class='form-check-input' id='exampleRadios2-2-2' name='exampleRadios-right' type='radio' value='option2'>
+<label class='radio-button form-check-label' for='exampleRadios2-2-2'>
+Second default radio
+</label>
 </div>
-<h4>Without labels</h4>
-<p>Add .position-static to inputs within .form-check that don’t have any label text. Remember to still provide some form of label for assistive technologies (for instance, using aria-label).</p>
-<div class='form-check'>
-<input aria-label='...' class='form-check-input position-static' id='blankCheckbox' type='checkbox' value='option1'>
+<div class='form-check sa-radio-buttons-after'>
+<input class='form-check-input' disabled='disabled' id='exampleRadios2-3-3' name='exampleRadios-right' type='radio' value='option3'>
+<label class='radio-button form-check-label' for='exampleRadios2-3-3'>
+Disabled radio
+</label>
 </div>
-<div class='form-check'>
-<input aria-label='...' class='form-check-input position-static' id='blankRadio1' name='blankRadio' type='radio' value='option1'>
+</div>
+</div>
+<div class='card-body border-bottom'>
+<h5 class='card-title'>.sa-radio-buttons (inline)</h5>
+<div class='form-check form-check-inline sa-radio-buttons'>
+<input class='form-check-input' id='inlineRadio2-1' name='inlineRadioOptions' type='radio' value='option1'>
+<label class='form-check-label radio-button' for='inlineRadio2-1'>1</label>
+</div>
+<div class='form-check form-check-inline sa-radio-buttons'>
+<input class='form-check-input' id='inlineRadio2-2' name='inlineRadioOptions' type='radio' value='option2'>
+<label class='form-check-label radio-button' for='inlineRadio2-2'>2</label>
+</div>
+<div class='form-check form-check-inline sa-radio-buttons'>
+<input class='form-check-input' disabled='disabled' id='inlineRadio2-3' name='inlineRadioOptions' type='radio' value='option3'>
+<label class='form-check-label radio-button' for='inlineRadio2-3'>3 (disabled)</label>
+</div>
+</div>
+<div class='card-body border-bottom'>
+<h5 class='card-title'>.sa-radio-buttons-after (inline)</h5>
+<div class='right'>
+<div class='form-check form-check-inline sa-radio-buttons-after'>
+<input class='form-check-input' id='inlineRadio-right-2-1-1' name='inlineRadioOptions-right' type='radio' value='option1'>
+<label class='form-check-label radio-button' for='inlineRadio-right-2-1-1'>1</label>
+</div>
+<div class='form-check form-check-inline sa-radio-buttons-after'>
+<input class='form-check-input' id='inlineRadio-right-2-2-2' name='inlineRadioOptions-right' type='radio' value='option2'>
+<label class='form-check-label radio-button' for='inlineRadio-right-2-2-2'>2</label>
+</div>
+<div class='form-check form-check-inline sa-radio-buttons-after'>
+<input class='form-check-input' disabled='disabled' id='inlineRadio-right-2-3-3' name='inlineRadioOptions-right' type='radio' value='option3'>
+<label class='form-check-label radio-button' for='inlineRadio-right-2-3-3'>3 (disabled)</label>
+</div>
+</div>
+</div>
+<div class='card-body'>
+<h5 class='card-title'>Without labels</h5>
+<p class='base'>With SARD styles you DON'T need to add .position-static to inputs within .form-check that don’t have any label text. Remember to still provide some form of label for assistive technologies (for instance, using aria-label).</p>
+<div class='form-check sa-checkbox'>
+<input aria-label='...' class='form-check-input' id='blankCheckbox-2' type='checkbox' value='option1'>
+<label class='form-check-label' for='blankCheckbox-2'>
+<span class='checkbox'></span>
+</label>
+</div>
+<div class='form-check sa-radio-buttons'>
+<input aria-label='...' class='form-check-input' id='blankRadio2-1' name='blankRadio' type='radio' value='option1'>
+<label class='form-check-label radio-button' for='blankRadio2-1'>
+<span></span>
+</label>
+</div>
+</div>
+</div>
+</div>
+<div class='col-sm-12'>
+<hr>
+<h3>Toggle Switches</h3>
+<p>
+Toggle Switches are based on Checkboxes or Radios. Each has a specific purpose and each is written slighly differently.
+</p>
+<div class='card card-sard'>
+<div class='card-header'>Toggle Switches</div>
+<div class='card-body'>
+<div class='row'>
+<div class='col-sm-6'>
+<div class='sa-toggle-switch'>
+<input class='advanced_when' id='advanced_when_toggle' name='advanced_when' type='checkbox'>
+<label for='advanced_when_toggle'>
+<span class='slider'>.sa-toggle-switch</span>
+</label>
+</div>
+</div>
+<div class='col-sm-6'>
+<div class='sa-toggle-switch-right'>
+<input class='advanced_when' id='advanced_when_toggle_right' name='advanced_when' type='checkbox'>
+<label for='advanced_when_toggle_right'>
+<span class='slider'>.sa-toggle-switch-right</span>
+</label>
+</div>
+</div>
+</div>
+</div>
+<div class='card-body'>
+<p>
+<code>.sa-toggle-switch</code>
+is a form of checkbox.
+<br>
+They can be arranged either left (default) or right by using the class of
+<code>.sa-toggle-switch-right</code>
+instead.
+</p>
+</div>
+</div>
+<div class='card card-sard'>
+<div class='card-header'>Radio Toggles</div>
+<div class='card-body'>
+<div class='row'>
+<div class='col-sm-6'>
+<div class='sa-radio-toggle'>
+<input checked='checked' id='sa-radio-toggle-one' name='user' type='radio' value='false'>
+<label for='sa-radio-toggle-one'>
+<span class='radio'>Top</span>
+</label>
+</div>
+<div class='sa-radio-toggle'>
+<input id='sa-radio-toggle-two' name='user' type='radio' value='true'>
+<label for='sa-radio-toggle-two'>
+<span class='radio'>Bottom</span>
+</label>
+</div>
+</div>
+<div class='col-sm-6'>
+<div class='sa-radio-toggle-right'>
+<input checked='checked' id='sa-radio-toggle-three' name='user2' type='radio' value='false'>
+<label for='sa-radio-toggle-three'>
+<span class='radio'>Top</span>
+</label>
+</div>
+<div class='sa-radio-toggle-right'>
+<input id='sa-radio-toggle-four' name='user2' type='radio' value='true'>
+<label for='sa-radio-toggle-four'>
+<span class='radio'>Bottom</span>
+</label>
+</div>
+</div>
+</div>
+</div>
+<div class='card-body'>
+<p>
+<code>.sa-radio-toggle</code>
+is a set of radio buttons, when one is selected, the other is de-selected.
+<br>
+They can be arranged either left (default) or right by using the class of
+<code>.sa-radio-toggle-right</code>
+instead.
+</p>
+</div>
+</div>
+<div class='card card-sard'>
+<div class='card-header'>Toggle Check</div>
+<div class='card-body'>
+<div class='row'>
+<div class='col-sm-6'>
+<div class='sa-toggle-check'>
+<label>
+<input checked='checked' class='have_own_cpd toggle-check-input' id='own_cpd_record' name='own_cpd_record' type='checkbox' value='true'>
+<span class='toggle-check-text'></span>
+</label>
+</div>
+</div>
+<div class='col-sm-6'>
+<div class='sa-toggle-check-right'>
+<label>
+<input checked='checked' class='have_own_cpd toggle-check-input' id='own_cpd_record' name='own_cpd_record' type='checkbox' value='true'>
+<span class='toggle-check-text'></span>
+</label>
+</div>
+</div>
+</div>
+</div>
+<div class='card-body'>
+<p>
+<code>.sa-toggle-check</code>
+is a single checkbox, with a YES / NO Statement.
+<br>
+They can be arranged either left (default) or right by using the class of
+<code>.sa-toggle-check-right</code>
+instead.
+</p>
+</div>
 </div>
 </div>
 </div>
@@ -1676,60 +1914,12 @@ Remember me
 </div>
 </form>
 <hr>
-<h4>Checkboxes and radios</h4>
-<p>Default checkboxes and radios are improved upon with the help of .form-check, a single class for both input types that improves the layout and behavior of their HTML elements. Checkboxes are for selecting one or several options in a list, while radios are for selecting one option from many.</p>
-<h4>Default (stacked)</h4>
-<div class='form-check mb-3'>
-<input class='form-check-input' id='defaultCheck1' type='checkbox' value=''>
-<label class='form-check-label' for='defaultCheck1'>
-Default checkbox
-</label>
-</div>
-<div class='form-check'>
-<input class='form-check-input' disabled='disabled' id='defaultCheck2' type='checkbox' value=''>
-<label class='form-check-label' for='defaultCheck2'>
-Disabled checkbox
-</label>
-</div>
-<div class='form-check mb-3'>
-<input checked='checked' class='form-check-input' id='exampleRadios1' name='exampleRadios' type='radio' value='option1'>
-<label class='form-check-label' for='exampleRadios1'>
-Default radio
-</label>
-</div>
-<div class='form-check'>
-<input class='form-check-input' id='exampleRadios2' name='exampleRadios' type='radio' value='option2'>
-<label class='form-check-label' for='exampleRadios2'>
-Second default radio
-</label>
-</div>
-<div class='form-check mb-3'>
-<input class='form-check-input' disabled='disabled' id='exampleRadios3' name='exampleRadios' type='radio' value='option3'>
-<label class='form-check-label' for='exampleRadios3'>
-Disabled radio
-</label>
-</div>
-<h4>Inline</h4>
-<div class='form-check form-check-inline mb-3'>
-<input class='form-check-input' id='inlineRadio1' name='inlineRadioOptions' type='radio' value='option1'>
-<label class='form-check-label' for='inlineRadio1'>1</label>
-</div>
-<div class='form-check form-check-inline'>
-<input class='form-check-input' id='inlineRadio2' name='inlineRadioOptions' type='radio' value='option2'>
-<label class='form-check-label' for='inlineRadio2'>2</label>
-</div>
-<div class='form-check form-check-inline'>
-<input class='form-check-input' disabled='disabled' id='inlineRadio3' name='inlineRadioOptions' type='radio' value='option3'>
-<label class='form-check-label' for='inlineRadio3'>3 (disabled)</label>
-</div>
-<h4>Without labels</h4>
-<p>Add .position-static to inputs within .form-check that don’t have any label text. Remember to still provide some form of label for assistive technologies (for instance, using aria-label).</p>
-<div class='form-check'>
-<input aria-label='...' class='form-check-input position-static' id='blankCheckbox' type='checkbox' value='option1'>
-</div>
-<div class='form-check'>
-<input aria-label='...' class='form-check-input position-static' id='blankRadio1' name='blankRadio' type='radio' value='option1'>
-</div>
+<h4>Checkboxes and Radios</h4>
+<p>
+See
+<a href='#checkboxes-anchor'>Checkboxes and Radios</a>
+above.
+</p>
 <hr>
 <h4>Form Groups</h4>
 <p>The .form-group class is the easiest way to add some structure to forms. It provides a flexible class that encourages proper grouping of labels, controls, optional help text, and form validation messaging. By default it only applies margin-bottom, but it picks up additional styles in .form-inline as needed. Use it with fieldsets, divs, or nearly any other element.</p>
