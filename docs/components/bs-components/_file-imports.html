@@ -1,0 +1,68 @@
+<div class='row'>
+<div class='col-sm-12 mb-3'>
+<h1 class='bs-anchor' id='file-imports-anchor'>File Imports</h1>
+<h6>Standard Bootstrap version</h6>
+<p>
+For file inputs, swap the
+<code>.form-control</code>
+for
+<code>.form-control-file</code>
+.
+</p>
+<form>
+<div class='form-group mb-3'>
+<label for='exampleFormControlFile1'>Example file input</label>
+<input class='form-control-file' id='exampleFormControlFile1' type='file'>
+</div>
+</form>
+</div>
+<div class='col-sm-12'>
+<h4>SARD File Upload</h4>
+<p>
+This version is taken from
+<a href='https://codepen.io/claviska/pen/vAgmd' target='blank'>A Pen by Cory LaViska</a>
+and style to fit.
+</p>
+<p>
+The following classes need to be added.
+<br>
+<code class='bold'>.sa-file-upload</code>
+shoud be added to
+<code>.input-group</code>
+</p>
+<p>
+If you are using the Reset button, you will also need to add
+<code class='bold'>.sa-file</code>
+to
+<code>input.form-control</code>
+</p>
+<form action=''>
+<div class='input-group sa-file-upload mb-3'>
+<label class='input-group-btn' id='file_upload_1'>
+<span class='btn btn-primary'>
+Browse…
+<input for='file_upload_1' multiple='multiple' type='file'>
+</span>
+</label>
+<input class='form-control' for='file_upload_1' placeholder='Choose One or Multiple files' readonly='readonly' type='text'>
+</div>
+<p>
+Version with added Reset Button
+</p>
+<div class='input-group sa-file-upload'>
+<label class='input-group-btn' id='file_upload_2'>
+<span class='btn btn-primary'>
+Browse…
+<input for='file_upload_2' multiple='multiple' type='file'>
+</span>
+</label>
+<input class='form-control sa-file' for='file_upload_2' placeholder='Choose One or Multiple files' readonly='readonly' type='text'>
+<label class='input-group-btn' id='file_upload_2'>
+<span class='btn btn-primary btn-reset'>
+Reset
+</span>
+</label>
+</div>
+</form>
+</div>
+</div>

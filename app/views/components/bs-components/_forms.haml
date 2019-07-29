@@ -1,203 +1,274 @@
 .row
   .col-sm-12
     %h1#forms-anchor.bs-anchor Forms
+    %p
+      Forms in SARD always sit within a Card, Panel or Fieldset.
+
+.row
+  .col-sm-12
+    %hr/
+    .card.card-sard
+      .card-header
+        Basic Form
+      .card-body
+        %form
+          .form-group
+            %label{:for => "exampleInputEmail1"} Email address
+            %input#exampleInputEmail1.form-control{"aria-describedby" => "emailHelp", :placeholder => "Enter email", :type => "email"}/
+            %small#emailHelp.form-text.text-muted We'll never share your email with anyone else.
+          %hr/
+          .form-group
+            %label{:for => "exampleInputPassword1"} Password
+            %input#exampleInputPassword1.form-control{:placeholder => "Password", :type => "password"}/
+          %hr/
+          .form-group
+            .form-check.sa-checkbox
+              %input#exampleCheck1.form-check-input{:type => "checkbox"}/
+              %label.form-check-label{:for => "exampleCheck1"} 
+                %span.checkbox Check me out
+          %hr/
+          .form-group.form-buttons
+            %button.btn.btn-primary{:type => "submit"} Submit
+      
+    %p
+      You can add a rule between .form-groups by add a 
+      %code hr 
+      between them.
+      %br/
+      Form buttons should always be on the right, so the containing .form groups should have .form-buttons added to it 
+      %br/
+      i.e.
+      %code  .form-group.form-buttons
+
+.row
+  .col-sm-12
+    %hr/
+    .card.card-sard
+      .card-header
+        Form Controls
+      .card-body
+        %form
+          .form-group
+            %label{:for => "exampleFormControlInput1"} Email address
+            %input#exampleFormControlInput1.form-control{:placeholder => "name@example.com", :type => "email"}/
+          .form-group
+            %label{:for => "exampleFormControlSelect1"} Example select
+            %select#exampleFormControlSelect1.form-control
+              %option 1
+              %option 2
+              %option 3
+              %option 4
+              %option 5
+          .form-group
+            %label{:for => "exampleFormControlSelect2"} Example multiple select
+            %select#exampleFormControlSelect2.form-control{:multiple => "multiple"}
+              %option 1
+              %option 2
+              %option 3
+              %option 4
+              %option 5
+          .form-group
+            %label{:for => "exampleFormControlTextarea1"} Example textarea
+            %textarea#exampleFormControlTextarea1.form-control{rows: "3", placeholder: 'Placeholder Text'}
+
+      .card-body.border-top
+        %h5 Form Control Select Sizing
+        %select.mb-3.form-control.form-control-lg
+          %option Large select
+
+        %select.mb-3.form-control
+          %option Default select
+
+        %select.form-control.form-control-sm
+          %option Small select
 
 
-    %form
-      .form-group
-        %label{:for => "exampleInputEmail1"} Email address
-        %input#exampleInputEmail1.form-control{"aria-describedby" => "emailHelp", :placeholder => "Enter email", :type => "email"}/
-        %small#emailHelp.form-text.text-muted We'll never share your email with anyone else.
-      .form-group
-        %label{:for => "exampleInputPassword1"} Password
-        %input#exampleInputPassword1.form-control{:placeholder => "Password", :type => "password"}/
-      .form-group.form-check
-        %input#exampleCheck1.form-check-input{:type => "checkbox"}/
-        %label.form-check-label{:for => "exampleCheck1"} Check me out
-      %button.btn.btn-primary{:type => "submit"} Submit
 
-    %hr
-
-    %h4 Form Controls
-    %form
-      .form-group
-        %label{:for => "exampleFormControlInput1"} Email address
-        %input#exampleFormControlInput1.form-control{:placeholder => "name@example.com", :type => "email"}/
-      .form-group
-        %label{:for => "exampleFormControlSelect1"} Example select
-        %select#exampleFormControlSelect1.form-control
-          %option 1
-          %option 2
-          %option 3
-          %option 4
-          %option 5
-      .form-group
-        %label{:for => "exampleFormControlSelect2"} Example multiple select
-        %select#exampleFormControlSelect2.form-control{:multiple => "multiple"}
-          %option 1
-          %option 2
-          %option 3
-          %option 4
-          %option 5
-      .form-group
-        %label{:for => "exampleFormControlTextarea1"} Example textarea
-        %textarea#exampleFormControlTextarea1.form-control{:rows => "3"}
-
-    %hr
-
-    %h4 Sizing
-    %select.mb-3.form-control.form-control-lg
-      %option Large select
-
-    %select.mb-3.form-control
-      %option Default select
-
-    %select.form-control.form-control-sm
-      %option Small select
-
-    %hr
-
-    %h4 File Imports
-    %p For file inputs, swap the .form-control for .form-control-file.
-    %form
-      .form-group
-        %label{:for => "exampleFormControlFile1"} Example file input
-        %input#exampleFormControlFile1.form-control-file{:type => "file"}/
-
-    %hr
-
+.row
+  .col-sm-12
+    %hr/
     %h4 Range Inputs
-    %p Set horizontally scrollable range inputs using .form-control-range.
-    %form
-      .form-group
-        %label{:for => "formControlRange"} Example Range input
-        %input#formControlRange.form-control-range{:type => "range"}/
+    .card.card-sard
+      .card-header
+        Standard Bootstrap Inputs
+      .card-body
+        %p 
+          This is the standard Bootstrap version using 
+          %code .form-control-range
+          \. It is quite difficult to style, but we have added some colouring to it.
+        %form
+          .form-group
+            %label{:for => "formControlRange"} Example Range input
+            %input#formControlRange.form-control-range{:type => "range"}/
 
 
-    %hr
-
-    %h4 Checkboxes and Radios
-    %p 
-      See 
-      %a{href: "#checkboxes-anchor"} Checkboxes and Radios
-      above.
-
-    %hr
-    %h4 Form Groups
+.row
+  .col-sm-12
+    %hr/
+    %h4 Form Groups and Layouts
     %p The .form-group class is the easiest way to add some structure to forms. It provides a flexible class that encourages proper grouping of labels, controls, optional help text, and form validation messaging. By default it only applies margin-bottom, but it picks up additional styles in .form-inline as needed. Use it with fieldsets, divs, or nearly any other element.
-    %form
-      .form-group
-        %label{:for => "formGroupExampleInput"} Example label
-        %input#formGroupExampleInput.form-control{:placeholder => "Example input", :type => "text"}/
-      .form-group
-        %label{:for => "formGroupExampleInput2"} Another label
-        %input#formGroupExampleInput2.form-control{:placeholder => "Another input", :type => "text"}/
+    .card.card-sard
+      .card-header
+        Form Groups
+      .card-body
+        %form
+          .form-group
+            %label{:for => "formGroupExampleInput"} Example label
+            %input#formGroupExampleInput.form-control{:placeholder => "Example input", :type => "text"}/
+          .form-group
+            %label{:for => "formGroupExampleInput2"} Another label
+            %input#formGroupExampleInput2.form-control{:placeholder => "Another input", :type => "text"}/
 
-    %hr
-    %h4 Form Grid
-    %p More complex forms can be built using our grid classes. Use these for form layouts that require multiple columns, varied widths, and additional alignment options.
-    %form
-      .row
-        .col
-          %input.form-control{:placeholder => "First name", :type => "text"}/
-        .col
-          %input.form-control{:placeholder => "Last name", :type => "text"}/
+.row
+  .col-sm-12
+    %hr/
 
-    %hr
-    %h4 Form Row
-    %p You may also swap .row for .form-row, a variation of our standard grid row that overrides the default column gutters for tighter and more compact layouts.
+    .card.card-sard
+      .card-header
+        Form Grid
+      .card-body
+        %p More complex forms can be built using our grid classes. Use these for form layouts that require multiple columns, varied widths, and additional alignment options.
+        %form
+          .form-group.row
+            .col
+              %input.form-control{:placeholder => "First name", :type => "text"}/
+            .col
+              %input.form-control{:placeholder => "Last name", :type => "text"}/
+          .form-group
+            .row
+              .col
+                %input.form-control{:placeholder => "First name", :type => "text"}/
+              .col
+                %input.form-control{:placeholder => "Middle name", :type => "text"}/
+              .col
+                %input.form-control{:placeholder => "Last name", :type => "text"}/
 
-    %form
-      .form-row
-        .col
-          %input.form-control{:placeholder => "First name", :type => "text"}/
-        .col
-          %input.form-control{:placeholder => "Last name", :type => "text"}/
+.row
+  .col-sm-12
+    %hr/
+    .card.card-sard
+      .card-header
+        Form Row
+      .card-body
+        %p 
+          You may also swap .form-group and .row for just 
+          %code .form-row
+          , a variation of our standard grid row that overrides the default column gutters for tighter and more compact layouts. It will have the sane effect.
 
-    %hr
-    %p More complex layouts can also be created with the grid system.
-    %form
-      .form-row
-        .form-group.col-md-6
-          %label{:for => "inputEmail4"} Email
-          %input#inputEmail4.form-control{:placeholder => "Email", :type => "email"}/
-        .form-group.col-md-6
-          %label{:for => "inputPassword4"} Password
-          %input#inputPassword4.form-control{:placeholder => "Password", :type => "password"}/
-      .form-group
-        %label{:for => "inputAddress"} Address
-        %input#inputAddress.form-control{:placeholder => "1234 Main St", :type => "text"}/
-      .form-group
-        %label{:for => "inputAddress2"} Address 2
-        %input#inputAddress2.form-control{:placeholder => "Apartment, studio, or floor", :type => "text"}/
-      .form-row
-        .form-group.col-md-6
-          %label{:for => "inputCity"} City
-          %input#inputCity.form-control{:type => "text"}/
-        .form-group.col-md-4
-          %label{:for => "inputState"} State
-          %select#inputState.form-control
-            %option{:selected => "selected"} Choose...
-            %option ...
-        .form-group.col-md-2
-          %label{:for => "inputZip"} Zip
-          %input#inputZip.form-control{:type => "text"}/
-      .form-group
-        .form-check
-          %input#gridCheck.form-check-input{:type => "checkbox"}/
-          %label.form-check-label{:for => "gridCheck"}
-            Check me out
-      %button.btn.btn-primary{:type => "submit"} Sign in
+        %form
+          .form-row
+            .col
+              %input.form-control{:placeholder => "First name", :type => "text"}/
+            .col
+              %input.form-control{:placeholder => "Last name", :type => "text"}/
+          .form-row
+            .col
+              %input.form-control{:placeholder => "First name", :type => "text"}/
+            .col
+              %input.form-control{:placeholder => "Middle name", :type => "text"}/
+            .col
+              %input.form-control{:placeholder => "Last name", :type => "text"}/
 
-    %hr
-    %h4 Horizontal form
-    %p Create horizontal forms with the grid by adding the .row class to form groups and using the .col-*-* classes to specify the width of your labels and controls. Be sure to add .col-form-label to your <label>s as well so they’re vertically centered with their associated form controls.
+.row
+  .col-sm-12
+    %hr/
+    .card.card-sard
+      .card-header
+        Complex Layouts 
+      .card-body
+        %p More complex layouts can also be created with the grid system.
+        
+        %form
+          .form-row
+            .form-group.col-md-6
+              %label{:for => "inputEmail4"} Email
+              %input#inputEmail4.form-control{:placeholder => "Email", :type => "email"}/
+            .form-group.col-md-6
+              %label{:for => "inputPassword4"} Password
+              %input#inputPassword4.form-control{:placeholder => "Password", :type => "password"}/
+          .form-group
+            %label{:for => "inputAddress"} Address
+            %input#inputAddress.form-control{:placeholder => "1234 Main St", :type => "text"}/
+          .form-group
+            %label{:for => "inputAddress2"} Address 2
+            %input#inputAddress2.form-control{:placeholder => "Apartment, studio, or floor", :type => "text"}/
+          .form-row
+            .form-group.col-md-6
+              %label{:for => "inputCity"} City
+              %input#inputCity.form-control{:type => "text"}/
+            .form-group.col-md-4
+              %label{:for => "inputState"} State
+              %select#inputState.form-control
+                %option{:selected => "selected"} Choose...
+                %option ...
+            .form-group.col-md-2
+              %label{:for => "inputZip"} Zip
+              %input#inputZip.form-control{:type => "text"}/
+          .form-group
+            .form-check.sa-checkbox
+              %input#gridCheck.form-check-input{:type => "checkbox"}/
+              %label.form-check-label{:for => "gridCheck"}
+                %span.checkbox Check me out
+          %hr/
+          .form-group.form-buttons
+            %button.btn.btn-primary{:type => "submit"} Sign in
 
-    At times, you maybe need to use margin or padding utilities to create that perfect alignment you need. For example, we’ve removed the padding-top on our stacked radio inputs label to better align the text baseline.
+.row
+  .col-sm-12
+    %hr/
+    .card.card-sard
+      .card-header
+        Horizontal form
+      .card-body
+        %p 
+          Create horizontal forms with the grid by adding the .row class to form groups and using the .col-*-* classes to specify the width of your labels and controls. Be sure to add .col-form-label to your <label>s as well so they’re vertically centered with their associated form controls.
+        %p
+          At times, you maybe need to use margin or padding utilities to create that perfect alignment you need. For example, we’ve removed the padding-top on our stacked radio inputs label to better align the text baseline.
 
-    %form
-      .form-group.row
-        %label.col-sm-2.col-form-label{:for => "inputEmail3"} Email
-        .col-sm-10
-          %input#inputEmail3.form-control{:placeholder => "Email", :type => "email"}/
-      .form-group.row
-        %label.col-sm-2.col-form-label{:for => "inputPassword3"} Password
-        .col-sm-10
-          %input#inputPassword3.form-control{:placeholder => "Password", :type => "password"}/
-      .form-group
-        .row
-          .col-form-label.col-sm-2.pt-0 Radios
-          .col-sm-10
-            .form-check
-              %input#gridRadios1.form-check-input{:checked => "checked", :name => "gridRadios", :type => "radio", :value => "option1"}/
-              %label.form-check-label{:for => "gridRadios1"}
-                First radio
-            .form-check
-              %input#gridRadios2.form-check-input{:name => "gridRadios", :type => "radio", :value => "option2"}/
-              %label.form-check-label{:for => "gridRadios2"}
-                Second radio
-            .form-check.disabled
-              %input#gridRadios3.form-check-input{:disabled => "disabled", :name => "gridRadios", :type => "radio", :value => "option3"}/
-              %label.form-check-label{:for => "gridRadios3"}
-                Third disabled radio
-      .form-group.row
-        .col-sm-2 Checkbox
-        .col-sm-10
-          .form-check
-            %input#gridCheck1.form-check-input{:type => "checkbox"}/
-            %label.form-check-label{:for => "gridCheck1"}
-              Example checkbox
-      .form-group.row
-        .col-sm-10
-          %button.btn.btn-primary{:type => "submit"} Sign in
+        %form
+          .form-group.row
+            %label.col-sm-2.col-form-label{:for => "inputEmail3"} Email
+            .col-sm-10
+              %input#inputEmail3.form-control{:placeholder => "Email", :type => "email"}/
+          .form-group.row
+            %label.col-sm-2.col-form-label{:for => "inputPassword3"} Password
+            .col-sm-10
+              %input#inputPassword3.form-control{:placeholder => "Password", :type => "password"}/
+          .form-group
+            .row
+              .col-form-label.col-sm-2.pt-0 Radios
+              .col-sm-10
+                .form-check.sa-radio-buttons
+                  %input#gridRadios1.form-check-input{:checked => "checked", :name => "gridRadios", :type => "radio", :value => "option1"}/
+                  %label.form-check-label.radio-button{:for => "gridRadios1"}
+                    %span First radio
+                .form-check.sa-radio-buttons
+                  %input#gridRadios2.form-check-input{:name => "gridRadios", :type => "radio", :value => "option2"}/
+                  %label.form-check-label.radio-button{:for => "gridRadios2"}
+                    %span Second radio
+                .form-check.sa-radio-buttons.disabled
+                  %input#gridRadios3.form-check-input{:disabled => "disabled", :name => "gridRadios", :type => "radio", :value => "option3"}/
+                  %label.form-check-label.radio-button{:for => "gridRadios3"}
+                    %span Third disabled radio
+          .form-group.row
+            .col-sm-2 Checkbox
+            .col-sm-10
+              .form-check.sa-checkbox
+                %input#gridCheck1.form-check-input{:type => "checkbox"}/
+                %label.form-check-label{:for => "gridCheck1"}
+                  %span.checkbox Example checkbox
+          %hr/
+          .form-group.form-buttons
+            %button.btn.btn-primary{:type => "submit"} Sign in
 
 
 
 %hr
 .row
   .col-sm-12
-    %h2 Forms within Cards, Panels and Fieldsets
-    %p These are designed so they look identical, whichever you use.
+    %h3 Mixing Forms within Cards, Panels and Fieldsets
+    %p Whether you use Cards, Panels or Fieldsets, they are designed to look identical. However Fieldsets can be placed within either a Card or a Panel.
+    %p Below are some examples of mixed layouts.
 .row
   .col-sm-6
     %h4 Card
@@ -213,8 +284,8 @@
             %input#user_password.form-control{:name => "user[password]", :size => "30", :type => "password"}/
             %a{:href => "/users/password/new"} Forgot your password?
             %br/
-        .card-body
-          .form-group.no-border.login-btns
+          %hr/
+          .form-group.form-buttons
             %input.btn.btn-client.btn-bold.pull-right{:name => "commit", :type => "submit", :value => "Sign in"}/
             %button.btn.btn-primary{:type => "submit"} Submit
 
@@ -247,37 +318,68 @@
           .form-group
             %label{:for => "exampleFormControlTextarea1"} Example textarea
             %textarea#exampleFormControlTextarea1.form-control{:rows => "3"}
-          .form-group.form-check
+          .form-group.form-check.sa-checkbox
             %input#exampleCheck1.form-check-input{:type => "checkbox"}/
-            %label.form-check-label{:for => "exampleCheck1"} Check me out
+            %label.form-check-label{:for => "exampleCheck1"} 
+              %span.checkbox Check me out
+          %hr/
+          .form-group.form-buttons
+            %button.btn.btn-primary{:type => "submit"} Submit
+
+
+
+  .col-sm-12  
+    %h4 Fieldsets
+  .col-sm-6
+    %form#new_user.new_user{"accept-charset" => "UTF-8", :action => "/users/sign_in", :method => "post"}
+      %fieldset.fieldset-sard
+        %legend Form in Fieldset
+        .form-group
+          %label{:for => "user_login"} Email
+          %input#user_login.form-control{:name => "user[login]", :size => "30", :type => "text"}/
+        
+        .form-group
+          %label{:for => "user_password"} Password
+          %input#user_password.form-control{:name => "user[password]", :size => "30", :type => "password"}/
+          %a{:href => "/users/password/new"} Forgot your password?
+          %br/
+
+        %hr/
+        .form-group.form-buttons
+          %input.btn.btn-client.btn-bold{:name => "commit", :type => "submit", :value => "Sign in"}/
           %button.btn.btn-primary{:type => "submit"} Submit
 
-
   .col-sm-6
-    .card.card-sard
-      .card-header Form within Card using Fieldsets
-      .card-body
-        %form#new_user.new_user{"accept-charset" => "UTF-8", :action => "/users/sign_in", :method => "post"}
-          %fieldset
-            %legend This is an example of a legend
-            .form-group
-              %label{:for => "user_login"} Email
-              %input#user_login.form-control{:name => "user[login]", :size => "30", :type => "text"}/
-            %hr
-            .form-group
-              %label{:for => "user_password"} Password
-              %input#user_password.form-control{:name => "user[password]", :size => "30", :type => "password"}/
-              %a{:href => "/users/password/new"} Forgot your password?
-              %br/
-          %fieldset
-            .form-group.no-border.login-btns
-              %input.btn.btn-client.btn-bold.pull-right{:name => "commit", :type => "submit", :value => "Sign in"}/
-              %button.btn.btn-primary{:type => "submit"} Submit
+    %form#new_user.new_user{"accept-charset" => "UTF-8", :action => "/users/sign_in", :method => "post"}
+      %fieldset.fieldset-sard
+        %legend Form in seperate Fieldsets
+        .form-group.border-bottom
+          %label{:for => "user_login"} Email
+          %input#user_login.form-control{:name => "user[login]", :size => "30", :type => "text"}/
+        
+        .form-group
+          %label{:for => "user_password"} Password
+          %input#user_password.form-control{:name => "user[password]", :size => "30", :type => "password"}/
+          %a{:href => "/users/password/new"} Forgot your password?
+          %br/
+      %fieldset
+        .form-group.form-buttons
+          %input.btn.btn-client.btn-bold.pull-right{:name => "commit", :type => "submit", :value => "Sign in"}/
+          %button.btn.btn-primary{:type => "submit"} Submit
+
+.row
+  .col-sm-12  
+    %hr/
+    %h4 Nesting Fieldsets within Cards or Panels
+    %p
+      You can nest Fieldstes within a Card or Panel, They will automatically have a border around each friedset.
 
   .col-sm-6
     .panel.panel-sard
       .panel-header Form within Card using Fieldsets
       .panel-body
+        %p  
+          You can add a border between .form-groups by adding a hr between them.
         %form#new_user.new_user{"accept-charset" => "UTF-8", :action => "/users/sign_in", :method => "post"}
           %fieldset
             %legend Welcome to Strengthened Appraisal & Revalidation Database
@@ -290,26 +392,30 @@
               %input#user_password.form-control{:name => "user[password]", :size => "30", :type => "password"}/
               %a{:href => "/users/password/new"} Forgot your password?
               %br/
-          %fieldset
-            .form-group.no-border.login-btns
+            %hr
+            .form-group.form-buttons
               %input.btn.btn-client.btn-bold.pull-right{:name => "commit", :type => "submit", :value => "Sign in"}/
               %button.btn.btn-primary{:type => "submit"} Submit
 
-
   .col-sm-6
-    %form#new_user.new_user{"accept-charset" => "UTF-8", :action => "/users/sign_in", :method => "post"}
-      %fieldset.fieldset-sard
-        %legend Stand alone fieldset
-        .form-group.border-bottom
-          %label{:for => "user_login"} Email
-          %input#user_login.form-control{:name => "user[login]", :size => "30", :type => "text"}/
-        
-        .form-group
-          %label{:for => "user_password"} Password
-          %input#user_password.form-control{:name => "user[password]", :size => "30", :type => "password"}/
-          %a{:href => "/users/password/new"} Forgot your password?
-          %br/
-      %fieldset
-        .form-group.no-border.login-btns
-          %input.btn.btn-client.btn-bold.pull-right{:name => "commit", :type => "submit", :value => "Sign in"}/
-          %button.btn.btn-primary{:type => "submit"} Submit
+    .card.card-sard
+      .card-header Form within Card using Fieldsets
+      .card-body
+        %p
+          You can add multiple Fieldsets within a Card or Panel.
+        %form#new_user.new_user{"accept-charset" => "UTF-8", :action => "/users/sign_in", :method => "post"}
+          %fieldset
+            %legend This is an example of a legend
+            .form-group
+              %label{:for => "user_login"} Email
+              %input#user_login.form-control{:name => "user[login]", :size => "30", :type => "text"}/
+            .form-group
+              %label{:for => "user_password"} Password
+              %input#user_password.form-control{:name => "user[password]", :size => "30", :type => "password"}/
+              %a{:href => "/users/password/new"} Forgot your password?
+              %br/
+          %fieldset
+            .form-group.form-buttons
+              %input.btn.btn-client.btn-bold.pull-right{:name => "commit", :type => "submit", :value => "Sign in"}/
+              %button.btn.btn-primary{:type => "submit"} Submit
+

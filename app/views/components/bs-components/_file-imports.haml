@@ -1,0 +1,52 @@
+.row
+  .col-sm-12.mb-3
+    %h1#file-imports-anchor.bs-anchor File Imports
+    %h6 Standard Bootstrap version
+    %p 
+      For file inputs, swap the 
+      %code .form-control 
+      for 
+      %code .form-control-file
+      \.
+
+    %form
+      .form-group.mb-3
+        %label{:for => "exampleFormControlFile1"} Example file input
+        %input#exampleFormControlFile1.form-control-file{:type => "file"}/
+
+  .col-sm-12
+    %h4 SARD File Upload
+    %p
+      This version is taken from 
+      %a{href: "https://codepen.io/claviska/pen/vAgmd", target: 'blank'} A Pen by Cory LaViska
+      and style to fit.
+    %p
+      The following classes need to be added.
+      %br/
+      %code.bold .sa-file-upload
+      shoud be added to  
+      %code .input-group 
+    %p
+      If you are using the Reset button, you will also need to add
+      %code.bold .sa-file
+      to
+      %code input.form-control  
+
+    %form(action="")
+      .input-group.sa-file-upload.mb-3
+        %label#file_upload_1.input-group-btn
+          %span.btn.btn-primary
+            Browse…
+            %input{for: 'file_upload_1', :multiple => "multiple", :type => "file"}/
+        %input.form-control{:readonly => "readonly", :type => "text", for: 'file_upload_1', placeholder: 'Choose One or Multiple files'}/
+      %p
+        Version with added Reset Button
+      .input-group.sa-file-upload
+        %label#file_upload_2.input-group-btn
+          %span.btn.btn-primary
+            Browse…
+            %input{for: 'file_upload_2', :multiple => "multiple", :type => "file"}/
+        %input.form-control.sa-file{:readonly => "readonly", :type => "text", for: 'file_upload_2', placeholder: 'Choose One or Multiple files'}/
+        %label#file_upload_2.input-group-btn
+          %span.btn.btn-primary.btn-reset
+            Reset
