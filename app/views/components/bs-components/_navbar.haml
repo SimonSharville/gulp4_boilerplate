@@ -111,3 +111,47 @@
         %form.form-inline.my-2.my-lg-0
           %input.form-control.mr-sm-2{"aria-label" => "Search", :placeholder => "Search", :type => "search"}/
           %button.btn.btn-outline-success.my-2.my-sm-0{:type => "submit"} Search
+
+    %hr/
+    %h4.mt-3 Nested Dropdowns
+    %p
+      Nested dropdowns are not part of the default Bootstrap 4, We have added a small amount of Javascript and CSS.  
+    %nav.navbar.navbar-expand-lg.navbar-sard
+      %a.navbar-brand{:href => "#"} Navbar
+      %button.navbar-toggler{"aria-controls" => "navbarNavDropdown", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbarNavDropdown", "data-toggle" => "collapse", :type => "button"}
+        %span.navbar-toggler-icon
+      #navbarNavDropdown.collapse.navbar-collapse
+        %ul.navbar-nav
+          %li.nav-item.active
+            %a.nav-link{:href => "#"}
+              Home
+              %span.sr-only (current)
+          %li.nav-item.dropdown
+            %a#navbarDropdownMenuLink.nav-link.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "http://example.com"}
+              Nested Dropdowns
+            %ul.dropdown-menu{"aria-labelledby" => "navbarDropdownMenuLink"}
+              %li
+                %a.dropdown-item{:href => "#/"} Action
+              %li
+                %a.dropdown-item{:href => "#/"} Another action
+              %li.dropdown-submenu
+                %a.dropdown-item.dropdown-toggle{:href => "#/"} Submenu
+                %ul.dropdown-menu
+                  %li
+                    %a.dropdown-item{:href => "#/"} Submenu action
+                  %li
+                    %a.dropdown-item{:href => "#/"} Another submenu action
+                  %li.dropdown-submenu
+                    %a.dropdown-item.dropdown-toggle{:href => "#/"} Subsubmenu
+                    %ul.dropdown-menu
+                      %li
+                        %a.dropdown-item{:href => "#/"} Subsubmenu action
+                      %li
+                        %a.dropdown-item{:href => "#/"} Another subsubmenu action
+                  %li.dropdown-submenu
+                    %a.dropdown-item.dropdown-toggle{:href => "#/"} Second subsubmenu
+                    %ul.dropdown-menu
+                      %li
+                        %a.dropdown-item{:href => "#/"} Subsubmenu action
+                      %li
+                        %a.dropdown-item{:href => "#/"} Another subsubmenu action

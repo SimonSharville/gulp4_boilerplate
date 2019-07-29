@@ -43,25 +43,28 @@ Components
 <a class='dropdown-item' href='../components/components.html#breadcrumbs-anchor'>Breadcrumbs</a>
 <a class='dropdown-item' href='../components/components.html#buttons-anchor'>Buttons</a>
 <a class='dropdown-item' href='../components/components.html#cards-anchor'>Cards</a>
-<a class='dropdown-item' href='../components/components.html#checkboxes-anchor'>Checkboxes and Radios</a>
 <a class='dropdown-item' href='../components/components.html#collapse-anchor'>Collapse</a>
 <a class='dropdown-item' href='../components/components.html#dropdowns-anchor'>Dropdowns</a>
+<div class='dropdown-submenu'>
+<a class='dropdown-item dropdown-toggle' href='#'>Form Components</a>
+<ul class='dropdown-menu'>
 <a class='dropdown-item' href='../components/components.html#forms-anchor'>Forms</a>
-<a class='dropdown-item' href='../components/components.html#input-group-anchor'>Input Groups</a>
+<a class='dropdown-item' href='../components/components.html#checkboxes-anchor'>Checkboxes and Radios</a>
 <a class='dropdown-item' href='../components/components.html#file-imports-anchor'>File Imports</a>
+<a class='dropdown-item' href='../components/components.html#input-group-anchor'>Input Groups</a>
+</ul>
+</div>
 <a class='dropdown-item' href='../components/components.html#list-group-anchor'>List Groups</a>
 <a class='dropdown-item' href='../components/components.html#modal-anchor'>Modal</a>
 <a class='dropdown-item' href='../components/components.html#navbar-anchor'>Navbar</a>
 <a class='dropdown-item' href='../components/components.html#navs-anchor'>Navs</a>
 <a class='dropdown-item' href='../components/components.html#pagination-anchor'>Pagination</a>
+<a class='dropdown-item' href='../components/components.html#panels-anchor'>Panels</a>
 <a class='dropdown-item' href='../components/components.html#popovers-anchor'>Popovers</a>
 <a class='dropdown-item' href='../components/components.html#progress-anchor'>Progress Bars</a>
 <a class='dropdown-item' href='../components/components.html#searchbars-anchor'>Searchbars</a>
 <a class='dropdown-item' href='../components/components.html#tables-anchor'>Tables</a>
 <a class='dropdown-item' href='../components/components.html#tooltips-anchor'>Tooltips</a>
-<div class='dropdown-divider'></div>
-<div class='dropdown-header'>BS3 Components</div>
-<a class='dropdown-item' href='../components/components.html#panels-anchor'>Panels</a>
 </div>
 </li>
 <li class='nav-item'>
@@ -996,362 +999,6 @@ Someone famous in
 <small class='text-muted'>Last updated 3 mins ago</small>
 </p>
 </div>
-</div>
-</div>
-</div>
-</div>
-<hr class='black'>
-<div class='row'>
-<div class='col-sm-12'>
-<h1 class='bs-anchor' id='checkboxes-anchor'>Checkboxes and Radios</h1>
-<p>Standard Checkboxes and Radios are by default quite small. We have created a new set, that with a little bit of extra code added, will make them stand out better.</p>
-<h3>Build Notes</h3>
-<p>
-<span class='bold'>Note!</span>
-Bootstrap 4 for has introduced the class of
-<code>.form-check</code>
-This is uses as a wrapper for Checkboxes and Radios. However, some of the earlier SARD project were built in BS3, These have their own wrappers (.sa-checkbox and .sa-radio-buttons), Which if using BS4 should be added to .form-check.
-</p>
-<h5 class='base'>Checkboxes</h5>
-<p>
-To create the SARD Checkboxes add
-<code>.sa-checkbox</code>
-to the class of .form-check, and
-<span class='bold'>ADD</span>
-<code>%span.checkbox</code>
-<span class='bold'>INSIDE</span>
-the label.
-<br>
-You can instead use
-<code>.sa-checkbox-after</code>
-to have the checkbox after the label.
-</p>
-<h5 class='base'>Radios</h5>
-<p>
-To create SARD Radios add
-<code>.sa-radio-buttons</code>
-to the class of .form-check, and
-<span class='bold'>ADD</span>
-<code>.radio-button</code>
-<span class='bold'>TO</span>
-the label.
-<br>
-You can instead use
-<code>.sa-radio-buttons-after</code>
-to have the button after the label.
-</p>
-<p>Below you will see the Standard and SARD styles next to each other.</p>
-</div>
-<div class='col-sm-6'>
-<div class='card card-sard'>
-<div class='card-header'>Standard Style</div>
-<div class='card-body border-bottom'>
-<h5 class='card-title'>Default (stacked)</h5>
-<div class='form-check'>
-<input class='form-check-input' id='defaultCheck1' type='checkbox' value=''>
-<label class='form-check-label' for='defaultCheck1'>
-Default checkbox
-</label>
-</div>
-<div class='form-check'>
-<input class='form-check-input' disabled='disabled' id='defaultCheck2' type='checkbox' value=''>
-<label class='form-check-label' for='defaultCheck2'>
-Disabled checkbox
-</label>
-</div>
-</div>
-<div class='card-body border-bottom'>
-<h5 class='card-title'>Radios</h5>
-<div class='form-check'>
-<input checked='checked' class='form-check-input' id='exampleRadios1' name='exampleRadios' type='radio' value='option1'>
-<label class='form-check-label' for='exampleRadios1'>
-Default radio
-</label>
-</div>
-<div class='form-check'>
-<input class='form-check-input' id='exampleRadios2' name='exampleRadios' type='radio' value='option2'>
-<label class='form-check-label' for='exampleRadios2'>
-Second default radio
-</label>
-</div>
-<div class='form-check'>
-<input class='form-check-input' disabled='disabled' id='exampleRadios3' name='exampleRadios' type='radio' value='option3'>
-<label class='form-check-label' for='exampleRadios3'>
-Disabled radio
-</label>
-</div>
-</div>
-<div class='card-body border-bottom'>
-<h5 class='card-title'>Inline</h5>
-<div class='form-check form-check-inline'>
-<input class='form-check-input' id='inlineRadio1' name='inlineRadioOptions' type='radio' value='option1'>
-<label class='form-check-label' for='inlineRadio1'>1</label>
-</div>
-<div class='form-check form-check-inline'>
-<input class='form-check-input' id='inlineRadio2' name='inlineRadioOptions' type='radio' value='option2'>
-<label class='form-check-label' for='inlineRadio2'>2</label>
-</div>
-<div class='form-check form-check-inline'>
-<input class='form-check-input' disabled='disabled' id='inlineRadio3' name='inlineRadioOptions' type='radio' value='option3'>
-<label class='form-check-label' for='inlineRadio3'>3 (disabled)</label>
-</div>
-</div>
-<div class='card-body'>
-<h5 class='card-title'>Without labels</h5>
-<p>Add .position-static to inputs within .form-check that don’t have any label text. Remember to still provide some form of label for assistive technologies (for instance, using aria-label).</p>
-<div class='form-check'>
-<input aria-label='...' class='form-check-input position-static' id='blankCheckbox' type='checkbox' value='option1'>
-</div>
-<div class='form-check'>
-<input aria-label='...' class='form-check-input position-static' id='blankRadio1' name='blankRadio' type='radio' value='option1'>
-</div>
-</div>
-</div>
-</div>
-<div class='col-sm-6'>
-<div class='card card-sard'>
-<div class='card-header'>SARD style</div>
-<div class='card-body border-bottom'>
-<h5 class='card-title'>.sa-checkbox</h5>
-<div class='form-check sa-checkbox'>
-<input class='form-check-input' id='defaultCheck2-1' type='checkbox' value=''>
-<label class='form-check-label checkbox' for='defaultCheck2-1'>
-<span class='checkbox'>sa-checkbox</span>
-</label>
-</div>
-<div class='form-check sa-checkbox'>
-<input class='form-check-input' disabled='disabled' id='defaultCheck2-2' type='checkbox' value=''>
-<label class='form-check-label checkbox' for='defaultCheck2-2'>
-<span class='checkbox'>Disabled sa-checkbox</span>
-</label>
-</div>
-</div>
-<div class='card-body border-bottom'>
-<h5 class='card-title'>.sa-checkbox-after</h5>
-<div class='right'>
-<div class='form-check sa-checkbox-after'>
-<input class='form-check-input' id='defaultCheck2-1-1' type='checkbox' value=''>
-<label class='form-check-label' for='defaultCheck2-1-1'>
-<span class='checkbox'>sa-checkbox-after</span>
-</label>
-</div>
-<div class='form-check sa-checkbox-after'>
-<input class='form-check-input' disabled='disabled' id='defaultCheck2-2-2' type='checkbox' value=''>
-<label class='form-check-label' for='defaultCheck2-2-2'>
-<span class='checkbox'>Disabled sa-checkbox-after</span>
-</label>
-</div>
-</div>
-</div>
-<div class='card-body border-bottom'>
-<h5 class='card-title'>.sa-radio-buttons</h5>
-<div class='form-check sa-radio-buttons'>
-<input checked='checked' class='form-check-input' id='exampleRadios2-1' name='exampleRadios-sa' type='radio' value='option1'>
-<label class='radio-button form-check-label' for='exampleRadios2-1'>
-<span>Default radio</span>
-</label>
-</div>
-<div class='form-check sa-radio-buttons'>
-<input class='form-check-input' id='exampleRadios2-2' name='exampleRadios-sa' type='radio' value='option2'>
-<label class='radio-button form-check-label' for='exampleRadios2-2'>
-Second default radio
-</label>
-</div>
-<div class='form-check sa-radio-buttons'>
-<input class='form-check-input' disabled='disabled' id='exampleRadios2-3' name='exampleRadios' type='radio' value='option3'>
-<label class='radio-button form-check-label' for='exampleRadios2-3'>
-Disabled radio
-</label>
-</div>
-</div>
-<div class='card-body border-bottom'>
-<h5 class='card-title'>.sa-radio-buttons-after</h5>
-<div class='right'>
-<div class='form-check sa-radio-buttons-after'>
-<input checked='checked' class='form-check-input' id='exampleRadios2-1-1' name='exampleRadios-right' type='radio' value='option1'>
-<label class='radio-button form-check-label' for='exampleRadios2-1-1'>
-<span>Default radio</span>
-</label>
-</div>
-<div class='form-check sa-radio-buttons-after'>
-<input class='form-check-input' id='exampleRadios2-2-2' name='exampleRadios-right' type='radio' value='option2'>
-<label class='radio-button form-check-label' for='exampleRadios2-2-2'>
-Second default radio
-</label>
-</div>
-<div class='form-check sa-radio-buttons-after'>
-<input class='form-check-input' disabled='disabled' id='exampleRadios2-3-3' name='exampleRadios-right' type='radio' value='option3'>
-<label class='radio-button form-check-label' for='exampleRadios2-3-3'>
-Disabled radio
-</label>
-</div>
-</div>
-</div>
-<div class='card-body border-bottom'>
-<h5 class='card-title'>.sa-radio-buttons (inline)</h5>
-<div class='form-check form-check-inline sa-radio-buttons'>
-<input class='form-check-input' id='inlineRadio2-1' name='inlineRadioOptions' type='radio' value='option1'>
-<label class='form-check-label radio-button' for='inlineRadio2-1'>1</label>
-</div>
-<div class='form-check form-check-inline sa-radio-buttons'>
-<input class='form-check-input' id='inlineRadio2-2' name='inlineRadioOptions' type='radio' value='option2'>
-<label class='form-check-label radio-button' for='inlineRadio2-2'>2</label>
-</div>
-<div class='form-check form-check-inline sa-radio-buttons'>
-<input class='form-check-input' disabled='disabled' id='inlineRadio2-3' name='inlineRadioOptions' type='radio' value='option3'>
-<label class='form-check-label radio-button' for='inlineRadio2-3'>3 (disabled)</label>
-</div>
-</div>
-<div class='card-body border-bottom'>
-<h5 class='card-title'>.sa-radio-buttons-after (inline)</h5>
-<div class='right'>
-<div class='form-check form-check-inline sa-radio-buttons-after'>
-<input class='form-check-input' id='inlineRadio-right-2-1-1' name='inlineRadioOptions-right' type='radio' value='option1'>
-<label class='form-check-label radio-button' for='inlineRadio-right-2-1-1'>1</label>
-</div>
-<div class='form-check form-check-inline sa-radio-buttons-after'>
-<input class='form-check-input' id='inlineRadio-right-2-2-2' name='inlineRadioOptions-right' type='radio' value='option2'>
-<label class='form-check-label radio-button' for='inlineRadio-right-2-2-2'>2</label>
-</div>
-<div class='form-check form-check-inline sa-radio-buttons-after'>
-<input class='form-check-input' disabled='disabled' id='inlineRadio-right-2-3-3' name='inlineRadioOptions-right' type='radio' value='option3'>
-<label class='form-check-label radio-button' for='inlineRadio-right-2-3-3'>3 (disabled)</label>
-</div>
-</div>
-</div>
-<div class='card-body'>
-<h5 class='card-title'>Without labels</h5>
-<p class='base'>With SARD styles you DON'T need to add .position-static to inputs within .form-check that don’t have any label text. Remember to still provide some form of label for assistive technologies (for instance, using aria-label).</p>
-<div class='form-check sa-checkbox'>
-<input aria-label='...' class='form-check-input' id='blankCheckbox-2' type='checkbox' value='option1'>
-<label class='form-check-label' for='blankCheckbox-2'>
-<span class='checkbox'></span>
-</label>
-</div>
-<div class='form-check sa-radio-buttons'>
-<input aria-label='...' class='form-check-input' id='blankRadio2-1' name='blankRadio' type='radio' value='option1'>
-<label class='form-check-label radio-button' for='blankRadio2-1'>
-<span></span>
-</label>
-</div>
-</div>
-</div>
-</div>
-<div class='col-sm-12'>
-<hr>
-<h3>Toggle Switches</h3>
-<p>
-Toggle Switches are based on Checkboxes or Radios. Each has a specific purpose and each is written slighly differently.
-</p>
-<div class='card card-sard'>
-<div class='card-header'>Toggle Switches</div>
-<div class='card-body'>
-<div class='row'>
-<div class='col-sm-6'>
-<div class='sa-toggle-switch'>
-<input class='advanced_when' id='advanced_when_toggle' name='advanced_when' type='checkbox'>
-<label for='advanced_when_toggle'>
-<span class='slider'>.sa-toggle-switch</span>
-</label>
-</div>
-</div>
-<div class='col-sm-6'>
-<div class='sa-toggle-switch-right'>
-<input class='advanced_when' id='advanced_when_toggle_right' name='advanced_when' type='checkbox'>
-<label for='advanced_when_toggle_right'>
-<span class='slider'>.sa-toggle-switch-right</span>
-</label>
-</div>
-</div>
-</div>
-</div>
-<div class='card-body'>
-<p>
-<code>.sa-toggle-switch</code>
-is a form of checkbox.
-<br>
-They can be arranged either left (default) or right by using the class of
-<code>.sa-toggle-switch-right</code>
-instead.
-</p>
-</div>
-</div>
-<div class='card card-sard'>
-<div class='card-header'>Radio Toggles</div>
-<div class='card-body'>
-<div class='row'>
-<div class='col-sm-6'>
-<div class='sa-radio-toggle'>
-<input checked='checked' id='sa-radio-toggle-one' name='user' type='radio' value='false'>
-<label for='sa-radio-toggle-one'>
-<span class='radio'>Top</span>
-</label>
-</div>
-<div class='sa-radio-toggle'>
-<input id='sa-radio-toggle-two' name='user' type='radio' value='true'>
-<label for='sa-radio-toggle-two'>
-<span class='radio'>Bottom</span>
-</label>
-</div>
-</div>
-<div class='col-sm-6'>
-<div class='sa-radio-toggle-right'>
-<input checked='checked' id='sa-radio-toggle-three' name='user2' type='radio' value='false'>
-<label for='sa-radio-toggle-three'>
-<span class='radio'>Top</span>
-</label>
-</div>
-<div class='sa-radio-toggle-right'>
-<input id='sa-radio-toggle-four' name='user2' type='radio' value='true'>
-<label for='sa-radio-toggle-four'>
-<span class='radio'>Bottom</span>
-</label>
-</div>
-</div>
-</div>
-</div>
-<div class='card-body'>
-<p>
-<code>.sa-radio-toggle</code>
-is a set of radio buttons, when one is selected, the other is de-selected.
-<br>
-They can be arranged either left (default) or right by using the class of
-<code>.sa-radio-toggle-right</code>
-instead.
-</p>
-</div>
-</div>
-<div class='card card-sard'>
-<div class='card-header'>Toggle Check</div>
-<div class='card-body'>
-<div class='row'>
-<div class='col-sm-6'>
-<div class='sa-toggle-check'>
-<label>
-<input checked='checked' class='have_own_cpd toggle-check-input' id='own_cpd_record' name='own_cpd_record' type='checkbox' value='true'>
-<span class='toggle-check-text'></span>
-</label>
-</div>
-</div>
-<div class='col-sm-6'>
-<div class='sa-toggle-check-right'>
-<label>
-<input checked='checked' class='have_own_cpd toggle-check-input' id='own_cpd_record' name='own_cpd_record' type='checkbox' value='true'>
-<span class='toggle-check-text'></span>
-</label>
-</div>
-</div>
-</div>
-</div>
-<div class='card-body'>
-<p>
-<code>.sa-toggle-check</code>
-is a single checkbox, with a YES / NO Statement.
-<br>
-They can be arranged either left (default) or right by using the class of
-<code>.sa-toggle-check-right</code>
-instead.
-</p>
 </div>
 </div>
 </div>
@@ -2405,6 +2052,432 @@ You can add multiple Fieldsets within a Card or Panel.
 <hr class='black'>
 <div class='row'>
 <div class='col-sm-12'>
+<h1 class='bs-anchor' id='checkboxes-anchor'>Checkboxes and Radios</h1>
+<p>Standard Checkboxes and Radios are by default quite small. We have created a new set, that with a little bit of extra code added, will make them stand out better.</p>
+<h3>Build Notes</h3>
+<p>
+<span class='bold'>Note!</span>
+Bootstrap 4 for has introduced the class of
+<code>.form-check</code>
+This is uses as a wrapper for Checkboxes and Radios. However, some of the earlier SARD project were built in BS3, These have their own wrappers (.sa-checkbox and .sa-radio-buttons), Which if using BS4 should be added to .form-check.
+</p>
+<h5 class='base'>Checkboxes</h5>
+<p>
+To create the SARD Checkboxes add
+<code>.sa-checkbox</code>
+to the class of .form-check, and
+<span class='bold'>ADD</span>
+<code>%span.checkbox</code>
+<span class='bold'>INSIDE</span>
+the label.
+<br>
+You can instead use
+<code>.sa-checkbox-after</code>
+to have the checkbox after the label.
+</p>
+<h5 class='base'>Radios</h5>
+<p>
+To create SARD Radios add
+<code>.sa-radio-buttons</code>
+to the class of .form-check, and
+<span class='bold'>ADD</span>
+<code>.radio-button</code>
+<span class='bold'>TO</span>
+the label.
+<br>
+You can instead use
+<code>.sa-radio-buttons-after</code>
+to have the button after the label.
+</p>
+<p>Below you will see the Standard and SARD styles next to each other.</p>
+</div>
+<div class='col-sm-6'>
+<div class='card card-sard'>
+<div class='card-header'>Standard Style</div>
+<div class='card-body border-bottom'>
+<h5 class='card-title'>Default (stacked)</h5>
+<div class='form-check'>
+<input class='form-check-input' id='defaultCheck1' type='checkbox' value=''>
+<label class='form-check-label' for='defaultCheck1'>
+Default checkbox
+</label>
+</div>
+<div class='form-check'>
+<input class='form-check-input' disabled='disabled' id='defaultCheck2' type='checkbox' value=''>
+<label class='form-check-label' for='defaultCheck2'>
+Disabled checkbox
+</label>
+</div>
+</div>
+<div class='card-body border-bottom'>
+<h5 class='card-title'>Radios</h5>
+<div class='form-check'>
+<input checked='checked' class='form-check-input' id='exampleRadios1' name='exampleRadios' type='radio' value='option1'>
+<label class='form-check-label' for='exampleRadios1'>
+Default radio
+</label>
+</div>
+<div class='form-check'>
+<input class='form-check-input' id='exampleRadios2' name='exampleRadios' type='radio' value='option2'>
+<label class='form-check-label' for='exampleRadios2'>
+Second default radio
+</label>
+</div>
+<div class='form-check'>
+<input class='form-check-input' disabled='disabled' id='exampleRadios3' name='exampleRadios' type='radio' value='option3'>
+<label class='form-check-label' for='exampleRadios3'>
+Disabled radio
+</label>
+</div>
+</div>
+<div class='card-body border-bottom'>
+<h5 class='card-title'>Inline</h5>
+<div class='form-check form-check-inline'>
+<input class='form-check-input' id='inlineRadio1' name='inlineRadioOptions' type='radio' value='option1'>
+<label class='form-check-label' for='inlineRadio1'>1</label>
+</div>
+<div class='form-check form-check-inline'>
+<input class='form-check-input' id='inlineRadio2' name='inlineRadioOptions' type='radio' value='option2'>
+<label class='form-check-label' for='inlineRadio2'>2</label>
+</div>
+<div class='form-check form-check-inline'>
+<input class='form-check-input' disabled='disabled' id='inlineRadio3' name='inlineRadioOptions' type='radio' value='option3'>
+<label class='form-check-label' for='inlineRadio3'>3 (disabled)</label>
+</div>
+</div>
+<div class='card-body'>
+<h5 class='card-title'>Without labels</h5>
+<p>Add .position-static to inputs within .form-check that don’t have any label text. Remember to still provide some form of label for assistive technologies (for instance, using aria-label).</p>
+<div class='form-check'>
+<input aria-label='...' class='form-check-input position-static' id='blankCheckbox' type='checkbox' value='option1'>
+</div>
+<div class='form-check'>
+<input aria-label='...' class='form-check-input position-static' id='blankRadio1' name='blankRadio' type='radio' value='option1'>
+</div>
+</div>
+</div>
+</div>
+<div class='col-sm-6'>
+<div class='card card-sard'>
+<div class='card-header'>SARD style</div>
+<div class='card-body border-bottom'>
+<h5 class='card-title'>.sa-checkbox</h5>
+<div class='form-check sa-checkbox'>
+<input class='form-check-input' id='defaultCheck2-1' type='checkbox' value=''>
+<label class='form-check-label checkbox' for='defaultCheck2-1'>
+<span class='checkbox'>sa-checkbox</span>
+</label>
+</div>
+<div class='form-check sa-checkbox'>
+<input class='form-check-input' disabled='disabled' id='defaultCheck2-2' type='checkbox' value=''>
+<label class='form-check-label checkbox' for='defaultCheck2-2'>
+<span class='checkbox'>Disabled sa-checkbox</span>
+</label>
+</div>
+</div>
+<div class='card-body border-bottom'>
+<h5 class='card-title'>.sa-checkbox-after</h5>
+<div class='right'>
+<div class='form-check sa-checkbox-after'>
+<input class='form-check-input' id='defaultCheck2-1-1' type='checkbox' value=''>
+<label class='form-check-label' for='defaultCheck2-1-1'>
+<span class='checkbox'>sa-checkbox-after</span>
+</label>
+</div>
+<div class='form-check sa-checkbox-after'>
+<input class='form-check-input' disabled='disabled' id='defaultCheck2-2-2' type='checkbox' value=''>
+<label class='form-check-label' for='defaultCheck2-2-2'>
+<span class='checkbox'>Disabled sa-checkbox-after</span>
+</label>
+</div>
+</div>
+</div>
+<div class='card-body border-bottom'>
+<h5 class='card-title'>.sa-radio-buttons</h5>
+<div class='form-check sa-radio-buttons'>
+<input checked='checked' class='form-check-input' id='exampleRadios2-1' name='exampleRadios-sa' type='radio' value='option1'>
+<label class='radio-button form-check-label' for='exampleRadios2-1'>
+<span>Default radio</span>
+</label>
+</div>
+<div class='form-check sa-radio-buttons'>
+<input class='form-check-input' id='exampleRadios2-2' name='exampleRadios-sa' type='radio' value='option2'>
+<label class='radio-button form-check-label' for='exampleRadios2-2'>
+Second default radio
+</label>
+</div>
+<div class='form-check sa-radio-buttons'>
+<input class='form-check-input' disabled='disabled' id='exampleRadios2-3' name='exampleRadios' type='radio' value='option3'>
+<label class='radio-button form-check-label' for='exampleRadios2-3'>
+Disabled radio
+</label>
+</div>
+</div>
+<div class='card-body border-bottom'>
+<h5 class='card-title'>.sa-radio-buttons-after</h5>
+<div class='right'>
+<div class='form-check sa-radio-buttons-after'>
+<input checked='checked' class='form-check-input' id='exampleRadios2-1-1' name='exampleRadios-right' type='radio' value='option1'>
+<label class='radio-button form-check-label' for='exampleRadios2-1-1'>
+<span>Default radio</span>
+</label>
+</div>
+<div class='form-check sa-radio-buttons-after'>
+<input class='form-check-input' id='exampleRadios2-2-2' name='exampleRadios-right' type='radio' value='option2'>
+<label class='radio-button form-check-label' for='exampleRadios2-2-2'>
+Second default radio
+</label>
+</div>
+<div class='form-check sa-radio-buttons-after'>
+<input class='form-check-input' disabled='disabled' id='exampleRadios2-3-3' name='exampleRadios-right' type='radio' value='option3'>
+<label class='radio-button form-check-label' for='exampleRadios2-3-3'>
+Disabled radio
+</label>
+</div>
+</div>
+</div>
+<div class='card-body border-bottom'>
+<h5 class='card-title'>.sa-radio-buttons (inline)</h5>
+<div class='form-check form-check-inline sa-radio-buttons'>
+<input class='form-check-input' id='inlineRadio2-1' name='inlineRadioOptions' type='radio' value='option1'>
+<label class='form-check-label radio-button' for='inlineRadio2-1'>1</label>
+</div>
+<div class='form-check form-check-inline sa-radio-buttons'>
+<input class='form-check-input' id='inlineRadio2-2' name='inlineRadioOptions' type='radio' value='option2'>
+<label class='form-check-label radio-button' for='inlineRadio2-2'>2</label>
+</div>
+<div class='form-check form-check-inline sa-radio-buttons'>
+<input class='form-check-input' disabled='disabled' id='inlineRadio2-3' name='inlineRadioOptions' type='radio' value='option3'>
+<label class='form-check-label radio-button' for='inlineRadio2-3'>3 (disabled)</label>
+</div>
+</div>
+<div class='card-body border-bottom'>
+<h5 class='card-title'>.sa-radio-buttons-after (inline)</h5>
+<div class='right'>
+<div class='form-check form-check-inline sa-radio-buttons-after'>
+<input class='form-check-input' id='inlineRadio-right-2-1-1' name='inlineRadioOptions-right' type='radio' value='option1'>
+<label class='form-check-label radio-button' for='inlineRadio-right-2-1-1'>1</label>
+</div>
+<div class='form-check form-check-inline sa-radio-buttons-after'>
+<input class='form-check-input' id='inlineRadio-right-2-2-2' name='inlineRadioOptions-right' type='radio' value='option2'>
+<label class='form-check-label radio-button' for='inlineRadio-right-2-2-2'>2</label>
+</div>
+<div class='form-check form-check-inline sa-radio-buttons-after'>
+<input class='form-check-input' disabled='disabled' id='inlineRadio-right-2-3-3' name='inlineRadioOptions-right' type='radio' value='option3'>
+<label class='form-check-label radio-button' for='inlineRadio-right-2-3-3'>3 (disabled)</label>
+</div>
+</div>
+</div>
+<div class='card-body'>
+<h5 class='card-title'>Without labels</h5>
+<p class='base'>With SARD styles you DON'T need to add .position-static to inputs within .form-check that don’t have any label text. Remember to still provide some form of label for assistive technologies (for instance, using aria-label).</p>
+<div class='form-check sa-checkbox'>
+<input aria-label='...' class='form-check-input' id='blankCheckbox-2' type='checkbox' value='option1'>
+<label class='form-check-label' for='blankCheckbox-2'>
+<span class='checkbox'></span>
+</label>
+</div>
+<div class='form-check sa-radio-buttons'>
+<input aria-label='...' class='form-check-input' id='blankRadio2-1' name='blankRadio' type='radio' value='option1'>
+<label class='form-check-label radio-button' for='blankRadio2-1'>
+<span></span>
+</label>
+</div>
+</div>
+</div>
+</div>
+<div class='col-sm-12'>
+<hr>
+<h3>Toggle Switches</h3>
+<p>
+Toggle Switches are based on Checkboxes or Radios. Each has a specific purpose and each is written slighly differently.
+</p>
+<div class='card card-sard'>
+<div class='card-header'>Toggle Switches</div>
+<div class='card-body'>
+<div class='row'>
+<div class='col-sm-6'>
+<div class='sa-toggle-switch'>
+<input class='advanced_when' id='advanced_when_toggle' name='advanced_when' type='checkbox'>
+<label for='advanced_when_toggle'>
+<span class='slider'>.sa-toggle-switch</span>
+</label>
+</div>
+</div>
+<div class='col-sm-6'>
+<div class='sa-toggle-switch-right'>
+<input class='advanced_when' id='advanced_when_toggle_right' name='advanced_when' type='checkbox'>
+<label for='advanced_when_toggle_right'>
+<span class='slider'>.sa-toggle-switch-right</span>
+</label>
+</div>
+</div>
+</div>
+</div>
+<div class='card-body'>
+<p>
+<code>.sa-toggle-switch</code>
+is a form of checkbox.
+<br>
+They can be arranged either left (default) or right by using the class of
+<code>.sa-toggle-switch-right</code>
+instead.
+</p>
+</div>
+</div>
+<div class='card card-sard'>
+<div class='card-header'>Radio Toggles</div>
+<div class='card-body'>
+<div class='row'>
+<div class='col-sm-6'>
+<div class='sa-radio-toggle'>
+<input checked='checked' id='sa-radio-toggle-one' name='user' type='radio' value='false'>
+<label for='sa-radio-toggle-one'>
+<span class='radio'>Top</span>
+</label>
+</div>
+<div class='sa-radio-toggle'>
+<input id='sa-radio-toggle-two' name='user' type='radio' value='true'>
+<label for='sa-radio-toggle-two'>
+<span class='radio'>Bottom</span>
+</label>
+</div>
+</div>
+<div class='col-sm-6'>
+<div class='sa-radio-toggle-right'>
+<input checked='checked' id='sa-radio-toggle-three' name='user2' type='radio' value='false'>
+<label for='sa-radio-toggle-three'>
+<span class='radio'>Top</span>
+</label>
+</div>
+<div class='sa-radio-toggle-right'>
+<input id='sa-radio-toggle-four' name='user2' type='radio' value='true'>
+<label for='sa-radio-toggle-four'>
+<span class='radio'>Bottom</span>
+</label>
+</div>
+</div>
+</div>
+</div>
+<div class='card-body'>
+<p>
+<code>.sa-radio-toggle</code>
+is a set of radio buttons, when one is selected, the other is de-selected.
+<br>
+They can be arranged either left (default) or right by using the class of
+<code>.sa-radio-toggle-right</code>
+instead.
+</p>
+</div>
+</div>
+<div class='card card-sard'>
+<div class='card-header'>Toggle Check</div>
+<div class='card-body'>
+<div class='row'>
+<div class='col-sm-6'>
+<div class='sa-toggle-check'>
+<label>
+<input checked='checked' class='have_own_cpd toggle-check-input' id='own_cpd_record' name='own_cpd_record' type='checkbox' value='true'>
+<span class='toggle-check-text'></span>
+</label>
+</div>
+</div>
+<div class='col-sm-6'>
+<div class='sa-toggle-check-right'>
+<label>
+<input checked='checked' class='have_own_cpd toggle-check-input' id='own_cpd_record' name='own_cpd_record' type='checkbox' value='true'>
+<span class='toggle-check-text'></span>
+</label>
+</div>
+</div>
+</div>
+</div>
+<div class='card-body'>
+<p>
+<code>.sa-toggle-check</code>
+is a single checkbox, with a YES / NO Statement.
+<br>
+They can be arranged either left (default) or right by using the class of
+<code>.sa-toggle-check-right</code>
+instead.
+</p>
+</div>
+</div>
+</div>
+</div>
+<hr class='black'>
+<div class='row'>
+<div class='col-sm-12 mb-3'>
+<h1 class='bs-anchor' id='file-imports-anchor'>File Imports</h1>
+<h6>Standard Bootstrap version</h6>
+<p>
+For file inputs, swap the
+<code>.form-control</code>
+for
+<code>.form-control-file</code>
+.
+</p>
+<form>
+<div class='form-group mb-3'>
+<label for='exampleFormControlFile1'>Example file input</label>
+<input class='form-control-file' id='exampleFormControlFile1' type='file'>
+</div>
+</form>
+<hr>
+</div>
+<div class='col-sm-12'>
+<h4>SARD File Upload</h4>
+<p>
+This version is taken from
+<a href='https://codepen.io/claviska/pen/vAgmd' target='blank'>A Pen by Cory LaViska</a>
+and styled to fit.
+</p>
+<p>
+The following classes need to be added.
+<br>
+<code class='bold'>.sa-file-upload</code>
+shoud be added to
+<code>.input-group</code>
+</p>
+<p>
+If you are using the Reset button, you will also need to add
+<code class='bold'>.sa-file</code>
+to
+<code>input.form-control</code>
+</p>
+<form action=''>
+<div class='input-group sa-file-upload mb-3'>
+<label class='input-group-btn' id='file_upload_1'>
+<span class='btn btn-primary'>
+Browse…
+<input for='file_upload_1' multiple='multiple' type='file'>
+</span>
+</label>
+<input class='form-control' for='file_upload_1' placeholder='Choose One or Multiple files' readonly='readonly' type='text'>
+</div>
+<p>
+Version with added Reset Button
+</p>
+<div class='input-group sa-file-upload'>
+<label class='input-group-btn' id='file_upload_2'>
+<span class='btn btn-primary'>
+Browse…
+<input for='file_upload_2' multiple='multiple' type='file'>
+</span>
+</label>
+<input class='form-control sa-file' for='file_upload_2' placeholder='Choose One or Multiple files' readonly='readonly' type='text'>
+<label class='input-group-btn' id='file_upload_2'>
+<span class='btn btn-primary btn-reset'>
+Reset
+</span>
+</label>
+</div>
+</form>
+</div>
+</div>
+<hr class='black'>
+<div class='row'>
+<div class='col-sm-12'>
 <h1 class='bs-anchor' id='input-group-anchor'>Input Groups</h1>
 <h4>Basic example</h4>
 <div class='input-group mb-3'>
@@ -2572,75 +2645,6 @@ You can add multiple Fieldsets within a Card or Panel.
 <button class='btn btn-outline-secondary' id='inputGroupFileAddon04' type='button'>Button</button>
 </div>
 </div>
-</div>
-</div>
-<hr class='black'>
-<div class='row'>
-<div class='col-sm-12 mb-3'>
-<h1 class='bs-anchor' id='file-imports-anchor'>File Imports</h1>
-<h6>Standard Bootstrap version</h6>
-<p>
-For file inputs, swap the
-<code>.form-control</code>
-for
-<code>.form-control-file</code>
-.
-</p>
-<form>
-<div class='form-group mb-3'>
-<label for='exampleFormControlFile1'>Example file input</label>
-<input class='form-control-file' id='exampleFormControlFile1' type='file'>
-</div>
-</form>
-</div>
-<div class='col-sm-12'>
-<h4>SARD File Upload</h4>
-<p>
-This version is taken from
-<a href='https://codepen.io/claviska/pen/vAgmd' target='blank'>A Pen by Cory LaViska</a>
-and style to fit.
-</p>
-<p>
-The following classes need to be added.
-<br>
-<code class='bold'>.sa-file-upload</code>
-shoud be added to
-<code>.input-group</code>
-</p>
-<p>
-If you are using the Reset button, you will also need to add
-<code class='bold'>.sa-file</code>
-to
-<code>input.form-control</code>
-</p>
-<form action=''>
-<div class='input-group sa-file-upload mb-3'>
-<label class='input-group-btn' id='file_upload_1'>
-<span class='btn btn-primary'>
-Browse…
-<input for='file_upload_1' multiple='multiple' type='file'>
-</span>
-</label>
-<input class='form-control' for='file_upload_1' placeholder='Choose One or Multiple files' readonly='readonly' type='text'>
-</div>
-<p>
-Version with added Reset Button
-</p>
-<div class='input-group sa-file-upload'>
-<label class='input-group-btn' id='file_upload_2'>
-<span class='btn btn-primary'>
-Browse…
-<input for='file_upload_2' multiple='multiple' type='file'>
-</span>
-</label>
-<input class='form-control sa-file' for='file_upload_2' placeholder='Choose One or Multiple files' readonly='readonly' type='text'>
-<label class='input-group-btn' id='file_upload_2'>
-<span class='btn btn-primary btn-reset'>
-Reset
-</span>
-</label>
-</div>
-</form>
 </div>
 </div>
 <hr class='black'>
@@ -3114,6 +3118,73 @@ Dropdown
 </form>
 </div>
 </nav>
+<hr>
+<h4 class='mt-3'>Nested Dropdowns</h4>
+<p>
+Nested dropdowns are not part of the default Bootstrap 4, We have added a small amount of Javascript and CSS.
+</p>
+<nav class='navbar navbar-expand-lg navbar-sard'>
+<a class='navbar-brand' href='#'>Navbar</a>
+<button aria-controls='navbarNavDropdown' aria-expanded='false' aria-label='Toggle navigation' class='navbar-toggler' data-target='#navbarNavDropdown' data-toggle='collapse' type='button'>
+<span class='navbar-toggler-icon'></span>
+</button>
+<div class='collapse navbar-collapse' id='navbarNavDropdown'>
+<ul class='navbar-nav'>
+<li class='nav-item active'>
+<a class='nav-link' href='#'>
+Home
+<span class='sr-only'>(current)</span>
+</a>
+</li>
+<li class='nav-item dropdown'>
+<a aria-expanded='false' aria-haspopup='true' class='nav-link dropdown-toggle' data-toggle='dropdown' href='http://example.com' id='navbarDropdownMenuLink'>
+Nested Dropdowns
+</a>
+<ul aria-labelledby='navbarDropdownMenuLink' class='dropdown-menu'>
+<li>
+<a class='dropdown-item' href='#/'>Action</a>
+</li>
+<li>
+<a class='dropdown-item' href='#/'>Another action</a>
+</li>
+<li class='dropdown-submenu'>
+<a class='dropdown-item dropdown-toggle' href='#/'>Submenu</a>
+<ul class='dropdown-menu'>
+<li>
+<a class='dropdown-item' href='#/'>Submenu action</a>
+</li>
+<li>
+<a class='dropdown-item' href='#/'>Another submenu action</a>
+</li>
+<li class='dropdown-submenu'>
+<a class='dropdown-item dropdown-toggle' href='#/'>Subsubmenu</a>
+<ul class='dropdown-menu'>
+<li>
+<a class='dropdown-item' href='#/'>Subsubmenu action</a>
+</li>
+<li>
+<a class='dropdown-item' href='#/'>Another subsubmenu action</a>
+</li>
+</ul>
+</li>
+<li class='dropdown-submenu'>
+<a class='dropdown-item dropdown-toggle' href='#/'>Second subsubmenu</a>
+<ul class='dropdown-menu'>
+<li>
+<a class='dropdown-item' href='#/'>Subsubmenu action</a>
+</li>
+<li>
+<a class='dropdown-item' href='#/'>Another subsubmenu action</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</nav>
 </div>
 </div>
 <hr class='black'>
@@ -3284,6 +3355,165 @@ Dropdown
 </li>
 </ul>
 </nav>
+</div>
+</div>
+<hr class='black'>
+<div class='row'>
+<div class='col-sm-12'>
+<h1 class='bs-anchor' id='panels-anchor'>Panels</h1>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-6'>
+<div class='panel'>
+<div class='panel-heading'>
+<h3>Panel Heading H3</h3>
+</div>
+<div class='panel-body'>
+<p class='last'>
+<strong>Panel Body Text</strong>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed est tortor, consectetur a neque sed, mollis accumsan tortor. Duis vitae varius magna. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec et tortor ornare, imperdiet lacus bibendum, vestibulum erat. Cras vulputate faucibus est id sollicitudin. Duis congue libero odio, eget blandit ante commodo eleifend. Fusce auctor sit amet nibh consectetur molestie. Duis in lobortis lacus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vivamus sit amet laoreet quam, sed tincidunt nulla. Nullam efficitur orci sed condimentum consectetur. Etiam dapibus libero nibh, sodales mollis tortor semper ut.
+</p>
+</div>
+<div class='panel-footer'>
+Lorem ipsum dolor
+</div>
+</div>
+</div>
+<div class='col-sm-6'>
+<div class='panel'>
+<div class='panel-heading'>
+Panel Heading
+</div>
+<div class='panel-body'>
+<p>
+<strong>Panel Body Text</strong>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed est tortor, consectetur a neque sed, mollis accumsan tortor. Duis vitae varius magna. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec et tortor ornare, imperdiet lacus bibendum, vestibulum erat. Cras vulputate faucibus est id sollicitudin. Duis congue libero odio, eget blandit ante commodo eleifend.
+</p>
+<p>
+Fusce auctor sit amet nibh consectetur molestie. Duis in lobortis lacus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vivamus sit amet laoreet quam, sed tincidunt nulla. Nullam efficitur orci sed condimentum consectetur. Etiam dapibus libero nibh, sodales mollis tortor semper ut.
+</p>
+</div>
+<div class='panel-body'>
+<p>
+<strong>2nd panel body</strong>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed est tortor, consectetur a neque sed, mollis accumsan tortor. Duis vitae varius magna. Class aptent taci
+</p>
+</div>
+<div class='panel-body border-bottom'>
+<p>
+<strong>3rd panel body with .border-bottom added</strong>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed est tortor, consectetur a neque sed, mollis accumsan tortor. Duis vitae varius magna. Class aptent taci
+</p>
+</div>
+<div class='panel-body'>
+<p>
+<strong>4th panel body with HR between paras</strong>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed est tortor, consectetur a neque sed, mollis accumsan tortor. Duis vitae varius magna. Class aptent taci
+</p>
+<hr>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed est tortor, consectetur a neque sed, mollis accumsan tortor. Duis vitae varius magna. Class aptent taci</p>
+</div>
+<div class='panel-footer'>
+Lorem ipsum dolor
+</div>
+</div>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-12'>
+<hr>
+<h3>Cards and Panels for comparison.</h3>
+</div>
+<div class='col-sm-6'>
+<h4>Card</h4>
+<div class='card card-sard'>
+<div class='card-header'>Card Sard / Default</div>
+<div class='card-body border-bottom'>
+<h5 class='card-title'>.card.card-sard</h5>
+<p class='card-text'>
+This can also be classed as
+<span class='bold'>.card.card-default.</span>
+<br>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed est tortor, consectetur a neque sed.
+</p>
+</div>
+<div class='card-body'>
+<h5 class='card-title'>2nd Card body</h5>
+<p>Below is a %hr between the paras.</p>
+<hr>
+<p>Normal para. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed est tortor, consectetur a neque sed.</p>
+</div>
+<div class='card-footer'>
+Card Footer
+</div>
+</div>
+<div class='card card-sard outline'>
+<div class='card-header'>Card Sard / Default Outline</div>
+<div class='card-body border-bottom'>
+<h5 class='card-title'>.card.card-sard.outline</h5>
+<p class='card-text'>
+This can also be classed as
+<span class='bold'>.card.card-default.outline.</span>
+<br>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed est tortor, consectetur a neque sed.
+</p>
+</div>
+<div class='card-body'>
+<h5 class='card-title'>2nd Card body</h5>
+<p>Below is a %hr between the paras.</p>
+<hr>
+<p>Normal para. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed est tortor, consectetur a neque sed.</p>
+</div>
+<div class='card-footer'>
+Card Footer
+</div>
+</div>
+</div>
+<div class='col-sm-6'>
+<h4>Panel</h4>
+<div class='panel panel-sard'>
+<div class='panel-heading'>Panel Sard / Default</div>
+<div class='panel-body border-bottom'>
+<h5 class='panel-title'>.panel.panel-sard</h5>
+<p class='panel-text'>
+This can also be classed as
+<span class='bold'>.panel.panel-default.</span>
+<br>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed est tortor, consectetur a neque sed.
+</p>
+</div>
+<div class='panel-body'>
+<h5 class='panel-title'>2nd Panel body</h5>
+<p>Below is a %hr between the paras.</p>
+<hr>
+<p>Normal para. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed est tortor, consectetur a neque sed.</p>
+</div>
+<div class='panel-footer'>
+Panel Footer
+</div>
+</div>
+<div class='panel panel-sard outline'>
+<div class='panel-heading'>Panel Sard / Default Outline</div>
+<div class='panel-body border-bottom'>
+<h5 class='panel-title'>.panel.panel-sard</h5>
+<p class='panel-text'>
+This can also be classed as
+<span class='bold'>.panel.panel-default.</span>
+<br>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed est tortor, consectetur a neque sed.
+</p>
+</div>
+<div class='panel-body'>
+<h5 class='panel-title'>2nd Panel body</h5>
+<p>Below is a %hr between the paras.</p>
+<hr>
+<p>Normal para. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed est tortor, consectetur a neque sed.</p>
+</div>
+<div class='panel-footer'>
+Panel Footer
+</div>
+</div>
 </div>
 </div>
 <hr class='black'>
@@ -4135,168 +4365,6 @@ Tooltip on bottom
 <button class='btn btn-secondary' data-placement='left' data-toggle='tooltip' title='Tooltip on left' type='button'>
 Tooltip on left
 </button>
-</div>
-</div>
-<hr class='black'>
-<div class='bs-anchor'>
-<h1 class='display-4'>Bootstrap 3 Components</h1>
-</div>
-<div class='row'>
-<div class='col-sm-12'>
-<h1 id='panels-anchor'>Panels</h1>
-</div>
-</div>
-<div class='row'>
-<div class='col-sm-6'>
-<div class='panel'>
-<div class='panel-heading'>
-<h3>Panel Heading H3</h3>
-</div>
-<div class='panel-body'>
-<p class='last'>
-<strong>Panel Body Text</strong>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed est tortor, consectetur a neque sed, mollis accumsan tortor. Duis vitae varius magna. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec et tortor ornare, imperdiet lacus bibendum, vestibulum erat. Cras vulputate faucibus est id sollicitudin. Duis congue libero odio, eget blandit ante commodo eleifend. Fusce auctor sit amet nibh consectetur molestie. Duis in lobortis lacus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vivamus sit amet laoreet quam, sed tincidunt nulla. Nullam efficitur orci sed condimentum consectetur. Etiam dapibus libero nibh, sodales mollis tortor semper ut.
-</p>
-</div>
-<div class='panel-footer'>
-Lorem ipsum dolor
-</div>
-</div>
-</div>
-<div class='col-sm-6'>
-<div class='panel'>
-<div class='panel-heading'>
-Panel Heading
-</div>
-<div class='panel-body'>
-<p>
-<strong>Panel Body Text</strong>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed est tortor, consectetur a neque sed, mollis accumsan tortor. Duis vitae varius magna. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec et tortor ornare, imperdiet lacus bibendum, vestibulum erat. Cras vulputate faucibus est id sollicitudin. Duis congue libero odio, eget blandit ante commodo eleifend.
-</p>
-<p>
-Fusce auctor sit amet nibh consectetur molestie. Duis in lobortis lacus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vivamus sit amet laoreet quam, sed tincidunt nulla. Nullam efficitur orci sed condimentum consectetur. Etiam dapibus libero nibh, sodales mollis tortor semper ut.
-</p>
-</div>
-<div class='panel-body'>
-<p>
-<strong>2nd panel body</strong>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed est tortor, consectetur a neque sed, mollis accumsan tortor. Duis vitae varius magna. Class aptent taci
-</p>
-</div>
-<div class='panel-body border-bottom'>
-<p>
-<strong>3rd panel body with .border-bottom added</strong>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed est tortor, consectetur a neque sed, mollis accumsan tortor. Duis vitae varius magna. Class aptent taci
-</p>
-</div>
-<div class='panel-body'>
-<p>
-<strong>4th panel body with HR between paras</strong>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed est tortor, consectetur a neque sed, mollis accumsan tortor. Duis vitae varius magna. Class aptent taci
-</p>
-<hr>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed est tortor, consectetur a neque sed, mollis accumsan tortor. Duis vitae varius magna. Class aptent taci</p>
-</div>
-<div class='panel-footer'>
-Lorem ipsum dolor
-</div>
-</div>
-</div>
-</div>
-<div class='row'>
-<div class='col-sm-12'>
-<hr>
-<h3>Cards and Panels for comparison.</h3>
-</div>
-<div class='col-sm-6'>
-<h4>Card</h4>
-<div class='card card-sard'>
-<div class='card-header'>Card Sard / Default</div>
-<div class='card-body border-bottom'>
-<h5 class='card-title'>.card.card-sard</h5>
-<p class='card-text'>
-This can also be classed as
-<span class='bold'>.card.card-default.</span>
-<br>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed est tortor, consectetur a neque sed.
-</p>
-</div>
-<div class='card-body'>
-<h5 class='card-title'>2nd Card body</h5>
-<p>Below is a %hr between the paras.</p>
-<hr>
-<p>Normal para. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed est tortor, consectetur a neque sed.</p>
-</div>
-<div class='card-footer'>
-Card Footer
-</div>
-</div>
-<div class='card card-sard outline'>
-<div class='card-header'>Card Sard / Default Outline</div>
-<div class='card-body border-bottom'>
-<h5 class='card-title'>.card.card-sard.outline</h5>
-<p class='card-text'>
-This can also be classed as
-<span class='bold'>.card.card-default.outline.</span>
-<br>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed est tortor, consectetur a neque sed.
-</p>
-</div>
-<div class='card-body'>
-<h5 class='card-title'>2nd Card body</h5>
-<p>Below is a %hr between the paras.</p>
-<hr>
-<p>Normal para. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed est tortor, consectetur a neque sed.</p>
-</div>
-<div class='card-footer'>
-Card Footer
-</div>
-</div>
-</div>
-<div class='col-sm-6'>
-<h4>Panel</h4>
-<div class='panel panel-sard'>
-<div class='panel-heading'>Panel Sard / Default</div>
-<div class='panel-body border-bottom'>
-<h5 class='panel-title'>.panel.panel-sard</h5>
-<p class='panel-text'>
-This can also be classed as
-<span class='bold'>.panel.panel-default.</span>
-<br>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed est tortor, consectetur a neque sed.
-</p>
-</div>
-<div class='panel-body'>
-<h5 class='panel-title'>2nd Panel body</h5>
-<p>Below is a %hr between the paras.</p>
-<hr>
-<p>Normal para. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed est tortor, consectetur a neque sed.</p>
-</div>
-<div class='panel-footer'>
-Panel Footer
-</div>
-</div>
-<div class='panel panel-sard outline'>
-<div class='panel-heading'>Panel Sard / Default Outline</div>
-<div class='panel-body border-bottom'>
-<h5 class='panel-title'>.panel.panel-sard</h5>
-<p class='panel-text'>
-This can also be classed as
-<span class='bold'>.panel.panel-default.</span>
-<br>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed est tortor, consectetur a neque sed.
-</p>
-</div>
-<div class='panel-body'>
-<h5 class='panel-title'>2nd Panel body</h5>
-<p>Below is a %hr between the paras.</p>
-<hr>
-<p>Normal para. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed est tortor, consectetur a neque sed.</p>
-</div>
-<div class='panel-footer'>
-Panel Footer
-</div>
-</div>
 </div>
 </div>
 </div>
