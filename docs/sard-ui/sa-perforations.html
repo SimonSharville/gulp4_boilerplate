@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class='no-js' lang='en'>
 <head>
-<title>Gulp 4 Boilerplate - Links</title>
+<title>Gulp 4 Boilerplate - Perforations and Dividers</title>
 <meta content='ie=edge' http-equiv='x-ua-compatible'>
 <meta content='width=device-width, initial-scale=1.0' name='viewport'>
 <link href='../assets/css/sard-styles.min.css' rel='stylesheet'>
@@ -83,6 +83,204 @@ Components
 </nav>
 </header>
 <div class='container'>
+<div class='row'>
+<div class='col-sm-12'>
+<h1 class='bs-anchor' id='links'>Perforations and Dividers</h1>
+<p>Throughout SARD we use a variety of perforations and divders to visually seperate sections.</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-12'>
+<h3>Horizontal Rules</h3>
+<p>We have created a range of HR thickness and colours.</p>
+<h5>A standard HR</h5>
+<code>hr</code>
+<hr>
+<h5>Various weights</h5>
+<p>Add the weights as below.</p>
+<code>hr.x2</code>
+<hr class='x2'>
+<code>hr.x4</code>
+<hr class='x4'>
+<code>hr.x8</code>
+<hr class='x8'>
+<code>hr.x12</code>
+<hr class='x12'>
+<code>hr.x16</code>
+<hr class='x16'>
+<h5>Various colours</h5>
+<p>Add the colours as below.</p>
+<code>hr.black</code>
+<hr class='black'>
+<code>hr.primary</code>
+or
+<code>hr.client</code>
+<hr class='primary'>
+<code>hr.secondary</code>
+or
+<code>hr.admin</code>
+<hr class='secondary'>
+<code>hr.white</code>
+<div class='card card-sard'>
+<div class='card-body'>
+<hr class='white'>
+</div>
+</div>
+<h5>Various styles</h5>
+<code>hr.dashed</code>
+<hr class='dashed'>
+<code>hr.dotted</code>
+<hr class='dotted'>
+<h5>Mix n match</h5>
+<code>hr.client.dashed.x4</code>
+<hr class='client dashed x4'>
+<code>hr.admin.dotted.x12</code>
+<hr class='admin x12 dotted'>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-12'>
+<h3 class='mt-3'>Perforations</h3>
+<p>Dotted horizontal rules don't always behave well in varions browsers, So we have created a set of perforations that can be used as dividers instead.</p>
+<p>
+<code>.perf.client</code>
+<div class='perf client'></div>
+</p>
+<h5>Various weights</h5>
+<p>
+<code>.perf.client.x2</code>
+<div class='perf client x2'></div>
+</p>
+<p>
+<code>.perf.client.x4</code>
+<div class='perf client x4'></div>
+</p>
+<p>
+<code>.perf.client.x8</code>
+<div class='perf client x8'></div>
+</p>
+<p>
+<code>.perf.client.x12</code>
+<div class='perf client x12'></div>
+</p>
+<p>
+<code>.perf.client.x16</code>
+<div class='perf client x16'></div>
+</p>
+<h5>Various colours</h5>
+<p>
+<code>.perf.black</code>
+<div class='perf black x8'></div>
+</p>
+<p>
+<code>.perf.primary</code>
+or
+<code>.perf.client</code>
+<div class='perf client x8'></div>
+</p>
+<p>
+<code>.perf.secondary</code>
+or
+<code>.perf.admin</code>
+<div class='perf secondary x8'></div>
+</p>
+<p>
+<code>.perf.white</code>
+</p>
+<div class='card card-sard'>
+<div class='card-body'>
+<div class='perf white x8'></div>
+</div>
+</div>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-12'>
+<h3 class='mt-3'>Perforations as Card dividers</h3>
+<p>Perforations were origionally designed as dividers between card body dividers. They can be placed within Cards, Panels or Fieldsets to divide them.</p>
+</div>
+<div class='col-sm-4'>
+<div class='card card-sard'>
+<div class='card-header'>Card</div>
+<div class='card-body'>
+<p>
+They can be placed between two card bodies
+</p>
+</div>
+<div class='perf'></div>
+<div class='card-body'>
+<p>Like this</p>
+<hr class='black'>
+<p>Or within a .card-body</p>
+<div class='perf'></div>
+<p>like this</p>
+</div>
+</div>
+<p>
+The Default Perforation for use in Cards is white, 8px. So you only need to have the following code:
+<br>
+<code>.card-body</code>
+<br>
+<code>.perf</code>
+<br>
+<code>.card-body</code>
+</p>
+</div>
+<div class='col-sm-4'>
+<div class='panel panel-sard'>
+<div class='panel-header'>Panel</div>
+<div class='panel-body'>
+<p>
+They can be placed between two panel bodies
+</p>
+</div>
+<div class='perf'></div>
+<div class='panel-body'>
+<p>Like this</p>
+<hr class='black'>
+<p>Or within a .panel-body</p>
+<div class='perf'></div>
+<p>like this</p>
+</div>
+</div>
+<p>
+The Default Perforation for use in panels is white, 8px. So you only need to have the following code:
+<br>
+<code>.panel-body</code>
+<br>
+<code>.perf</code>
+<br>
+<code>.panel-body</code>
+</p>
+</div>
+<div class='col-sm-4'>
+<fieldset>
+<legend>Fieldset</legend>
+<div class='form-group'>
+<p>
+They can be placed between two form groups
+</p>
+</div>
+<div class='perf'></div>
+<div class='form-group'>
+<p>Like this</p>
+<hr class='black'>
+<p>Or within a .form-group</p>
+<div class='perf'></div>
+<p>like this</p>
+</div>
+</fieldset>
+<p>
+The Default Perforation for use in fieldsets is white, 8px. So you only need to have the following code:
+<br>
+<code>.form-group</code>
+<br>
+<code>.perf</code>
+<br>
+<code>.form-group</code>
+</p>
+</div>
+</div>
 <div class='row'>
 <div class='col-sm-12'>
 <h1 class='bs-anchor' id='links'>Links</h1>
