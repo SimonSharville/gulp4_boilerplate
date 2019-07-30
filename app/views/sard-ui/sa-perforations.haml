@@ -6,7 +6,7 @@
     %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
     %link{:href => "../assets/css/sard-styles.min.css", :rel => "stylesheet"}/
  
-  %body
+  %body.theme-test
     //=include ../navbars/_navbar-x1.haml
 
     .container
@@ -39,13 +39,13 @@
           %p Add the colours as below. 
           %code hr.black 
           %hr.black/
+          %code hr.grey 
+          %hr.grey/
           %code hr.primary 
-          or 
-          %code hr.client
           %hr.primary/
+          %code hr.trust
+          %hr.trust/
           %code hr.secondary 
-          or 
-          %code hr.admin
           %hr.secondary/
           %code hr.white
           .card.card-sard
@@ -59,8 +59,8 @@
           %hr.dotted/
           
           %h5 Mix n match
-          %code hr.client.dashed.x4
-          %hr.client.dashed.x4/
+          %code hr.trust.dashed.x4
+          %hr.trust.dashed.x4/
           %code hr.admin.dotted.x12
           %hr.admin.x12.dotted
 
@@ -72,44 +72,45 @@
           %p Dotted horizontal rules don't always behave well in varions browsers, So we have created a set of perforations that can be used as dividers instead.
 
           %p
-            %code .perf.client
-            .perf.client
+            %code .perf.trust
+            .perf.grey
           %h5 Various weights
           %p
-            %code .perf.client.x2
-            .perf.client.x2
+            %code .perf.x2
+            .perf.grey.x2
           %p
-            %code .perf.client.x4
-            .perf.client.x4
+            %code .perf.x4
+            .perf.grey.x4
           %p
-            %code .perf.client.x8
-            .perf.client.x8
+            %code .perf.x8
+            .perf.grey.x8
           %p
-            %code .perf.client.x12
-            .perf.client.x12
+            %code .perf.x12
+            .perf.grey.x12
           %p
-            %code .perf.client.x16
-            .perf.client.x16
+            %code .perf.x16
+            .perf.grey.x16
 
           %h5 Various colours
           %p
             %code .perf.black
             .perf.black.x8 
           %p
+            %code .perf.grey
+            .perf.grey.x8           
+          %p
             %code .perf.primary
-            or
-            %code .perf.client
-            .perf.client.x8
+            .perf.a.x8
+            %code .perf.trust
+            .perf.trust.x8
           %p
             %code .perf.secondary
-            or
-            %code .perf.admin
             .perf.secondary.x8
           %p
             %code .perf.white
           .card.card-sard 
             .card-body
-              .perf.white.x8
+              .perf.white.x8.mt-2
             
       .row
         .col-sm-12
@@ -181,241 +182,6 @@
             %code .perf
             %br/
             %code .form-group
-      .row
-        .col-sm-12
-          %h1#links.bs-anchor Links
-
-      .row
-        .col-sm-12
-          %p
-            This is an example of a standard
-            %a{href: "#/"} Text Link
-
-      %hr
-
-      .row
-        .col-sm-12
-          %h4 Links in Cards, Panels and Fieldsets
-
-        .col-sm-4
-          %h5 Links in Cards
-          .card.card-sard
-            .card-header 
-              %a{href: "#/"} Link in Card Header
-            .card-body
-              %h5.card-title 
-                %a{href: "#/"} Link in Card Title
-              %p.card-text 
-                Standard
-                %a{href: "#/"} Link in Card Text
-              %p 
-                %a{href: "#/"} Link in Card Body
-            .card-footer
-              %a{href: "#/"} Link in Card Footer
-
-
-        .col-sm-4
-          %h5 Links in Panels
-          .panel.card-sard
-            .panel-header 
-              %a{href: "#/"} Link in Panel Header
-            .panel-body
-              %h5.panel-title 
-                %a{href: "#/"} Link in Panel Title
-              %p.panel-text 
-                Standard
-                %a{href: "#/"} Link in Panel Text
-              %p 
-                %a{href: "#/"} Link in Panel Body
-            .panel-footer
-              %a{href: "#/"} Link in Panel Footer
-
-
-        .col-sm-4 
-          %h5 Links in Fieldsets 
-          %fieldset.fieldset-sard
-            %legend 
-              Standard
-              %a{href: "#/"} Link in Legend
-            .form-group
-              %label
-                %a{href: "#/"} Link in Label
-              %br/
-              %p
-                Standard
-                %a{href: "#/"} Link in Form Group
-            .form-footer
-              Standard
-              %a{href: "#/"} Link in Footer
-
-        .col-sm-12
-          .card.card-sard
-            .card-header 
-              Links with specific icons
-            .card-body.border-bottom
-              %p
-                Link icons can be place directly onto the link, or on the containing paragraph or span. They should have the class of .link-icon
-                and either .link-NAME or .NAME . i.e 
-                %code .link-icon.link-pdf
-                or
-                %code .link-icon.pdf
-                \. They are designed so that the text of the link hangs from the icon.
-              
-            -# Examples
-            .card-body.pb-0
-              %h6.base Examples
-            .card-body.multi-column-3-white
-              %a.link-icon.link-pdf{href: "#/"} 
-                %span.text-default Direct 
-                %code (a.link-icon.link-pdf) 
-                %span.text-default Link to pdf, this a really, really long title so it wraps onto the next line.
-              
-              %a.link-icon.pdf{href: "#/"}
-                %span.text-default Direct 
-                %code (a.link-icon.pdf) 
-                %span.text-default Link to pdf, this a really, really long title so it wraps onto the next line.
-              
-              %p.link-icon.link-pdf
-                %a{href: "#/"} 
-                  %span.text-default Link within a paragraph 
-                  %code (p.link-icon.link-pdf)
-                  %span.text-default ,  Some long title
-              
-              %p.link-icon.pdf
-                %a{href: "#/"} 
-                  %span.text-default Link within a paragraph 
-                  %code (p.link-icon.pdf)
-                  %span.text-default , Some long title, so it wraps around to show the indent.
-
-              %span.link-icon.link-pdf
-                %a{href: "#/"} 
-                  %span.text-default Link within a span 
-                  %code (span.link-icon.link-pdf)
-                  %span.text-default , Some long title, so it wraps around to show the indent.
-
-              %span.link-icon.pdf
-                %a{href: "#/"} 
-                  %span.text-default Link within a span 
-                  %code (span.link-icon.pdf)
-                  %span.text-default , Some long title, so it wraps around to show the indent.
-
-            -# File Types
-            .card-body.pb-0.border-top
-              %h6.base File Types
-              %p You can use any of the file extensions within the brackets ( ).
-            .card-body.multi-column-3-white
-              %p.link-icon.audio
-                %a{href: "#/"} 
-                  AUDIO 
-                  %br
-                %code .link-icon.link-audio
-                or
-                %code .link-icon.audio
-             
-              %p.link-icon.xls
-                %a{href: "#/"} 
-                  EXCEL (xls, xlsx)
-                  %br
-                %code .link-icon.link-xls
-                or
-                %code .link-icon.xls
-
-              %p.link-icon.image
-                %a{href: "#/"} 
-                  IMAGES (gif, ico, image, jpg, photo, png )
-                  %br
-                %code .link-icon.link-image
-                or
-                %code .link-icon.image
-
-              %p.link-icon.pdf
-                %a{href: "#/"} 
-                  PDF
-                  %br
-                %code .link-icon.link-pdf
-                or
-                %code .link-icon.pdf
-
-              %p.link-icon.ppt
-                %a{href: "#/"} 
-                  POWERPOINT (ppt, pptm, pptx)
-                  %br
-                %code .link-icon.link-ppt
-                or
-                %code .link-icon.ppt
-
-              %p.link-icon.txt
-                %a{href: "#/"} 
-                  TEXT (txt, odt, rtf)
-                  %br
-                %code .link-icon.link-txt
-                or
-                %code .link-icon.txt
-
-              %p.link-icon.video
-                %a{href: "#/"} 
-                  VIDEO
-                  %br
-                %code .link-icon.link-video
-                or
-                %code .link-icon.video
-
-              %p.link-icon.doc
-                %a{href: "#/"} 
-                  WORD (doc, docm, docx)
-                  %br
-                %code .link-icon.link-doc
-                or
-                %code .link-icon.doc
-
-              %p.link-icon.zip
-                %a{href: "#/"} 
-                  ZIP (zip, archive)
-                  %br
-                %code .link-icon.link-zip
-                or
-                %code .link-icon.zip
-
-        .col-sm-12
-          .card.card-sard
-            .card-header 
-              Links icons within a table
-            .card-body
-              %table.table.table-sard.table-bordered
-                %thead
-                  %tr
-                    %th th
-                    %th th
-                %tbody
-                  %tr
-                    %td 
-                      %a.link-icon.link-pdf{href: "#/"} 
-                        %code a.link-icon.link-pdf 
-                        %span.text-default within a td with no class added. 
-                        %br
-                        %span.text-default Really, long, long title to exdent it to a new line.
-
-                    %td.link-icon
-                      %a.link-pdf{href: "#/"} 
-                        %span.text-default Link 
-                        %code (a.link-pdf)
-                        %span.text-default within a td with the class of 
-                        %code (td.link-icon)
-                        %br
-                        %span.text-default Some long title, so it wraps around to show the indent.
-                      
-                      %a.link-pdf{href: "#/"} 
-                        %span.text-default Another Link 
-                        %code (a.link-pdf)
-                        %span.text-default within the same td with the class of 
-                        %code (td.link-icon)
-                        %br
-                        %span.text-default Some long title, so it wraps around to show the indent.
-
-
-
-              
-              
 
 
     / Scripts ================================

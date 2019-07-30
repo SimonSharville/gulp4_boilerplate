@@ -6,7 +6,7 @@
 <meta content='width=device-width, initial-scale=1.0' name='viewport'>
 <link href='../assets/css/sard-styles.min.css' rel='stylesheet'>
 </head>
-<body>
+<body class='theme-test'>
 <header>
 <nav class='navbar fixed-top navbar-expand-lg navbar-sard'>
 <div class='container'>
@@ -112,13 +112,13 @@ Components
 <p>Add the colours as below.</p>
 <code>hr.black</code>
 <hr class='black'>
+<code>hr.grey</code>
+<hr class='grey'>
 <code>hr.primary</code>
-or
-<code>hr.client</code>
 <hr class='primary'>
+<code>hr.trust</code>
+<hr class='trust'>
 <code>hr.secondary</code>
-or
-<code>hr.admin</code>
 <hr class='secondary'>
 <code>hr.white</code>
 <div class='card card-sard'>
@@ -132,8 +132,8 @@ or
 <code>hr.dotted</code>
 <hr class='dotted'>
 <h5>Mix n match</h5>
-<code>hr.client.dashed.x4</code>
-<hr class='client dashed x4'>
+<code>hr.trust.dashed.x4</code>
+<hr class='trust dashed x4'>
 <code>hr.admin.dotted.x12</code>
 <hr class='admin x12 dotted'>
 </div>
@@ -143,29 +143,29 @@ or
 <h3 class='mt-3'>Perforations</h3>
 <p>Dotted horizontal rules don't always behave well in varions browsers, So we have created a set of perforations that can be used as dividers instead.</p>
 <p>
-<code>.perf.client</code>
-<div class='perf client'></div>
+<code>.perf.trust</code>
+<div class='perf grey'></div>
 </p>
 <h5>Various weights</h5>
 <p>
-<code>.perf.client.x2</code>
-<div class='perf client x2'></div>
+<code>.perf.x2</code>
+<div class='perf grey x2'></div>
 </p>
 <p>
-<code>.perf.client.x4</code>
-<div class='perf client x4'></div>
+<code>.perf.x4</code>
+<div class='perf grey x4'></div>
 </p>
 <p>
-<code>.perf.client.x8</code>
-<div class='perf client x8'></div>
+<code>.perf.x8</code>
+<div class='perf grey x8'></div>
 </p>
 <p>
-<code>.perf.client.x12</code>
-<div class='perf client x12'></div>
+<code>.perf.x12</code>
+<div class='perf grey x12'></div>
 </p>
 <p>
-<code>.perf.client.x16</code>
-<div class='perf client x16'></div>
+<code>.perf.x16</code>
+<div class='perf grey x16'></div>
 </p>
 <h5>Various colours</h5>
 <p>
@@ -173,15 +173,17 @@ or
 <div class='perf black x8'></div>
 </p>
 <p>
+<code>.perf.grey</code>
+<div class='perf grey x8'></div>
+</p>
+<p>
 <code>.perf.primary</code>
-or
-<code>.perf.client</code>
-<div class='perf client x8'></div>
+<div class='perf a x8'></div>
+<code>.perf.trust</code>
+<div class='perf trust x8'></div>
 </p>
 <p>
 <code>.perf.secondary</code>
-or
-<code>.perf.admin</code>
 <div class='perf secondary x8'></div>
 </p>
 <p>
@@ -189,7 +191,7 @@ or
 </p>
 <div class='card card-sard'>
 <div class='card-body'>
-<div class='perf white x8'></div>
+<div class='perf white x8 mt-2'></div>
 </div>
 </div>
 </div>
@@ -279,288 +281,6 @@ The Default Perforation for use in fieldsets is white, 8px. So you only need to 
 <br>
 <code>.form-group</code>
 </p>
-</div>
-</div>
-<div class='row'>
-<div class='col-sm-12'>
-<h1 class='bs-anchor' id='links'>Links</h1>
-</div>
-</div>
-<div class='row'>
-<div class='col-sm-12'>
-<p>
-This is an example of a standard
-<a href='#/'>Text Link</a>
-</p>
-</div>
-</div>
-<hr>
-<div class='row'>
-<div class='col-sm-12'>
-<h4>Links in Cards, Panels and Fieldsets</h4>
-</div>
-<div class='col-sm-4'>
-<h5>Links in Cards</h5>
-<div class='card card-sard'>
-<div class='card-header'>
-<a href='#/'>Link in Card Header</a>
-</div>
-<div class='card-body'>
-<h5 class='card-title'>
-<a href='#/'>Link in Card Title</a>
-</h5>
-<p class='card-text'>
-Standard
-<a href='#/'>Link in Card Text</a>
-</p>
-<p>
-<a href='#/'>Link in Card Body</a>
-</p>
-</div>
-<div class='card-footer'>
-<a href='#/'>Link in Card Footer</a>
-</div>
-</div>
-</div>
-<div class='col-sm-4'>
-<h5>Links in Panels</h5>
-<div class='panel card-sard'>
-<div class='panel-header'>
-<a href='#/'>Link in Panel Header</a>
-</div>
-<div class='panel-body'>
-<h5 class='panel-title'>
-<a href='#/'>Link in Panel Title</a>
-</h5>
-<p class='panel-text'>
-Standard
-<a href='#/'>Link in Panel Text</a>
-</p>
-<p>
-<a href='#/'>Link in Panel Body</a>
-</p>
-</div>
-<div class='panel-footer'>
-<a href='#/'>Link in Panel Footer</a>
-</div>
-</div>
-</div>
-<div class='col-sm-4'>
-<h5>Links in Fieldsets</h5>
-<fieldset class='fieldset-sard'>
-<legend>
-Standard
-<a href='#/'>Link in Legend</a>
-</legend>
-<div class='form-group'>
-<label>
-<a href='#/'>Link in Label</a>
-</label>
-<br>
-<p>
-Standard
-<a href='#/'>Link in Form Group</a>
-</p>
-</div>
-<div class='form-footer'>
-Standard
-<a href='#/'>Link in Footer</a>
-</div>
-</fieldset>
-</div>
-<div class='col-sm-12'>
-<div class='card card-sard'>
-<div class='card-header'>
-Links with specific icons
-</div>
-<div class='card-body border-bottom'>
-<p>
-Link icons can be place directly onto the link, or on the containing paragraph or span. They should have the class of .link-icon
-and either .link-NAME or .NAME . i.e
-<code>.link-icon.link-pdf</code>
-or
-<code>.link-icon.pdf</code>
-. They are designed so that the text of the link hangs from the icon.
-</p>
-</div>
-<div class='card-body pb-0'>
-<h6 class='base'>Examples</h6>
-</div>
-<div class='card-body multi-column-3-white'>
-<a class='link-icon link-pdf' href='#/'>
-<span class='text-default'>Direct</span>
-<code>(a.link-icon.link-pdf)</code>
-<span class='text-default'>Link to pdf, this a really, really long title so it wraps onto the next line.</span>
-</a>
-<a class='link-icon pdf' href='#/'>
-<span class='text-default'>Direct</span>
-<code>(a.link-icon.pdf)</code>
-<span class='text-default'>Link to pdf, this a really, really long title so it wraps onto the next line.</span>
-</a>
-<p class='link-icon link-pdf'>
-<a href='#/'>
-<span class='text-default'>Link within a paragraph</span>
-<code>(p.link-icon.link-pdf)</code>
-<span class='text-default'>,  Some long title</span>
-</a>
-</p>
-<p class='link-icon pdf'>
-<a href='#/'>
-<span class='text-default'>Link within a paragraph</span>
-<code>(p.link-icon.pdf)</code>
-<span class='text-default'>, Some long title, so it wraps around to show the indent.</span>
-</a>
-</p>
-<span class='link-icon link-pdf'>
-<a href='#/'>
-<span class='text-default'>Link within a span</span>
-<code>(span.link-icon.link-pdf)</code>
-<span class='text-default'>, Some long title, so it wraps around to show the indent.</span>
-</a>
-</span>
-<span class='link-icon pdf'>
-<a href='#/'>
-<span class='text-default'>Link within a span</span>
-<code>(span.link-icon.pdf)</code>
-<span class='text-default'>, Some long title, so it wraps around to show the indent.</span>
-</a>
-</span>
-</div>
-<div class='card-body pb-0 border-top'>
-<h6 class='base'>File Types</h6>
-<p>You can use any of the file extensions within the brackets ( ).</p>
-</div>
-<div class='card-body multi-column-3-white'>
-<p class='link-icon audio'>
-<a href='#/'>
-AUDIO
-<br>
-</a>
-<code>.link-icon.link-audio</code>
-or
-<code>.link-icon.audio</code>
-</p>
-<p class='link-icon xls'>
-<a href='#/'>
-EXCEL (xls, xlsx)
-<br>
-</a>
-<code>.link-icon.link-xls</code>
-or
-<code>.link-icon.xls</code>
-</p>
-<p class='link-icon image'>
-<a href='#/'>
-IMAGES (gif, ico, image, jpg, photo, png )
-<br>
-</a>
-<code>.link-icon.link-image</code>
-or
-<code>.link-icon.image</code>
-</p>
-<p class='link-icon pdf'>
-<a href='#/'>
-PDF
-<br>
-</a>
-<code>.link-icon.link-pdf</code>
-or
-<code>.link-icon.pdf</code>
-</p>
-<p class='link-icon ppt'>
-<a href='#/'>
-POWERPOINT (ppt, pptm, pptx)
-<br>
-</a>
-<code>.link-icon.link-ppt</code>
-or
-<code>.link-icon.ppt</code>
-</p>
-<p class='link-icon txt'>
-<a href='#/'>
-TEXT (txt, odt, rtf)
-<br>
-</a>
-<code>.link-icon.link-txt</code>
-or
-<code>.link-icon.txt</code>
-</p>
-<p class='link-icon video'>
-<a href='#/'>
-VIDEO
-<br>
-</a>
-<code>.link-icon.link-video</code>
-or
-<code>.link-icon.video</code>
-</p>
-<p class='link-icon doc'>
-<a href='#/'>
-WORD (doc, docm, docx)
-<br>
-</a>
-<code>.link-icon.link-doc</code>
-or
-<code>.link-icon.doc</code>
-</p>
-<p class='link-icon zip'>
-<a href='#/'>
-ZIP (zip, archive)
-<br>
-</a>
-<code>.link-icon.link-zip</code>
-or
-<code>.link-icon.zip</code>
-</p>
-</div>
-</div>
-</div>
-<div class='col-sm-12'>
-<div class='card card-sard'>
-<div class='card-header'>
-Links icons within a table
-</div>
-<div class='card-body'>
-<table class='table table-sard table-bordered'>
-<thead>
-<tr>
-<th>th</th>
-<th>th</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-<a class='link-icon link-pdf' href='#/'>
-<code>a.link-icon.link-pdf</code>
-<span class='text-default'>within a td with no class added.</span>
-<br>
-<span class='text-default'>Really, long, long title to exdent it to a new line.</span>
-</a>
-</td>
-<td class='link-icon'>
-<a class='link-pdf' href='#/'>
-<span class='text-default'>Link</span>
-<code>(a.link-pdf)</code>
-<span class='text-default'>within a td with the class of</span>
-<code>(td.link-icon)</code>
-<br>
-<span class='text-default'>Some long title, so it wraps around to show the indent.</span>
-</a>
-<a class='link-pdf' href='#/'>
-<span class='text-default'>Another Link</span>
-<code>(a.link-pdf)</code>
-<span class='text-default'>within the same td with the class of</span>
-<code>(td.link-icon)</code>
-<br>
-<span class='text-default'>Some long title, so it wraps around to show the indent.</span>
-</a>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
 </div>
 </div>
 </div>
