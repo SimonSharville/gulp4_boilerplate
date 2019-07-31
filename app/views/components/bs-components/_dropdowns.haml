@@ -21,8 +21,8 @@
   .col-sm-12    
     %h4 Button dropdowns
     .btn-group
-      %button.btn.btn-primary.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :type => "button"}
-        Default
+      %button.btn.btn-user.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :type => "button"}
+        User
       .dropdown-menu
         %a.dropdown-item{:href => "#/"} Action
         %a.dropdown-item{:href => "#/"} Another action
@@ -91,16 +91,16 @@
     %h5 Sizing
     / Large button groups (default and split)
     .btn-group
-      %button.btn.btn-secondary.btn-lg.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :type => "button"}
+      %button.btn.btn-user.btn-lg.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :type => "button"}
         Large button
       .dropdown-menu
         %button.dropdown-item{:type => "button"} Action
         %button.dropdown-item{:type => "button"} Another action
         %button.dropdown-item{:type => "button"} Something else here
     .btn-group
-      %button.btn.btn-secondary.btn-lg{:type => "button"}
+      %button.btn.btn-user.btn-lg{:type => "button"}
         Large split button
-      %button.btn.btn-lg.btn-secondary.dropdown-toggle.dropdown-toggle-split{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :type => "button"}
+      %button.btn.btn-lg.btn-user.dropdown-toggle.dropdown-toggle-split{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :type => "button"}
         %span.sr-only Toggle Dropdown
       .dropdown-menu
         %button.dropdown-item{:type => "button"} Action
@@ -109,16 +109,16 @@
     %p
     / Small button groups (default and split)
     .btn-group
-      %button.btn.btn-secondary.btn-sm.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :type => "button"}
+      %button.btn.btn-user.btn-sm.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :type => "button"}
         Small button
       .dropdown-menu
         %button.dropdown-item{:type => "button"} Action
         %button.dropdown-item{:type => "button"} Another action
         %button.dropdown-item{:type => "button"} Something else here
     .btn-group
-      %button.btn.btn-secondary.btn-sm{:type => "button"}
+      %button.btn.btn-user.btn-sm{:type => "button"}
         Small split button
-      %button.btn.btn-sm.btn-secondary.dropdown-toggle.dropdown-toggle-split{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :type => "button"}
+      %button.btn.btn-sm.btn-user.dropdown-toggle.dropdown-toggle-split{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :type => "button"}
         %span.sr-only Toggle Dropdown
       .dropdown-menu
         %button.dropdown-item{:type => "button"} Action
@@ -129,7 +129,7 @@
 
     %h5 Responsive alignment
     .btn-group
-      %button.btn.btn-secondary.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-display" => "static", "data-toggle" => "dropdown", :type => "button"}
+      %button.btn.btn-user.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-display" => "static", "data-toggle" => "dropdown", :type => "button"}
         Left-aligned but right aligned when large screen
       .dropdown-menu.dropdown-menu-lg-right
         %button.dropdown-item{:type => "button"} Action
@@ -137,7 +137,7 @@
         %button.dropdown-item{:type => "button"} Something else here
     %p
     .btn-group
-      %button.btn.btn-secondary.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-display" => "static", "data-toggle" => "dropdown", :type => "button"}
+      %button.btn.btn-user.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-display" => "static", "data-toggle" => "dropdown", :type => "button"}
         Right-aligned but left aligned when large screen
       .dropdown-menu.dropdown-menu-right.dropdown-menu-lg-left
         %button.dropdown-item{:type => "button"} Action
@@ -153,7 +153,7 @@
       %code .dropwown-menu-item
     
     .btn-group
-      %button.btn.btn-primary.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :type => "button"}
+      %button.btn.btn-user.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :type => "button"}
         Text
       .dropdown-menu
         .dropwown-menu-item
@@ -162,7 +162,7 @@
           %p.mb-0
             And this is more example text.
     .btn-group
-      %button.btn.btn-primary.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :type => "button"}
+      %button.btn.btn-user.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :type => "button"}
         Form
       .dropdown-menu
         %form.dropwown-menu-item
@@ -177,7 +177,7 @@
               %input#dropdownCheck.form-check-input{:type => "checkbox"}/
               %label.form-check-label{:for => "dropdownCheck"}
                 Remember me
-          %button.btn.btn-primary{:type => "submit"} Sign in
+          %button.btn.btn-user.mt-3{:type => "submit"} Sign in
         .dropdown-divider
         %a.dropdown-item{:href => "#/"} New around here? Sign up
         %a.dropdown-item{:href => "#/"} Forgot password?
