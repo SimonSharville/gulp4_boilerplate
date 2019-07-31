@@ -20,8 +20,14 @@
       A simple dark alert—check it out!
 
     %hr
+    %h3 SARD Alerts
+    .alert.alert-user{:role => "alert"}
+      A simple user alert—check it out!
+    .alert.alert-admin{:role => "alert"}
+      A simple admin alert—check it out!
 
-    %h4 Additional content
+    %hr
+    %h3 Additional content
     .alert.alert-success{:role => "alert"}
       %h4.alert-heading Well done!
       %p Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.
@@ -29,7 +35,7 @@
       %p.mb-0 Whenever you need to, be sure to use margin utilities to keep things nice and tidy.
 
     %hr
-    %h4 Dismissible Alerts
+    %h3 Dismissible Alerts
     .alert.alert-primary.alert-dismissible.fade.show{:role => "alert"}
       %strong Holy guacamole!
       You should check in on some of those fields below.
@@ -66,6 +72,17 @@
       %button.close{"aria-label" => "Close", "data-dismiss" => "alert", :type => "button"}
         .fa-icon.alert-close 
     .alert.alert-dark.alert-dismissible.fade.show{:role => "alert"}
+      %strong Holy guacamole!
+      You should check in on some of those fields below.
+      %button.close{"aria-label" => "Close", "data-dismiss" => "alert", :type => "button"}
+        .fa-icon.alert-close 
+    
+    .alert.alert-user.alert-dismissible.fade.show{:role => "alert"}
+      %strong Holy guacamole!
+      You should check in on some of those fields below.
+      %button.close{"aria-label" => "Close", "data-dismiss" => "alert", :type => "button"}
+        .fa-icon.alert-close 
+    .alert.alert-admin.alert-dismissible.fade.show{:role => "alert"}
       %strong Holy guacamole!
       You should check in on some of those fields below.
       %button.close{"aria-label" => "Close", "data-dismiss" => "alert", :type => "button"}
