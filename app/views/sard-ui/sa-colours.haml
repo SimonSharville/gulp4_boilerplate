@@ -473,7 +473,7 @@
       .row
         .col-12
           %h1 Theme Trust Colours
-          %p.lead These should change colour when you change the trust class attached to the body tag.
+          %p.lead Trust colours will change when you change the theme class attached to the body tag.
           %p 
             To test this, go to the body tag of this page and change the class to either:
             %code .theme-trust
@@ -484,7 +484,8 @@
             \. 
             %br/
             The Trust colours should change, while the User and Admin colours remain the same.
-          %h3 Background Colours
+          
+          %h3 Trust Colours
         .col-sm-6
           .card.mb-3
             .card-header.bg-trust-dark Dark
@@ -494,6 +495,7 @@
                   Primary - Trust colour
             .card-footer.bg-trust-light.text-white 
               Light
+  
         .col-sm-6
           .card.mb-3
             .card-header.bg-trust-2-dark Dark
@@ -503,6 +505,19 @@
                   Secondary - Trust colour
             .card-footer.bg-trust-2-light.text-white 
               Light
+        .col-sm-6
+          %h5.text-trust-dark  Primary - Trust Colour (Dark)
+          %h4.text-trust  Primary - Trust Colour
+          %h5.text-trust-light  Primary - Trust Colour (Light)
+        .col-sm-6
+          %h5.text-trust-2-dark  Secondary - Trust Colour (Dark)
+          %h4.text-trust-2  Secondary - Trust Colour
+          %h5.text-trust-2-light  Secondary - Trust Colour (Light)
+
+        
+        .col-12
+          %hr/
+          %h3 User & Admin Colours
 
         .col-sm-6
           .card.mb-3
@@ -542,16 +557,6 @@
             .card-footer.bg-trust-admin-2-light.text-white 
               Light
 
-        .col-12
-          %h3 Trust Colours
-        .col-sm-6
-          %h5.text-trust-dark  Primary - Trust Colour (Dark)
-          %h4.text-trust  Primary - Trust Colour
-          %h5.text-trust-light  Primary - Trust Colour (Light)
-        .col-sm-6
-          %h5.text-trust-2-dark  Secondary - Trust Colour (Dark)
-          %h4.text-trust-2  Secondary - Trust Colour
-          %h5.text-trust-2-light  Secondary - Trust Colour (Light)
 
         .col-12
           %h3 User Colours
@@ -574,7 +579,6 @@
           %h5.text-trust-admin-2-dark  Admin-2 Colour (Dark)
           %h4.text-trust-admin-2  Admin-2 Colour
           %h5.text-trust-admin-2-light  Admin-2 Colour (Light)
-
 
 
     / Scripts ================================
