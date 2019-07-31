@@ -6,7 +6,7 @@
     %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
     %link{:href => "../assets/css/sard-styles.min.css", :rel => "stylesheet"}/
  
-  %body.theme-test
+  %body.theme-trust
     //=include ../navbars/_navbar-x1.haml
 
     .container
@@ -468,6 +468,124 @@
                 14.14.14
                 %br
                 82.71.62.90
+
+      %hr
+      .row
+        .col-12
+          %h1 Theme Trust Colours
+          %p.lead These should change colour when you change the trust class attached to the body tag.
+          %p 
+            To tst this, go t the body tag of this page and change the class to %either:
+            %code .theme-trust
+            ,
+            %code .theme-user
+            or 
+            %code .theme-admin
+            \. 
+            %br/
+            The Trust colours should change, while the User and Admin colours remain the same.
+          %h3 Background Colours
+        .col-sm-6
+          .card.mb-3
+            .card-header.bg-trust-dark Dark
+            .card-body.bg-trust
+              %h5.card-title.base.text-white 
+                %span.h2.base 
+                  Trust
+                  %br/
+                  Theme colour
+            .card-footer.bg-trust-light.text-white 
+              Light
+        .col-sm-6
+          .card.mb-3
+            .card-header.bg-trust-2-dark Dark
+            .card-body.bg-trust-2
+              %h5.card-title.base.text-white 
+                %span.h2.base 
+                  Trust
+                  %br/
+                  Theme secondary colour
+            .card-footer.bg-trust-2-light.text-white 
+              Light
+
+        .col-sm-6
+          .card.mb-3
+            .card-header.bg-trust-user-dark Dark
+            .card-body.bg-trust-user
+              %h5.card-title.base.text-white 
+                %span.h2.base 
+                  Trust
+                  %br/
+                  User colour
+            .card-footer.bg-trust-user-light.text-white 
+              Light
+        .col-sm-6
+          .card.mb-3
+            .card-header.bg-trust-user-2-dark Dark
+            .card-body.bg-trust-user-2
+              %h5.card-title.base.text-white 
+                %span.h2.base 
+                  Trust
+                  %br/
+                  User secondary colour
+            .card-footer.bg-trust-user-2-light.text-white 
+              Light
+
+        .col-sm-6
+          .card.mb-3
+            .card-header.bg-trust-admin-dark Dark
+            .card-body.bg-trust-admin
+              %h5.card-title.base.text-white 
+                %span.h2.base 
+                  Trust
+                  %br/
+                  Admin colour
+            .card-footer.bg-trust-admin-light.text-white 
+              Light
+        .col-sm-6
+          .card.mb-3
+            .card-header.bg-trust-admin-2-dark Dark
+            .card-body.bg-trust-admin-2
+              %h5.card-title.base.text-white 
+                %span.h2.base 
+                  Trust
+                  %br/
+                  Admin secondary colour
+            .card-footer.bg-trust-admin-2-light.text-white 
+              Light
+
+        .col-12
+          %h3 Trust Colours
+        .col-sm-6
+          %h5.text-trust-dark  Trust Colour Dark
+          %h4.text-trust  Trust Colour
+          %h5.text-trust-light  Trust Colour Light
+        .col-sm-6
+          %h5.text-trust-2-dark  Trust Secondary Colour Dark
+          %h4.text-trust-2  Trust Secondary Colour
+          %h5.text-trust-2-light  Trust Secondary Colour Light
+
+        .col-12
+          %h3 Trust User Colours
+        .col-sm-6
+          %h5.text-trust-user-dark  Trust User Colour Dark
+          %h4.text-trust-user  Trust User Colour
+          %h5.text-trust-user-light  Trust User Colour Light
+        .col-sm-6
+          %h5.text-trust-user-2-dark  Trust User Secondary Colour Dark
+          %h4.text-trust-user-2  Trust User Secondary Colour
+          %h5.text-trust-user-2-light  Trust User Secondary Colour Light
+
+        .col-12
+          %h3 Trust Admin Colours
+        .col-sm-6
+          %h5.text-trust-admin-dark  Trust Admin Colour Dark
+          %h4.text-trust-admin  Trust Admin Colour
+          %h5.text-trust-admin-light  Trust Admin Colour Light
+        .col-sm-6
+          %h5.text-trust-admin-2-dark  Trust Admin Secondary Colour Dark
+          %h4.text-trust-admin-2  Trust Admin Secondary Colour
+          %h5.text-trust-admin-2-light  Trust Admin Secondary Colour Light
 
 
 
