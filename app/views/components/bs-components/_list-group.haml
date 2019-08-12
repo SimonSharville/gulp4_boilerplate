@@ -50,23 +50,9 @@
 .row
   .col-sm-6
     .card.card-sard
-      .card-header Contextual classes
-      .card-body 
-        .list-group
-          %a.list-group-item.list-group-item-action{href: "#/"} Dapibus ac facilisis in
-          %a.list-group-item.list-group-item-action.list-group-item-primary{href: "#/"} A simple primary list group item
-          %a.list-group-item.list-group-item-action.list-group-item-secondary{href: "#/"} A simple secondary list group item
-          %a.list-group-item.list-group-item-action.list-group-item-success{href: "#/"} A simple success list group item
-          %a.list-group-item.list-group-item-action.list-group-item-danger{href: "#/"} A simple danger list group item
-          %a.list-group-item.list-group-item-action.list-group-item-warning{href: "#/"} A simple warning list group item
-          %a.list-group-item.list-group-item-action.list-group-item-info{href: "#/"} A simple info list group item
-          %a.list-group-item.list-group-item-action.list-group-item-light{href: "#/"} A simple light list group item
-          %a.list-group-item.list-group-item-action.list-group-item-dark{href: "#/"} A simple dark list group item
-  .col-sm-6
-    .card.card-sard
       .card-header With badges
       .card-body 
-        %ul.list-group.mb-3
+        %ul.list-group
           %li.list-group-item.d-flex.justify-content-between.align-items-center
             Cras justo odio
             %span.badge.badge-trust.badge-pill 14
@@ -76,7 +62,7 @@
           %li.list-group-item.d-flex.justify-content-between.align-items-center
             Morbi leo risus
             %span.badge.badge-trust.badge-pill 1
-
+  .col-sm-6
     .card.card-sard
       .card-header Flush
       .card-body 
@@ -96,22 +82,22 @@
 .row
   .col-sm-12
     .card.card-sard
-      .card-header Custom content
+      .card-header Custom content & Links
       .card-body 
         .list-group
-          %a.list-group-item.list-group-item-action.active{:href => "#/"}
+          %a.list-group-item.list-group-item-trust.active{:href => "#/"}
             .d-flex.w-100.justify-content-between
               %h5.mb-1 List group item heading
               %small 3 days ago
             %p.mb-1 Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.
             %small Donec id elit non mi porta.
-          %a.list-group-item.list-group-item-action{:href => "#/"}
+          %a.list-group-item.list-group-item-trust{:href => "#/"}
             .d-flex.w-100.justify-content-between
               %h5.mb-1 List group item heading
               %small.text-muted 3 days ago
             %p.mb-1 Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.
             %small.text-muted Donec id elit non mi porta.
-          %a.list-group-item.list-group-item-action{:href => "#/"}
+          %a.list-group-item.list-group-item-trust{:href => "#/"}
             .d-flex.w-100.justify-content-between
               %h5.mb-1 List group item heading
               %small.text-muted 3 days ago
@@ -127,10 +113,10 @@
         .row
           .col-4
             #list-tab.list-group{:role => "tablist"}
-              %a#list-home-list.list-group-item.list-group-item-action.active{"aria-controls" => "home", "data-toggle" => "list", :href => "#list-home-2", :role => "tab"} Home
-              %a#list-profile-list.list-group-item.list-group-item-action{"aria-controls" => "profile", "data-toggle" => "list", :href => "#list-profile-2", :role => "tab"} Profile
-              %a#list-messages-list.list-group-item.list-group-item-action{"aria-controls" => "messages", "data-toggle" => "list", :href => "#list-messages-2", :role => "tab"} Messages
-              %a#list-settings-list.list-group-item.list-group-item-action{"aria-controls" => "settings", "data-toggle" => "list", :href => "#list-settings-2", :role => "tab"} Settings
+              %a#list-home-list.list-group-item.list-group-item-trust.active{"aria-controls" => "home", "data-toggle" => "list", :href => "#list-home-2", :role => "tab"} Home
+              %a#list-profile-list.list-group-item.list-group-item-trust{"aria-controls" => "profile", "data-toggle" => "list", :href => "#list-profile-2", :role => "tab"} Profile
+              %a#list-messages-list.list-group-item.list-group-item-trust{"aria-controls" => "messages", "data-toggle" => "list", :href => "#list-messages-2", :role => "tab"} Messages
+              %a#list-settings-list.list-group-item.list-group-item-trust{"aria-controls" => "settings", "data-toggle" => "list", :href => "#list-settings-2", :role => "tab"} Settings
           .col-8
             #nav-tabContent.tab-content
               #list-home-2.tab-pane.fade.show.active{"aria-labelledby" => "list-home-list", :role => "tabpanel"} Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed tortor id eros pulvinar iaculis posuere sit amet nulla. Aenean malesuada lacus id libero rutrum, eu elementum mauris ultrices. Cras vel imperdiet ante. Sed eget nisi ante. Aenean dapibus arcu vel ex molestie convallis sit amet vel sem. Vivamus vitae magna non dolor pulvinar mollis. Suspendisse lacinia tortor sed cursus finibus. Aenean tellus turpis, accumsan a egestas ac, faucibus eget lorem. Duis odio diam, iaculis eget est sed, tincidunt malesuada arcu. Nulla facilisi. Donec porttitor, diam quis feugiat vestibulum, leo eros malesuada arcu, id congue magna diam molestie est. In eget accumsan justo. Aliquam id sapien porta, tempor est sit amet, varius lectus. Vestibulum maximus consequat quam, a mollis ante finibus vel.
