@@ -1,0 +1,180 @@
+!!!
+%html.no-js{:lang => "en"}
+  %head
+    %title Gulp 4 Boilerplate - Links
+    %meta{:content => "ie=edge", "http-equiv" => "x-ua-compatible"}/
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+    %link{:href => "../assets/css/sard-styles.min.css", :rel => "stylesheet"}/
+ 
+  %body.theme-trust
+    //=include ../navbars/_navbar-x1.haml
+
+    .container
+      .row
+        .col-sm-12
+          %h1#links.bs-anchor Lists
+
+      .row
+        .col-sm-12
+          %p.lead
+            All 
+            %span.strong ul 
+            list styles have a bullet point added, To remove the bullet, add
+            %code .no-bullet
+            to the 
+            %code ul 
+
+      
+
+      .row
+        .col-sm-6
+          %h4 A Standard UL List
+          %ul
+            %li Cras justo odio
+            %li Dapibus ac facilisis in
+            %li Morbi leo risus
+            %li Porta ac consectetur ac
+            %li Vestibulum at eros
+        .col-sm-6
+          %h4 A Standard UL List Group
+          %ul.list-group
+            %li.list-group-item Cras justo odio
+            %li.list-group-item Dapibus ac facilisis in
+            %li.list-group-item Morbi leo risus
+            %li.list-group-item Porta ac consectetur ac
+            %li.list-group-item Vestibulum at eros
+        .col-sm-12
+          %hr
+          %p 
+            By adding
+            %code .no-bullet
+            to 
+            %code ul 
+            , you can remove the bullet.
+        .col-sm-6
+          %h4 A Standard UL.no-bullet List
+          %ul.no-bullet
+            %li Cras justo odio
+            %li Dapibus ac facilisis in
+            %li Morbi leo risus
+            %li Porta ac consectetur ac
+            %li Vestibulum at eros
+        .col-sm-6
+          %h4 A Standard UL.no-bullet List Group
+          %ul.no-bullet.list-group
+            %li.list-group-item Cras justo odio
+            %li.list-group-item Dapibus ac facilisis in
+            %li.list-group-item Morbi leo risus
+            %li.list-group-item Porta ac consectetur ac
+            %li.list-group-item Vestibulum at eros
+
+        .col-sm-12
+          %hr
+          %p 
+            Alternatively, you can just remove the bullet from individual list items by adding 
+            %code .no-bullet 
+            to the 
+            %code li
+            instead. 
+        .col-sm-6
+          %h4 A Standard UL.no-bullet List
+          %ul
+            %li Cras justo odio
+            %li.no-bullet Dapibus ac facilisis in
+            %li.no-bullet Morbi leo risus
+            %li Porta ac consectetur ac
+            %li Vestibulum at eros
+        .col-sm-6
+          %h4 A Standard UL.no-bullet List Group
+          %ul.list-group
+            %li.list-group-item Cras justo odio
+            %li.no-bullet.list-group-item Dapibus ac facilisis in
+            %li.no-bullet.list-group-item Morbi leo risus
+            %li.list-group-item Porta ac consectetur ac
+            %li.list-group-item Vestibulum at eros
+
+      %hr/
+      .row
+        .col-sm-12  
+          %h3 Colour variations 
+          %p
+            Add 
+            %code .trust-list 
+            ,
+            %code .user-list 
+            or 
+            %code .admin-list 
+            to the 
+            %code ul 
+            or 
+            %code li 
+        .col-sm-4
+          %h4 Trust Colours
+          %ul.trust-list
+            %li Cras justo odio
+            %li Dapibus ac facilisis in
+            %li Morbi leo risus
+            %li Porta ac consectetur ac
+            %li Vestibulum at eros
+        .col-sm-4
+          %h4 User Colours
+          %ul.user-list
+            %li Cras justo odio
+            %li Dapibus ac facilisis in
+            %li Morbi leo risus
+            %li Porta ac consectetur ac
+            %li Vestibulum at eros
+        .col-sm-4
+          %h4 Admin Colours
+          %ul.admin-list
+            %li Cras justo odio
+            %li Dapibus ac facilisis in
+            %li Morbi leo risus
+            %li Porta ac consectetur ac
+            %li Vestibulum at eros
+
+      %hr/
+      .row
+        .col-sm-12  
+          %h3 Open Bullets 
+          %p
+            Add 
+            %code .open-bullet 
+            to either the 
+            %code ul 
+            or 
+            %code li 
+            to creat an open bullet.
+        .col-sm-4
+          %h4 Trust Colours
+          %ul.open-bullet
+            %li Cras justo odio
+            %li.trust-list Dapibus ac facilisis in
+            %li.trust-list Morbi leo risus
+            %li Porta ac consectetur ac
+            %li Vestibulum at eros
+        .col-sm-4
+          %h4 User Colours
+          %ul
+            %li Cras justo odio
+            %li.open-bullet.user-list Dapibus ac facilisis in
+            %li.open-bullet.user-list Morbi leo risus
+            %li Porta ac consectetur ac
+            %li Vestibulum at eros
+        .col-sm-4
+          %h4 Admin Colours
+          %ul.open-bullet
+            %li Cras justo odio
+            %li.admin-list Dapibus ac facilisis in
+            %li.admin-list Morbi leo risus
+            %li Porta ac consectetur ac
+            %li Vestibulum at eros
+              
+
+
+    / Scripts ================================
+
+    / Remote Scripts
+    %script{:src => "https://simonsharville.github.io/gulp4_bootstrap4_boilerplate/assets/js/remote-sard-scripts.min.js"}
+    / Local Scripts
+    %script{:src => "../assets/js/local-scripts.min.js"}

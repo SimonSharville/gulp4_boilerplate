@@ -4,7 +4,7 @@
     %h1#list-group-anchor.bs-anchor List Groups
     %p These are List Groups placed within either Cards, Panels or Fieldsets.
 .row
-  .col-sm-6
+  .col-sm-4
     .card.card-sard
       .card-header Basic example
       .card-body
@@ -14,11 +14,26 @@
           %li.list-group-item Morbi leo risus
           %li.list-group-item Porta ac consectetur ac
           %li.list-group-item Vestibulum at eros
-  .col-sm-6
+  .col-sm-4
     .card.card-sard
       .card-header Flush example
       .card-body
         %ul.list-group.list-group-flush
+          %li.list-group-item Cras justo odio
+          %li.list-group-item Dapibus ac facilisis in
+          %li.list-group-item Morbi leo risus
+          %li.list-group-item Porta ac consectetur ac
+          %li.list-group-item Vestibulum at eros
+  .col-sm-4
+    .card.card-sard
+      .card-header List Group No Bullet
+      .card-body
+        %p
+          Add 
+          %code .no-bullet
+          to 
+          %code ul.list-group
+        %ul.list-group.no-bullet
           %li.list-group-item Cras justo odio
           %li.list-group-item Dapibus ac facilisis in
           %li.list-group-item Morbi leo risus
@@ -31,7 +46,7 @@
     .card.card-sard
       .card-header Horizontal
       .card-body 
-        %ul.list-group.list-group-horizontal
+        %ul.list-group.no-bullet.list-group-horizontal
           %li.list-group-item Cras justo odio
           %li.list-group-item Dapibus ac facilisis in
           %li.list-group-item Morbi leo risus
@@ -40,7 +55,7 @@
     .card.card-sard
       .card-header Horizontal / Flush
       .card-body 
-        %ul.list-group.list-group-flush.list-group-horizontal
+        %ul.list-group.no-bullet.list-group-flush.list-group-horizontal
           %li.list-group-item Cras justo odio
           %li.list-group-item Dapibus ac facilisis in
           %li.list-group-item Morbi leo risus
@@ -52,7 +67,7 @@
     .card.card-sard
       .card-header With badges
       .card-body 
-        %ul.list-group
+        %ul.list-group.no-bullet
           %li.list-group-item.d-flex.justify-content-between.align-items-center
             Cras justo odio
             %span.badge.badge-trust.badge-pill 14
@@ -66,7 +81,7 @@
     .card.card-sard
       .card-header Flush
       .card-body 
-        %ul.list-group.list-group-flush
+        %ul.list-group.no-bullet.list-group-flush
           %li.list-group-item.d-flex.justify-content-between.align-items-center
             Cras justo odio
             %span.badge.badge-trust.badge-pill 14

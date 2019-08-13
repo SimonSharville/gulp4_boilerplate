@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class='no-js' lang='en'>
 <head>
-<title>Gulp 4 Boilerplate - Perforations and Dividers</title>
+<title>Gulp 4 Boilerplate - Links</title>
 <meta content='ie=edge' http-equiv='x-ua-compatible'>
 <meta content='width=device-width, initial-scale=1.0' name='viewport'>
 <link href='../assets/css/sard-styles.min.css' rel='stylesheet'>
@@ -86,202 +86,194 @@ Components
 <div class='container'>
 <div class='row'>
 <div class='col-sm-12'>
-<h1 class='bs-anchor' id='links'>Perforations and Dividers</h1>
-<p>Throughout SARD we use a variety of perforations and divders to visually seperate sections.</p>
+<h1 class='bs-anchor' id='links'>Lists</h1>
 </div>
 </div>
 <div class='row'>
 <div class='col-sm-12'>
-<h3>Horizontal Rules</h3>
-<p>We have created a range of HR thickness and colours.</p>
-<h5>A standard HR</h5>
-<code>hr</code>
+<p class='lead'>
+All
+<span class='strong'>ul</span>
+list styles have a bullet point added, To remove the bullet, add
+<code>.no-bullet</code>
+to the
+<code>ul</code>
+</p>
+</div>
+</div>
+<div class='row'>
+<div class='col-sm-6'>
+<h4>A Standard UL List</h4>
+<ul>
+<li>Cras justo odio</li>
+<li>Dapibus ac facilisis in</li>
+<li>Morbi leo risus</li>
+<li>Porta ac consectetur ac</li>
+<li>Vestibulum at eros</li>
+</ul>
+</div>
+<div class='col-sm-6'>
+<h4>A Standard UL List Group</h4>
+<ul class='list-group'>
+<li class='list-group-item'>Cras justo odio</li>
+<li class='list-group-item'>Dapibus ac facilisis in</li>
+<li class='list-group-item'>Morbi leo risus</li>
+<li class='list-group-item'>Porta ac consectetur ac</li>
+<li class='list-group-item'>Vestibulum at eros</li>
+</ul>
+</div>
+<div class='col-sm-12'>
 <hr>
-<h5>Various weights</h5>
-<p>Add the weights as below.</p>
-<code>hr.x2</code>
-<hr class='x2'>
-<code>hr.x4</code>
-<hr class='x4'>
-<code>hr.x8</code>
-<hr class='x8'>
-<code>hr.x12</code>
-<hr class='x12'>
-<code>hr.x16</code>
-<hr class='x16'>
-<h5>Various colours</h5>
-<p>Add the colours as below.</p>
-<code>hr.black</code>
-<hr class='black'>
-<code>hr.grey</code>
-<hr class='grey'>
-<code>hr.primary</code>
-<hr class='primary'>
-<code>hr.trust</code>
-<hr class='trust'>
-<code>hr.secondary</code>
-<hr class='secondary'>
-<code>hr.white</code>
-<div class='card card-sard'>
-<div class='card-body'>
-<hr class='white'>
+<p>
+By adding
+<code>.no-bullet</code>
+to
+<code>ul</code>
+, you can remove the bullet.
+</p>
+</div>
+<div class='col-sm-6'>
+<h4>A Standard UL.no-bullet List</h4>
+<ul class='no-bullet'>
+<li>Cras justo odio</li>
+<li>Dapibus ac facilisis in</li>
+<li>Morbi leo risus</li>
+<li>Porta ac consectetur ac</li>
+<li>Vestibulum at eros</li>
+</ul>
+</div>
+<div class='col-sm-6'>
+<h4>A Standard UL.no-bullet List Group</h4>
+<ul class='no-bullet list-group'>
+<li class='list-group-item'>Cras justo odio</li>
+<li class='list-group-item'>Dapibus ac facilisis in</li>
+<li class='list-group-item'>Morbi leo risus</li>
+<li class='list-group-item'>Porta ac consectetur ac</li>
+<li class='list-group-item'>Vestibulum at eros</li>
+</ul>
+</div>
+<div class='col-sm-12'>
+<hr>
+<p>
+Alternatively, you can just remove the bullet from individual list items by adding
+<code>.no-bullet</code>
+to the
+<code>li</code>
+instead.
+</p>
+</div>
+<div class='col-sm-6'>
+<h4>A Standard UL.no-bullet List</h4>
+<ul>
+<li>Cras justo odio</li>
+<li class='no-bullet'>Dapibus ac facilisis in</li>
+<li class='no-bullet'>Morbi leo risus</li>
+<li>Porta ac consectetur ac</li>
+<li>Vestibulum at eros</li>
+</ul>
+</div>
+<div class='col-sm-6'>
+<h4>A Standard UL.no-bullet List Group</h4>
+<ul class='list-group'>
+<li class='list-group-item'>Cras justo odio</li>
+<li class='no-bullet list-group-item'>Dapibus ac facilisis in</li>
+<li class='no-bullet list-group-item'>Morbi leo risus</li>
+<li class='list-group-item'>Porta ac consectetur ac</li>
+<li class='list-group-item'>Vestibulum at eros</li>
+</ul>
 </div>
 </div>
-<h5>Various styles</h5>
-<code>hr.dashed</code>
-<hr class='dashed'>
-<code>hr.dotted</code>
-<hr class='dotted'>
-<h5>Mix n match</h5>
-<code>hr.trust.dashed.x4</code>
-<hr class='trust dashed x4'>
-<code>hr.admin.dotted.x12</code>
-<hr class='admin x12 dotted'>
-</div>
-</div>
+<hr>
 <div class='row'>
 <div class='col-sm-12'>
-<h3 class='mt-3'>Perforations</h3>
-<p>Dotted horizontal rules don't always behave well in varions browsers, So we have created a set of perforations that can be used as dividers instead.</p>
+<h3>Colour variations</h3>
 <p>
-<code>.perf.trust</code>
-<div class='perf grey'></div>
+Add
+<code>.trust-list</code>
+,
+<code>.user-list</code>
+or
+<code>.admin-list</code>
+to the
+<code>ul</code>
+or
+<code>li</code>
 </p>
-<h5>Various weights</h5>
-<p>
-<code>.perf.x2</code>
-<div class='perf grey x2'></div>
-</p>
-<p>
-<code>.perf.x4</code>
-<div class='perf grey x4'></div>
-</p>
-<p>
-<code>.perf.x8</code>
-<div class='perf grey x8'></div>
-</p>
-<p>
-<code>.perf.x12</code>
-<div class='perf grey x12'></div>
-</p>
-<p>
-<code>.perf.x16</code>
-<div class='perf grey x16'></div>
-</p>
-<h5>Various colours</h5>
-<p>
-<code>.perf.black</code>
-<div class='perf black x8'></div>
-</p>
-<p>
-<code>.perf.grey</code>
-<div class='perf grey x8'></div>
-</p>
-<p>
-<code>.perf.primary</code>
-<div class='perf a x8'></div>
-<code>.perf.trust</code>
-<div class='perf trust x8'></div>
-</p>
-<p>
-<code>.perf.secondary</code>
-<div class='perf secondary x8'></div>
-</p>
-<p>
-<code>.perf.white</code>
-</p>
-<div class='card card-sard'>
-<div class='card-body'>
-<div class='perf white x8 mt-2'></div>
+</div>
+<div class='col-sm-4'>
+<h4>Trust Colours</h4>
+<ul class='trust-list'>
+<li>Cras justo odio</li>
+<li>Dapibus ac facilisis in</li>
+<li>Morbi leo risus</li>
+<li>Porta ac consectetur ac</li>
+<li>Vestibulum at eros</li>
+</ul>
+</div>
+<div class='col-sm-4'>
+<h4>User Colours</h4>
+<ul class='user-list'>
+<li>Cras justo odio</li>
+<li>Dapibus ac facilisis in</li>
+<li>Morbi leo risus</li>
+<li>Porta ac consectetur ac</li>
+<li>Vestibulum at eros</li>
+</ul>
+</div>
+<div class='col-sm-4'>
+<h4>Admin Colours</h4>
+<ul class='admin-list'>
+<li>Cras justo odio</li>
+<li>Dapibus ac facilisis in</li>
+<li>Morbi leo risus</li>
+<li>Porta ac consectetur ac</li>
+<li>Vestibulum at eros</li>
+</ul>
 </div>
 </div>
-</div>
-</div>
+<hr>
 <div class='row'>
 <div class='col-sm-12'>
-<h3 class='mt-3'>Perforations as Card dividers</h3>
-<p>Perforations were origionally designed as dividers between card body dividers. They can be placed within Cards, Panels or Fieldsets to divide them.</p>
-</div>
-<div class='col-sm-4'>
-<div class='card card-sard'>
-<div class='card-header'>Card</div>
-<div class='card-body'>
+<h3>Open Bullets</h3>
 <p>
-They can be placed between two card bodies
-</p>
-</div>
-<div class='perf'></div>
-<div class='card-body'>
-<p>Like this</p>
-<hr class='black'>
-<p>Or within a .card-body</p>
-<div class='perf'></div>
-<p>like this</p>
-</div>
-</div>
-<p>
-The Default Perforation for use in Cards is white, 8px. So you only need to have the following code:
-<br>
-<code>.card-body</code>
-<br>
-<code>.perf</code>
-<br>
-<code>.card-body</code>
+Add
+<code>.open-bullet</code>
+to either the
+<code>ul</code>
+or
+<code>li</code>
+to creat an open bullet.
 </p>
 </div>
 <div class='col-sm-4'>
-<div class='panel panel-sard'>
-<div class='panel-header'>Panel</div>
-<div class='panel-body'>
-<p>
-They can be placed between two panel bodies
-</p>
-</div>
-<div class='perf'></div>
-<div class='panel-body'>
-<p>Like this</p>
-<hr class='black'>
-<p>Or within a .panel-body</p>
-<div class='perf'></div>
-<p>like this</p>
-</div>
-</div>
-<p>
-The Default Perforation for use in panels is white, 8px. So you only need to have the following code:
-<br>
-<code>.panel-body</code>
-<br>
-<code>.perf</code>
-<br>
-<code>.panel-body</code>
-</p>
+<h4>Trust Colours</h4>
+<ul class='open-bullet'>
+<li>Cras justo odio</li>
+<li class='trust-list'>Dapibus ac facilisis in</li>
+<li class='trust-list'>Morbi leo risus</li>
+<li>Porta ac consectetur ac</li>
+<li>Vestibulum at eros</li>
+</ul>
 </div>
 <div class='col-sm-4'>
-<fieldset>
-<legend>Fieldset</legend>
-<div class='form-group'>
-<p>
-They can be placed between two form groups
-</p>
+<h4>User Colours</h4>
+<ul>
+<li>Cras justo odio</li>
+<li class='open-bullet user-list'>Dapibus ac facilisis in</li>
+<li class='open-bullet user-list'>Morbi leo risus</li>
+<li>Porta ac consectetur ac</li>
+<li>Vestibulum at eros</li>
+</ul>
 </div>
-<div class='perf'></div>
-<div class='form-group'>
-<p>Like this</p>
-<hr class='black'>
-<p>Or within a .form-group</p>
-<div class='perf'></div>
-<p>like this</p>
-</div>
-</fieldset>
-<p>
-The Default Perforation for use in fieldsets is white, 8px. So you only need to have the following code:
-<br>
-<code>.form-group</code>
-<br>
-<code>.perf</code>
-<br>
-<code>.form-group</code>
-</p>
+<div class='col-sm-4'>
+<h4>Admin Colours</h4>
+<ul class='open-bullet'>
+<li>Cras justo odio</li>
+<li class='admin-list'>Dapibus ac facilisis in</li>
+<li class='admin-list'>Morbi leo risus</li>
+<li>Porta ac consectetur ac</li>
+<li>Vestibulum at eros</li>
+</ul>
 </div>
 </div>
 </div>
