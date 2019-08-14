@@ -447,12 +447,65 @@
                     #notes_errors
                     #notes_errors
               %fieldset
-                .form-group.requested_by
+                .form-group.row.requested_by
                   %label.col-sm-3{:for => "current_user"} Requested By
                   .col-sm-9
                     %span#current_user Mrs Bella Owen
 
           .modal-footer
+            %button.btn.btn-sm.btn-info{:type => "button"} btn info
+            %button.btn.btn-sm.btn-danger{"data-dismiss" => "modal", :type => "button"} Close
+            %button.btn.btn-sm.btn-save{:type => "button"} Save changes
+
+    / Button trigger modal
+    %button.btn.btn-info{"data-target" => "#modalRoles", "data-toggle" => "modal", :type => "button"}
+      Modal Roles
+    / Modal
+    #modalRoles.modal.modal-roles.fade{"aria-hidden" => "true", "aria-labelledby" => "modalRolesTitle", :role => "dialog", :tabindex => "-1"}
+      .modal-dialog.modal-dialog-scrollable{:role => "document"}
+        .modal-content
+          -# .modal-header
+          -#   %h5#modalRolesTitle.modal-title 
+          -#     Modal Roles
+          %button.close{"aria-label" => "Close", "data-dismiss" => "modal", :type => "button"}
+            %span{"aria-hidden" => "true"} ×
+          .modal-body
+            %h3 H3 Header
+            %p Modal roles, is used specifically in in Admin/Users/Roles & Admin Users/New User/Form. It is created dynamically, so has special styling.
+            %p It has no header, instead the header is within the modal-body with a h3 tag.
+            %h4 H4 Header
+            %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit massa eget mi maximus.
+            %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit massa eget mi maximus, sed faucibus nisi consequat. Donec placerat mauris eu malesuada consectetur. Pellentesque egestas gravida dolor, eget aliquet dui consectetur ut. Phasellus sollicitudin diam vitae purus commodo, vel commodo leo elementum.
+            .divide-rule
+            %ul
+              %li List Item One
+              %li List Item Two. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit massa eget mi maximus
+              %li List Item Three
+            %hr/
+            %ul.no-bullet
+              %li ul.no-bullet
+              %li List Item Two. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit massa eget mi maximus
+              %li List Item Three
+            %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit massa eget mi maximus, sed faucibus nisi consequat. 
+            %hr/
+            %h1 H1 Header
+            %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit massa eget mi maximus.
+            %h2 H2 Header
+            %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit massa eget mi maximus.
+            %p H3 is used for the modal header.
+            %h4 H4 Header
+            %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit massa eget mi maximus.
+            %h5 H5 Header
+            %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit massa eget mi maximus.
+            %h6 H6 Header
+            %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit massa eget mi maximus. 
+            %hr/
+            %p
+              This is an example of a standard
+              %a{href: "#/"} Text Link
+            %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit massa eget mi maximus, sed faucibus nisi consequat. Donec placerat mauris eu malesuada consectetur. Pellentesque egestas gravida dolor, eget aliquet dui consectetur ut. Phasellus sollicitudin diam vitae purus commodo, vel commodo leo elementum.         
+          .modal-footer
+            %button.btn.btn-sm.btn-default{:type => "button"} btn default
             %button.btn.btn-sm.btn-info{:type => "button"} btn info
             %button.btn.btn-sm.btn-danger{"data-dismiss" => "modal", :type => "button"} Close
             %button.btn.btn-sm.btn-save{:type => "button"} Save changes
