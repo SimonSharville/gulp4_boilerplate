@@ -57,7 +57,7 @@ Components
 </ul>
 </div>
 <a class='dropdown-item' href='../components/components.html#list-group-anchor'>List Groups</a>
-<a class='dropdown-item' href='../components/components.html#modal-anchor'>Modal</a>
+<a class='dropdown-item' href='../components/components.html#modal-anchor'>Modals</a>
 <a class='dropdown-item' href='../components/components.html#navbar-anchor'>Navbar</a>
 <a class='dropdown-item' href='../components/components.html#navs-anchor'>Navs</a>
 <a class='dropdown-item' href='../components/components.html#pagination-anchor'>Pagination</a>
@@ -3095,7 +3095,7 @@ Morbi leo risus
 <h1 class='bs-anchor' id='modal-anchor'>Modals</h1>
 <h4>Basic Modal</h4>
 <!-- Button trigger modal -->
-<button class='btn btn-primary' data-target='#exampleModal' data-toggle='modal' type='button'>
+<button class='btn btn-default' data-target='#exampleModal' data-toggle='modal' type='button'>
 Launch demo modal
 </button>
 <!-- Modal -->
@@ -3122,7 +3122,7 @@ This is the basic Modal.
 <h4>Scrolling long content</h4>
 <p>When modals become too long for the user’s viewport or device, they scroll independent of the page itself. Try the demo below to see what we mean.</p>
 <!-- Button trigger modal -->
-<button class='btn btn-primary' data-target='#exampleModalLong' data-toggle='modal' type='button'>
+<button class='btn btn-default' data-target='#exampleModalLong' data-toggle='modal' type='button'>
 Scrolling long content
 </button>
 <!-- Modal -->
@@ -3168,6 +3168,10 @@ long content
 <h6 class='base'>H6 Header</h6>
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit massa eget mi maximus.</p>
 <hr>
+<p>
+This is an example of a standard
+<a href='#/'>Text Link</a>
+</p>
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit massa eget mi maximus, sed faucibus nisi consequat. Donec placerat mauris eu malesuada consectetur. Pellentesque egestas gravida dolor, eget aliquet dui consectetur ut. Phasellus sollicitudin diam vitae purus commodo, vel commodo leo elementum.</p>
 <hr>
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit massa eget mi maximus, sed faucibus nisi consequat. Donec placerat mauris eu malesuada consectetur. Pellentesque egestas gravida dolor, eget aliquet dui consectetur ut. Phasellus sollicitudin diam vitae purus commodo, vel commodo leo elementum.</p>
@@ -3189,7 +3193,7 @@ to
 .
 </p>
 <!-- Button trigger modal -->
-<button class='btn btn-primary' data-target='#exampleModalScrollable' data-toggle='modal' type='button'>
+<button class='btn btn-default' data-target='#exampleModalScrollable' data-toggle='modal' type='button'>
 Scrollable Modal
 </button>
 <!-- Modal -->
@@ -3227,7 +3231,7 @@ Vivamus mattis nunc a quam ultricies, vitae posuere elit malesuada. Aliquam erat
 <h4>Vertically centered</h4>
 <p>Add .modal-dialog-centered to .modal-dialog to vertically center the modal.</p>
 <!-- Button trigger modal -->
-<button class='btn btn-primary' data-target='#exampleModalCenter' data-toggle='modal' type='button'>
+<button class='btn btn-default' data-target='#exampleModalCenter' data-toggle='modal' type='button'>
 Vertically centered
 </button>
 <!-- Modal -->
@@ -3254,7 +3258,7 @@ This is a vertically centered Modal.
 <h4>Tooltips and popovers</h4>
 <p>Tooltips and popovers can be placed within modals as needed. When modals are closed, any tooltips and popovers within are also automatically dismissed.</p>
 <!-- Button trigger modal -->
-<button class='btn btn-primary' data-target='#exampleModalToolTips' data-toggle='modal' type='button'>
+<button class='btn btn-default' data-target='#exampleModalToolTips' data-toggle='modal' type='button'>
 Tooltips and popovers
 </button>
 <!-- Modal -->
@@ -3284,6 +3288,370 @@ have tooltips on hover.
 </p>
 </div>
 <div class='modal-footer'>
+<button class='btn btn-sm btn-danger' data-dismiss='modal' type='button'>Close</button>
+<button class='btn btn-sm btn-save' type='button'>Save changes</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<hr>
+<div class='row'>
+<div class='col-sm-12'>
+<h2>SARD Modals</h2>
+<p>This is a selction of SARD specific modals.</p>
+<!-- Button trigger modal -->
+<button class='btn btn-info' data-target='#modalInfo' data-toggle='modal' type='button'>
+Modal Info
+</button>
+<!-- Modal -->
+<div aria-hidden='true' aria-labelledby='modalInfoTitle' class='modal modal-info fade' id='modalInfo' role='dialog' tabindex='-1'>
+<div class='modal-dialog modal-dialog-scrollable' role='document'>
+<div class='modal-content'>
+<div class='modal-header'>
+<h5 class='modal-title' id='modalInfoTitle'>
+Modal Info
+</h5>
+<button aria-label='Close' class='close' data-dismiss='modal' type='button'>
+<span aria-hidden='true'>×</span>
+</button>
+</div>
+<div class='modal-body'>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit massa eget mi maximus, sed faucibus nisi consequat. Donec placerat mauris eu malesuada consectetur. Pellentesque egestas gravida dolor, eget aliquet dui consectetur ut. Phasellus sollicitudin diam vitae purus commodo, vel commodo leo elementum.</p>
+<hr>
+<ul>
+<li>List Item One</li>
+<li>List Item Two. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit massa eget mi maximus</li>
+<li>List Item Three</li>
+</ul>
+<hr>
+<h6 class='base'>ul.no-bullet</h6>
+<ul class='no-bullet'>
+<li>List Item One</li>
+<li>List Item Two. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit massa eget mi maximus</li>
+<li>List Item Three</li>
+</ul>
+<hr>
+<h1 class='base'>H1 Header</h1>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit massa eget mi maximus.</p>
+<h2 class='base'>H2 Header</h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit massa eget mi maximus.</p>
+<h3 class='base'>H3 Header</h3>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit massa eget mi maximus.</p>
+<h4 class='base'>H4 Header</h4>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit massa eget mi maximus.</p>
+<h5 class='base'>H5 Header</h5>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit massa eget mi maximus.</p>
+<h6 class='base'>H6 Header</h6>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit massa eget mi maximus.</p>
+<hr>
+<p>
+This is an example of a standard
+<a href='#/'>Text Link</a>
+</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit massa eget mi maximus, sed faucibus nisi consequat. Donec placerat mauris eu malesuada consectetur. Pellentesque egestas gravida dolor, eget aliquet dui consectetur ut. Phasellus sollicitudin diam vitae purus commodo, vel commodo leo elementum.</p>
+<hr>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit massa eget mi maximus, sed faucibus nisi consequat. Donec placerat mauris eu malesuada consectetur. Pellentesque egestas gravida dolor, eget aliquet dui consectetur ut. Phasellus sollicitudin diam vitae purus commodo, vel commodo leo elementum.</p>
+</div>
+<div class='modal-footer'>
+<button class='btn btn-sm btn-info' type='button'>btn info</button>
+<button class='btn btn-sm btn-danger' data-dismiss='modal' type='button'>Close</button>
+<button class='btn btn-sm btn-save' type='button'>Save changes</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Button trigger modal -->
+<button class='btn btn-trust' data-target='#modalTrust' data-toggle='modal' type='button'>
+Modal Trust
+</button>
+<!-- Modal -->
+<div aria-hidden='true' aria-labelledby='modalTrustTitle' class='modal modal-trust fade' id='modalTrust' role='dialog' tabindex='-1'>
+<div class='modal-dialog modal-dialog-scrollable' role='document'>
+<div class='modal-content'>
+<div class='modal-header'>
+<h5 class='modal-title' id='modalTrustTitle'>
+Modal Trust
+</h5>
+<button aria-label='Close' class='close' data-dismiss='modal' type='button'>
+<span aria-hidden='true'>×</span>
+</button>
+</div>
+<div class='modal-body'>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit massa eget mi maximus, sed faucibus nisi consequat. Donec placerat mauris eu malesuada consectetur. Pellentesque egestas gravida dolor, eget aliquet dui consectetur ut. Phasellus sollicitudin diam vitae purus commodo, vel commodo leo elementum.</p>
+<hr>
+<ul>
+<li>List Item One</li>
+<li>List Item Two. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit massa eget mi maximus</li>
+<li>List Item Three</li>
+</ul>
+<hr>
+<h6 class='base'>ul.no-bullet</h6>
+<ul class='no-bullet'>
+<li>List Item One</li>
+<li>List Item Two. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit massa eget mi maximus</li>
+<li>List Item Three</li>
+</ul>
+<hr>
+<h1 class='base'>H1 Header</h1>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit massa eget mi maximus.</p>
+<h2 class='base'>H2 Header</h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit massa eget mi maximus.</p>
+<h3 class='base'>H3 Header</h3>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit massa eget mi maximus.</p>
+<h4 class='base'>H4 Header</h4>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit massa eget mi maximus.</p>
+<h5 class='base'>H5 Header</h5>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit massa eget mi maximus.</p>
+<h6 class='base'>H6 Header</h6>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit massa eget mi maximus.</p>
+<hr>
+<p>
+This is an example of a standard
+<a href='#/'>Text Link</a>
+</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit massa eget mi maximus, sed faucibus nisi consequat. Donec placerat mauris eu malesuada consectetur. Pellentesque egestas gravida dolor, eget aliquet dui consectetur ut. Phasellus sollicitudin diam vitae purus commodo, vel commodo leo elementum.</p>
+<hr>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit massa eget mi maximus, sed faucibus nisi consequat. Donec placerat mauris eu malesuada consectetur. Pellentesque egestas gravida dolor, eget aliquet dui consectetur ut. Phasellus sollicitudin diam vitae purus commodo, vel commodo leo elementum.</p>
+</div>
+<div class='modal-footer'>
+<button class='btn btn-sm btn-info' type='button'>btn info</button>
+<button class='btn btn-sm btn-danger' data-dismiss='modal' type='button'>Close</button>
+<button class='btn btn-sm btn-save' type='button'>Save changes</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Button trigger modal -->
+<button class='btn btn-user' data-target='#modalUser' data-toggle='modal' type='button'>
+Modal User
+</button>
+<!-- Modal -->
+<div aria-hidden='true' aria-labelledby='modalUserTitle' class='modal modal-user fade' id='modalUser' role='dialog' tabindex='-1'>
+<div class='modal-dialog modal-dialog-scrollable' role='document'>
+<div class='modal-content'>
+<div class='modal-header'>
+<h5 class='modal-title' id='modalUserTitle'>
+Modal User
+</h5>
+<button aria-label='Close' class='close' data-dismiss='modal' type='button'>
+<span aria-hidden='true'>×</span>
+</button>
+</div>
+<div class='modal-body'>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit massa eget mi maximus, sed faucibus nisi consequat. Donec placerat mauris eu malesuada consectetur. Pellentesque egestas gravida dolor, eget aliquet dui consectetur ut. Phasellus sollicitudin diam vitae purus commodo, vel commodo leo elementum.</p>
+<hr>
+<ul>
+<li>List Item One</li>
+<li>List Item Two. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit massa eget mi maximus</li>
+<li>List Item Three</li>
+</ul>
+<hr>
+<h6 class='base'>ul.no-bullet</h6>
+<ul class='no-bullet'>
+<li>List Item One</li>
+<li>List Item Two. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit massa eget mi maximus</li>
+<li>List Item Three</li>
+</ul>
+<hr>
+<h1 class='base'>H1 Header</h1>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit massa eget mi maximus.</p>
+<h2 class='base'>H2 Header</h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit massa eget mi maximus.</p>
+<h3 class='base'>H3 Header</h3>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit massa eget mi maximus.</p>
+<h4 class='base'>H4 Header</h4>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit massa eget mi maximus.</p>
+<h5 class='base'>H5 Header</h5>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit massa eget mi maximus.</p>
+<h6 class='base'>H6 Header</h6>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit massa eget mi maximus.</p>
+<hr>
+<p>
+This is an example of a standard
+<a href='#/'>Text Link</a>
+</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit massa eget mi maximus, sed faucibus nisi consequat. Donec placerat mauris eu malesuada consectetur. Pellentesque egestas gravida dolor, eget aliquet dui consectetur ut. Phasellus sollicitudin diam vitae purus commodo, vel commodo leo elementum.</p>
+<hr>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit massa eget mi maximus, sed faucibus nisi consequat. Donec placerat mauris eu malesuada consectetur. Pellentesque egestas gravida dolor, eget aliquet dui consectetur ut. Phasellus sollicitudin diam vitae purus commodo, vel commodo leo elementum.</p>
+</div>
+<div class='modal-footer'>
+<button class='btn btn-sm btn-info' type='button'>btn info</button>
+<button class='btn btn-sm btn-danger' data-dismiss='modal' type='button'>Close</button>
+<button class='btn btn-sm btn-save' type='button'>Save changes</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Button trigger modal -->
+<button class='btn btn-admin' data-target='#modalAdmin' data-toggle='modal' type='button'>
+Modal Admin
+</button>
+<!-- Modal -->
+<div aria-hidden='true' aria-labelledby='modalAdminTitle' class='modal modal-admin fade' id='modalAdmin' role='dialog' tabindex='-1'>
+<div class='modal-dialog modal-dialog-scrollable' role='document'>
+<div class='modal-content'>
+<div class='modal-header'>
+<h5 class='modal-title' id='modalAdminTitle'>
+Modal Admin
+</h5>
+<button aria-label='Close' class='close' data-dismiss='modal' type='button'>
+<span aria-hidden='true'>×</span>
+</button>
+</div>
+<div class='modal-body'>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit massa eget mi maximus, sed faucibus nisi consequat. Donec placerat mauris eu malesuada consectetur. Pellentesque egestas gravida dolor, eget aliquet dui consectetur ut. Phasellus sollicitudin diam vitae purus commodo, vel commodo leo elementum.</p>
+<hr>
+<ul>
+<li>List Item One</li>
+<li>List Item Two. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit massa eget mi maximus</li>
+<li>List Item Three</li>
+</ul>
+<hr>
+<h6 class='base'>ul.no-bullet</h6>
+<ul class='no-bullet'>
+<li>List Item One</li>
+<li>List Item Two. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit massa eget mi maximus</li>
+<li>List Item Three</li>
+</ul>
+<hr>
+<h1 class='base'>H1 Header</h1>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit massa eget mi maximus.</p>
+<h2 class='base'>H2 Header</h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit massa eget mi maximus.</p>
+<h3 class='base'>H3 Header</h3>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit massa eget mi maximus.</p>
+<h4 class='base'>H4 Header</h4>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit massa eget mi maximus.</p>
+<h5 class='base'>H5 Header</h5>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit massa eget mi maximus.</p>
+<h6 class='base'>H6 Header</h6>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit massa eget mi maximus.</p>
+<hr>
+<p>
+This is an example of a standard
+<a href='#/'>Text Link</a>
+</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit massa eget mi maximus, sed faucibus nisi consequat. Donec placerat mauris eu malesuada consectetur. Pellentesque egestas gravida dolor, eget aliquet dui consectetur ut. Phasellus sollicitudin diam vitae purus commodo, vel commodo leo elementum.</p>
+<hr>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit massa eget mi maximus, sed faucibus nisi consequat. Donec placerat mauris eu malesuada consectetur. Pellentesque egestas gravida dolor, eget aliquet dui consectetur ut. Phasellus sollicitudin diam vitae purus commodo, vel commodo leo elementum.</p>
+</div>
+<div class='modal-footer'>
+<button class='btn btn-sm btn-info' type='button'>btn info</button>
+<button class='btn btn-sm btn-danger' data-dismiss='modal' type='button'>Close</button>
+<button class='btn btn-sm btn-save' type='button'>Save changes</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Button trigger modal -->
+<button class='btn btn-default' data-target='#modalForm' data-toggle='modal' type='button'>
+Modal Form
+</button>
+<!-- Modal -->
+<div aria-hidden='true' aria-labelledby='modalFormTitle' class='modal modal-form fade' id='modalForm' role='dialog' tabindex='-1'>
+<div class='modal-dialog modal-dialog-scrollable' role='document'>
+<div class='modal-content'>
+<div class='modal-header'>
+<h5 class='modal-title' id='modalFormTitle'>
+Modal Form
+</h5>
+<button aria-label='Close' class='close' data-dismiss='modal' type='button'>
+<span aria-hidden='true'>×</span>
+</button>
+</div>
+<div class='modal-body'>
+<form class='form-horizontal' id='eleave-form'>
+<fieldset>
+<legend>
+Legend (if needed)
+</legend>
+<div class='form-group row border-bottom'>
+<label class='col-sm-3 control-label' for='leave_allowance_name'>Allowance</label>
+<div class='col-sm-9'>
+<select class='form-control' id='leave_allowance_name'>
+<option value=''>Choose one...</option>
+<option value='Annual Leave'>Annual Leave</option>
+<option value='Study / Professional Leave'>Study / Professional Leave</option>
+<option value='Test'>Test</option>
+</select>
+<div id='leave_allowance_name_errors'></div>
+</div>
+</div>
+<div class='form-group row border-bottom'>
+<label class='col-sm-3 control-label' for='type'>Take/Accrue</label>
+<div class='col-sm-9'>
+<select class='form-control' id='type'>
+<option value=''>Choose one...</option>
+<option value='Take'>Take</option>
+<option value='Accrue'>Accrue</option>
+</select>
+<div id='type_errors'></div>
+</div>
+</div>
+<div class='form-group row border-bottom'>
+<label class='col-sm-3 control-label' for='from_date'>From Date</label>
+<div class='col-sm-9'>
+<input class='form-control hasDatepicker' id='from_date' placeholder='DD/MM/YYYY' type='text'>
+<div id='from_date_warning'></div>
+<div id='from_date_errors'></div>
+</div>
+</div>
+<div class='form-group row border-bottom'>
+<label class='col-sm-3 control-label' for='start_time'>Start Time</label>
+<div class='col-sm-9'>
+<input class='form-control' id='start_time' placeholder='HH:MM' type='text'>
+<div id='start_time_errors'></div>
+</div>
+</div>
+<div class='form-group row border-bottom'>
+<label class='col-sm-3 control-label' for='until_date'>Until Date</label>
+<div class='col-sm-9'>
+<input class='form-control hasDatepicker' id='until_date' placeholder='DD/MM/YYYY' type='text'>
+<div id='until_date_errors'></div>
+</div>
+</div>
+<div class='form-group row border-bottom'>
+<label class='col-sm-3 control-label' for='end_time'>End Time</label>
+<div class='col-sm-9'>
+<input class='form-control' id='end_time' placeholder='HH:MM' type='text'>
+<div id='end_time_errors'></div>
+</div>
+</div>
+<div class='form-group row border-bottom'>
+<label class='col-sm-3 control-label' for='days_taken'>Allowance</label>
+<div class='col-sm-9'>
+<input class='form-control' id='days_taken' placeholder='0.0' type='text'>
+<div id='days_taken_errors'></div>
+<div id='days_taken_explanation'>
+If incorrect, you must adjust the
+<span class='days_taken_label'>Allowance Taken</span>
+according to your contract.
+</div>
+</div>
+</div>
+<div class='form-group row'>
+<label class='col-sm-3 control-label' for='notes'>Notes</label>
+<div class='col-sm-9'>
+<input class='form-control' id='notes' type='text'>
+<div id='notes_errors'></div>
+<div id='notes_errors'></div>
+</div>
+</div>
+</fieldset>
+<fieldset>
+<div class='form-group requested_by'>
+<label class='col-sm-3' for='current_user'>Requested By</label>
+<div class='col-sm-9'>
+<span id='current_user'>Mrs Bella Owen</span>
+</div>
+</div>
+</fieldset>
+</form>
+</div>
+<div class='modal-footer'>
+<button class='btn btn-sm btn-info' type='button'>btn info</button>
 <button class='btn btn-sm btn-danger' data-dismiss='modal' type='button'>Close</button>
 <button class='btn btn-sm btn-save' type='button'>Save changes</button>
 </div>
