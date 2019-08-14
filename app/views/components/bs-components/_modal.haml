@@ -98,16 +98,38 @@
             %button.close{"aria-label" => "Close", "data-dismiss" => "modal", :type => "button"}
               %span{"aria-hidden" => "true"} ×
           .modal-body
+            %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit massa eget mi maximus, sed faucibus nisi consequat. Donec placerat mauris eu malesuada consectetur. Pellentesque egestas gravida dolor, eget aliquet dui consectetur ut. Phasellus sollicitudin diam vitae purus commodo, vel commodo leo elementum.
+            %hr/
+            %ul
+              %li List Item One
+              %li List Item Two. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit massa eget mi maximus
+              %li List Item Three
+            %hr/
+            %h6.base ul.no-bullet
+            %ul.no-bullet
+              %li List Item One
+              %li List Item Two. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit massa eget mi maximus
+              %li List Item Three
+            %hr/
+            %h1.base H1 Header
+            %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit massa eget mi maximus.
+            %h2.base H2 Header
+            %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit massa eget mi maximus.
+            %h3.base H3 Header
+            %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit massa eget mi maximus.
+            %h4.base H4 Header
+            %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit massa eget mi maximus.
+            %h5.base H5 Header
+            %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit massa eget mi maximus.
+            %h6.base H6 Header
+            %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit massa eget mi maximus. 
+            %hr/
             %p
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed tortor id eros pulvinar iaculis posuere sit amet nulla. Aenean malesuada lacus id libero rutrum, eu elementum mauris ultrices. Cras vel imperdiet ante. Sed eget nisi ante. Aenean dapibus arcu vel ex molestie convallis sit amet vel sem. Vivamus vitae magna non dolor pulvinar mollis. Suspendisse lacinia tortor sed cursus finibus. Aenean tellus turpis, accumsan a egestas ac, faucibus eget lorem. Duis odio diam, iaculis eget est sed, tincidunt malesuada arcu. Nulla facilisi. Donec porttitor, diam quis feugiat vestibulum, leo eros malesuada arcu, id congue magna diam molestie est. In eget accumsan justo. Aliquam id sapien porta, tempor est sit amet, varius lectus. Vestibulum maximus consequat quam, a mollis ante finibus vel.
-
-            %p
-              Vivamus mattis nunc a quam ultricies, vitae posuere elit malesuada. Aliquam erat volutpat. In mauris nulla, molestie ac fermentum et, pellentesque non lacus. Fusce lacinia felis at venenatis efficitur. Sed facilisis metus sit amet urna pretium efficitur. Aenean eros orci, rhoncus quis suscipit a, fringilla sed ipsum. Nunc nec odio euismod, convallis nunc sed, sollicitudin lacus. Vestibulum vulputate ante nunc, vel ultricies lorem consectetur in. Duis dignissim suscipit massa sed blandit. Aenean a fringilla neque. Pellentesque suscipit quis diam at posuere. Vivamus ac orci rutrum, lacinia nulla eget, pellentesque libero. Pellentesque et dapibus ligula. Donec egestas rhoncus risus, elementum fringilla odio interdum sit amet. Fusce sollicitudin dolor eget enim eleifend fringilla.
-            %p
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed tortor id eros pulvinar iaculis posuere sit amet nulla. Aenean malesuada lacus id libero rutrum, eu elementum mauris ultrices. Cras vel imperdiet ante. Sed eget nisi ante. Aenean dapibus arcu vel ex molestie convallis sit amet vel sem. Vivamus vitae magna non dolor pulvinar mollis. Suspendisse lacinia tortor sed cursus finibus. Aenean tellus turpis, accumsan a egestas ac, faucibus eget lorem. Duis odio diam, iaculis eget est sed, tincidunt malesuada arcu. Nulla facilisi. Donec porttitor, diam quis feugiat vestibulum, leo eros malesuada arcu, id congue magna diam molestie est. In eget accumsan justo. Aliquam id sapien porta, tempor est sit amet, varius lectus. Vestibulum maximus consequat quam, a mollis ante finibus vel.
-
-            %p
-              Vivamus mattis nunc a quam ultricies, vitae posuere elit malesuada. Aliquam erat volutpat. In mauris nulla, molestie ac fermentum et, pellentesque non lacus. Fusce lacinia felis at venenatis efficitur. Sed facilisis metus sit amet urna pretium efficitur. Aenean eros orci, rhoncus quis suscipit a, fringilla sed ipsum. Nunc nec odio euismod, convallis nunc sed, sollicitudin lacus. Vestibulum vulputate ante nunc, vel ultricies lorem consectetur in. Duis dignissim suscipit massa sed blandit. Aenean a fringilla neque. Pellentesque suscipit quis diam at posuere. Vivamus ac orci rutrum, lacinia nulla eget, pellentesque libero. Pellentesque et dapibus ligula. Donec egestas rhoncus risus, elementum fringilla odio interdum sit amet. Fusce sollicitudin dolor eget enim eleifend fringilla.
+              This is an example of a standard
+              %a{href: "#/"} Text Link
+            %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit massa eget mi maximus, sed faucibus nisi consequat. Donec placerat mauris eu malesuada consectetur. Pellentesque egestas gravida dolor, eget aliquet dui consectetur ut. Phasellus sollicitudin diam vitae purus commodo, vel commodo leo elementum.
+            %hr/
+            %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit massa eget mi maximus, sed faucibus nisi consequat. Donec placerat mauris eu malesuada consectetur. Pellentesque egestas gravida dolor, eget aliquet dui consectetur ut. Phasellus sollicitudin diam vitae purus commodo, vel commodo leo elementum.
           .modal-footer
             %button.btn.btn-sm.btn-danger{"data-dismiss" => "modal", :type => "button"} Close
             %button.btn.btn-sm.btn-save{:type => "button"} Save changes
@@ -509,3 +531,116 @@
             %button.btn.btn-sm.btn-info{:type => "button"} btn info
             %button.btn.btn-sm.btn-danger{"data-dismiss" => "modal", :type => "button"} Close
             %button.btn.btn-sm.btn-save{:type => "button"} Save changes
+
+  
+%hr/
+.row
+  .col-sm-12
+    %h2 Modals in Cards, Panels and Fieldsets
+  
+  .col-sm-4
+    .card.card-sard
+      .card-header
+        Card
+        %a.modal-info-circle.no-pdf{"data-target" => "#cardModal", "data-toggle" => "modal", :title => "Edit Status"}
+        / Modal
+        #cardModal.modal.modal-info.fade{"aria-hidden" => "true", "aria-labelledby" => "cardModalTitle", :role => "dialog", :tabindex => "-1"}
+          .modal-dialog.modal-dialog-scrollable{:role => "document"}
+            .modal-content
+              .modal-header
+                %h5#cardModalTitle.modal-title Card, Panel, Fieldset Modal
+                %button.close{"aria-label" => "Close", "data-dismiss" => "modal", :type => "button"}
+                  %span{"aria-hidden" => "true"} ×
+              .modal-body
+                %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit massa eget mi maximus, sed faucibus nisi consequat. Donec placerat mauris eu malesuada consectetur. Pellentesque egestas gravida dolor, eget aliquet dui consectetur ut. Phasellus sollicitudin diam vitae purus commodo, vel commodo leo elementum.
+                %hr/
+                %ul
+                  %li List Item One
+                  %li List Item Two. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit massa eget mi maximus
+                  %li List Item Three
+                %hr/
+                %h6.base ul.no-bullet
+                %ul.no-bullet
+                  %li List Item One
+                  %li List Item Two. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit massa eget mi maximus
+                  %li List Item Three
+                %hr/
+                %h1.base H1 Header
+                %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit massa eget mi maximus.
+                %h2.base H2 Header
+                %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit massa eget mi maximus.
+                %h3.base H3 Header
+                %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit massa eget mi maximus.
+                %h4.base H4 Header
+                %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit massa eget mi maximus.
+                %h5.base H5 Header
+                %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit massa eget mi maximus.
+                %h6.base H6 Header
+                %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit massa eget mi maximus. 
+                %hr/
+                %p
+                  This is an example of a standard
+                  %a{href: "#/"} Text Link
+                %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit massa eget mi maximus, sed faucibus nisi consequat. Donec placerat mauris eu malesuada consectetur. Pellentesque egestas gravida dolor, eget aliquet dui consectetur ut. Phasellus sollicitudin diam vitae purus commodo, vel commodo leo elementum.
+                %hr/
+                %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit massa eget mi maximus, sed faucibus nisi consequat. Donec placerat mauris eu malesuada consectetur. Pellentesque egestas gravida dolor, eget aliquet dui consectetur ut. Phasellus sollicitudin diam vitae purus commodo, vel commodo leo elementum.
+              .modal-footer
+                %button.btn.btn-sm.btn-danger{"data-dismiss" => "modal", :type => "button"} Close
+                %button.btn.btn-sm.btn-save{:type => "button"} Save changes
+      .card-body
+        %a.modal-info-circle.no-pdf{"data-target" => "#cardModal", "data-toggle" => "modal", :title => "Edit Status"}
+        %h5.card-title Info Modals
+        %p.card-text 
+          Modal links can be added within the header, body or footer. The code to use is: 
+          %code a.modal-info-circle.no-pdf
+        %p
+          You can also add one within the paragraph text, like this: 
+          %a.modal-info-circle-inline.no-pdf{"data-target" => "#cardModal", "data-toggle" => "modal", :title => "Edit Status"}
+          and it will be placed inline. The code for this is: 
+          %br/
+          %code a.modal-info-circle-inline.no-pdf
+      .card-footer
+        \.card-footer
+        %a.modal-info-circle.no-pdf{"data-target" => "#cardModal", "data-toggle" => "modal", :title => "Edit Status"}
+
+  .col-sm-4
+    .panel.panel-sard
+      .panel-header
+        Panel
+        %a.modal-info-circle.no-pdf{"data-target" => "#cardModal", "data-toggle" => "modal", :title => "Edit Status"}
+      .panel-body
+        %a.modal-info-circle.no-pdf{"data-target" => "#cardModal", "data-toggle" => "modal", :title => "Edit Status"}
+        %h5.panel-title Info Modals
+        %p.panel-text 
+          Modal links can be added within the header, body or footer. The code to use is: 
+          %code a.modal-info-circle.no-pdf
+        %p
+          You can also add one within the paragraph text, like this: 
+          %a.modal-info-circle-inline.no-pdf{"data-target" => "#cardModal", "data-toggle" => "modal", :title => "Edit Status"}
+          and it will be placed inline. The code for this is: 
+          %br/
+          %code a.modal-info-circle-inline.no-pdf
+      .panel-footer
+        \.panel-footer
+        %a.modal-info-circle.no-pdf{"data-target" => "#cardModal", "data-toggle" => "modal", :title => "Edit Status"}
+
+  .col-sm-4
+    %fieldset
+      %legend
+        Fieldset
+        %a.modal-info-circle.no-pdf{"data-target" => "#cardModal", "data-toggle" => "modal", :title => "Edit Status"}
+      .form-group
+        %a.modal-info-circle.no-pdf{"data-target" => "#cardModal", "data-toggle" => "modal", :title => "Edit Status"}
+        %h5.base Info Modals
+        %p 
+          Modal links can be added within the header, form-group or footer. The code to use is: 
+          %code a.modal-info-circle.no-pdf
+        %p
+          You can also add one within the paragraph text, like this: 
+          %a.modal-info-circle-inline.no-pdf{"data-target" => "#cardModal", "data-toggle" => "modal", :title => "Edit Status"}
+          and it will be placed inline. The code for this is: 
+          %br/
+          %code a.modal-info-circle-inline.no-pdf
+      .form-footer
+        \.form-footer
+        %a.modal-info-circle.no-pdf{"data-target" => "#cardModal", "data-toggle" => "modal", :title => "Edit Status"}
