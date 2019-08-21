@@ -7,17 +7,17 @@
     %h5 Light / Light (Default)
   .col-sm-12
     %nav.navbar.navbar-expand-lg.navbar-light.bg-light
-      %a.navbar-brand{:href => "index.html"} Navbar
+      %a.navbar-brand{:href => "#/"} Navbar
       %button.navbar-toggler{"aria-controls" => "navbarLight", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbarLight", "data-toggle" => "collapse", :type => "button"}
         %span.navbar-toggler-icon
       #navbarLight.collapse.navbar-collapse
         %ul.navbar-nav.mr-auto
           %li.nav-item.active
-            %a.nav-link{:href => "#"}
+            %a.nav-link{:href => "#/"}
               Home
               %span.sr-only (current)
           %li.nav-item
-            %a.nav-link{:href => "#"} Link
+            %a.nav-link{:href => "#/"} Link
           %li.nav-item.dropdown
             %a#navbarDropdownMenuLink.nav-link.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "http://example.com"}
               Dropdowns
@@ -56,27 +56,26 @@
                 %li
                   %a.dropdown-item{:href => "#/"} Another action
           %li.nav-item
-            %a.nav-link.disabled{"aria-disabled" => "true", :href => "#", :tabindex => "-1"} Disabled
-        %form.form-inline.input-group.searchbar-sard
+            %a.nav-link.disabled{"aria-disabled" => "true", :href => "#/", :tabindex => "-1"} Disabled
+        %form.form-inline.searchbar-sard
           %input.form-control{"aria-label" => "Search", :placeholder => "Search", :type => "search"}/
-          .input-group-append
-            %button.btn.btn-navbar{:type => "submit"} Search
+          %button.btn.btn-search{:type => "submit", :href => "#/"} 
 
 .row
   .col-sm-12
     %h5.mt-3 Dark / Dark
     %nav.navbar.navbar-expand-lg.navbar-dark.bg-dark
-      %a.navbar-brand{:href => "index.html"} Navbar
+      %a.navbar-brand{:href => "#/"} Navbar
       %button.navbar-toggler{"aria-controls" => "navbarDark", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbarDark", "data-toggle" => "collapse", :type => "button"}
         %span.navbar-toggler-icon
       #navbarDark.collapse.navbar-collapse
         %ul.navbar-nav.mr-auto
           %li.nav-item.active
-            %a.nav-link{:href => "#"}
+            %a.nav-link{:href => "#/"}
               Home
               %span.sr-only (current)
           %li.nav-item
-            %a.nav-link{:href => "#"} Link
+            %a.nav-link{:href => "#/"} Link
           %li.nav-item.dropdown
             %a#navbarDropdownMenuLink.nav-link.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "http://example.com"}
               Dropdowns
@@ -115,11 +114,10 @@
                 %li
                   %a.dropdown-item{:href => "#/"} Another action
           %li.nav-item
-            %a.nav-link.disabled{"aria-disabled" => "true", :href => "#", :tabindex => "-1"} Disabled
-        %form.form-inline.input-group.searchbar-sard
+            %a.nav-link.disabled{"aria-disabled" => "true", :href => "#/", :tabindex => "-1"} Disabled
+        %form.form-inline.searchbar-sard
           %input.form-control{"aria-label" => "Search", :placeholder => "Search", :type => "search"}/
-          .input-group-append
-            %button.btn.btn-navbar{:type => "submit"} Search
+          %button.btn.btn-search{:type => "submit", :href => "#/"} 
 %hr/
 .row 
   .col-sm-12
@@ -131,17 +129,17 @@
       %code nav.navbar.navbar-expand-lg.navbar-sard
   .col-sm-12
     %nav.navbar.navbar-expand-lg.navbar-sard.mb-3
-      %a.navbar-brand{:href => "index.html"} Navbar
+      %a.navbar-brand{:href => "#/"} Navbar
       %button.navbar-toggler{"aria-controls" => "navbarSard", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbarSard", "data-toggle" => "collapse", :type => "button"}
         %span.navbar-toggler-icon
       #navbarSard.collapse.navbar-collapse
         %ul.navbar-nav.mr-auto
           %li.nav-item.active
-            %a.nav-link{:href => "#"}
+            %a.nav-link{:href => "#/"}
               Home
               %span.sr-only (current)
           %li.nav-item
-            %a.nav-link{:href => "#"} Link
+            %a.nav-link{:href => "#/"} Link
           %li.nav-item.dropdown
             %a#navbarDropdownMenuLink.nav-link.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "http://example.com"}
               Dropdowns
@@ -180,31 +178,30 @@
                 %li
                   %a.dropdown-item{:href => "#/"} Another action
           %li.nav-item
-            %a.nav-link.disabled{"aria-disabled" => "true", :href => "#", :tabindex => "-1"} Disabled
-        %form.form-inline.input-group.searchbar-sard
+            %a.nav-link.disabled{"aria-disabled" => "true", :href => "#/", :tabindex => "-1"} Disabled
+        %form.form-inline.searchbar-sard
           %input.form-control{"aria-label" => "Search", :placeholder => "Search", :type => "search"}/
-          .input-group-append
-            %button.btn.btn-navbar{:type => "submit"} Search
+          %button.btn.btn-search{:type => "submit", :href => "#/"} 
 
 .row
   .col-sm-12
     %h4 Navbar User 
     %p
-      This is the default sard navbar and changes colour with the trust.
+      This is the SARD User navbar and changes colour with the trust.
       %code nav.navbar.navbar-expand-lg.navbar-user
   .col-sm-12
     %nav.navbar.navbar-expand-lg.navbar-user.mb-3
-      %a.navbar-brand{:href => "index.html"} Navbar
+      %a.navbar-brand{:href => "#/"} Navbar
       %button.navbar-toggler{"aria-controls" => "navbarUser", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbarUser", "data-toggle" => "collapse", :type => "button"}
         %span.navbar-toggler-icon
       #navbarUser.collapse.navbar-collapse
         %ul.navbar-nav.mr-auto
           %li.nav-item.active
-            %a.nav-link{:href => "#"}
+            %a.nav-link{:href => "#/"}
               Home
               %span.sr-only (current)
           %li.nav-item
-            %a.nav-link{:href => "#"} Link
+            %a.nav-link{:href => "#/"} Link
           %li.nav-item.dropdown
             %a#navbarDropdownMenuLink.nav-link.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "http://example.com"}
               Dropdowns
@@ -243,30 +240,29 @@
                 %li
                   %a.dropdown-item{:href => "#/"} Another action
           %li.nav-item
-            %a.nav-link.disabled{"aria-disabled" => "true", :href => "#", :tabindex => "-1"} Disabled
-        %form.form-inline.input-group.searchbar-sard
+            %a.nav-link.disabled{"aria-disabled" => "true", :href => "#/", :tabindex => "-1"} Disabled
+        %form.form-inline.searchbar-sard
           %input.form-control{"aria-label" => "Search", :placeholder => "Search", :type => "search"}/
-          .input-group-append
-            %button.btn.btn-navbar{:type => "submit"} Search
-  .row
+          %button.btn.btn-search{:type => "submit", :href => "#/"} 
+.row
   .col-sm-12
     %h4 Navbar Admin 
     %p
-      This is the default sard navbar and changes colour with the trust.
+      This is the SARD Admin navbar and changes colour with the trust.
       %code nav.navbar.navbar-expand-lg.navbar-admin
   .col-sm-12
     %nav.navbar.navbar-expand-lg.navbar-user.mb-3
-      %a.navbar-brand{:href => "index.html"} Navbar
+      %a.navbar-brand{:href => "#/"} Navbar
       %button.navbar-toggler{"aria-controls" => "navbarAdmin", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbarAdmin", "data-toggle" => "collapse", :type => "button"}
         %span.navbar-toggler-icon
       #navbarAdmin.collapse.navbar-collapse
         %ul.navbar-nav.mr-auto
           %li.nav-item.active
-            %a.nav-link{:href => "#"}
+            %a.nav-link{:href => "#/"}
               Home
               %span.sr-only (current)
           %li.nav-item
-            %a.nav-link{:href => "#"} Link
+            %a.nav-link{:href => "#/"} Link
           %li.nav-item.dropdown
             %a#navbarDropdownMenuLink.nav-link.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "http://example.com"}
               Dropdowns
@@ -305,8 +301,8 @@
                 %li
                   %a.dropdown-item{:href => "#/"} Another action
           %li.nav-item
-            %a.nav-link.disabled{"aria-disabled" => "true", :href => "#", :tabindex => "-1"} Disabled
-        %form.form-inline.input-group.searchbar-sard
+            %a.nav-link.disabled{"aria-disabled" => "true", :href => "#/", :tabindex => "-1"} Disabled
+        %form.form-inline.searchbar-sard
           %input.form-control{"aria-label" => "Search", :placeholder => "Search", :type => "search"}/
-          .input-group-append
-            %button.btn.btn-navbar{:type => "submit"} Search
+          %button.btn.btn-search{:type => "submit", :href => "#/"} 
+

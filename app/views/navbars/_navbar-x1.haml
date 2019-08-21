@@ -52,7 +52,6 @@
               
           %li.nav-item
             %a.nav-link.disabled{"aria-disabled" => "true", :href => "#", :tabindex => "-1"} Disabled
-        %form.form-inline.input-group.searchbar-sard
+        %form.form-inline.searchbar-sard
           %input.form-control{"aria-label" => "Search", :placeholder => "Search", :type => "search"}/
-          .input-group-append
-            %button.btn.btn-navbar{:type => "submit"} Search
+          %button.btn.btn-search{:type => "submit"}
