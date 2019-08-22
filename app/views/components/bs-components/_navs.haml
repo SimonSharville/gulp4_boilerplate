@@ -3,36 +3,84 @@
     %h1#navs-anchor.bs-anchor Navs
 
     %h4 Basic Nav
-    %ul.nav
+    -# %ul.nav
+    -#   %li.nav-item
+    -#     %a.nav-link.active{:href => "#/"} Active
+    -#   %li.nav-item
+    -#     %a.nav-link{:href => "#/"} Link
+    -#   %li.nav-item
+    -#     %a.nav-link.disabled{"aria-disabled" => "true", :href => "#/", :tabindex => "-1"} Disabled
+    %ul.nav.mb-3{:role => "tablist"}
       %li.nav-item
-        %a.nav-link.active{:href => "#"} Active
+        %a#nav-tab.nav-link.active{"aria-controls" => "nav-home", "aria-selected" => "true", "data-toggle" => "pill", :href => "#nav-home", :role => "tab"} Home
       %li.nav-item
-        %a.nav-link{:href => "#"} Link
+        %a#nav-tab.nav-link{"aria-controls" => "nav-profile", "aria-selected" => "false", "data-toggle" => "pill", :href => "#nav-profile", :role => "tab"} Profile
       %li.nav-item
-        %a.nav-link{:href => "#"} Link
+        %a#nav-tab.nav-link{"aria-controls" => "nav-contact", "aria-selected" => "false", "data-toggle" => "pill", :href => "#nav-contact", :role => "tab"} Contact
       %li.nav-item
-        %a.nav-link.disabled{"aria-disabled" => "true", :href => "#", :tabindex => "-1"} Disabled
+        %a.nav-link.disabled{"aria-disabled" => "true", :href => "#/", :tabindex => "-1"} Disabled
 
-    %hr
+    #nav-tabContent.tab-content
+      #nav-home.tab-pane.fade.show.active{"aria-labelledby" => "nav-home-tab", :role => "tabpanel"} 
+        %h6.base Nav Home
+        %p 
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed tortor id eros pulvinar iaculis posuere sit amet nulla. Aenean malesuada lacus id libero rutrum, eu elementum mauris ultrices. Cras vel imperdiet ante. Sed eget nisi ante. Aenean dapibus arcu vel ex molestie convallis sit amet vel sem. Vivamus vitae magna non dolor pulvinar mollis. Suspendisse lacinia tortor sed cursus finibus. Aenean tellus turpis, accumsan a egestas ac, faucibus eget lorem. Duis odio diam, iaculis eget est sed, tincidunt malesuada arcu. Nulla facilisi. Donec porttitor, diam quis feugiat vestibulum, leo eros malesuada arcu, id congue magna diam molestie est. In eget accumsan justo. Aliquam id sapien porta, tempor est sit amet, varius lectus. Vestibulum maximus consequat quam, a mollis ante finibus vel.
+
+
+      #nav-profile.tab-pane.fade{"aria-labelledby" => "nav-profile-tab", :role => "tabpanel"} 
+        %h6.base Nav Profile
+        %p
+          Vivamus mattis nunc a quam ultricies, vitae posuere elit malesuada. Aliquam erat volutpat. In mauris nulla, molestie ac fermentum et, pellentesque non lacus. Fusce lacinia felis at venenatis efficitur. Sed facilisis metus sit amet urna pretium efficitur. Aenean eros orci, rhoncus quis suscipit a, fringilla sed ipsum. Nunc nec odio euismod, convallis nunc sed, sollicitudin lacus. Vestibulum vulputate ante nunc, vel ultricies lorem consectetur in. Duis dignissim suscipit massa sed blandit. Aenean a fringilla neque. Pellentesque suscipit quis diam at posuere. Vivamus ac orci rutrum, lacinia nulla eget, pellentesque libero. Pellentesque et dapibus ligula. Donec egestas rhoncus risus, elementum fringilla odio interdum sit amet. Fusce sollicitudin dolor eget enim eleifend fringilla.
+
+      #nav-contact.tab-pane.fade{"aria-labelledby" => "nav-contact-tab", :role => "tabpanel"} 
+        %h6.base Nav Contact
+        %p
+          Vestibulum quis odio vestibulum, aliquet nisl ut, dapibus nunc. Pellentesque volutpat et nisi mattis tempor. Suspendisse faucibus sit amet ipsum vitae molestie. Aenean ut massa sem. Phasellus et condimentum elit. Pellentesque sit amet feugiat leo. Ut aliquam eget erat vel posuere. Vivamus at tincidunt augue, ac maximus mi.
+
+%hr
+.row
+  .col-sm-12
     %h4 Tabs
-    %p Takes the basic nav from above and adds the .nav-tabs class to generate a tabbed interface. Use them to create tabbable regions with our tab JavaScript plugin.
-    %ul.nav.nav-tabs
+    %p 
+      Takes the basic nav from above and adds the 
+      %code .nav-tabs 
+      class to generate a tabbed interface. Use them to create tabbable regions with our tab JavaScript plugin.
+    %ul#nav-tab.nav.nav-tabs.mb-3{:role => "tablist"}
       %li.nav-item
-        %a.nav-link.active{:href => "#"} Active
+        %a#tabs-home-tab.nav-link.active{"aria-controls" => "nav-tabs-home", "aria-selected" => "true", "data-toggle" => "pill", :href => "#nav-tabs-home", :role => "tab"} Home
       %li.nav-item
-        %a.nav-link{:href => "#"} Link
+        %a#nav-tabs-profile-tab.nav-link{"aria-controls" => "nav-tabs-profile", "aria-selected" => "false", "data-toggle" => "pill", :href => "#nav-tabs-profile", :role => "tab"} Profile
       %li.nav-item
-        %a.nav-link{:href => "#"} Link
+        %a#nav-tabs-contact-tab.nav-link{"aria-controls" => "nav-tabs-contact", "aria-selected" => "false", "data-toggle" => "pill", :href => "#nav-tabs-contact", :role => "tab"} Contact
       %li.nav-item
-        %a.nav-link.disabled{"aria-disabled" => "true", :href => "#", :tabindex => "-1"} Disabled
+        %a.nav-link.disabled{"aria-disabled" => "true", :href => "#/", :tabindex => "-1"} Disabled
+    #nav-tabs-tabContent.tab-content
+      #nav-tabs-home.tab-pane.fade.show.active{"aria-labelledby" => "tabs-home-tab", :role => "tabpanel"} 
+        %h6.base Nav Tab Home
+        %p
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed tortor id eros pulvinar iaculis posuere sit amet nulla. Aenean malesuada lacus id libero rutrum, eu elementum mauris ultrices. Cras vel imperdiet ante. Sed eget nisi ante. Aenean dapibus arcu vel ex molestie convallis sit amet vel sem. Vivamus vitae magna non dolor pulvinar mollis. Suspendisse lacinia tortor sed cursus finibus. Aenean tellus turpis, accumsan a egestas ac, faucibus eget lorem. Duis odio diam, iaculis eget est sed, tincidunt malesuada arcu. Nulla facilisi. Donec porttitor, diam quis feugiat vestibulum, leo eros malesuada arcu, id congue magna diam molestie est. In eget accumsan justo. Aliquam id sapien porta, tempor est sit amet, varius lectus. Vestibulum maximus consequat quam, a mollis ante finibus vel.
+
+
+      #nav-tabs-profile.tab-pane.fade{"aria-labelledby" => "tabs-profile-tab", :role => "tabpanel"} 
+        %h6.base Nav Tab Profile
+        %p
+          Vivamus mattis nunc a quam ultricies, vitae posuere elit malesuada. Aliquam erat volutpat. In mauris nulla, molestie ac fermentum et, pellentesque non lacus. Fusce lacinia felis at venenatis efficitur. Sed facilisis metus sit amet urna pretium efficitur. Aenean eros orci, rhoncus quis suscipit a, fringilla sed ipsum. Nunc nec odio euismod, convallis nunc sed, sollicitudin lacus. Vestibulum vulputate ante nunc, vel ultricies lorem consectetur in. Duis dignissim suscipit massa sed blandit. Aenean a fringilla neque. Pellentesque suscipit quis diam at posuere. Vivamus ac orci rutrum, lacinia nulla eget, pellentesque libero. Pellentesque et dapibus ligula. Donec egestas rhoncus risus, elementum fringilla odio interdum sit amet. Fusce sollicitudin dolor eget enim eleifend fringilla.
+
+      #nav-tabs-contact.tab-pane.fade{"aria-labelledby" => "tabs-contact-tab", :role => "tabpanel"} 
+        %h6.base Nav Tab Contact
+        %p
+          Vestibulum quis odio vestibulum, aliquet nisl ut, dapibus nunc. Pellentesque volutpat et nisi mattis tempor. Suspendisse faucibus sit amet ipsum vitae molestie. Aenean ut massa sem. Phasellus et condimentum elit. Pellentesque sit amet feugiat leo. Ut aliquam eget erat vel posuere. Vivamus at tincidunt augue, ac maximus mi.
 
 
 %hr
 
 .row
   .col-sm-12
-    %h4 Pils
-    %p Take that same HTML, but use .nav-pills instead:
+    %h4 Nav Pils
+    %p 
+      Take that same HTML, but use 
+      %code .nav-pills 
+      instead:
     %ul#pills-tab.nav.nav-pills.mb-3{:role => "tablist"}
       %li.nav-item
         %a#pills-home-tab.nav-link.active{"aria-controls" => "pills-home", "aria-selected" => "true", "data-toggle" => "pill", :href => "#pills-home", :role => "tab"} Home
@@ -41,17 +89,29 @@
       %li.nav-item
         %a#pills-contact-tab.nav-link{"aria-controls" => "pills-contact", "aria-selected" => "false", "data-toggle" => "pill", :href => "#pills-contact", :role => "tab"} Contact
     #pills-tabContent.tab-content
-      #pills-home.tab-pane.fade.show.active{"aria-labelledby" => "pills-home-tab", :role => "tabpanel"} Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed tortor id eros pulvinar iaculis posuere sit amet nulla. Aenean malesuada lacus id libero rutrum, eu elementum mauris ultrices. Cras vel imperdiet ante. Sed eget nisi ante. Aenean dapibus arcu vel ex molestie convallis sit amet vel sem. Vivamus vitae magna non dolor pulvinar mollis. Suspendisse lacinia tortor sed cursus finibus. Aenean tellus turpis, accumsan a egestas ac, faucibus eget lorem. Duis odio diam, iaculis eget est sed, tincidunt malesuada arcu. Nulla facilisi. Donec porttitor, diam quis feugiat vestibulum, leo eros malesuada arcu, id congue magna diam molestie est. In eget accumsan justo. Aliquam id sapien porta, tempor est sit amet, varius lectus. Vestibulum maximus consequat quam, a mollis ante finibus vel.
+      #pills-home.tab-pane.fade.show.active{"aria-labelledby" => "pills-home-tab", :role => "tabpanel"} 
+        %h6.base Nav Pil Home
+        %p
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed tortor id eros pulvinar iaculis posuere sit amet nulla. Aenean malesuada lacus id libero rutrum, eu elementum mauris ultrices. Cras vel imperdiet ante. Sed eget nisi ante. Aenean dapibus arcu vel ex molestie convallis sit amet vel sem. Vivamus vitae magna non dolor pulvinar mollis. Suspendisse lacinia tortor sed cursus finibus. Aenean tellus turpis, accumsan a egestas ac, faucibus eget lorem. Duis odio diam, iaculis eget est sed, tincidunt malesuada arcu. Nulla facilisi. Donec porttitor, diam quis feugiat vestibulum, leo eros malesuada arcu, id congue magna diam molestie est. In eget accumsan justo. Aliquam id sapien porta, tempor est sit amet, varius lectus. Vestibulum maximus consequat quam, a mollis ante finibus vel.
 
 
-      #pills-profile.tab-pane.fade{"aria-labelledby" => "pills-profile-tab", :role => "tabpanel"} Vivamus mattis nunc a quam ultricies, vitae posuere elit malesuada. Aliquam erat volutpat. In mauris nulla, molestie ac fermentum et, pellentesque non lacus. Fusce lacinia felis at venenatis efficitur. Sed facilisis metus sit amet urna pretium efficitur. Aenean eros orci, rhoncus quis suscipit a, fringilla sed ipsum. Nunc nec odio euismod, convallis nunc sed, sollicitudin lacus. Vestibulum vulputate ante nunc, vel ultricies lorem consectetur in. Duis dignissim suscipit massa sed blandit. Aenean a fringilla neque. Pellentesque suscipit quis diam at posuere. Vivamus ac orci rutrum, lacinia nulla eget, pellentesque libero. Pellentesque et dapibus ligula. Donec egestas rhoncus risus, elementum fringilla odio interdum sit amet. Fusce sollicitudin dolor eget enim eleifend fringilla.
+      #pills-profile.tab-pane.fade{"aria-labelledby" => "pills-profile-tab", :role => "tabpanel"} 
+        %h6.base Nav Pil Profile
+        %p
+          Vivamus mattis nunc a quam ultricies, vitae posuere elit malesuada. Aliquam erat volutpat. In mauris nulla, molestie ac fermentum et, pellentesque non lacus. Fusce lacinia felis at venenatis efficitur. Sed facilisis metus sit amet urna pretium efficitur. Aenean eros orci, rhoncus quis suscipit a, fringilla sed ipsum. Nunc nec odio euismod, convallis nunc sed, sollicitudin lacus. Vestibulum vulputate ante nunc, vel ultricies lorem consectetur in. Duis dignissim suscipit massa sed blandit. Aenean a fringilla neque. Pellentesque suscipit quis diam at posuere. Vivamus ac orci rutrum, lacinia nulla eget, pellentesque libero. Pellentesque et dapibus ligula. Donec egestas rhoncus risus, elementum fringilla odio interdum sit amet. Fusce sollicitudin dolor eget enim eleifend fringilla.
 
-      #pills-contact.tab-pane.fade{"aria-labelledby" => "pills-contact-tab", :role => "tabpanel"} Vestibulum quis odio vestibulum, aliquet nisl ut, dapibus nunc. Pellentesque volutpat et nisi mattis tempor. Suspendisse faucibus sit amet ipsum vitae molestie. Aenean ut massa sem. Phasellus et condimentum elit. Pellentesque sit amet feugiat leo. Ut aliquam eget erat vel posuere. Vivamus at tincidunt augue, ac maximus mi.
+      #pills-contact.tab-pane.fade{"aria-labelledby" => "pills-contact-tab", :role => "tabpanel"} 
+        %h6.base Nav Pil Contact
+        %p
+          Vestibulum quis odio vestibulum, aliquet nisl ut, dapibus nunc. Pellentesque volutpat et nisi mattis tempor. Suspendisse faucibus sit amet ipsum vitae molestie. Aenean ut massa sem. Phasellus et condimentum elit. Pellentesque sit amet feugiat leo. Ut aliquam eget erat vel posuere. Vivamus at tincidunt augue, ac maximus mi.
 
 %hr
 .row
   .col-sm-12
     %h4 Vertical Pils
+    %p
+      You can make Vertical Pils by using: 
+      %code #v-pills-tab.nav.flex-column.nav-pills
     .row
       .col-3
         #v-pills-tab.nav.flex-column.nav-pills{"aria-orientation" => "vertical", :role => "tablist"}
@@ -61,11 +121,159 @@
           %a#v-pills-settings-tab.nav-link{"aria-controls" => "v-pills-settings", "aria-selected" => "false", "data-toggle" => "pill", :href => "#v-pills-settings", :role => "tab"} Settings
       .col-9
         #v-pills-tabContent.tab-content
-          #v-pills-home.tab-pane.fade.show.active{"aria-labelledby" => "v-pills-home-tab", :role => "tabpanel"} Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed tortor id eros pulvinar iaculis posuere sit amet nulla. Aenean malesuada lacus id libero rutrum, eu elementum mauris ultrices. Cras vel imperdiet ante. Sed eget nisi ante. Aenean dapibus arcu vel ex molestie convallis sit amet vel sem. Vivamus vitae magna non dolor pulvinar mollis. Suspendisse lacinia tortor sed cursus finibus. Aenean tellus turpis, accumsan a egestas ac, faucibus eget lorem. Duis odio diam, iaculis eget est sed, tincidunt malesuada arcu. Nulla facilisi. Donec porttitor, diam quis feugiat vestibulum, leo eros malesuada arcu, id congue magna diam molestie est. In eget accumsan justo. Aliquam id sapien porta, tempor est sit amet, varius lectus. Vestibulum maximus consequat quam, a mollis ante finibus vel.
+          #v-pills-home.tab-pane.fade.show.active{"aria-labelledby" => "v-pills-home-tab", :role => "tabpanel"} 
+            %h6.base Vertical Pil Home
+            %p
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed tortor id eros pulvinar iaculis posuere sit amet nulla. Aenean malesuada lacus id libero rutrum, eu elementum mauris ultrices. Cras vel imperdiet ante. Sed eget nisi ante. Aenean dapibus arcu vel ex molestie convallis sit amet vel sem. Vivamus vitae magna non dolor pulvinar mollis. Suspendisse lacinia tortor sed cursus finibus. Aenean tellus turpis, accumsan a egestas ac, faucibus eget lorem. Duis odio diam, iaculis eget est sed, tincidunt malesuada arcu. Nulla facilisi. Donec porttitor, diam quis feugiat vestibulum, leo eros malesuada arcu, id congue magna diam molestie est. In eget accumsan justo. Aliquam id sapien porta, tempor est sit amet, varius lectus. Vestibulum maximus consequat quam, a mollis ante finibus vel.
           
-          #v-pills-profile.tab-pane.fade{"aria-labelledby" => "v-pills-profile-tab", :role => "tabpanel"} Vivamus mattis nunc a quam ultricies, vitae posuere elit malesuada. Aliquam erat volutpat. In mauris nulla, molestie ac fermentum et, pellentesque non lacus. Fusce lacinia felis at venenatis efficitur. Sed facilisis metus sit amet urna pretium efficitur. Aenean eros orci, rhoncus quis suscipit a, fringilla sed ipsum. Nunc nec odio euismod, convallis nunc sed, sollicitudin lacus. Vestibulum vulputate ante nunc, vel ultricies lorem consectetur in. Duis dignissim suscipit massa sed blandit. Aenean a fringilla neque. Pellentesque suscipit quis diam at posuere. Vivamus ac orci rutrum, lacinia nulla eget, pellentesque libero. Pellentesque et dapibus ligula. Donec egestas rhoncus risus, elementum fringilla odio interdum sit amet. Fusce sollicitudin dolor eget enim eleifend fringilla.
+          #v-pills-profile.tab-pane.fade{"aria-labelledby" => "v-pills-profile-tab", :role => "tabpanel"} 
+            %h6.base Vertical Pil Profile
+            %p
+              Vivamus mattis nunc a quam ultricies, vitae posuere elit malesuada. Aliquam erat volutpat. In mauris nulla, molestie ac fermentum et, pellentesque non lacus. Fusce lacinia felis at venenatis efficitur. Sed facilisis metus sit amet urna pretium efficitur. Aenean eros orci, rhoncus quis suscipit a, fringilla sed ipsum. Nunc nec odio euismod, convallis nunc sed, sollicitudin lacus. Vestibulum vulputate ante nunc, vel ultricies lorem consectetur in. Duis dignissim suscipit massa sed blandit. Aenean a fringilla neque. Pellentesque suscipit quis diam at posuere. Vivamus ac orci rutrum, lacinia nulla eget, pellentesque libero. Pellentesque et dapibus ligula. Donec egestas rhoncus risus, elementum fringilla odio interdum sit amet. Fusce sollicitudin dolor eget enim eleifend fringilla.
 
-          #v-pills-messages.tab-pane.fade{"aria-labelledby" => "v-pills-messages-tab", :role => "tabpanel"} Vestibulum quis odio vestibulum, aliquet nisl ut, dapibus nunc. Pellentesque volutpat et nisi mattis tempor. Suspendisse faucibus sit amet ipsum vitae molestie. Aenean ut massa sem. Phasellus et condimentum elit. Pellentesque sit amet feugiat leo. Ut aliquam eget erat vel posuere. Vivamus at tincidunt augue, ac maximus mi.
+          #v-pills-messages.tab-pane.fade{"aria-labelledby" => "v-pills-messages-tab", :role => "tabpanel"} 
+            %h6.base Vertical Pil Messages
+            %p
+              Vestibulum quis odio vestibulum, aliquet nisl ut, dapibus nunc. Pellentesque volutpat et nisi mattis tempor. Suspendisse faucibus sit amet ipsum vitae molestie. Aenean ut massa sem. Phasellus et condimentum elit. Pellentesque sit amet feugiat leo. Ut aliquam eget erat vel posuere. Vivamus at tincidunt augue, ac maximus mi.
 
-          #v-pills-settings.tab-pane.fade{"aria-labelledby" => "v-pills-settings-tab", :role => "tabpanel"} Fusce porta semper tortor, non luctus lorem porttitor vitae. Donec sollicitudin turpis ut sem egestas auctor eu sed leo. Cras lacinia elit ut nibh rhoncus vestibulum vel id leo. Aliquam porta, massa quis viverra fringilla, est eros sodales sem, quis laoreet risus purus in arcu. Ut quis est vestibulum, ultrices nisl ut, hendrerit mi. Ut hendrerit ac elit molestie cursus. Vivamus vel metus sed lacus dictum maximus ac et lacus. Morbi libero erat, porttitor non nibh sit amet, faucibus sodales justo. Vestibulum ut risus pellentesque, semper lorem id, sagittis sem. Cras aliquet risus at ex euismod facilisis. Vestibulum vulputate, orci quis blandit pellentesque, tortor turpis finibus risus, in lobortis risus dolor vel dui. Phasellus finibus et urna vitae tincidunt. Vivamus euismod augue urna.
+          #v-pills-settings.tab-pane.fade{"aria-labelledby" => "v-pills-settings-tab", :role => "tabpanel"} 
+            %h6.base Vertical Pil Settings
+            %p
+              Fusce porta semper tortor, non luctus lorem porttitor vitae. Donec sollicitudin turpis ut sem egestas auctor eu sed leo. Cras lacinia elit ut nibh rhoncus vestibulum vel id leo. Aliquam porta, massa quis viverra fringilla, est eros sodales sem, quis laoreet risus purus in arcu. Ut quis est vestibulum, ultrices nisl ut, hendrerit mi. Ut hendrerit ac elit molestie cursus. Vivamus vel metus sed lacus dictum maximus ac et lacus. Morbi libero erat, porttitor non nibh sit amet, faucibus sodales justo. Vestibulum ut risus pellentesque, semper lorem id, sagittis sem. Cras aliquet risus at ex euismod facilisis. Vestibulum vulputate, orci quis blandit pellentesque, tortor turpis finibus risus, in lobortis risus dolor vel dui. Phasellus finibus et urna vitae tincidunt. Vivamus euismod augue urna.
 
+%hr
+.row
+  .col-sm-12
+    %h4 Nav alignment variations 
+    %p
+      Information about the various alignment styles can be be found at:
+      %a{href: "https://getbootstrap.com/docs/4.3/components/navs/#available-styles", class: "link-external", target: "_blank"} Bootstrap Nav Styles
+      %br/
+      But here are some justified versions:
+
+.row
+  .col-sm-12
+    %h4 Justified Tabs
+    %p 
+      Add 
+      %code .nav-justified 
+      to justify the tabs evenly, or 
+      %code .nav-fill 
+      to justify the tabs unevenly.
+    %ul#nav-tab.nav.nav-tabs.nav-justified.mb-3{:role => "tablist"}
+      %li.nav-item
+        %a#tabs-home-tab.nav-link.active{"aria-controls" => "nav-tabs-home-justify", "aria-selected" => "true", "data-toggle" => "pill", :href => "#nav-tabs-home-justify", :role => "tab"} Home
+      %li.nav-item
+        %a#nav-tabs-profile-tab.nav-link{"aria-controls" => "nav-tabs-profile-justify", "aria-selected" => "false", "data-toggle" => "pill", :href => "#nav-tabs-profile-justify", :role => "tab"} Profile
+      %li.nav-item
+        %a#nav-tabs-contact-tab.nav-link{"aria-controls" => "nav-tabs-contact-justify", "aria-selected" => "false", "data-toggle" => "pill", :href => "#nav-tabs-contact-justify", :role => "tab"} Contact
+      %li.nav-item
+        %a.nav-link.disabled{"aria-disabled" => "true", :href => "#/", :tabindex => "-1"} Disabled
+    #nav-tabs-tabContent.tab-content
+      #nav-tabs-home-justify.tab-pane.fade.show.active{"aria-labelledby" => "tabs-home-justify-tab", :role => "tabpanel"} 
+        %h6.base Nav Tab Home
+        %p
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed tortor id eros pulvinar iaculis posuere sit amet nulla. Aenean malesuada lacus id libero rutrum, eu elementum mauris ultrices. Cras vel imperdiet ante. Sed eget nisi ante. Aenean dapibus arcu vel ex molestie convallis sit amet vel sem. Vivamus vitae magna non dolor pulvinar mollis. Suspendisse lacinia tortor sed cursus finibus. Aenean tellus turpis, accumsan a egestas ac, faucibus eget lorem. Duis odio diam, iaculis eget est sed, tincidunt malesuada arcu. Nulla facilisi. Donec porttitor, diam quis feugiat vestibulum, leo eros malesuada arcu, id congue magna diam molestie est. In eget accumsan justo. Aliquam id sapien porta, tempor est sit amet, varius lectus. Vestibulum maximus consequat quam, a mollis ante finibus vel.
+
+
+      #nav-tabs-profile-justify.tab-pane.fade{"aria-labelledby" => "tabs-profile-tab", :role => "tabpanel"} 
+        %h6.base Nav Tab Profile
+        %p
+          Vivamus mattis nunc a quam ultricies, vitae posuere elit malesuada. Aliquam erat volutpat. In mauris nulla, molestie ac fermentum et, pellentesque non lacus. Fusce lacinia felis at venenatis efficitur. Sed facilisis metus sit amet urna pretium efficitur. Aenean eros orci, rhoncus quis suscipit a, fringilla sed ipsum. Nunc nec odio euismod, convallis nunc sed, sollicitudin lacus. Vestibulum vulputate ante nunc, vel ultricies lorem consectetur in. Duis dignissim suscipit massa sed blandit. Aenean a fringilla neque. Pellentesque suscipit quis diam at posuere. Vivamus ac orci rutrum, lacinia nulla eget, pellentesque libero. Pellentesque et dapibus ligula. Donec egestas rhoncus risus, elementum fringilla odio interdum sit amet. Fusce sollicitudin dolor eget enim eleifend fringilla.
+
+      #nav-tabs-contact-justify.tab-pane.fade{"aria-labelledby" => "tabs-contact-tab", :role => "tabpanel"} 
+        %h6.base Nav Tab Contact
+        %p
+          Vestibulum quis odio vestibulum, aliquet nisl ut, dapibus nunc. Pellentesque volutpat et nisi mattis tempor. Suspendisse faucibus sit amet ipsum vitae molestie. Aenean ut massa sem. Phasellus et condimentum elit. Pellentesque sit amet feugiat leo. Ut aliquam eget erat vel posuere. Vivamus at tincidunt augue, ac maximus mi.
+
+
+%hr
+.row
+  .col-sm-12
+    %h4 Justified Nav Pils
+    %ul#pills-tab.nav.nav-pills.nav-justified.mb-3{:role => "tablist"}
+      %li.nav-item
+        %a#pills-home-tab.nav-link.active{"aria-controls" => "pills-home-justify", "aria-selected" => "true", "data-toggle" => "pill", :href => "#pills-home-justify", :role => "tab"} Home
+      %li.nav-item
+        %a#pills-profile-tab.nav-link{"aria-controls" => "pills-profile-justify", "aria-selected" => "false", "data-toggle" => "pill", :href => "#pills-profile-justify", :role => "tab"} Profile
+      %li.nav-item
+        %a#pills-contact-tab.nav-link{"aria-controls" => "pills-contact-justify", "aria-selected" => "false", "data-toggle" => "pill", :href => "#pills-contact-justify", :role => "tab"} Contact
+    #pills-tabContent.tab-content
+      #pills-home-justify.tab-pane.fade.show.active{"aria-labelledby" => "pills-home-justify-tab", :role => "tabpanel"} 
+        %h6.base Nav Pil Home
+        %p
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed tortor id eros pulvinar iaculis posuere sit amet nulla. Aenean malesuada lacus id libero rutrum, eu elementum mauris ultrices. Cras vel imperdiet ante. Sed eget nisi ante. Aenean dapibus arcu vel ex molestie convallis sit amet vel sem. Vivamus vitae magna non dolor pulvinar mollis. Suspendisse lacinia tortor sed cursus finibus. Aenean tellus turpis, accumsan a egestas ac, faucibus eget lorem. Duis odio diam, iaculis eget est sed, tincidunt malesuada arcu. Nulla facilisi. Donec porttitor, diam quis feugiat vestibulum, leo eros malesuada arcu, id congue magna diam molestie est. In eget accumsan justo. Aliquam id sapien porta, tempor est sit amet, varius lectus. Vestibulum maximus consequat quam, a mollis ante finibus vel.
+
+
+      #pills-profile-justify.tab-pane.fade{"aria-labelledby" => "pills-profile-justify-tab", :role => "tabpanel"} 
+        %h6.base Nav Pil Profile
+        %p
+          Vivamus mattis nunc a quam ultricies, vitae posuere elit malesuada. Aliquam erat volutpat. In mauris nulla, molestie ac fermentum et, pellentesque non lacus. Fusce lacinia felis at venenatis efficitur. Sed facilisis metus sit amet urna pretium efficitur. Aenean eros orci, rhoncus quis suscipit a, fringilla sed ipsum. Nunc nec odio euismod, convallis nunc sed, sollicitudin lacus. Vestibulum vulputate ante nunc, vel ultricies lorem consectetur in. Duis dignissim suscipit massa sed blandit. Aenean a fringilla neque. Pellentesque suscipit quis diam at posuere. Vivamus ac orci rutrum, lacinia nulla eget, pellentesque libero. Pellentesque et dapibus ligula. Donec egestas rhoncus risus, elementum fringilla odio interdum sit amet. Fusce sollicitudin dolor eget enim eleifend fringilla.
+
+      #pills-contact-justify.tab-pane.fade{"aria-labelledby" => "pills-contact-justify-tab", :role => "tabpanel"} 
+        %h6.base Nav Pil Contact
+        %p
+          Vestibulum quis odio vestibulum, aliquet nisl ut, dapibus nunc. Pellentesque volutpat et nisi mattis tempor. Suspendisse faucibus sit amet ipsum vitae molestie. Aenean ut massa sem. Phasellus et condimentum elit. Pellentesque sit amet feugiat leo. Ut aliquam eget erat vel posuere. Vivamus at tincidunt augue, ac maximus mi.
+
+%hr
+.row
+  .col-sm-12
+    %h4 Flexible and Justified Nav Pils
+    %p 
+      If you need responsive nav variations, consider using a series of flexbox utilities. While more verbose, these utilities offer greater customization across responsive breakpoints. In the example below, our nav will be stacked on the lowest breakpoint, then adapt to a horizontal layout that fills the available width starting from the small breakpoint.
+    %ul#pills-tab.nav.nav-pills.nav-justified.flex-column.flex-sm-row.mb-3{:role => "tablist"}
+      %li.nav-item
+        %a#pills-home-tab.nav-link.active{"aria-controls" => "pills-home-flexible", "aria-selected" => "true", "data-toggle" => "pill", :href => "#pills-home-flexible", :role => "tab"} Home
+      %li.nav-item
+        %a#pills-profile-tab.nav-link{"aria-controls" => "pills-profile-flexible", "aria-selected" => "false", "data-toggle" => "pill", :href => "#pills-profile-flexible", :role => "tab"} Profile
+      %li.nav-item
+        %a#pills-contact-tab.nav-link{"aria-controls" => "pills-contact-flexible", "aria-selected" => "false", "data-toggle" => "pill", :href => "#pills-contact-flexible", :role => "tab"} Contact
+    #pills-tabContent.tab-content
+      #pills-home-flexible.tab-pane.fade.show.active{"aria-labelledby" => "pills-home-flexible-tab", :role => "tabpanel"} 
+        %h6.base Nav Pil Home
+        %p
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed tortor id eros pulvinar iaculis posuere sit amet nulla. Aenean malesuada lacus id libero rutrum, eu elementum mauris ultrices. Cras vel imperdiet ante. Sed eget nisi ante. Aenean dapibus arcu vel ex molestie convallis sit amet vel sem. Vivamus vitae magna non dolor pulvinar mollis. Suspendisse lacinia tortor sed cursus finibus. Aenean tellus turpis, accumsan a egestas ac, faucibus eget lorem. Duis odio diam, iaculis eget est sed, tincidunt malesuada arcu. Nulla facilisi. Donec porttitor, diam quis feugiat vestibulum, leo eros malesuada arcu, id congue magna diam molestie est. In eget accumsan justo. Aliquam id sapien porta, tempor est sit amet, varius lectus. Vestibulum maximus consequat quam, a mollis ante finibus vel.
+
+
+      #pills-profile-flexible.tab-pane.fade{"aria-labelledby" => "pills-profile-flexible-tab", :role => "tabpanel"} 
+        %h6.base Nav Pil Profile
+        %p
+          Vivamus mattis nunc a quam ultricies, vitae posuere elit malesuada. Aliquam erat volutpat. In mauris nulla, molestie ac fermentum et, pellentesque non lacus. Fusce lacinia felis at venenatis efficitur. Sed facilisis metus sit amet urna pretium efficitur. Aenean eros orci, rhoncus quis suscipit a, fringilla sed ipsum. Nunc nec odio euismod, convallis nunc sed, sollicitudin lacus. Vestibulum vulputate ante nunc, vel ultricies lorem consectetur in. Duis dignissim suscipit massa sed blandit. Aenean a fringilla neque. Pellentesque suscipit quis diam at posuere. Vivamus ac orci rutrum, lacinia nulla eget, pellentesque libero. Pellentesque et dapibus ligula. Donec egestas rhoncus risus, elementum fringilla odio interdum sit amet. Fusce sollicitudin dolor eget enim eleifend fringilla.
+
+      #pills-contact-flexible.tab-pane.fade{"aria-labelledby" => "pills-contact-flexible-tab", :role => "tabpanel"} 
+        %h6.base Nav Pil Contact
+        %p
+          Vestibulum quis odio vestibulum, aliquet nisl ut, dapibus nunc. Pellentesque volutpat et nisi mattis tempor. Suspendisse faucibus sit amet ipsum vitae molestie. Aenean ut massa sem. Phasellus et condimentum elit. Pellentesque sit amet feugiat leo. Ut aliquam eget erat vel posuere. Vivamus at tincidunt augue, ac maximus mi.
+
+%hr
+.row
+  .col-sm-12
+    %h4 SARD Nav Colouring 
+    %p The default navs, nav pills and vertical nav pills are set to the Default SARD Colours but to change their colouring dependent on the trust theme, then use one of the following.
+  .col-sm-12
+    %h4 Nav Pils Trust
+    %p 
+      Add 
+      %code .nav-trust 
+      \.
+    %ul#pills-tab.nav.nav-pills.nav-trust.mb-3{:role => "tablist"}
+      %li.nav-item
+        %a#pills-home-tab.nav-link.active{"aria-controls" => "pills-home", "aria-selected" => "true", "data-toggle" => "pill", :href => "#pills-home", :role => "tab"} Home
+      %li.nav-item
+        %a#pills-profile-tab.nav-link{"aria-controls" => "pills-profile", "aria-selected" => "false", "data-toggle" => "pill", :href => "#pills-profile", :role => "tab"} Profile
+      %li.nav-item
+        %a#pills-contact-tab.nav-link{"aria-controls" => "pills-contact", "aria-selected" => "false", "data-toggle" => "pill", :href => "#pills-contact", :role => "tab"} Contact
+    .col-sm-12
+    %hr/
+    %h4 Nav Pils Admin
+    %p 
+      Add 
+      %code .nav-admin 
+      \.
+    %ul#pills-tab.nav.nav-pills.nav-admin.mb-3{:role => "tablist"}
+      %li.nav-item
+        %a#pills-home-tab.nav-link.active{"aria-controls" => "pills-home", "aria-selected" => "true", "data-toggle" => "pill", :href => "#pills-home", :role => "tab"} Home
+      %li.nav-item
+        %a#pills-profile-tab.nav-link{"aria-controls" => "pills-profile", "aria-selected" => "false", "data-toggle" => "pill", :href => "#pills-profile", :role => "tab"} Profile
+      %li.nav-item
+        %a#pills-contact-tab.nav-link{"aria-controls" => "pills-contact", "aria-selected" => "false", "data-toggle" => "pill", :href => "#pills-contact", :role => "tab"} Contact
