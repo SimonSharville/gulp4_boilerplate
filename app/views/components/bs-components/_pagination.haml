@@ -3,36 +3,38 @@
     %h1#pagination-anchor.bs-anchor Pagintaion
 
     %h4 Default
+    %p This is the default boostrap pagination.
     %nav{"aria-label" => "Page navigation example"}
       %ul.pagination
         %li.page-item
-          %a.page-link{:href => "#"} Previous
+          %a.page-link{:href => "#/"} Previous
+        %li.page-item.active
+          %a.page-link{:href => "#/"} 1
         %li.page-item
-          %a.page-link{:href => "#"} 1
+          %a.page-link{:href => "#/"} 2
         %li.page-item
-          %a.page-link{:href => "#"} 2
+          %a.page-link{:href => "#/"} 3
         %li.page-item
-          %a.page-link{:href => "#"} 3
-        %li.page-item
-          %a.page-link{:href => "#"} Next
-
+          %a.page-link{:href => "#/"} Next
+  .col-sm-12
     %hr
     %h4 Working with icons
+    %p You can add an icon within the span of a Previous or Next page link. 
     %nav{"aria-label" => "Page navigation example"}
       %ul.pagination
         %li.page-item
-          %a.page-link{"aria-label" => "Previous", :href => "#"}
+          %a.page-link{"aria-label" => "Previous", :href => "#/"}
             %span{"aria-hidden" => "true"} «
+        %li.page-item.active
+          %a.page-link{:href => "#/"} 1
         %li.page-item
-          %a.page-link{:href => "#"} 1
+          %a.page-link{:href => "#/"} 2
         %li.page-item
-          %a.page-link{:href => "#"} 2
+          %a.page-link{:href => "#/"} 3
         %li.page-item
-          %a.page-link{:href => "#"} 3
-        %li.page-item
-          %a.page-link{"aria-label" => "Next", :href => "#"}
+          %a.page-link{"aria-label" => "Next", :href => "#/"}
             %span{"aria-hidden" => "true"} »
-
+  .col-sm-12
     %hr
     %h4 Sizing
     %nav{"aria-label" => "..."}
@@ -42,9 +44,9 @@
             1
             %span.sr-only (current)
         %li.page-item
-          %a.page-link{:href => "#"} 2
+          %a.page-link{:href => "#/"} 2
         %li.page-item
-          %a.page-link{:href => "#"} 3
+          %a.page-link{:href => "#/"} 3
           
     %nav{"aria-label" => "..."}
       %ul.pagination.pagination-sm
@@ -53,6 +55,163 @@
             1
             %span.sr-only (current)
         %li.page-item
-          %a.page-link{:href => "#"} 2
+          %a.page-link{:href => "#/"} 2
         %li.page-item
-          %a.page-link{:href => "#"} 3
+          %a.page-link{:href => "#/"} 3
+%hr/
+.row
+  .col-sm-12
+    %h3 SARD Variations
+  .col-sm-12
+    %hr
+    %h4 Pagination sard
+    %p 
+      Add 
+      %code .pagination-sard 
+      to 
+      code .pagination 
+      and it will add Arrow Icons to the Previous and Next page-links, 
+      %br/
+      This relies on the aria-label being either Previous or Next. 
+    %p 
+      Pagination Sard will change it's colours depending on the theme.
+    %nav{"aria-label" => "Page navigation example"}
+      %ul.pagination.pagination-sard.pagination-lg
+        %li.page-item
+          %a.page-link{"aria-label" => "Previous", :href => "#/"}
+            %span{"aria-hidden" => "true"} «
+        %li.page-item.active
+          %a.page-link{:href => "#/"} 1
+        %li.page-item
+          %a.page-link{:href => "#/"} 2
+        %li.page-item
+          %a.page-link{:href => "#/"} 3
+        %li.page-item
+          %a.page-link{"aria-label" => "Next", :href => "#/"}
+            %span{"aria-hidden" => "true"} »
+      
+    %nav{"aria-label" => "Page navigation example"}
+      %ul.pagination.pagination-sard
+        %li.page-item
+          %a.page-link{"aria-label" => "Previous", :href => "#/"}
+            %span{"aria-hidden" => "true"} «
+        %li.page-item.active
+          %a.page-link{:href => "#/"} 1
+        %li.page-item
+          %a.page-link{:href => "#/"} 2
+        %li.page-item
+          %a.page-link{:href => "#/"} 3
+        %li.page-item
+          %a.page-link{"aria-label" => "Next", :href => "#/"}
+            %span{"aria-hidden" => "true"} »
+        
+    %nav{"aria-label" => "Page navigation example"}
+      %ul.pagination.pagination-sard.pagination-sm
+        %li.page-item
+          %a.page-link{"aria-label" => "Previous", :href => "#/"}
+            %span{"aria-hidden" => "true"} «
+        %li.page-item.active
+          %a.page-link{:href => "#/"} 1
+        %li.page-item
+          %a.page-link{:href => "#/"} 2
+        %li.page-item
+          %a.page-link{:href => "#/"} 3
+        %li.page-item
+          %a.page-link{"aria-label" => "Next", :href => "#/"}
+            %span{"aria-hidden" => "true"} »
+  
+  .col-sm-12
+    %hr
+    %h4 Within a Card, Panel or Filedset 
+    %p
+      When including paginination within one of these, add 
+      %code .pagination-div 
+      to the 
+      %code nav 
+      \. You can also add 
+      %code .pagination-entries 
+      within that nav.
+    %p 
+      Within these the pagination will alway range on the right.
+  .col-sm-12
+    .card.card-sard
+      .card-header
+        Card
+      .card-body
+        %p  
+          This is an example of pagination with in a card-body.
+        %nav.pagination-div{"aria-label" => "Page navigation example"}
+          .pagination-entries
+            Displaying User
+            %b 1 - 10
+            of
+            %b 74
+            in total
+          %ul.pagination.pagination-sard.pagination
+            %li.page-item
+              %a.page-link{"aria-label" => "Previous", :href => "#/"}
+                %span{"aria-hidden" => "true"} «
+            %li.page-item.active
+              %a.page-link{:href => "#/"} 1
+            %li.page-item
+              %a.page-link{:href => "#/"} 2
+            %li.page-item
+              %a.page-link{:href => "#/"} 3
+            %li.page-item
+              %a.page-link{"aria-label" => "Next", :href => "#/"}
+                %span{"aria-hidden" => "true"} »
+
+  .col-sm-12
+    .panel.panel-sard
+      .panel-header
+        Panel
+      .panel-body
+        %p  
+          This is an example of pagination with in a panel-body.
+        %nav.pagination-div{"aria-label" => "Page navigation example"}
+          .pagination-entries
+            Displaying User
+            %b 1 - 10
+            of
+            %b 74
+            in total
+          %ul.pagination.pagination-sard.pagination
+            %li.page-item
+              %a.page-link{"aria-label" => "Previous", :href => "#/"}
+                %span{"aria-hidden" => "true"} «
+            %li.page-item.active
+              %a.page-link{:href => "#/"} 1
+            %li.page-item
+              %a.page-link{:href => "#/"} 2
+            %li.page-item
+              %a.page-link{:href => "#/"} 3
+            %li.page-item
+              %a.page-link{"aria-label" => "Next", :href => "#/"}
+                %span{"aria-hidden" => "true"} »
+  .col-sm-12
+    %fieldset
+      %legend
+        Fieldset
+      .form-group  
+        %p  
+          This is an example of pagination with in a form-group.
+        %nav.pagination-div{"aria-label" => "Page navigation example"}
+          .pagination-entries
+            Displaying User
+            %b 1 - 10
+            of
+            %b 74
+            in total
+          %ul.pagination.pagination-sard.pagination
+            %li.page-item
+              %a.page-link{"aria-label" => "Previous", :href => "#/"}
+                %span{"aria-hidden" => "true"} «
+            %li.page-item.active
+              %a.page-link{:href => "#/"} 1
+            %li.page-item
+              %a.page-link{:href => "#/"} 2
+            %li.page-item
+              %a.page-link{:href => "#/"} 3
+            %li.page-item
+              %a.page-link{"aria-label" => "Next", :href => "#/"}
+                %span{"aria-hidden" => "true"} »

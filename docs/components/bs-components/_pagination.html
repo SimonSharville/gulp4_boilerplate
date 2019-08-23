@@ -2,50 +2,56 @@
 <div class='col-sm-12'>
 <h1 class='bs-anchor' id='pagination-anchor'>Pagintaion</h1>
 <h4>Default</h4>
+<p>This is the default boostrap pagination.</p>
 <nav aria-label='Page navigation example'>
 <ul class='pagination'>
 <li class='page-item'>
-<a class='page-link' href='#'>Previous</a>
+<a class='page-link' href='#/'>Previous</a>
+</li>
+<li class='page-item active'>
+<a class='page-link' href='#/'>1</a>
 </li>
 <li class='page-item'>
-<a class='page-link' href='#'>1</a>
+<a class='page-link' href='#/'>2</a>
 </li>
 <li class='page-item'>
-<a class='page-link' href='#'>2</a>
+<a class='page-link' href='#/'>3</a>
 </li>
 <li class='page-item'>
-<a class='page-link' href='#'>3</a>
-</li>
-<li class='page-item'>
-<a class='page-link' href='#'>Next</a>
+<a class='page-link' href='#/'>Next</a>
 </li>
 </ul>
 </nav>
+</div>
+<div class='col-sm-12'>
 <hr>
 <h4>Working with icons</h4>
+<p>You can add an icon within the span of a Previous or Next page link.</p>
 <nav aria-label='Page navigation example'>
 <ul class='pagination'>
 <li class='page-item'>
-<a aria-label='Previous' class='page-link' href='#'>
+<a aria-label='Previous' class='page-link' href='#/'>
 <span aria-hidden='true'>«</span>
 </a>
 </li>
-<li class='page-item'>
-<a class='page-link' href='#'>1</a>
+<li class='page-item active'>
+<a class='page-link' href='#/'>1</a>
 </li>
 <li class='page-item'>
-<a class='page-link' href='#'>2</a>
+<a class='page-link' href='#/'>2</a>
 </li>
 <li class='page-item'>
-<a class='page-link' href='#'>3</a>
+<a class='page-link' href='#/'>3</a>
 </li>
 <li class='page-item'>
-<a aria-label='Next' class='page-link' href='#'>
+<a aria-label='Next' class='page-link' href='#/'>
 <span aria-hidden='true'>»</span>
 </a>
 </li>
 </ul>
 </nav>
+</div>
+<div class='col-sm-12'>
 <hr>
 <h4>Sizing</h4>
 <nav aria-label='...'>
@@ -57,10 +63,10 @@
 </span>
 </li>
 <li class='page-item'>
-<a class='page-link' href='#'>2</a>
+<a class='page-link' href='#/'>2</a>
 </li>
 <li class='page-item'>
-<a class='page-link' href='#'>3</a>
+<a class='page-link' href='#/'>3</a>
 </li>
 </ul>
 </nav>
@@ -73,12 +79,245 @@
 </span>
 </li>
 <li class='page-item'>
-<a class='page-link' href='#'>2</a>
+<a class='page-link' href='#/'>2</a>
 </li>
 <li class='page-item'>
-<a class='page-link' href='#'>3</a>
+<a class='page-link' href='#/'>3</a>
 </li>
 </ul>
 </nav>
+</div>
+</div>
+<hr>
+<div class='row'>
+<div class='col-sm-12'>
+<h3>SARD Variations</h3>
+</div>
+<div class='col-sm-12'>
+<hr>
+<h4>Pagination sard</h4>
+<p>
+Add
+<code>.pagination-sard</code>
+to
+code .pagination
+and it will add Arrow Icons to the Previous and Next page-links,
+<br>
+This relies on the aria-label being either Previous or Next.
+</p>
+<p>
+Pagination Sard will change it's colours depending on the theme.
+</p>
+<nav aria-label='Page navigation example'>
+<ul class='pagination pagination-sard pagination-lg'>
+<li class='page-item'>
+<a aria-label='Previous' class='page-link' href='#/'>
+<span aria-hidden='true'>«</span>
+</a>
+</li>
+<li class='page-item active'>
+<a class='page-link' href='#/'>1</a>
+</li>
+<li class='page-item'>
+<a class='page-link' href='#/'>2</a>
+</li>
+<li class='page-item'>
+<a class='page-link' href='#/'>3</a>
+</li>
+<li class='page-item'>
+<a aria-label='Next' class='page-link' href='#/'>
+<span aria-hidden='true'>»</span>
+</a>
+</li>
+</ul>
+</nav>
+<nav aria-label='Page navigation example'>
+<ul class='pagination pagination-sard'>
+<li class='page-item'>
+<a aria-label='Previous' class='page-link' href='#/'>
+<span aria-hidden='true'>«</span>
+</a>
+</li>
+<li class='page-item active'>
+<a class='page-link' href='#/'>1</a>
+</li>
+<li class='page-item'>
+<a class='page-link' href='#/'>2</a>
+</li>
+<li class='page-item'>
+<a class='page-link' href='#/'>3</a>
+</li>
+<li class='page-item'>
+<a aria-label='Next' class='page-link' href='#/'>
+<span aria-hidden='true'>»</span>
+</a>
+</li>
+</ul>
+</nav>
+<nav aria-label='Page navigation example'>
+<ul class='pagination pagination-sard pagination-sm'>
+<li class='page-item'>
+<a aria-label='Previous' class='page-link' href='#/'>
+<span aria-hidden='true'>«</span>
+</a>
+</li>
+<li class='page-item active'>
+<a class='page-link' href='#/'>1</a>
+</li>
+<li class='page-item'>
+<a class='page-link' href='#/'>2</a>
+</li>
+<li class='page-item'>
+<a class='page-link' href='#/'>3</a>
+</li>
+<li class='page-item'>
+<a aria-label='Next' class='page-link' href='#/'>
+<span aria-hidden='true'>»</span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+<div class='col-sm-12'>
+<hr>
+<h4>Within a Card, Panel or Filedset</h4>
+<p>
+When including paginination within one of these, add
+<code>.pagination-div</code>
+to the
+<code>nav</code>
+. You can also add
+<code>.pagination-entries</code>
+within that nav.
+</p>
+<p>
+Within these the pagination will alway range on the right.
+</p>
+</div>
+<div class='col-sm-12'>
+<div class='card card-sard'>
+<div class='card-header'>
+Card
+</div>
+<div class='card-body'>
+<p>
+This is an example of pagination with in a card-body.
+</p>
+<nav aria-label='Page navigation example' class='pagination-div'>
+<div class='pagination-entries'>
+Displaying User
+<b>1 - 10</b>
+of
+<b>74</b>
+in total
+</div>
+<ul class='pagination pagination-sard pagination'>
+<li class='page-item'>
+<a aria-label='Previous' class='page-link' href='#/'>
+<span aria-hidden='true'>«</span>
+</a>
+</li>
+<li class='page-item active'>
+<a class='page-link' href='#/'>1</a>
+</li>
+<li class='page-item'>
+<a class='page-link' href='#/'>2</a>
+</li>
+<li class='page-item'>
+<a class='page-link' href='#/'>3</a>
+</li>
+<li class='page-item'>
+<a aria-label='Next' class='page-link' href='#/'>
+<span aria-hidden='true'>»</span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class='col-sm-12'>
+<div class='panel panel-sard'>
+<div class='panel-header'>
+Panel
+</div>
+<div class='panel-body'>
+<p>
+This is an example of pagination with in a panel-body.
+</p>
+<nav aria-label='Page navigation example' class='pagination-div'>
+<div class='pagination-entries'>
+Displaying User
+<b>1 - 10</b>
+of
+<b>74</b>
+in total
+</div>
+<ul class='pagination pagination-sard pagination'>
+<li class='page-item'>
+<a aria-label='Previous' class='page-link' href='#/'>
+<span aria-hidden='true'>«</span>
+</a>
+</li>
+<li class='page-item active'>
+<a class='page-link' href='#/'>1</a>
+</li>
+<li class='page-item'>
+<a class='page-link' href='#/'>2</a>
+</li>
+<li class='page-item'>
+<a class='page-link' href='#/'>3</a>
+</li>
+<li class='page-item'>
+<a aria-label='Next' class='page-link' href='#/'>
+<span aria-hidden='true'>»</span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class='col-sm-12'>
+<fieldset>
+<legend>
+Fieldset
+</legend>
+<div class='form-group'>
+<p>
+This is an example of pagination with in a form-group.
+</p>
+<nav aria-label='Page navigation example' class='pagination-div'>
+<div class='pagination-entries'>
+Displaying User
+<b>1 - 10</b>
+of
+<b>74</b>
+in total
+</div>
+<ul class='pagination pagination-sard pagination'>
+<li class='page-item'>
+<a aria-label='Previous' class='page-link' href='#/'>
+<span aria-hidden='true'>«</span>
+</a>
+</li>
+<li class='page-item active'>
+<a class='page-link' href='#/'>1</a>
+</li>
+<li class='page-item'>
+<a class='page-link' href='#/'>2</a>
+</li>
+<li class='page-item'>
+<a class='page-link' href='#/'>3</a>
+</li>
+<li class='page-item'>
+<a aria-label='Next' class='page-link' href='#/'>
+<span aria-hidden='true'>»</span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</fieldset>
 </div>
 </div>
