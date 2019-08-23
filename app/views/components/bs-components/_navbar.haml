@@ -185,67 +185,6 @@
 
 .row
   .col-sm-12
-    %h4 Navbar Trust 
-    %p
-      This is the SARD Trust navbar and changes colour with the trust.
-      %code nav.navbar.navbar-expand-lg.navbar-trust
-  .col-sm-12
-    %nav.navbar.navbar-expand-lg.navbar-trust.mb-3
-      %a.navbar-brand{:href => "#/"} Navbar
-      %button.navbar-toggler{"aria-controls" => "navbarUser", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbarUser", "data-toggle" => "collapse", :type => "button"}
-        %span.navbar-toggler-icon
-      #navbarUser.collapse.navbar-collapse
-        %ul.navbar-nav.mr-auto
-          %li.nav-item.active
-            %a.nav-link{:href => "#/"}
-              Home
-              %span.sr-only (current)
-          %li.nav-item
-            %a.nav-link{:href => "#/"} Link
-          %li.nav-item.dropdown
-            %a#navbarDropdownMenuLink.nav-link.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "http://example.com"}
-              Dropdowns
-            %ul.dropdown-menu{"aria-labelledby" => "navbarDropdownMenuLink"}
-              %li
-                %a.dropdown-item{:href => "#/"} Action
-              %li
-                %a.dropdown-item{:href => "#/"} Another action
-              .dropdown-header Dropdown Header
-              %li.dropdown-submenu
-                %a.dropdown-item.dropdown-toggle{:href => "#/"} Submenu
-                %ul.dropdown-menu
-                  %li
-                    %a.dropdown-item{:href => "#/"} Submenu action
-                  %li
-                    %a.dropdown-item{:href => "#/"} Another submenu action
-                  %li.dropdown-submenu
-                    %a.dropdown-item.dropdown-toggle{:href => "#/"} Subsubmenu
-                    %ul.dropdown-menu
-                      %li
-                        %a.dropdown-item{:href => "#/"} Subsubmenu action
-                      %li
-                        %a.dropdown-item{:href => "#/"} Another subsubmenu action
-                  %li.dropdown-submenu
-                    %a.dropdown-item.dropdown-toggle{:href => "#/"} Second subsubmenu
-                    %ul.dropdown-menu
-                      %li
-                        %a.dropdown-item{:href => "#/"} Subsubmenu action
-                      %li
-                        %a.dropdown-item{:href => "#/"} Another subsubmenu action
-                  %li
-                    %a.dropdown-item{:href => "#/"} Another action
-                %li
-                  %a.dropdown-item{:href => "#/"} Another action
-                %hr/
-                %li
-                  %a.dropdown-item{:href => "#/"} Another action
-          %li.nav-item
-            %a.nav-link.disabled{"aria-disabled" => "true", :href => "#/", :tabindex => "-1"} Disabled
-        %form.form-inline.searchbar-sard
-          %input.form-control{"aria-label" => "Search", :placeholder => "Search", :type => "search"}/
-          %button.btn.btn-search{:type => "submit", :href => "#/"} 
-.row
-  .col-sm-12
     %h4 Navbar Secondary 
     %p
       This is the SARD Secondary navbar and changes colour with the trust.

@@ -246,15 +246,15 @@
             %button.btn.btn-sm.btn-save{:type => "button"} Save changes
 
     / Button trigger modal
-    %button.btn.btn-trust{"data-target" => "#modalTrust", "data-toggle" => "modal", :type => "button"}
-      Modal Trust
+    %button.btn.btn-primary{"data-target" => "#modalSard", "data-toggle" => "modal", :type => "button"}
+      Modal Sard
     / Modal
-    #modalTrust.modal.modal-trust.fade{"aria-hidden" => "true", "aria-labelledby" => "modalTrustTitle", :role => "dialog", :tabindex => "-1"}
+    #modalSard.modal.modal-sard.fade{"aria-hidden" => "true", "aria-labelledby" => "modalSardTitle", :role => "dialog", :tabindex => "-1"}
       .modal-dialog.modal-dialog-scrollable{:role => "document"}
         .modal-content
           .modal-header
-            %h5#modalTrustTitle.modal-title 
-              Modal Trust
+            %h5#modalSardTitle.modal-title 
+              Modal Sard
             %button.close{"aria-label" => "Close", "data-dismiss" => "modal", :type => "button"}
               %span{"aria-hidden" => "true"} ×
           .modal-body
@@ -296,107 +296,6 @@
             %button.btn.btn-sm.btn-danger{"data-dismiss" => "modal", :type => "button"} Close
             %button.btn.btn-sm.btn-save{:type => "button"} Save changes
 
-    / Button trigger modal
-    %button.btn.btn-user{"data-target" => "#modalUser", "data-toggle" => "modal", :type => "button"}
-      Modal User
-    / Modal
-    #modalUser.modal.modal-user.fade{"aria-hidden" => "true", "aria-labelledby" => "modalUserTitle", :role => "dialog", :tabindex => "-1"}
-      .modal-dialog.modal-dialog-scrollable{:role => "document"}
-        .modal-content
-          .modal-header
-            %h5#modalUserTitle.modal-title 
-              Modal User
-            %button.close{"aria-label" => "Close", "data-dismiss" => "modal", :type => "button"}
-              %span{"aria-hidden" => "true"} ×
-          .modal-body
-            %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit massa eget mi maximus, sed faucibus nisi consequat. Donec placerat mauris eu malesuada consectetur. Pellentesque egestas gravida dolor, eget aliquet dui consectetur ut. Phasellus sollicitudin diam vitae purus commodo, vel commodo leo elementum.
-            %hr/
-            %ul
-              %li List Item One
-              %li List Item Two. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit massa eget mi maximus
-              %li List Item Three
-            %hr/
-            %h6.base ul.no-bullet
-            %ul.no-bullet
-              %li List Item One
-              %li List Item Two. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit massa eget mi maximus
-              %li List Item Three
-            %hr/
-            %h1.base H1 Header
-            %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit massa eget mi maximus.
-            %h2.base H2 Header
-            %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit massa eget mi maximus.
-            %h3.base H3 Header
-            %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit massa eget mi maximus.
-            %h4.base H4 Header
-            %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit massa eget mi maximus.
-            %h5.base H5 Header
-            %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit massa eget mi maximus.
-            %h6.base H6 Header
-            %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit massa eget mi maximus. 
-            %hr/
-            %p
-              This is an example of a standard
-              %a{href: "#/"} Text Link
-            %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit massa eget mi maximus, sed faucibus nisi consequat. Donec placerat mauris eu malesuada consectetur. Pellentesque egestas gravida dolor, eget aliquet dui consectetur ut. Phasellus sollicitudin diam vitae purus commodo, vel commodo leo elementum.
-            %hr/
-            %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit massa eget mi maximus, sed faucibus nisi consequat. Donec placerat mauris eu malesuada consectetur. Pellentesque egestas gravida dolor, eget aliquet dui consectetur ut. Phasellus sollicitudin diam vitae purus commodo, vel commodo leo elementum.
-
-          .modal-footer
-            %button.btn.btn-sm.btn-info{:type => "button"} btn info
-            %button.btn.btn-sm.btn-danger{"data-dismiss" => "modal", :type => "button"} Close
-            %button.btn.btn-sm.btn-save{:type => "button"} Save changes
-
-    / Button trigger modal
-    %button.btn.btn-admin{"data-target" => "#modalAdmin", "data-toggle" => "modal", :type => "button"}
-      Modal Admin
-    / Modal
-    #modalAdmin.modal.modal-admin.fade{"aria-hidden" => "true", "aria-labelledby" => "modalAdminTitle", :role => "dialog", :tabindex => "-1"}
-      .modal-dialog.modal-dialog-scrollable{:role => "document"}
-        .modal-content
-          .modal-header
-            %h5#modalAdminTitle.modal-title 
-              Modal Admin
-            %button.close{"aria-label" => "Close", "data-dismiss" => "modal", :type => "button"}
-              %span{"aria-hidden" => "true"} ×
-          .modal-body
-            %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit massa eget mi maximus, sed faucibus nisi consequat. Donec placerat mauris eu malesuada consectetur. Pellentesque egestas gravida dolor, eget aliquet dui consectetur ut. Phasellus sollicitudin diam vitae purus commodo, vel commodo leo elementum.
-            %hr/
-            %ul
-              %li List Item One
-              %li List Item Two. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit massa eget mi maximus
-              %li List Item Three
-            %hr/
-            %h6.base ul.no-bullet
-            %ul.no-bullet
-              %li List Item One
-              %li List Item Two. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit massa eget mi maximus
-              %li List Item Three
-            %hr/
-            %h1.base H1 Header
-            %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit massa eget mi maximus.
-            %h2.base H2 Header
-            %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit massa eget mi maximus.
-            %h3.base H3 Header
-            %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit massa eget mi maximus.
-            %h4.base H4 Header
-            %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit massa eget mi maximus.
-            %h5.base H5 Header
-            %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit massa eget mi maximus.
-            %h6.base H6 Header
-            %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit massa eget mi maximus. 
-            %hr/
-            %p
-              This is an example of a standard
-              %a{href: "#/"} Text Link
-            %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit massa eget mi maximus, sed faucibus nisi consequat. Donec placerat mauris eu malesuada consectetur. Pellentesque egestas gravida dolor, eget aliquet dui consectetur ut. Phasellus sollicitudin diam vitae purus commodo, vel commodo leo elementum.
-            %hr/
-            %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit massa eget mi maximus, sed faucibus nisi consequat. Donec placerat mauris eu malesuada consectetur. Pellentesque egestas gravida dolor, eget aliquet dui consectetur ut. Phasellus sollicitudin diam vitae purus commodo, vel commodo leo elementum.
-
-          .modal-footer
-            %button.btn.btn-sm.btn-info{:type => "button"} btn info
-            %button.btn.btn-sm.btn-danger{"data-dismiss" => "modal", :type => "button"} Close
-            %button.btn.btn-sm.btn-save{:type => "button"} Save changes
 
     / Button trigger modal
     %button.btn.btn-default{"data-target" => "#modalForm", "data-toggle" => "modal", :type => "button"}
