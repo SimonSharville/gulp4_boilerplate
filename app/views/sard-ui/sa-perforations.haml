@@ -19,10 +19,10 @@
         .col-sm-12
           %h3 Horizontal Rules
           %p We have created a range of HR thickness and colours.
-          %h5 A standard HR 
+          %h4 A standard HR 
           %code hr 
           %hr/
-          %h5 Various weights
+          %h4 Various weights
           %p Add the weights as below. 
           %code hr.x2 
           %hr.x2/
@@ -35,7 +35,7 @@
           %code hr.x16 
           %hr.x16/
 
-          %h5 Various colours
+          %h4 Various colours
           %p Add the colours as below. 
           %code hr.black 
           %hr.black/
@@ -43,8 +43,6 @@
           %hr.grey/
           %code hr.primary 
           %hr.primary/
-          %code hr.trust
-          %hr.trust/
           %code hr.secondary 
           %hr.secondary/
           %code hr.white
@@ -52,17 +50,17 @@
             .card-body
               %hr.white/
           
-          %h5 Various styles
-          %code hr.dashed 
-          %hr.dashed/
-          %code hr.dotted 
-          %hr.dotted/
+          %h4 Various styles
+          %code hr.primary.dashed 
+          %hr.primary.dashed/
+          %code hr.secondary.dotted 
+          %hr.secondary.dotted/
           
-          %h5 Mix n match
-          %code hr.trust.dashed.x4
-          %hr.trust.dashed.x4/
-          %code hr.admin.dotted.x12
-          %hr.admin.x12.dotted
+          %h4 Mix n match
+          %code hr.primary.dashed.x4
+          %hr.primary.dashed.x4/
+          %code hr.secondary.dotted.x12
+          %hr.secondary.x12.dotted
 
           
 
@@ -72,26 +70,26 @@
           %p Dotted horizontal rules don't always behave well in varions browsers, So we have created a set of perforations that can be used as dividers instead.
 
           %p
-            %code .perf.trust
-            .perf.grey
-          %h5 Various weights
+            %code .perf.primary
+            .perf.primary
+          %h4 Various weights
           %p
             %code .perf.x2
-            .perf.grey.x2
+            .perf.x2
           %p
             %code .perf.x4
-            .perf.grey.x4
+            .perf.x4
           %p
             %code .perf.x8
-            .perf.grey.x8
+            .perf.x8
           %p
             %code .perf.x12
-            .perf.grey.x12
+            .perf.x12
           %p
             %code .perf.x16
-            .perf.grey.x16
+            .perf.x16
 
-          %h5 Various colours
+          %h4 Various colours
           %p
             %code .perf.black
             .perf.black.x8 
@@ -100,9 +98,7 @@
             .perf.grey.x8           
           %p
             %code .perf.primary
-            .perf.a.x8
-            %code .perf.trust
-            .perf.trust.x8
+            .perf.primary.a.x8
           %p
             %code .perf.secondary
             .perf.secondary.x8
@@ -182,6 +178,7 @@
             %code .perf
             %br/
             %code .form-group
+
 
 
     / Scripts ================================
