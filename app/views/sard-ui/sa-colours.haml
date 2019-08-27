@@ -483,8 +483,16 @@
             %code .theme-admin
             \. 
             %br/
-            The Trust colours should change, while the User and Admin colours remain the same.
+            The Trust colours should change to match the User or Admin colours respectively.
           
+          %p
+            The Trust colours can be changed globally by amending 
+            %code $trust-primary-colour 
+            and 
+            %code $trust-secondary-colour 
+            in the 
+            %span.bold sa-colours.scss 
+            file.
           %h3 Trust Colours
         .col-sm-6
           .card.mb-3
@@ -492,7 +500,7 @@
             .card-body.bg-trust
               %h5.card-title.base.text-white 
                 %span.h2.base 
-                  Primary - Trust colour
+                  Primary colour
             .card-footer.bg-trust-light.text-white 
               Light
   
@@ -502,17 +510,17 @@
             .card-body.bg-trust-2
               %h5.card-title.base.text-white 
                 %span.h2.base 
-                  Secondary - Trust colour
+                  Secondary colour
             .card-footer.bg-trust-2-light.text-white 
               Light
         .col-sm-6
-          %h5.text-trust-dark  Primary - Trust Colour (Dark)
-          %h4.text-trust  Primary - Trust Colour
-          %h5.text-trust-light  Primary - Trust Colour (Light)
+          %h5.text-trust-dark  Primary Colour (Dark)
+          %h4.text-trust  Primary Colour
+          %h5.text-trust-light  Primary Colour (Light)
         .col-sm-6
-          %h5.text-trust-2-dark  Secondary - Trust Colour (Dark)
-          %h4.text-trust-2  Secondary - Trust Colour
-          %h5.text-trust-2-light  Secondary - Trust Colour (Light)
+          %h5.text-trust-2-dark  Secondary Colour (Dark)
+          %h4.text-trust-2  Secondary Colour
+          %h5.text-trust-2-light  Secondary Colour (Light)
 
         
         .col-12
@@ -579,6 +587,7 @@
           %h5.text-trust-admin-2-dark  Admin-2 Colour (Dark)
           %h4.text-trust-admin-2  Admin-2 Colour
           %h5.text-trust-admin-2-light  Admin-2 Colour (Light)
+
 
 
     / Scripts ================================
