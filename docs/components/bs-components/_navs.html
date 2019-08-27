@@ -176,7 +176,7 @@ Fusce porta semper tortor, non luctus lorem porttitor vitae. Donec sollicitudin 
 <hr>
 <div class='row'>
 <div class='col-sm-12'>
-<h4>Nav alignment variations</h4>
+<h3>Nav alignment variations</h3>
 <p>
 Information about the various alignment styles can be be found at:
 <a class='link-external' href='https://getbootstrap.com/docs/4.3/components/navs/#available-styles' target='_blank'>Bootstrap Nav Styles</a>
@@ -311,17 +311,32 @@ Vestibulum quis odio vestibulum, aliquet nisl ut, dapibus nunc. Pellentesque vol
 <hr>
 <div class='row'>
 <div class='col-sm-12'>
-<h4>SARD Nav Colouring</h4>
-<p>The default navs, nav pills and vertical nav pills are set to the Default SARD Colours but to change their colouring dependent on the trust theme, then use one of the following.</p>
+<h3>SARD Nav Colouring</h3>
+<p>The default navs, nav pills and vertical nav pills are set to the Default SARD Grey but to change their colouring dependent on the trust theme, then use one of the following.</p>
 </div>
 <div class='col-sm-12'>
-<h4>Nav Pils Trust</h4>
+<h4>Nav Pils Primary</h4>
 <p>
 Add
-<code>.nav-trust</code>
+<code>.nav-primary</code>
 .
 </p>
-<ul class='nav nav-pills nav-trust mb-3' id='pills-tab' role='tablist'>
+<ul class='nav nav-tabs nav-primary mb-3' id='nav-tab' role='tablist'>
+<li class='nav-item'>
+<a aria-controls='nav-tabs-home' aria-selected='true' class='nav-link active' data-toggle='pill' href='#nav-tabs-home' id='tabs-home-tab' role='tab'>Home</a>
+</li>
+<li class='nav-item'>
+<a aria-controls='nav-tabs-profile' aria-selected='false' class='nav-link' data-toggle='pill' href='#nav-tabs-profile' id='nav-tabs-profile-tab' role='tab'>Profile</a>
+</li>
+<li class='nav-item'>
+<a aria-controls='nav-tabs-contact' aria-selected='false' class='nav-link' data-toggle='pill' href='#nav-tabs-contact' id='nav-tabs-contact-tab' role='tab'>Contact</a>
+</li>
+<li class='nav-item'>
+<a aria-disabled='true' class='nav-link disabled' href='#/' tabindex='-1'>Disabled</a>
+</li>
+</ul>
+<br>
+<ul class='nav nav-pills nav-primary mb-3' id='pills-tab' role='tablist'>
 <li class='nav-item'>
 <a aria-controls='pills-home' aria-selected='true' class='nav-link active' data-toggle='pill' href='#pills-home' id='pills-home-tab' role='tab'>Home</a>
 </li>
@@ -332,15 +347,70 @@ Add
 <a aria-controls='pills-contact' aria-selected='false' class='nav-link' data-toggle='pill' href='#pills-contact' id='pills-contact-tab' role='tab'>Contact</a>
 </li>
 </ul>
+</div>
+<div class='col-sm-12 mt-3'>
+<div class='row'>
+<div class='col-3'>
+<div aria-orientation='vertical' class='nav flex-column nav-pills nav-primary' id='v-pills-tab' role='tablist'>
+<a aria-controls='v-pills-home' aria-selected='true' class='nav-link active' data-toggle='pill' href='#v-pills-home-primary' id='v-pills-home-tab' role='tab'>Home</a>
+<a aria-controls='v-pills-profile' aria-selected='false' class='nav-link' data-toggle='pill' href='#v-pills-profile-primary' id='v-pills-profile-tab' role='tab'>Profile</a>
+<a aria-controls='v-pills-messages' aria-selected='false' class='nav-link' data-toggle='pill' href='#v-pills-messages-primary' id='v-pills-messages-tab' role='tab'>Messages</a>
+<a aria-controls='v-pills-settings' aria-selected='false' class='nav-link' data-toggle='pill' href='#v-pills-settings-primary' id='v-pills-settings-tab' role='tab'>Settings</a>
+</div>
+</div>
+<div class='col-9'>
+<div class='tab-content' id='v-pills-tabContent'>
+<div aria-labelledby='v-pills-home-tab' class='tab-pane fade show active' id='v-pills-home-primary' role='tabpanel'>
+<h6 class='base'>Vertical Pil Home</h6>
+<p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed tortor id eros pulvinar iaculis posuere sit amet nulla. Aenean malesuada lacus id libero rutrum, eu elementum mauris ultrices. Cras vel imperdiet ante. Sed eget nisi ante. Aenean dapibus arcu vel ex molestie convallis sit amet vel sem. Vivamus vitae magna non dolor pulvinar mollis. Suspendisse lacinia tortor sed cursus finibus. Aenean tellus turpis, accumsan a egestas ac, faucibus eget lorem. Duis odio diam, iaculis eget est sed, tincidunt malesuada arcu. Nulla facilisi. Donec porttitor, diam quis feugiat vestibulum, leo eros malesuada arcu, id congue magna diam molestie est. In eget accumsan justo. Aliquam id sapien porta, tempor est sit amet, varius lectus. Vestibulum maximus consequat quam, a mollis ante finibus vel.
+</p>
+</div>
+<div aria-labelledby='v-pills-profile-tab' class='tab-pane fade' id='v-pills-profile-primary' role='tabpanel'>
+<h6 class='base'>Vertical Pil Profile</h6>
+<p>
+Vivamus mattis nunc a quam ultricies, vitae posuere elit malesuada. Aliquam erat volutpat. In mauris nulla, molestie ac fermentum et, pellentesque non lacus. Fusce lacinia felis at venenatis efficitur. Sed facilisis metus sit amet urna pretium efficitur. Aenean eros orci, rhoncus quis suscipit a, fringilla sed ipsum. Nunc nec odio euismod, convallis nunc sed, sollicitudin lacus. Vestibulum vulputate ante nunc, vel ultricies lorem consectetur in. Duis dignissim suscipit massa sed blandit. Aenean a fringilla neque. Pellentesque suscipit quis diam at posuere. Vivamus ac orci rutrum, lacinia nulla eget, pellentesque libero. Pellentesque et dapibus ligula. Donec egestas rhoncus risus, elementum fringilla odio interdum sit amet. Fusce sollicitudin dolor eget enim eleifend fringilla.
+</p>
+</div>
+<div aria-labelledby='v-pills-messages-tab' class='tab-pane fade' id='v-pills-messages-primary' role='tabpanel'>
+<h6 class='base'>Vertical Pil Messages</h6>
+<p>
+Vestibulum quis odio vestibulum, aliquet nisl ut, dapibus nunc. Pellentesque volutpat et nisi mattis tempor. Suspendisse faucibus sit amet ipsum vitae molestie. Aenean ut massa sem. Phasellus et condimentum elit. Pellentesque sit amet feugiat leo. Ut aliquam eget erat vel posuere. Vivamus at tincidunt augue, ac maximus mi.
+</p>
+</div>
+<div aria-labelledby='v-pills-settings-tab' class='tab-pane fade' id='v-pills-settings-primary' role='tabpanel'>
+<h6 class='base'>Vertical Pil Settings</h6>
+<p>
+Fusce porta semper tortor, non luctus lorem porttitor vitae. Donec sollicitudin turpis ut sem egestas auctor eu sed leo. Cras lacinia elit ut nibh rhoncus vestibulum vel id leo. Aliquam porta, massa quis viverra fringilla, est eros sodales sem, quis laoreet risus purus in arcu. Ut quis est vestibulum, ultrices nisl ut, hendrerit mi. Ut hendrerit ac elit molestie cursus. Vivamus vel metus sed lacus dictum maximus ac et lacus. Morbi libero erat, porttitor non nibh sit amet, faucibus sodales justo. Vestibulum ut risus pellentesque, semper lorem id, sagittis sem. Cras aliquet risus at ex euismod facilisis. Vestibulum vulputate, orci quis blandit pellentesque, tortor turpis finibus risus, in lobortis risus dolor vel dui. Phasellus finibus et urna vitae tincidunt. Vivamus euismod augue urna.
+</p>
+</div>
+</div>
+</div>
+</div>
 <div class='col-sm-12'></div>
 <hr>
-<h4>Nav Pils Admin</h4>
+<h4>Nav Pils Secondary</h4>
 <p>
 Add
-<code>.nav-admin</code>
+<code>.nav-secondary</code>
 .
 </p>
-<ul class='nav nav-pills nav-admin mb-3' id='pills-tab' role='tablist'>
+<ul class='nav nav-tabs nav-secondary mb-3' id='nav-tab' role='tablist'>
+<li class='nav-item'>
+<a aria-controls='nav-tabs-home' aria-selected='true' class='nav-link active' data-toggle='pill' href='#nav-tabs-home' id='tabs-home-tab' role='tab'>Home</a>
+</li>
+<li class='nav-item'>
+<a aria-controls='nav-tabs-profile' aria-selected='false' class='nav-link' data-toggle='pill' href='#nav-tabs-profile' id='nav-tabs-profile-tab' role='tab'>Profile</a>
+</li>
+<li class='nav-item'>
+<a aria-controls='nav-tabs-contact' aria-selected='false' class='nav-link' data-toggle='pill' href='#nav-tabs-contact' id='nav-tabs-contact-tab' role='tab'>Contact</a>
+</li>
+<li class='nav-item'>
+<a aria-disabled='true' class='nav-link disabled' href='#/' tabindex='-1'>Disabled</a>
+</li>
+</ul>
+<br>
+<ul class='nav nav-pills nav-secondary mb-3' id='pills-tab' role='tablist'>
 <li class='nav-item'>
 <a aria-controls='pills-home' aria-selected='true' class='nav-link active' data-toggle='pill' href='#pills-home' id='pills-home-tab' role='tab'>Home</a>
 </li>
@@ -351,5 +421,45 @@ Add
 <a aria-controls='pills-contact' aria-selected='false' class='nav-link' data-toggle='pill' href='#pills-contact' id='pills-contact-tab' role='tab'>Contact</a>
 </li>
 </ul>
+</div>
+<div class='col-sm-12 mt-3'>
+<div class='row'>
+<div class='col-3'>
+<div aria-orientation='vertical' class='nav flex-column nav-pills nav-secondary' id='v-pills-tab' role='tablist'>
+<a aria-controls='v-pills-home' aria-selected='true' class='nav-link active' data-toggle='pill' href='#v-pills-home-secondary' id='v-pills-home-tab' role='tab'>Home</a>
+<a aria-controls='v-pills-profile' aria-selected='false' class='nav-link' data-toggle='pill' href='#v-pills-profile-secondary' id='v-pills-profile-tab' role='tab'>Profile</a>
+<a aria-controls='v-pills-messages' aria-selected='false' class='nav-link' data-toggle='pill' href='#v-pills-messages-secondary' id='v-pills-messages-tab' role='tab'>Messages</a>
+<a aria-controls='v-pills-settings' aria-selected='false' class='nav-link' data-toggle='pill' href='#v-pills-settings-secondary' id='v-pills-settings-tab' role='tab'>Settings</a>
+</div>
+</div>
+<div class='col-9'>
+<div class='tab-content' id='v-pills-tabContent'>
+<div aria-labelledby='v-pills-home-tab' class='tab-pane fade show active' id='v-pills-home-secondary' role='tabpanel'>
+<h6 class='base'>Vertical Pil Home</h6>
+<p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed tortor id eros pulvinar iaculis posuere sit amet nulla. Aenean malesuada lacus id libero rutrum, eu elementum mauris ultrices. Cras vel imperdiet ante. Sed eget nisi ante. Aenean dapibus arcu vel ex molestie convallis sit amet vel sem. Vivamus vitae magna non dolor pulvinar mollis. Suspendisse lacinia tortor sed cursus finibus. Aenean tellus turpis, accumsan a egestas ac, faucibus eget lorem. Duis odio diam, iaculis eget est sed, tincidunt malesuada arcu. Nulla facilisi. Donec porttitor, diam quis feugiat vestibulum, leo eros malesuada arcu, id congue magna diam molestie est. In eget accumsan justo. Aliquam id sapien porta, tempor est sit amet, varius lectus. Vestibulum maximus consequat quam, a mollis ante finibus vel.
+</p>
+</div>
+<div aria-labelledby='v-pills-profile-tab' class='tab-pane fade' id='v-pills-profile-secondary' role='tabpanel'>
+<h6 class='base'>Vertical Pil Profile</h6>
+<p>
+Vivamus mattis nunc a quam ultricies, vitae posuere elit malesuada. Aliquam erat volutpat. In mauris nulla, molestie ac fermentum et, pellentesque non lacus. Fusce lacinia felis at venenatis efficitur. Sed facilisis metus sit amet urna pretium efficitur. Aenean eros orci, rhoncus quis suscipit a, fringilla sed ipsum. Nunc nec odio euismod, convallis nunc sed, sollicitudin lacus. Vestibulum vulputate ante nunc, vel ultricies lorem consectetur in. Duis dignissim suscipit massa sed blandit. Aenean a fringilla neque. Pellentesque suscipit quis diam at posuere. Vivamus ac orci rutrum, lacinia nulla eget, pellentesque libero. Pellentesque et dapibus ligula. Donec egestas rhoncus risus, elementum fringilla odio interdum sit amet. Fusce sollicitudin dolor eget enim eleifend fringilla.
+</p>
+</div>
+<div aria-labelledby='v-pills-messages-tab' class='tab-pane fade' id='v-pills-messages-secondary' role='tabpanel'>
+<h6 class='base'>Vertical Pil Messages</h6>
+<p>
+Vestibulum quis odio vestibulum, aliquet nisl ut, dapibus nunc. Pellentesque volutpat et nisi mattis tempor. Suspendisse faucibus sit amet ipsum vitae molestie. Aenean ut massa sem. Phasellus et condimentum elit. Pellentesque sit amet feugiat leo. Ut aliquam eget erat vel posuere. Vivamus at tincidunt augue, ac maximus mi.
+</p>
+</div>
+<div aria-labelledby='v-pills-settings-tab' class='tab-pane fade' id='v-pills-settings-secondary' role='tabpanel'>
+<h6 class='base'>Vertical Pil Settings</h6>
+<p>
+Fusce porta semper tortor, non luctus lorem porttitor vitae. Donec sollicitudin turpis ut sem egestas auctor eu sed leo. Cras lacinia elit ut nibh rhoncus vestibulum vel id leo. Aliquam porta, massa quis viverra fringilla, est eros sodales sem, quis laoreet risus purus in arcu. Ut quis est vestibulum, ultrices nisl ut, hendrerit mi. Ut hendrerit ac elit molestie cursus. Vivamus vel metus sed lacus dictum maximus ac et lacus. Morbi libero erat, porttitor non nibh sit amet, faucibus sodales justo. Vestibulum ut risus pellentesque, semper lorem id, sagittis sem. Cras aliquet risus at ex euismod facilisis. Vestibulum vulputate, orci quis blandit pellentesque, tortor turpis finibus risus, in lobortis risus dolor vel dui. Phasellus finibus et urna vitae tincidunt. Vivamus euismod augue urna.
+</p>
+</div>
+</div>
+</div>
+</div>
 </div>
 </div>
