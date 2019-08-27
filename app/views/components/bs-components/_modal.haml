@@ -191,19 +191,71 @@
 %hr/
 .row
   .col-sm-12
-    %h2 SARD Modals
+    %h3 Modal colours
     %p This is a selction of SARD specific modals.
 
     / Button trigger modal
-    %button.btn.btn-info{"data-target" => "#modalInfo", "data-toggle" => "modal", :type => "button"}
-      Modal Info
+    %button.btn.btn-default{"data-target" => "#modalDefault", "data-toggle" => "modal", :type => "button"}
+      Modal Default
     / Modal
-    #modalInfo.modal.modal-info.fade{"aria-hidden" => "true", "aria-labelledby" => "modalInfoTitle", :role => "dialog", :tabindex => "-1"}
+    #modalDefault.modal.modal-default.fade{"aria-hidden" => "true", "aria-labelledby" => "modalDefaultTitle", :role => "dialog", :tabindex => "-1"}
       .modal-dialog.modal-dialog-scrollable{:role => "document"}
         .modal-content
           .modal-header
-            %h5#modalInfoTitle.modal-title 
-              Modal Info
+            %h5#modalDefaultTitle.modal-title 
+              Modal Default
+            %button.close{"aria-label" => "Close", "data-dismiss" => "modal", :type => "button"}
+              %span{"aria-hidden" => "true"} ×
+          .modal-body
+            %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit massa eget mi maximus, sed faucibus nisi consequat. Donec placerat mauris eu malesuada consectetur. Pellentesque egestas gravida dolor, eget aliquet dui consectetur ut. Phasellus sollicitudin diam vitae purus commodo, vel commodo leo elementum.
+            %hr/
+            %ul
+              %li List Item One
+              %li List Item Two. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit massa eget mi maximus
+              %li List Item Three
+            %hr/
+            %h6.base ul.no-bullet
+            %ul.no-bullet
+              %li List Item One
+              %li List Item Two. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit massa eget mi maximus
+              %li List Item Three
+            %hr/
+            %h1.base H1 Header
+            %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit massa eget mi maximus.
+            %h2.base H2 Header
+            %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit massa eget mi maximus.
+            %h3.base H3 Header
+            %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit massa eget mi maximus.
+            %h4.base H4 Header
+            %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit massa eget mi maximus.
+            %h5.base H5 Header
+            %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit massa eget mi maximus.
+            %h6.base H6 Header
+            %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit massa eget mi maximus. 
+            %hr/
+            %p
+              This is an example of a standard
+              %a{href: "#/"} Text Link
+            %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit massa eget mi maximus, sed faucibus nisi consequat. Donec placerat mauris eu malesuada consectetur. Pellentesque egestas gravida dolor, eget aliquet dui consectetur ut. Phasellus sollicitudin diam vitae purus commodo, vel commodo leo elementum.
+            %hr/
+            %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit massa eget mi maximus, sed faucibus nisi consequat. Donec placerat mauris eu malesuada consectetur. Pellentesque egestas gravida dolor, eget aliquet dui consectetur ut. Phasellus sollicitudin diam vitae purus commodo, vel commodo leo elementum.
+
+          .modal-footer
+            %button.btn.btn-sm.btn-info{:type => "button"} btn info
+            %button.btn.btn-sm.btn-danger{"data-dismiss" => "modal", :type => "button"} Close
+            %button.btn.btn-sm.btn-save{:type => "button"} Save changes
+
+
+    / Button trigger modal
+    %button.btn.btn-primary{"data-target" => "#modalPrimary", "data-toggle" => "modal", :type => "button"}
+      Modal Primary
+    / Modal
+    #modalPrimary.modal.modal-primary.fade{"aria-hidden" => "true", "aria-labelledby" => "modalPrimaryTitle", :role => "dialog", :tabindex => "-1"}
+      .modal-dialog.modal-dialog-scrollable{:role => "document"}
+        .modal-content
+          .modal-header
+            %h5#modalPrimaryTitle.modal-title 
+              Modal Primary
             %button.close{"aria-label" => "Close", "data-dismiss" => "modal", :type => "button"}
               %span{"aria-hidden" => "true"} ×
           .modal-body
@@ -246,15 +298,67 @@
             %button.btn.btn-sm.btn-save{:type => "button"} Save changes
 
     / Button trigger modal
-    %button.btn.btn-primary{"data-target" => "#modalSard", "data-toggle" => "modal", :type => "button"}
-      Modal Sard
+    %button.btn.btn-secondary{"data-target" => "#modalSecondary", "data-toggle" => "modal", :type => "button"}
+      Modal Secondary
     / Modal
-    #modalSard.modal.modal-sard.fade{"aria-hidden" => "true", "aria-labelledby" => "modalSardTitle", :role => "dialog", :tabindex => "-1"}
+    #modalSecondary.modal.modal-secondary.fade{"aria-hidden" => "true", "aria-labelledby" => "modalSecondaryTitle", :role => "dialog", :tabindex => "-1"}
       .modal-dialog.modal-dialog-scrollable{:role => "document"}
         .modal-content
           .modal-header
-            %h5#modalSardTitle.modal-title 
-              Modal Sard
+            %h5#modalSecondaryTitle.modal-title 
+              Modal Secondary
+            %button.close{"aria-label" => "Close", "data-dismiss" => "modal", :type => "button"}
+              %span{"aria-hidden" => "true"} ×
+          .modal-body
+            %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit massa eget mi maximus, sed faucibus nisi consequat. Donec placerat mauris eu malesuada consectetur. Pellentesque egestas gravida dolor, eget aliquet dui consectetur ut. Phasellus sollicitudin diam vitae purus commodo, vel commodo leo elementum.
+            %hr/
+            %ul
+              %li List Item One
+              %li List Item Two. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit massa eget mi maximus
+              %li List Item Three
+            %hr/
+            %h6.base ul.no-bullet
+            %ul.no-bullet
+              %li List Item One
+              %li List Item Two. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit massa eget mi maximus
+              %li List Item Three
+            %hr/
+            %h1.base H1 Header
+            %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit massa eget mi maximus.
+            %h2.base H2 Header
+            %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit massa eget mi maximus.
+            %h3.base H3 Header
+            %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit massa eget mi maximus.
+            %h4.base H4 Header
+            %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit massa eget mi maximus.
+            %h5.base H5 Header
+            %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit massa eget mi maximus.
+            %h6.base H6 Header
+            %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit massa eget mi maximus. 
+            %hr/
+            %p
+              This is an example of a standard
+              %a{href: "#/"} Text Link
+            %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit massa eget mi maximus, sed faucibus nisi consequat. Donec placerat mauris eu malesuada consectetur. Pellentesque egestas gravida dolor, eget aliquet dui consectetur ut. Phasellus sollicitudin diam vitae purus commodo, vel commodo leo elementum.
+            %hr/
+            %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit massa eget mi maximus, sed faucibus nisi consequat. Donec placerat mauris eu malesuada consectetur. Pellentesque egestas gravida dolor, eget aliquet dui consectetur ut. Phasellus sollicitudin diam vitae purus commodo, vel commodo leo elementum.
+
+          .modal-footer
+            %button.btn.btn-sm.btn-info{:type => "button"} btn info
+            %button.btn.btn-sm.btn-danger{"data-dismiss" => "modal", :type => "button"} Close
+            %button.btn.btn-sm.btn-save{:type => "button"} Save changes
+
+
+    / Button trigger modal
+    %button.btn.btn-info{"data-target" => "#modalInfo", "data-toggle" => "modal", :type => "button"}
+      Modal Info
+    / Modal
+    #modalInfo.modal.modal-info.fade{"aria-hidden" => "true", "aria-labelledby" => "modalInfoTitle", :role => "dialog", :tabindex => "-1"}
+      .modal-dialog.modal-dialog-scrollable{:role => "document"}
+        .modal-content
+          .modal-header
+            %h5#modalInfoTitle.modal-title 
+              Modal Info
             %button.close{"aria-label" => "Close", "data-dismiss" => "modal", :type => "button"}
               %span{"aria-hidden" => "true"} ×
           .modal-body
@@ -435,7 +539,7 @@
 %hr/
 .row
   .col-sm-12
-    %h2 Modals in Cards, Panels and Fieldsets
+    %h3 Modals in Cards, Panels and Fieldsets
   
   .col-sm-4
     .card.card-sard
