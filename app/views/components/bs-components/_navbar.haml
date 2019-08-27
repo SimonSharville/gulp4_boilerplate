@@ -2,133 +2,16 @@
   .col-sm-12
     %h1#navbar-anchor.bs-anchor Navbar
 
-  .col-sm-12
-    %h4 Bootstrap Colour Variations
-    %h5 Light / Light (Default)
-  .col-sm-12
-    %nav.navbar.navbar-expand-lg.navbar-light.bg-light
-      %a.navbar-brand{:href => "#/"} Navbar
-      %button.navbar-toggler{"aria-controls" => "navbarLight", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbarLight", "data-toggle" => "collapse", :type => "button"}
-        %span.navbar-toggler-icon
-      #navbarLight.collapse.navbar-collapse
-        %ul.navbar-nav.mr-auto
-          %li.nav-item.active
-            %a.nav-link{:href => "#/"}
-              Home
-              %span.sr-only (current)
-          %li.nav-item
-            %a.nav-link{:href => "#/"} Link
-          %li.nav-item.dropdown
-            %a#navbarDropdownMenuLink.nav-link.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "http://example.com"}
-              Dropdowns
-            %ul.dropdown-menu{"aria-labelledby" => "navbarDropdownMenuLink"}
-              %li
-                %a.dropdown-item{:href => "#/"} Action
-              %li
-                %a.dropdown-item{:href => "#/"} Another action
-              .dropdown-header Dropdown Header
-              %li.dropdown-submenu
-                %a.dropdown-item.dropdown-toggle{:href => "#/"} Submenu
-                %ul.dropdown-menu
-                  %li
-                    %a.dropdown-item{:href => "#/"} Submenu action
-                  %li
-                    %a.dropdown-item{:href => "#/"} Another submenu action
-                  %li.dropdown-submenu
-                    %a.dropdown-item.dropdown-toggle{:href => "#/"} Subsubmenu
-                    %ul.dropdown-menu
-                      %li
-                        %a.dropdown-item{:href => "#/"} Subsubmenu action
-                      %li
-                        %a.dropdown-item{:href => "#/"} Another subsubmenu action
-                  %li.dropdown-submenu
-                    %a.dropdown-item.dropdown-toggle{:href => "#/"} Second subsubmenu
-                    %ul.dropdown-menu
-                      %li
-                        %a.dropdown-item{:href => "#/"} Subsubmenu action
-                      %li
-                        %a.dropdown-item{:href => "#/"} Another subsubmenu action
-                  %li
-                    %a.dropdown-item{:href => "#/"} Another action
-                %li
-                  %a.dropdown-item{:href => "#/"} Another action
-                %hr/
-                %li
-                  %a.dropdown-item{:href => "#/"} Another action
-          %li.nav-item
-            %a.nav-link.disabled{"aria-disabled" => "true", :href => "#/", :tabindex => "-1"} Disabled
-        %form.form-inline.searchbar-sard
-          %input.form-control{"aria-label" => "Search", :placeholder => "Search", :type => "search"}/
-          %button.btn.btn-search{:type => "submit", :href => "#/"} 
-
-.row
-  .col-sm-12
-    %h5.mt-3 Dark / Dark
-    %nav.navbar.navbar-expand-lg.navbar-dark
-      %a.navbar-brand{:href => "#/"} Navbar
-      %button.navbar-toggler{"aria-controls" => "navbarDark", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbarDark", "data-toggle" => "collapse", :type => "button"}
-        %span.navbar-toggler-icon
-      #navbarDark.collapse.navbar-collapse
-        %ul.navbar-nav.mr-auto
-          %li.nav-item.active
-            %a.nav-link{:href => "#/"}
-              Home
-              %span.sr-only (current)
-          %li.nav-item
-            %a.nav-link{:href => "#/"} Link
-          %li.nav-item.dropdown
-            %a#navbarDropdownMenuLink.nav-link.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "http://example.com"}
-              Dropdowns
-            %ul.dropdown-menu{"aria-labelledby" => "navbarDropdownMenuLink"}
-              %li
-                %a.dropdown-item{:href => "#/"} Action
-              %li
-                %a.dropdown-item{:href => "#/"} Another action
-              .dropdown-header Dropdown Header
-              %li.dropdown-submenu
-                %a.dropdown-item.dropdown-toggle{:href => "#/"} Submenu
-                %ul.dropdown-menu
-                  %li
-                    %a.dropdown-item{:href => "#/"} Submenu action
-                  %li
-                    %a.dropdown-item{:href => "#/"} Another submenu action
-                  %li.dropdown-submenu
-                    %a.dropdown-item.dropdown-toggle{:href => "#/"} Subsubmenu
-                    %ul.dropdown-menu
-                      %li
-                        %a.dropdown-item{:href => "#/"} Subsubmenu action
-                      %li
-                        %a.dropdown-item{:href => "#/"} Another subsubmenu action
-                  %li.dropdown-submenu
-                    %a.dropdown-item.dropdown-toggle{:href => "#/"} Second subsubmenu
-                    %ul.dropdown-menu
-                      %li
-                        %a.dropdown-item{:href => "#/"} Subsubmenu action
-                      %li
-                        %a.dropdown-item{:href => "#/"} Another subsubmenu action
-                  %li
-                    %a.dropdown-item{:href => "#/"} Another action
-                %li
-                  %a.dropdown-item{:href => "#/"} Another action
-                %hr/
-                %li
-                  %a.dropdown-item{:href => "#/"} Another action
-          %li.nav-item
-            %a.nav-link.disabled{"aria-disabled" => "true", :href => "#/", :tabindex => "-1"} Disabled
-        %form.form-inline.searchbar-sard
-          %input.form-control{"aria-label" => "Search", :placeholder => "Search", :type => "search"}/
-          %button.btn.btn-search{:type => "submit", :href => "#/"} 
-%hr/
 .row 
   .col-sm-12
-    %h2 SARD Navbar colours
+    %h2 SARD Navbars
   .col-sm-12
-    %h4 Navbar SARD 
+    %h4 Navbar Primary 
     %p
       This is the default navbar used in SARD and changes colour with the trust.
-      %code nav.navbar.navbar-expand-lg.navbar-sard
+      %code nav.navbar.navbar-expand-lg.navbar-primary
   .col-sm-12
-    %nav.navbar.navbar-expand-lg.navbar-sard.mb-3
+    %nav.navbar.navbar-expand-lg.navbar-primary.mb-3
       %a.navbar-brand{:href => "#/"} Navbar
       %button.navbar-toggler{"aria-controls" => "navbarSard", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbarSard", "data-toggle" => "collapse", :type => "button"}
         %span.navbar-toggler-icon
