@@ -3,11 +3,11 @@
     %h1#cards-anchor.bs-anchor Cards
 
     .card.card-sard{:style => "width: 18rem;"}
-      %img.card-img-top{:alt => "...", :src => "..."}/
+      %img.card-img-top{:alt => "image placement", :src => "../assets/images/image-placement.png"}/
       .card-body
         %h5.card-title Card title
         %p.card-text Some quick example text to build on the card title and make up the bulk of the card's content.
-        %ul.list-group.list-group-flush
+        %ul.list-group
           %li.list-group-item Cras justo odio
           %li.list-group-item Dapibus ac facilisis in
           %li.list-group-item Vestibulum at eros
@@ -64,12 +64,13 @@
 %hr
 
 .row
-  .col-12
+  .col-sm-6
     %h4 Horizontal
-    .card.card-sard{:style => "max-width: 540px;"}
+    .card.card-sard
       .row.no-gutters
         .col-md-4
-          %img.card-img{:alt => "...", :src => "..."}/
+          %img.card-img{:alt => "image placement", :src => "../assets/images/image-placement.png"}/
+            
         .col-md-8
           .card-body
             %h5.card-title Card title
@@ -77,6 +78,12 @@
             %p.card-text
               %small.text-muted Last updated 3 mins ago
 
+  .col-sm-6
+    %h4 Images 
+    %p 
+      For information about placing images in cards, see: 
+      %br/
+      %a.link-external{href: "https://getbootstrap.com/docs/4.3/components/card/#images-1", target:'blank'} Bootstrap card Images
 %hr
 
 .row
