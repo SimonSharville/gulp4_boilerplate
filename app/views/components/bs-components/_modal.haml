@@ -159,6 +159,7 @@
 
     %h4 Tooltips and popovers
     %p Tooltips and popovers can be placed within modals as needed. When modals are closed, any tooltips and popovers within are also automatically dismissed.
+    %p.text-red These currently don't work for some reason.
 
     / Button trigger modal
     %button.btn.btn-default{"data-target" => "#exampleModalToolTips", "data-toggle" => "modal", :type => "button"}
@@ -175,14 +176,14 @@
             %h5 Popover in a modal
             %p
               This
-              %a.btn.btn-secondary.popover-test{"aria-describedby" => "popover166647", "data-container" => "#exampleModalPopovers", "data-content" => "Popover body content is set in this attribute.", "data-original-title" => "Popover title", :href => "#", :role => "button", :title => ""} button
+              %a.btn.btn-secondary.popover-test{"data-content" => "Popover body content is set in this attribute.", :href => "#/", :role => "button", :title => "Popover title"} button
               triggers a popover on click.
             %hr/
             %h5 Tooltips in a modal
             %p
-              %a.tooltip-test{"data-container" => "#exampleModalPopovers", "data-original-title" => "Tooltip", :href => "#", :title => ""} This link
+              %a.tooltip-test{:href => "#/", :title => "Tooltip"} This link
               and
-              %a.tooltip-test{"data-container" => "#exampleModalPopovers", "data-original-title" => "Tooltip", :href => "#", :title => ""} that link
+              %a.tooltip-test{:href => "#/", :title => "Tooltip"} that link
               have tooltips on hover.
           .modal-footer
             %button.btn.btn-sm.btn-danger{"data-dismiss" => "modal", :type => "button"} Close

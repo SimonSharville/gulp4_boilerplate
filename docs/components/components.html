@@ -3195,6 +3195,7 @@ This is a vertically centered Modal.
 <hr>
 <h4>Tooltips and popovers</h4>
 <p>Tooltips and popovers can be placed within modals as needed. When modals are closed, any tooltips and popovers within are also automatically dismissed.</p>
+<p class='text-red'>These currently don't work for some reason.</p>
 <!-- Button trigger modal -->
 <button class='btn btn-default' data-target='#exampleModalToolTips' data-toggle='modal' type='button'>
 Tooltips and popovers
@@ -3213,15 +3214,15 @@ Tooltips and popovers
 <h5>Popover in a modal</h5>
 <p>
 This
-<a aria-describedby='popover166647' class='btn btn-secondary popover-test' data-container='#exampleModalPopovers' data-content='Popover body content is set in this attribute.' data-original-title='Popover title' href='#' role='button' title=''>button</a>
+<a class='btn btn-secondary popover-test' data-content='Popover body content is set in this attribute.' href='#/' role='button' title='Popover title'>button</a>
 triggers a popover on click.
 </p>
 <hr>
 <h5>Tooltips in a modal</h5>
 <p>
-<a class='tooltip-test' data-container='#exampleModalPopovers' data-original-title='Tooltip' href='#' title=''>This link</a>
+<a class='tooltip-test' href='#/' title='Tooltip'>This link</a>
 and
-<a class='tooltip-test' data-container='#exampleModalPopovers' data-original-title='Tooltip' href='#' title=''>that link</a>
+<a class='tooltip-test' href='#/' title='Tooltip'>that link</a>
 have tooltips on hover.
 </p>
 </div>
