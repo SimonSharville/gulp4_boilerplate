@@ -526,12 +526,15 @@ Featured
 <h4>Navigation</h4>
 <div class='card card-sard text-center'>
 <div class='card-header'>
-<ul class='nav nav-tabs card-header-tabs'>
+<ul class='nav nav-tabs card-header-tabs' id='nav-tab' role='tablist'>
 <li class='nav-item'>
-<a class='nav-link active' href='#/'>Active</a>
+<a aria-controls='nav-tabs-home' aria-selected='true' class='nav-link active' data-toggle='pill' href='#nav-card-tabs-home' id='tabs-home-tab' role='tab'>Home</a>
 </li>
 <li class='nav-item'>
-<a class='nav-link' href='#/'>Link</a>
+<a aria-controls='nav-tabs-profile' aria-selected='false' class='nav-link' data-toggle='pill' href='#nav-card-tabs-profile' id='nav-tabs-profile-tab' role='tab'>Profile</a>
+</li>
+<li class='nav-item'>
+<a aria-controls='nav-tabs-contact' aria-selected='false' class='nav-link' data-toggle='pill' href='#nav-card-tabs-contact' id='nav-tabs-contact-tab' role='tab'>Contact</a>
 </li>
 <li class='nav-item'>
 <a aria-disabled='true' class='nav-link disabled' href='#/' tabindex='-1'>Disabled</a>
@@ -539,9 +542,26 @@ Featured
 </ul>
 </div>
 <div class='card-body'>
-<h5 class='card-title'>Special title treatment</h5>
-<p class='card-text'>With supporting text below as a natural lead-in to additional content.</p>
-<a class='btn btn-primary' href='#'>Go somewhere</a>
+<div class='tab-content' id='nav-tabs-tabContent'>
+<div aria-labelledby='tabs-home-tab' class='tab-pane fade show active' id='nav-card-tabs-home' role='tabpanel'>
+<h6 class='base'>Nav Tab Card Home</h6>
+<p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed tortor id eros pulvinar iaculis posuere sit amet nulla. Aenean malesuada lacus id libero rutrum, eu elementum mauris ultrices. Cras vel imperdiet ante. Sed eget nisi ante. Aenean dapibus arcu vel ex molestie convallis sit amet vel sem. Vivamus vitae magna non dolor pulvinar mollis. Suspendisse lacinia tortor sed cursus finibus. Aenean tellus turpis, accumsan a egestas ac, faucibus eget lorem. Duis odio diam, iaculis eget est sed, tincidunt malesuada arcu. Nulla facilisi. Donec porttitor, diam quis feugiat vestibulum, leo eros malesuada arcu, id congue magna diam molestie est. In eget accumsan justo. Aliquam id sapien porta, tempor est sit amet, varius lectus. Vestibulum maximus consequat quam, a mollis ante finibus vel.
+</p>
+</div>
+<div aria-labelledby='tabs-profile-tab' class='tab-pane fade' id='nav-card-tabs-profile' role='tabpanel'>
+<h6 class='base'>Nav Tab Card Profile</h6>
+<p>
+Vivamus mattis nunc a quam ultricies, vitae posuere elit malesuada. Aliquam erat volutpat. In mauris nulla, molestie ac fermentum et, pellentesque non lacus. Fusce lacinia felis at venenatis efficitur. Sed facilisis metus sit amet urna pretium efficitur. Aenean eros orci, rhoncus quis suscipit a, fringilla sed ipsum. Nunc nec odio euismod, convallis nunc sed, sollicitudin lacus. Vestibulum vulputate ante nunc, vel ultricies lorem consectetur in. Duis dignissim suscipit massa sed blandit. Aenean a fringilla neque. Pellentesque suscipit quis diam at posuere. Vivamus ac orci rutrum, lacinia nulla eget, pellentesque libero. Pellentesque et dapibus ligula. Donec egestas rhoncus risus, elementum fringilla odio interdum sit amet. Fusce sollicitudin dolor eget enim eleifend fringilla.
+</p>
+</div>
+<div aria-labelledby='tabs-contact-tab' class='tab-pane fade' id='nav-card-tabs-contact' role='tabpanel'>
+<h6 class='base'>Nav Tab Card Contact</h6>
+<p>
+Vestibulum quis odio vestibulum, aliquet nisl ut, dapibus nunc. Pellentesque volutpat et nisi mattis tempor. Suspendisse faucibus sit amet ipsum vitae molestie. Aenean ut massa sem. Phasellus et condimentum elit. Pellentesque sit amet feugiat leo. Ut aliquam eget erat vel posuere. Vivamus at tincidunt augue, ac maximus mi.
+</p>
+</div>
+</div>
 </div>
 </div>
 </div>
