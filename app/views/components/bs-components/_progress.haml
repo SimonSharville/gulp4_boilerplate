@@ -16,13 +16,13 @@
 
     %hr
 
-    %h4 Labels
+    %h3 Labels
     .progress
       .progress-bar{"aria-valuemax" => "100", "aria-valuemin" => "0", "aria-valuenow" => "25", :role => "progressbar", :style => "width: 25%;"} 25%
 
     %hr
 
-    %h4 Height
+    %h3 Height
     .progress.mb-3{:style => "height: 1px;"}
       .progress-bar{"aria-valuemax" => "100", "aria-valuemin" => "0", "aria-valuenow" => "25", :role => "progressbar", :style => "width: 25%;"}
     .progress.mb-3{:style => "height: 20px;"}
@@ -30,19 +30,26 @@
 
     %hr
 
-    %h4 Backgrounds
+    %h3 Backgrounds
+    %code .progress-bar.bg-secondary
+    .progress.mb-3
+      .progress-bar.bg-secondary{"aria-valuemax" => "100", "aria-valuemin" => "0", "aria-valuenow" => "25", :role => "progressbar", :style => "width: 25%"}
+    %code .progress-bar.bg-success
     .progress.mb-3
       .progress-bar.bg-success{"aria-valuemax" => "100", "aria-valuemin" => "0", "aria-valuenow" => "25", :role => "progressbar", :style => "width: 25%"}
+    %code .progress-bar.bg-info
     .progress.mb-3
       .progress-bar.bg-info{"aria-valuemax" => "100", "aria-valuemin" => "0", "aria-valuenow" => "50", :role => "progressbar", :style => "width: 50%"}
+    %code .progress-bar.bg-warning
     .progress.mb-3
       .progress-bar.bg-warning{"aria-valuemax" => "100", "aria-valuemin" => "0", "aria-valuenow" => "75", :role => "progressbar", :style => "width: 75%"}
+    %code .progress-bar.bg-danger
     .progress.mb-3
       .progress-bar.bg-danger{"aria-valuemax" => "100", "aria-valuemin" => "0", "aria-valuenow" => "100", :role => "progressbar", :style => "width: 100%"}
 
     %hr
 
-    %h4 Multiple bars
+    %h3 Multiple bars
     .progress.mb-3
       .progress-bar{"aria-valuemax" => "100", "aria-valuemin" => "0", "aria-valuenow" => "15", :role => "progressbar", :style => "width: 15%"}
       .progress-bar.bg-success{"aria-valuemax" => "100", "aria-valuemin" => "0", "aria-valuenow" => "30", :role => "progressbar", :style => "width: 30%"}
@@ -50,7 +57,7 @@
 
     %hr
 
-    %h4 Striped
+    %h3 Striped
     .progress.mb-3
       .progress-bar.progress-bar-striped{"aria-valuemax" => "100", "aria-valuemin" => "0", "aria-valuenow" => "10", :role => "progressbar", :style => "width: 10%"}
     .progress.mb-3
@@ -64,6 +71,6 @@
 
     %hr
 
-    %h4 Animated stripes
+    %h3 Animated stripes
     .progress.mb-3
       .progress-bar.progress-bar-striped.progress-bar-animated{"aria-valuemax" => "100", "aria-valuemin" => "0", "aria-valuenow" => "75", :role => "progressbar", :style => "width: 75%"}
