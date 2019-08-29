@@ -2,8 +2,9 @@
   .col-sm-12.mb-3
     %h1#searchbars-anchor.bs-anchor Searchbars
 
-    %h4 Standard Searchbar
-    %form.form-inline.input-group.searchbar-sard
+    %h3 Standard Bootstrap Searchbars
+    %code %form.form-inline.input-group
+    %form.form-inline.input-group
       %input.form-control{"aria-label" => "Search", :placeholder => "Search", :type => "search"}/
       .input-group-append
         %button.btn.btn-success{:type => "submit"} Search
@@ -19,3 +20,29 @@
       %input.form-control{"aria-describedby" => "basic-addon2", "aria-label" => "Recipient's username", :placeholder => "Recipient's username", :type => "text"}/
       .input-group-append
         %span#basic-addon2.input-group-text @example.com
+
+%hr/
+
+.row
+  .col-sm-12
+    %h3 SARD Searchbars 
+    %h5.base SARD Searchbar Primary  
+    %code %form.form-inline.searchbar-sard.searchbar-primary
+    %form.form-inline.searchbar-sard.searchbar-primary.mb-3
+      %input.form-control{"aria-label" => "Search", :placeholder => "Search", :type => "search"}/
+      %button.btn.btn-search{:type => "submit"}/
+  .col-sm-12
+    %h5.base SARD Searchbar Secondary
+    %code %form.form-inline.searchbar-sard.searchbar-secondary
+    %form.form-inline.searchbar-sard.searchbar-secondary
+      %input.form-control{"aria-label" => "Search", :placeholder => "Search", :type => "search"}/
+      %button.btn.btn-search{:type => "submit"}/
+  .col-sm-12
+    %p When using in a navbar you don't need to add either the primary or secondary classes.
+
+%hr/
+.row
+  .col-sm-12  
+    %h3 Searchbar with results 
+  .col-sm-12
+    %h1.text-red NOT COMPLETE
