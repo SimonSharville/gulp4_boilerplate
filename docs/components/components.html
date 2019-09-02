@@ -306,6 +306,7 @@ and
 <div class='col-sm-12'>
 <h1 class='bs-anchor' id='buttons-anchor'>Buttons</h1>
 <p>Primary and Secondary buttons will change colour depending on the theme class added to the body tag.</p>
+<div class='buttons-grouped'>
 <button class='btn btn-primary' type='button'>Primary</button>
 <button class='btn btn-secondary' type='button'>Secondary</button>
 <button class='btn btn-success' type='button'>Success</button>
@@ -316,6 +317,7 @@ and
 <button class='btn btn-dark' type='button'>Dark</button>
 <button class='btn btn-default' type='button'>Default</button>
 <button class='btn btn-link' type='button'>Link</button>
+</div>
 <hr>
 <button class='btn btn-outline-primary' type='button'>Primary</button>
 <button class='btn btn-outline-secondary' type='button'>Secondary</button>
@@ -326,6 +328,15 @@ and
 <button class='btn btn-outline-light' type='button'>Light</button>
 <button class='btn btn-outline-dark' type='button'>Dark</button>
 <button class='btn btn-outline-default' type='button'>Default</button>
+<p class='note'>
+<br>
+If you are finding large groups of buttons are touching at smal sizes, you can either wrap them in a div with the calss of
+<code>.buttons-grouped</code>
+or give each one a margin bottom by adding
+<code>.mb-2</code>
+to each button.
+</p>
+<p>Don't confuse this with .btn-group, which joins all the buttons together.</p>
 <hr>
 <h4>Button sizes</h4>
 <button class='btn btn-primary btn-lg' type='button'>Large button</button>
@@ -424,6 +435,19 @@ Radio
 <button class='btn btn-primary' type='button'>Left</button>
 <button class='btn btn-primary' type='button'>Middle</button>
 <button class='btn btn-primary' type='button'>Right</button>
+</div>
+<hr>
+<div class='btn-group'>
+<button class='btn btn-primary' type='button'>Primary</button>
+<button class='btn btn-secondary' type='button'>Secondary</button>
+<button class='btn btn-success' type='button'>Success</button>
+<button class='btn btn-danger' type='button'>Danger</button>
+<button class='btn btn-warning' type='button'>Warning</button>
+<button class='btn btn-info' type='button'>Info</button>
+<button class='btn btn-light' type='button'>Light</button>
+<button class='btn btn-dark' type='button'>Dark</button>
+<button class='btn btn-default' type='button'>Default</button>
+<button class='btn btn-link' type='button'>Link</button>
 </div>
 <hr>
 <h4>Button toolbar</h4>

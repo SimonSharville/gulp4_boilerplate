@@ -3,16 +3,17 @@
     %h1#buttons-anchor.bs-anchor Buttons
     %p Primary and Secondary buttons will change colour depending on the theme class added to the body tag.
 
-    %button.btn.btn-primary{:type => "button"} Primary
-    %button.btn.btn-secondary{:type => "button"} Secondary
-    %button.btn.btn-success{:type => "button"} Success
-    %button.btn.btn-danger{:type => "button"} Danger
-    %button.btn.btn-warning{:type => "button"} Warning
-    %button.btn.btn-info{:type => "button"} Info
-    %button.btn.btn-light{:type => "button"} Light
-    %button.btn.btn-dark{:type => "button"} Dark
-    %button.btn.btn-default{:type => "button"} Default
-    %button.btn.btn-link{:type => "button"} Link
+    .buttons-grouped
+      %button.btn.btn-primary{:type => "button"} Primary
+      %button.btn.btn-secondary{:type => "button"} Secondary
+      %button.btn.btn-success{:type => "button"} Success
+      %button.btn.btn-danger{:type => "button"} Danger
+      %button.btn.btn-warning{:type => "button"} Warning
+      %button.btn.btn-info{:type => "button"} Info
+      %button.btn.btn-light{:type => "button"} Light
+      %button.btn.btn-dark{:type => "button"} Dark
+      %button.btn.btn-default{:type => "button"} Default
+      %button.btn.btn-link{:type => "button"} Link
     
     %hr
 
@@ -25,6 +26,15 @@
     %button.btn.btn-outline-light{:type => "button"} Light
     %button.btn.btn-outline-dark{:type => "button"} Dark
     %button.btn.btn-outline-default{:type => "button"} Default
+
+    %p.note 
+      %br/
+      If you are finding large groups of buttons are touching at smal sizes, you can either wrap them in a div with the calss of 
+      %code .buttons-grouped 
+      or give each one a margin bottom by adding 
+      %code .mb-2 
+      to each button. 
+    %p Don't confuse this with .btn-group, which joins all the buttons together.
 
     %hr/
     %h4 Button sizes
@@ -129,6 +139,19 @@
       %button.btn.btn-primary{:type => "button"} Left
       %button.btn.btn-primary{:type => "button"} Middle
       %button.btn.btn-primary{:type => "button"} Right
+
+    %hr/
+    .btn-group
+      %button.btn.btn-primary{:type => "button"} Primary
+      %button.btn.btn-secondary{:type => "button"} Secondary
+      %button.btn.btn-success{:type => "button"} Success
+      %button.btn.btn-danger{:type => "button"} Danger
+      %button.btn.btn-warning{:type => "button"} Warning
+      %button.btn.btn-info{:type => "button"} Info
+      %button.btn.btn-light{:type => "button"} Light
+      %button.btn.btn-dark{:type => "button"} Dark
+      %button.btn.btn-default{:type => "button"} Default
+      %button.btn.btn-link{:type => "button"} Link
 
     %hr
     %h4 Button toolbar
