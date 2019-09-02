@@ -1,8 +1,8 @@
 .row
   .col-sm-12
     %h1#tooltips-anchor.bs-anchor Tooltips
-
-
+  .col-sm-12.mb-3
+    %p Tooltips can be in either Buttons...
     %button.btn.btn-secondary{"data-placement" => "top", "data-toggle" => "tooltip", :title => "Tooltip on top", :type => "button"}
       Tooltip on top
     %button.btn.btn-secondary{"data-placement" => "right", "data-toggle" => "tooltip", :title => "Tooltip on right", :type => "button"}
@@ -11,3 +11,6 @@
       Tooltip on bottom
     %button.btn.btn-secondary{"data-placement" => "left", "data-toggle" => "tooltip", :title => "Tooltip on left", :type => "button"}
       Tooltip on left
+  .col-sm-12
+    %p or text links.
+    %a{href: "#/", "data-placement" => "top", "data-toggle" => "tooltip", :title => "Tooltip on top"} Text Link

@@ -176,14 +176,14 @@
             %h5 Popover in a modal
             %p
               This
-              %a.btn.btn-secondary.popover-test{"data-content" => "Popover body content is set in this attribute.", :href => "#/", :role => "button", :title => "Popover title"} button
+              %button.btn.btn-primary{"data-content" => "And here's some amazing content. It's very engaging. Right?", "data-toggle" => "popover", :title => "Popover title", :type => "button"} button
               triggers a popover on click.
             %hr/
             %h5 Tooltips in a modal
             %p
-              %a.tooltip-test{:href => "#/", :title => "Tooltip"} This link
+              %a.tooltip-test{href: "#/", "data-placement" => "top", "data-toggle" => "tooltip", :title => "Tooltip on top"} This link
               and
-              %a.tooltip-test{:href => "#/", :title => "Tooltip"} that link
+              %a.tooltip-test{href: "#/", "data-placement" => "top", "data-toggle" => "tooltip", :title => "Tooltip on top"} that link
               have tooltips on hover.
           .modal-footer
             %button.btn.btn-sm.btn-danger{"data-dismiss" => "modal", :type => "button"} Close
