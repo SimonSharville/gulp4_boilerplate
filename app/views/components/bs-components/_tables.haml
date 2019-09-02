@@ -10,8 +10,121 @@
       %br 
       Sard tables are designed to always sit withing a 
       %code.strong .panel-body 
+      , 
+      %code.strong .card-body
       or a 
-      %code.strong .card-body.
+      %code.strong .form-group
+      and look identical.
+    %h4 Basic Sard Table
+
+.row
+  .col-sm-4
+    .card.card-sard
+      .card-header
+        Card
+      .card-body
+        %table.table.table-sard
+          %caption
+            This is an example in a 
+            %strong card body
+          %thead
+            %tr
+              %th thead/tr/th
+              %th th
+              %th th
+              %th th
+          %tbody
+            %tr
+              %th tbody/tr/th
+              %td td
+              %td td
+              %td td
+            %tr
+              %th tr/th
+              %td td
+              %td td
+              %td td
+            %tr
+              %th tr/th
+              %td td
+              %td td
+              %td td
+          %caption.caption-bottom
+            This is an example of a 
+            %strong caption.caption-bottom
+  .col-sm-4
+    .panel.panel-sard
+      .panel-header
+        Panel
+      .panel-body
+        %table.table.table-sard
+          %caption
+            This is an example in a 
+            %strong panel body
+          %thead
+            %tr
+              %th thead/tr/th
+              %th th
+              %th th
+              %th th
+          %tbody
+            %tr
+              %th tbody/tr/th
+              %td td
+              %td td
+              %td td
+            %tr
+              %th tr/th
+              %td td
+              %td td
+              %td td
+            %tr
+              %th tr/th
+              %td td
+              %td td
+              %td td
+          %caption.caption-bottom
+            This is an example of a 
+            %strong caption.caption-bottom
+
+  .col-sm-4
+    %fieldset
+      %legend
+        Fieldset
+      .form-group  
+        %table.table.table-sard
+          %caption
+            This is an example in a 
+            %strong form-group
+          %thead
+            %tr
+              %th thead/tr/th
+              %th th
+              %th th
+              %th th
+          %tbody
+            %tr
+              %th tbody/tr/th
+              %td td
+              %td td
+              %td td
+            %tr
+              %th tr/th
+              %td td
+              %td td
+              %td td
+            %tr
+              %th tr/th
+              %td td
+              %td td
+              %td td
+          %caption.caption-bottom
+            This is an example of a 
+            %strong caption.caption-bottom
+
+%hr/
+.row
+  .col-sm-12
     %h4 Basic Sard Table
     .panel.panel-sard
       .panel-heading Panel Heading
@@ -50,7 +163,7 @@
     %h4.base Basic Sard Table - small
     %p
       Add the class
-      %code.highlighter-rouge .table-sm
+      %code .table-sm
       to reduce the cell padding.
     .panel.panel-sard
       .panel-heading Panel Heading
@@ -83,7 +196,7 @@
     %h4.base Basic Sard Hoverable Table
     %p
       Add the class
-      %code.highlighter-rouge .table-hover
+      %code .table-hover
     .panel.panel-sard
       .panel-heading Panel Heading
       .panel-body     
@@ -115,7 +228,7 @@
     %h4.base Basic Sard Striped Table, with hover
     %p
       Add the class
-      %code.highlighter-rouge .table-striped
+      %code .table-striped
     .panel.panel-sard
       .panel-heading Panel Heading
       .panel-body     
@@ -147,7 +260,7 @@
     %h4.base Basic Sard Bordered Table
     %p
       Add the class
-      %code.highlighter-rouge .table-bordered
+      %code .table-bordered
     .panel.panel-sard
       .panel-heading Panel Heading
       .panel-body     
@@ -179,7 +292,7 @@
     %h4.base Inverted Sard Table
     %p
       Add the class
-      %code.highlighter-rouge .table-dark
+      %code .table-dark
     .panel.panel-sard.panel-dark
       .panel-heading Panel Heading
       .panel-body     
@@ -212,13 +325,13 @@
     %h4.base Table head options
     %p
       Use the modifier classes
-      %code.highlighter-rouge .thead-light
+      %code .thead-light
       ,
-      %code.highlighter-rouge .thead-dark
+      %code .thead-dark
       ,
-      %code.highlighter-rouge .thead-white
+      %code .thead-white
       ,
-      %code.highlighter-rouge .thead-info
+      %code .thead-info
       to make the table head appear lighter, darker or another colour.
 
     .panel.panel-sard
@@ -331,18 +444,19 @@
 %h2 Responsive tables
 %p
   Responsive tables allow tables to be scrolled horizontally with ease. Make any table responsive across all viewports by wrapping a
-  %code.highlighter-rouge .table
+  %code .table
   with
   = succeed "." do
-    %code.highlighter-rouge .table-responsive
+    %code .table-responsive
 
 .row
-  .col-sm-6
+  .col-sm-12
     %h4.base Basic Sard Responsive Table
     %p
-      Wrap in a 
-      %code.highlighter-rouge .table-responsive
-
+      Use 
+      %code .table-responsive
+      
+  .col-sm-6
     .panel.panel-sard
       .panel-heading Panel Heading
       .panel-body     
@@ -387,18 +501,18 @@
 %h4 Breakpoint specific
 %p
   Add
-  %code.highlighter-rouge .table-responsive{-sm|-md|-lg|-xl}
+  %code .table-responsive{-sm|-md|-lg|-xl}
   as needed to create responsive tables up to a particular breakpoint. From that breakpoint and up, the table will behave normally and not scroll horizontally.
 
 .row
   .col
     %h5.base Up to Small
     %p
-      %code.highlighter-rouge .table-responsive.table-responsive-sm
+      %code .table-responsive-sm
     .panel.panel-sard
       .panel-heading Panel Heading
       .panel-body
-        .table-responsive.table-responsive-sm
+        .table-responsive-sm
           %table.table.table-sard
             %thead
               %tr
@@ -432,11 +546,11 @@
                 %td Cell
     %h5.base Up to Medium
     %p
-      %code.highlighter-rouge .table-responsive.table-responsive-md
+      %code .table-responsive-md
     .panel.panel-sard
       .panel-heading Panel Heading
       .panel-body
-        .table-responsive.table-responsive-md
+        .table-responsive-md
           %table.table.table-sard
             %thead
               %tr
@@ -471,11 +585,11 @@
 
     %h5.base Up to Large
     %p
-      %code.highlighter-rouge .table-responsive.table-responsive-lg
+      %code .table-responsive-lg
     .panel.panel-sard
       .panel-heading Panel Heading
       .panel-body
-        .table-responsive.table-responsive-lg
+        .table-responsive-lg
           %table.table.table-sard
             %thead
               %tr
@@ -510,11 +624,11 @@
 
     %h5.base Up to Extra Large
     %p
-      %code.highlighter-rouge .table-responsive.table-responsive-xl
+      %code .table-responsive-xl
     .panel.panel-sard
       .panel-heading Panel Heading
       .panel-body
-        .table-responsive.table-responsive-xl
+        .table-responsive-xl
           %table.table.table-sard
             %thead
               %tr
