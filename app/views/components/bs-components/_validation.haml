@@ -1,0 +1,188 @@
+.row
+  .col-sm-12
+    %h1#validation-anchor.bs-anchor Validation
+    %p
+      For details information about Bootstrap's Form Validation, visit: 
+      %a.link-external{href: "https://getbootstrap.com/docs/4.3/components/forms/#validation", target: 'blank'} Validation
+  .col-sm-12
+    %h2 Bootstrap default versions 
+    %h3 Custom Styles 
+    %p Click the submit button to view the results.
+    %form.needs-validation{:novalidate => ""}
+      %fieldset.required
+        .form-group
+          .form-row
+            .col-md-4
+              %label{:for => "validationCustom01"} First name
+              %input#validationCustom01.form-control{:placeholder => "First name", :required => "", :type => "text", :value => "Mark"}/
+              .valid-feedback
+                Looks good!
+            .col-md-4
+              %label{:for => "validationCustom02"} Last name
+              %input#validationCustom02.form-control{:placeholder => "Last name", :required => "", :type => "text", :value => "Otto"}/
+              .valid-feedback
+                Looks good!
+            .col-md-4
+              %label{:for => "validationCustomUsername"} Username
+              .input-group
+                .input-group-prepend
+                  %span#inputGroupPrepend.input-group-text @
+                %input#validationCustomUsername.form-control{"aria-describedby" => "inputGroupPrepend", :placeholder => "Username", :required => "", :type => "text"}/
+                .invalid-feedback
+                  Please choose a username.
+        .form-group
+          .form-row
+            .col-md-6
+              %label{:for => "validationCustom03"} City
+              %input#validationCustom03.form-control{:placeholder => "City", :required => "", :type => "text"}/
+              .invalid-feedback
+                Please provide a valid city.
+            .col-md-3
+              %label{:for => "validationCustom04"} State
+              %input#validationCustom04.form-control{:placeholder => "State", :required => "", :type => "text"}/
+              .invalid-feedback
+                Please provide a valid state.
+            .col-md-3
+              %label{:for => "validationCustom05"} Zip
+              %input#validationCustom05.form-control{:placeholder => "Zip", :required => "", :type => "text"}/
+              .invalid-feedback
+                Please provide a valid zip.
+        .form-group
+          .form-check
+            %input#invalidCheck.form-check-input{:required => "", :type => "checkbox", :value => ""}/
+            %label.form-check-label{:for => "invalidCheck"}
+              Agree to terms and conditions
+            .invalid-feedback
+              You must agree before submitting.
+        .form-group.form-buttons
+          %button.btn.btn-submit{:type => "submit"} Submit form
+    %p 
+      At SARD we have added an asterisk after the label of any field that is required, simply add the class 
+      %code .required 
+      to any fieldset (all labels), form-group (selection) or label (individual). 
+    %p Due to CSS constraints the asterisks, won't chage colour if the field is validated or not. 
+%hr/
+.row
+  .col-sm-12
+    %h3 Browser defaults 
+    %p Not interested in custom validation feedback messages or writing JavaScript to change form behaviors? All good, you can use the browser defaults. Try submitting the form below. Depending on your browser and OS, you’ll see a slightly different style of feedback. 
+    %p While these feedback styles cannot be styled with CSS, you can still customize the feedback text through JavaScript.
+
+  .col-sm-12
+    %form
+      %fieldset
+        .form-group
+          .form-row
+            .col-md-4
+              %label{:for => "validationDefault01"} First name
+              %input#validationDefault01.form-control{:placeholder => "First name", :required => "", :type => "text", :value => "Mark"}/
+            .col-md-4
+              %label{:for => "validationDefault02"} Last name
+              %input#validationDefault02.form-control{:placeholder => "Last name", :required => "", :type => "text", :value => "Otto"}/
+            .col-md-4
+              %label{:for => "validationDefaultUsername"} Username
+              .input-group
+                .input-group-prepend
+                  %span#inputGroupPrepend2.input-group-text @
+                %input#validationDefaultUsername.form-control{"aria-describedby" => "inputGroupPrepend2", :placeholder => "Username", :required => "", :type => "text"}/
+        .form-group
+          .form-row
+            .col-md-6
+              %label{:for => "validationDefault03"} City
+              %input#validationDefault03.form-control{:placeholder => "City", :required => "", :type => "text"}/
+            .col-md-3
+              %label{:for => "validationDefault04"} State
+              %input#validationDefault04.form-control{:placeholder => "State", :required => "", :type => "text"}/
+            .col-md-3
+              %label{:for => "validationDefault05"} Zip
+              %input#validationDefault05.form-control{:placeholder => "Zip", :required => "", :type => "text"}/
+        .form-group
+          .form-check
+            %input#invalidCheck2.form-check-input{:required => "", :type => "checkbox", :value => ""}/
+            %label.form-check-label{:for => "invalidCheck2"}
+              Agree to terms and conditions
+        .form-group.form-buttons
+          %button.btn.btn-submit{:type => "submit"} Submit form
+
+%hr/
+.row
+  .col-sm-12
+    %h3 Server side 
+    %p 
+      We recommend using client-side validation, but in case you require server-side validation, you can indicate invalid and valid form fields with 
+      %code .is-invalid 
+      and 
+      %code .is-valid. 
+      Note that 
+      %code .invalid-feedback 
+      is also supported with these classes.
+  .col-sm-12
+    %form
+      %fieldset
+        .form-group
+          .form-row
+            .col-md-4
+              %label{:for => "validationServer01"} First name
+              %input#validationServer01.form-control.is-valid{:placeholder => "First name", :required => "", :type => "text", :value => "Mark"}/
+              .valid-feedback
+                Looks good!
+            .col-md-4
+              %label{:for => "validationServer02"} Last name
+              %input#validationServer02.form-control.is-valid{:placeholder => "Last name", :required => "", :type => "text", :value => "Otto"}/
+              .valid-feedback
+                Looks good!
+            .col-md-4
+              %label{:for => "validationServerUsername"} Username
+              .input-group
+                .input-group-prepend
+                  %span#inputGroupPrepend3.input-group-text @
+                %input#validationServerUsername.form-control.is-invalid{"aria-describedby" => "inputGroupPrepend3", :placeholder => "Username", :required => "", :type => "text"}/
+                .invalid-feedback
+                  Please choose a username.
+        .form-group
+          .form-row
+            .col-md-6
+              %label{:for => "validationServer03"} City
+              %input#validationServer03.form-control.is-invalid{:placeholder => "City", :required => "", :type => "text"}/
+              .invalid-feedback
+                Please provide a valid city.
+            .col-md-3
+              %label{:for => "validationServer04"} State
+              %input#validationServer04.form-control.is-invalid{:placeholder => "State", :required => "", :type => "text"}/
+              .invalid-feedback
+                Please provide a valid state.
+            .col-md-3
+              %label{:for => "validationServer05"} Zip
+              %input#validationServer05.form-control.is-invalid{:placeholder => "Zip", :required => "", :type => "text"}/
+              .invalid-feedback
+                Please provide a valid zip.
+        .form-group
+          .form-check
+            %input#invalidCheck3.form-check-input.is-invalid{:required => "", :type => "checkbox", :value => ""}/
+            %label.form-check-label{:for => "invalidCheck3"}
+              Agree to terms and conditions
+            .invalid-feedback
+              You must agree before submitting.
+        .form-group.form-buttons
+          %button.btn.btn-submit{:type => "submit"} Submit form
+
+
+  :javascript
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+    (function() {
+      'use strict';
+      window.addEventListener('load', function() {
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.getElementsByClassName('needs-validation');
+        // Loop over them and prevent submission
+        var validation = Array.prototype.filter.call(forms, function(form) {
+          form.addEventListener('submit', function(event) {
+            if (form.checkValidity() === false) {
+              event.preventDefault();
+              event.stopPropagation();
+            }
+            form.classList.add('was-validated');
+          }, false);
+        });
+      }, false);
+    })();
