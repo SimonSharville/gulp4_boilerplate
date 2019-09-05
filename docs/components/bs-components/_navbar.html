@@ -5,7 +5,7 @@
 </div>
 <div class='row'>
 <div class='col-sm-12'>
-<h2>SARD Navbars</h2>
+<h3>SARD Navbars</h3>
 </div>
 <div class='col-sm-12'>
 <h4>Navbar Primary</h4>
@@ -192,5 +192,275 @@ Dropdowns
 </form>
 </div>
 </nav>
+</div>
+</div>
+<hr>
+<div class='row'>
+<div class='col-sm-12'>
+<h3>Adding a Megamenu to the Navbar</h3>
+<p>The Megemenu has been completly re-written so that it can sit within any navbar item. It is no longer built using tables, and instead uses flexbox for layout, allowing the columns to expand regardless how many.</p>
+<p>Compair this Megamenu with the one in the top Navbar.</p>
+</div>
+<div class='col-sm-12'>
+<nav class='navbar navbar-expand-lg navbar-primary mb-3'>
+<a class='navbar-brand' href='#/'>Navbar</a>
+<button aria-controls='navbarSard' aria-expanded='false' aria-label='Toggle navigation' class='navbar-toggler' data-target='#navbarSard' data-toggle='collapse' type='button'>
+<span class='navbar-toggler-icon'></span>
+</button>
+<div class='collapse navbar-collapse' id='navbarSard'>
+<ul class='navbar-nav mr-auto'>
+<li class='nav-item active'>
+<a class='nav-link' href='#/'>
+Home
+<span class='sr-only'>(current)</span>
+</a>
+</li>
+<li class='nav-item'>
+<a class='nav-link' href='#/'>Link</a>
+</li>
+<li class='nav-item dropdown'>
+<a aria-expanded='false' aria-haspopup='true' class='nav-link dropdown-toggle' data-toggle='dropdown' href='http://example.com' id='navbarDropdownMenuLink'>
+Dropdowns
+</a>
+<ul aria-labelledby='navbarDropdownMenuLink' class='dropdown-menu'>
+<li>
+<a class='dropdown-item' href='#/'>Action</a>
+</li>
+<li>
+<a class='dropdown-item' href='#/'>Another action</a>
+</li>
+<div class='dropdown-header'>Dropdown Header</div>
+<li class='dropdown-submenu'>
+<a class='dropdown-item dropdown-toggle' href='#/'>Submenu</a>
+<ul class='dropdown-menu'>
+<li>
+<a class='dropdown-item' href='#/'>Submenu action</a>
+</li>
+<li>
+<a class='dropdown-item' href='#/'>Another submenu action</a>
+</li>
+<li class='dropdown-submenu'>
+<a class='dropdown-item dropdown-toggle' href='#/'>Subsubmenu</a>
+<ul class='dropdown-menu'>
+<li>
+<a class='dropdown-item' href='#/'>Subsubmenu action</a>
+</li>
+<li>
+<a class='dropdown-item' href='#/'>Another subsubmenu action</a>
+</li>
+</ul>
+</li>
+<li class='dropdown-submenu'>
+<a class='dropdown-item dropdown-toggle' href='#/'>Second subsubmenu</a>
+<ul class='dropdown-menu'>
+<li>
+<a class='dropdown-item' href='#/'>Subsubmenu action</a>
+</li>
+<li>
+<a class='dropdown-item' href='#/'>Another subsubmenu action</a>
+</li>
+</ul>
+</li>
+<li>
+<a class='dropdown-item' href='#/'>Another action</a>
+</li>
+</ul>
+<li>
+<a class='dropdown-item' href='#/'>Another action</a>
+</li>
+<hr>
+<li>
+<a class='dropdown-item' href='#/'>Another action</a>
+</li>
+</li>
+</ul>
+</li>
+<!-- / Megamenu -->
+<div id='megamenu'>
+<li class='nav-item dropdown'>
+<a aria-expanded='false' aria-haspopup='true' class='nav-link dropdown-toggle' data-toggle='dropdown' href='#' id='bsComponents' role='button'>
+Megamenu
+</a>
+<div class='dropdown-menu'>
+<div class='megamenu'>
+<div class='mega-column'>
+<p class='mega-list-title'>Users</p>
+<div class='mega-item'>
+<a href='#/'>New User</a>
+</div>
+<div class='current mega-item'>
+<a href='#/'>All Users</a>
+</div>
+<div class='mega-item'>
+<a href='#/'>Advanced User Search</a>
+</div>
+<div class='mega-item super-admin'>
+<a href='#/'>Guest Users</a>
+</div>
+</div>
+<div class='mega-column'>
+<p class='mega-list-title'>Data</p>
+<div class='mega-item'>
+<a href='#/'>Roles</a>
+</div>
+<div class='mega-item'>
+<a href='#/'>Medic Groups</a>
+</div>
+<div class='mega-item'>
+<a href='#/'>Directorates</a>
+</div>
+<div class='mega-item'>
+<a href='#/'>Locations</a>
+</div>
+<div class='mega-item'>
+<a href='#/'>Teams</a>
+</div>
+<div class='mega-item'>
+<a href='#/'>Specialties</a>
+</div>
+<div class='mega-item'>
+<a href='#/'>Position Titles</a>
+</div>
+<div class='mega-item'>
+<a href='#/'>ESR Roles</a>
+</div>
+<div class='mega-item'>
+<a href='#/'>Sites</a>
+</div>
+</div>
+<div class='mega-column'>
+<p class='mega-list-title'>GMC</p>
+<div class='mega-item'>
+<a href='#/'>Council Memberships</a>
+</div>
+<div class='mega-item'>
+<a href='#/'>Prescribed Connections</a>
+</div>
+</div>
+<div class='mega-column'>
+<p class='mega-list-title'>CSV Imports</p>
+<div class='mega-item'>
+<a href='#/'>New User CSV Import</a>
+</div>
+<div class='mega-item'>
+<a href='#/'>User Update Import</a>
+</div>
+<div class='mega-item'>
+<a href='#/'>Council Membership Import</a>
+</div>
+<hr>
+<div class='mega-item'>
+<a href='#/'>Appraisal Month Import</a>
+</div>
+<div class='mega-item'>
+<a href='#/'>Offline Appraisal Import</a>
+</div>
+<div class='mega-item'>
+<a href='#/'>MAG Form Import</a>
+</div>
+<div class='mega-item'>
+<a href='#/'>Recommendation Import</a>
+</div>
+<div class='mega-item'>
+<a href='#/'>Gov and FtoP Import</a>
+</div>
+<div class='mega-item'>
+<a href='#/'>Section 12 Import</a>
+</div>
+<hr>
+<div class='mega-item'>
+<a href='#/'>Appraiser Role Import</a>
+</div>
+<div class='mega-item super-admin'>
+<a href='#/'>User Lead Appraiser Import</a>
+</div>
+<div class='mega-item'>
+<a href='#/'>Custom Appraisal Lead Import</a>
+</div>
+<hr>
+<div class='mega-item'>
+<a href='#/'>Offline MSF Import</a>
+</div>
+<div class='mega-item'>
+<a href='#/'>Patient Feedback MSF Import</a>
+</div>
+<hr>
+<div class='mega-item'>
+<a href='#/'>Offline Job Plan Import</a>
+</div>
+<hr>
+<div class='mega-item'>
+<a href='#/'>Role Import</a>
+</div>
+<div class='mega-item'>
+<a href='#/'>Medic Group Import</a>
+</div>
+<hr>
+<div class='mega-item super-admin'>
+<a href='#/'>Designated Body Import</a>
+</div>
+<div class='mega-item super-admin'>
+<a href='#/'>Prep Documents Import</a>
+</div>
+<div class='mega-item super-admin'>
+<a href='#/'>Allocate Appraisal Import</a>
+</div>
+<div class='mega-item super-admin'>
+<a href='#/'>Equiniti User Appraisals Import</a>
+</div>
+<div class='mega-item super-admin'>
+<a href='#/'>Equiniti Portfolio Import</a>
+</div>
+</div>
+<div class='mega-column'>
+<p class='mega-list-title'>Added column</p>
+<div class='mega-item'>
+<a href='#/'>Mega Item</a>
+</div>
+</div>
+</div>
+</div>
+</li>
+</div>
+<!-- / End Megamenu -->
+<li class='nav-item'>
+<a aria-disabled='true' class='nav-link disabled' href='#/' tabindex='-1'>Disabled</a>
+</li>
+</ul>
+<form class='form-inline searchbar-sard'>
+<input aria-label='Search' class='form-control' placeholder='Search' type='search'>
+<button class='btn btn-search' href='#/' type='submit'></button>
+</form>
+</div>
+</nav>
+</div>
+<div class='col-sm-12'>
+<p>The new Megamenu is constructed as follows:</p>
+<p>
+<code>#megamenu</code>
+<br>
+<code>&nbsp; %li.nav-item.dropdown</code>
+<br>
+<code>&nbsp; &nbsp; %a#ID-Name.nav-link.dropdown-toggle</code>
+<span>{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}</span>
+<br>
+<span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Megamenu</span>
+<br>
+<code>&nbsp; &nbsp; .dropdown-menu</code>
+<br>
+<code>&nbsp; &nbsp; &nbsp; .megamenu</code>
+<br>
+<code>&nbsp; &nbsp; &nbsp; &nbsp; .mega-column</code>
+<br>
+<code>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; %p.mega-list-title Users</code>
+<br>
+<code>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; .mega-item</code>
+<br>
+<code>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; %a</code>
+<span>&nbsp; Link</span>
+<br>
+<code>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; %a</code>
+<span>&nbsp; Link</span>
+</p>
 </div>
 </div>

@@ -4,7 +4,7 @@
 
 .row 
   .col-sm-12
-    %h2 SARD Navbars
+    %h3 SARD Navbars
   .col-sm-12
     %h4 Navbar Primary 
     %p
@@ -127,4 +127,194 @@
         %form.form-inline.searchbar-sard
           %input.form-control{"aria-label" => "Search", :placeholder => "Search", :type => "search"}/
           %button.btn.btn-search{:type => "submit", :href => "#/"} 
+%hr/
+.row 
+  .col-sm-12
+    %h3 Adding a Megamenu to the Navbar 
+    %p The Megemenu has been completly re-written so that it can sit within any navbar item. It is no longer built using tables, and instead uses flexbox for layout, allowing the columns to expand regardless how many.
+    %p Compair this Megamenu with the one in the top Navbar.
+  .col-sm-12
+    %nav.navbar.navbar-expand-lg.navbar-primary.mb-3
+      %a.navbar-brand{:href => "#/"} Navbar
+      %button.navbar-toggler{"aria-controls" => "navbarSard", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbarSard", "data-toggle" => "collapse", :type => "button"}
+        %span.navbar-toggler-icon
+      #navbarSard.collapse.navbar-collapse
+        %ul.navbar-nav.mr-auto
+          %li.nav-item.active
+            %a.nav-link{:href => "#/"}
+              Home
+              %span.sr-only (current)
+          %li.nav-item
+            %a.nav-link{:href => "#/"} Link
+          %li.nav-item.dropdown
+            %a#navbarDropdownMenuLink.nav-link.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "http://example.com"}
+              Dropdowns
+            %ul.dropdown-menu{"aria-labelledby" => "navbarDropdownMenuLink"}
+              %li
+                %a.dropdown-item{:href => "#/"} Action
+              %li
+                %a.dropdown-item{:href => "#/"} Another action
+              .dropdown-header Dropdown Header
+              %li.dropdown-submenu
+                %a.dropdown-item.dropdown-toggle{:href => "#/"} Submenu
+                %ul.dropdown-menu
+                  %li
+                    %a.dropdown-item{:href => "#/"} Submenu action
+                  %li
+                    %a.dropdown-item{:href => "#/"} Another submenu action
+                  %li.dropdown-submenu
+                    %a.dropdown-item.dropdown-toggle{:href => "#/"} Subsubmenu
+                    %ul.dropdown-menu
+                      %li
+                        %a.dropdown-item{:href => "#/"} Subsubmenu action
+                      %li
+                        %a.dropdown-item{:href => "#/"} Another subsubmenu action
+                  %li.dropdown-submenu
+                    %a.dropdown-item.dropdown-toggle{:href => "#/"} Second subsubmenu
+                    %ul.dropdown-menu
+                      %li
+                        %a.dropdown-item{:href => "#/"} Subsubmenu action
+                      %li
+                        %a.dropdown-item{:href => "#/"} Another subsubmenu action
+                  %li
+                    %a.dropdown-item{:href => "#/"} Another action
+                %li
+                  %a.dropdown-item{:href => "#/"} Another action
+                %hr/
+                %li
+                  %a.dropdown-item{:href => "#/"} Another action
+          
+          // Megamenu
+          #megamenu
+            %li.nav-item.dropdown
+              %a#bsComponents.nav-link.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
+                Megamenu
+              .dropdown-menu
+                .megamenu
+                  .mega-column
+                    %p.mega-list-title Users
+                    .mega-item
+                      %a{:href => "#/"} New User
+                    .current.mega-item
+                      %a{:href => "#/"} All Users
+                    .mega-item
+                      %a{:href => "#/"} Advanced User Search
+                    .mega-item.super-admin
+                      %a{:href => "#/"} Guest Users
+                  .mega-column
+                    %p.mega-list-title Data
+                    .mega-item
+                      %a{:href => "#/"} Roles
+                    .mega-item
+                      %a{:href => "#/"} Medic Groups
+                    .mega-item
+                      %a{:href => "#/"} Directorates
+                    .mega-item
+                      %a{:href => "#/"} Locations
+                    .mega-item
+                      %a{:href => "#/"} Teams
+                    .mega-item
+                      %a{:href => "#/"} Specialties
+                    .mega-item
+                      %a{:href => "#/"} Position Titles
+                    .mega-item
+                      %a{:href => "#/"} ESR Roles
+                    .mega-item
+                      %a{:href => "#/"} Sites
+                  .mega-column
+                    %p.mega-list-title GMC
+                    .mega-item
+                      %a{:href => "#/"} Council Memberships
+                    .mega-item
+                      %a{:href => "#/"} Prescribed Connections
+                  .mega-column
+                    %p.mega-list-title CSV Imports
+                    .mega-item
+                      %a{:href => "#/"} New User CSV Import
+                    .mega-item
+                      %a{:href => "#/"} User Update Import
+                    .mega-item
+                      %a{:href => "#/"} Council Membership Import
+                    %hr/
+                    .mega-item
+                      %a{:href => "#/"} Appraisal Month Import
+                    .mega-item
+                      %a{:href => "#/"} Offline Appraisal Import
+                    .mega-item
+                      %a{:href => "#/"} MAG Form Import
+                    .mega-item
+                      %a{:href => "#/"} Recommendation Import
+                    .mega-item
+                      %a{:href => "#/"} Gov and FtoP Import
+                    .mega-item
+                      %a{:href => "#/"} Section 12 Import
+                    %hr/
+                    .mega-item
+                      %a{:href => "#/"} Appraiser Role Import
+                    .mega-item.super-admin
+                      %a{:href => "#/"} User Lead Appraiser Import
+                    .mega-item
+                      %a{:href => "#/"} Custom Appraisal Lead Import
+                    %hr/
+                    .mega-item
+                      %a{:href => "#/"} Offline MSF Import
+                    .mega-item
+                      %a{:href => "#/"} Patient Feedback MSF Import
+                    %hr/
+                    .mega-item
+                      %a{:href => "#/"} Offline Job Plan Import
+                    %hr/
+                    .mega-item
+                      %a{:href => "#/"} Role Import
+                    .mega-item
+                      %a{:href => "#/"} Medic Group Import
+                    %hr/
+                    .mega-item.super-admin
+                      %a{:href => "#/"} Designated Body Import
+                    .mega-item.super-admin
+                      %a{:href => "#/"} Prep Documents Import
+                    .mega-item.super-admin
+                      %a{:href => "#/"} Allocate Appraisal Import
+                    .mega-item.super-admin
+                      %a{:href => "#/"} Equiniti User Appraisals Import
+                    .mega-item.super-admin
+                      %a{:href => "#/"} Equiniti Portfolio Import
+                  .mega-column
+                    %p.mega-list-title Added column
+                    .mega-item
+                      %a{:href => "#/"} Mega Item
+          // End Megamenu
 
+          
+          %li.nav-item
+            %a.nav-link.disabled{"aria-disabled" => "true", :href => "#/", :tabindex => "-1"} Disabled
+        %form.form-inline.searchbar-sard
+          %input.form-control{"aria-label" => "Search", :placeholder => "Search", :type => "search"}/
+          %button.btn.btn-search{:type => "submit", :href => "#/"} 
+  .col-sm-12
+    %p The new Megamenu is constructed as follows: 
+    %p
+      %code #megamenu
+      %br/
+      %code &nbsp; %li.nav-item.dropdown
+      %br/
+      %code &nbsp; &nbsp; %a#ID-Name.nav-link.dropdown-toggle
+      %span {"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
+      %br/
+      %span &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Megamenu
+      %br/
+      %code &nbsp; &nbsp; .dropdown-menu
+      %br/
+      %code &nbsp; &nbsp; &nbsp; .megamenu
+      %br/
+      %code &nbsp; &nbsp; &nbsp; &nbsp; .mega-column
+      %br/
+      %code &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; %p.mega-list-title Users
+      %br/
+      %code &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; .mega-item
+      %br/
+      %code &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; %a
+      %span &nbsp; Link
+      %br/
+      %code &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; %a
+      %span &nbsp; Link
