@@ -1,369 +1,363 @@
-#navbar-admin
-  %nav.navbar.navbar-admin.navbar-fixed-top
-    #megamenu
-      .navbar-header
-        %button.navbar-toggle{"aria-controls" => "navbar", "aria-expanded" => "false", "data-target" => "#navbar", "data-toggle" => "collapse", :type => "button"}
-          %span.sr-only Toggle navigation
-          %span.icon-bar
-          %span.icon-bar
-          %span.icon-bar
-      #navbar.navbar-collapse.collapse.in{:style => "height: auto;"}
-        .container
-          .row
-            .col-xs-12
-              %ul.nav.navbar-nav.no-bullet
-                #megamenu
-                  %li.current.dropdown
-                    %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
-                      User Data
-                      %b.caret
-                    .dropdown-menu
-                      .megamenu
-                        .mega-column
-                          %p.mega-list-title Users
-                          .mega-item
-                            %a{:href => "#/"} New User
-                          .mega-item
-                            %a{:href => "#/"} All Users
-                          .mega-item
-                            %a{:href => "#/"} Advanced User Search
-                          .mega-item.super-admin
-                            %a{:href => "#/"} Guest Users
-                        .mega-column
-                          %p.mega-list-title Data
-                          .mega-item
-                            %a{:href => "#/"} Roles
-                          .mega-item
-                            %a{:href => "#/"} Medic Groups
-                          .mega-item
-                            %a{:href => "#/"} Directorates
-                          .mega-item
-                            %a{:href => "#/"} Locations
-                          .mega-item
-                            %a{:href => "#/"} Teams
-                          .mega-item
-                            %a{:href => "#/"} Specialties
-                          .mega-item
-                            %a{:href => "#/"} Position Titles
-                          .mega-item
-                            %a{:href => "#/"} ESR Roles
-                          .mega-item
-                            %a{:href => "#/"} Sites
-                        .mega-column
-                          %p.mega-list-title GMC
-                          .mega-item
-                            %a{:href => "#/"} Council Memberships
-                          .mega-item
-                            %a{:href => "#/"} Prescribed Connections
-                        .mega-column
-                          %p.mega-list-title CSV Imports
-                          .mega-item
-                            %a{:href => "#/"} New User CSV Import
-                          .mega-item
-                            %a{:href => "#/"} User Update Import
-                          .mega-item
-                            %a{:href => "#/"} Council Membership Import
-                          %hr/
-                          .mega-item
-                            %a{:href => "#/"} Appraisal Month Import
-                          .mega-item
-                            %a{:href => "#/"} Offline Appraisal Import
-                          .mega-item
-                            %a{:href => "#/"} MAG Form Import
-                          .mega-item
-                            %a{:href => "#/"} Recommendation Import
-                          .mega-item
-                            %a{:href => "#/"} Gov and FtoP Import
-                          .mega-item
-                            %a{:href => "#/"} Section 12 Import
-                          %hr/
-                          .mega-item
-                            %a{:href => "#/"} Appraiser Role Import
-                          .mega-item.super-admin
-                            %a{:href => "#/"} User Lead Appraiser Import
-                          .mega-item
-                            %a{:href => "#/"} Custom Appraisal Lead Import
-                          %hr/
-                          .mega-item
-                            %a{:href => "#/"} Offline MSF Import
-                          .mega-item
-                            %a{:href => "#/"} Patient Feedback MSF Import
-                          %hr/
-                          .mega-item
-                            %a{:href => "#/"} Offline Job Plan Import
-                          %hr/
-                          .mega-item
-                            %a{:href => "#/"} Role Import
-                          .mega-item
-                            %a{:href => "#/"} Medic Group Import
-                          %hr/
-                          .mega-item.super-admin
-                            %a{:href => "#/"} Designated Body Import
-                          .mega-item.super-admin
-                            %a{:href => "#/"} Prep Documents Import
-                          .mega-item.super-admin
-                            %a{:href => "#/"} Allocate Appraisal Import
-                          .mega-item.super-admin
-                            %a{:href => "#/"} Equiniti User Appraisals Import
-                          .mega-item.super-admin
-                            %a{:href => "#/"} Equiniti Portfolio Import
-                  %li.dropdown
-                    %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
-                      Medical Revalidation
-                      %b.caret
-                    .dropdown-menu
-                      .megamenu
-                        .mega-column
-                          %p.mega-list-title Appraisals
-                          .mega-item
-                            %a{:href => "#/"} All Appraisals
-                          .mega-item
-                            %a{:href => "#/"} Appraisal Months
-                          %hr/
-                          .mega-item
-                            %a{:href => "#/"} Appraisal Compliance Report
-                          .mega-item
-                            %a{:href => "#/"} Appraisal Compliance Report by Directorate
-                          .mega-item
-                            %a{:href => "#/"} Appraisal Compliance Report by Specialty
-                          .mega-item
-                            %a{:href => "#/"} Appraisal Compliance Report by Position Title
-                          .mega-item
-                            %a{:href => "#/"} Appraisal Compliance Report by Location
-                          .mega-item
-                            %a{:href => "#/"} Appraisal Compliance Report by Team
-                          %hr/
-                          .mega-item
-                            %a{:href => "#/"} Incomplete Appraisals
-                          .mega-item
-                            %a{:href => "#/"} Submitted Appraisals
-                          .mega-item
-                            %a{:href => "#/"} Appraisal Leads
-                          .mega-item
-                            %a{:href => "#/"} Appraisal Lead Transfers
-                          .mega-item
-                            %a{:href => "#/"} Appraisal Employers
-                          .mega-item
-                            %a{:href => "#/"} Appraisal Reminders
-                          .mega-item
-                            %a{:href => "#/"} Appraisal Exemptions
-                          .mega-item
-                            %a{:href => "#/"} Appraisal Due Date Extensions
-                          .mega-item
-                            %a{:href => "#/"} Appraisal New Starters
-                          .mega-item
-                            %a{:href => "#/"} Appraisal Section Exports
-                        .mega-column
-                          %p.mega-list-title Appraiser Management
-                          .mega-item
-                            %a{:href => "#/"} Current Configuration Options
-                          .mega-item
-                            %a{:href => "#/"} Medics with consecutive appraisers
-                          .mega-item
-                            %a{:href => "#/"} Medics with no appraiser
-                          .mega-item
-                            %a{:href => "#/"} Reciprocal Appraisers
-                          .mega-item
-                            %a{:href => "#/"} Appraisers
-                          .mega-item
-                            %a{:href => "#/"} Appraiser Feedback Questionnaires
-                          .mega-item
-                            %a{:href => "#/"} Appraiser Feedback Reports
-                        .mega-column
-                          %p.mega-list-title Recommendations
-                          .mega-item
-                            %a{:href => "#/"} Recommendations Compliance
-                          .mega-item
-                            %a{:href => "#/"} Recommendation QA Status
-                          %p.mega-list-title GMC
-                          .mega-item
-                            %a{:href => "#/"} Quarterly Reports
-                          .mega-item
-                            %a{:href => "#/"} AOA Reports
-                          .mega-item
-                            %a{:href => "#/"} GDC
-                          .mega-item
-                            %a{:href => "#/"} UKPHR
-                          %p.mega-list-title eDocs
-                          .mega-item
-                            %a{:href => "#/"} eDocs
-                          .mega-item
-                            %a{:href => "#/"} External Appraisal PDFs
-                          .mega-item
-                            %a{:href => "#/"} Transfers
-                          %p.mega-list-title Evidence
-                          .mega-item
-                            %a{:href => "#/"} S12 / AC
-                          .mega-item
-                            %a{:href => "#/"} Complaints
-                          .mega-item
-                            %a{:href => "#/"} SUIs
-                          %a{:href => "#/"} Capability/Performance ...
-                          %a{:href => "#/"} Criminal Records Bureau
-                          %a{:href => "#/"} Disciplinary
-                          %a{:href => "#/"} Grievance
-                          %a{:href => "#/"} Health Concerns
-                          %a{:href => "#/"} Private Medical Insurance
-                        .mega-column
-                          %p.mega-list-title Medical Roles
-                          .mega-item
-                            %a{:href => "#/"} Medical Roles
-                          %p.mega-list-title Appraisal Datasets
-                          .mega-item
-                            %a{:href => "#/"} Section Mapping
-                          .mega-item
-                            %a{:href => "#/"} Categories
-                          .mega-item
-                            %a{:href => "#/"} Dataset Matrix
-                  %li.dropdown
-                    %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
-                      Job Planning
-                      %b.caret
-                    .dropdown-menu
-                      .megamenu
-                        .mega-column
-                          %p.mega-list-title Job Planning
-                          .mega-item
-                            %a{:href => "#/"} All Job Plans
-                          .mega-item
-                            %a{:href => "#/"} Advanced Job Plan Report
-                          .mega-item
-                            %a{:href => "#/"} Job Plan Activities CSV Exports
-                          .mega-item
-                            %a{:href => "#/"} Job Plan Department of Health Reports
-                          .mega-item
-                            %a{:href => "#/"} Job Plan Management
-                          %hr/
-                          .mega-item
-                            %a{:href => "#/"} Job Plan Compliance Report
-                          .mega-item
-                            %a{:href => "#/"} Job Plan Compliance Report by Directorate
-                          .mega-item
-                            %a{:href => "#/"} Job Plan Compliance Report by Position
-                          .mega-item
-                            %a{:href => "#/"} Job Plan Compliance Report by Teams
-                          .mega-item
-                            %a{:href => "#/"} Job Plan Compliance Report by Specialty
-                          %hr/
-                          .mega-item
-                            %a{:href => "#/"} Job Plan Category Stats
-                          .mega-item
-                            %a{:href => "#/"} Job Plan Category Stats by Directorate
-                          .mega-item
-                            %a{:href => "#/"} Job Plan Category Stats by Position
-                          .mega-item
-                            %a{:href => "#/"} Job Plan Category Stats by Specialty
-                          %hr/
-                          .mega-item
-                            %a{:href => "#/"} Job Plan Activity Categorisation
-                          .mega-item
-                            %a{:href => "#/"} Job Plan Signatories
-                          .mega-item
-                            %a{:href => "#/"} Job Plan Locations
-                          .mega-item
-                            %a{:href => "#/"} Job Plan Tags
-                          .mega-item
-                            %a{:href => "#/"} Job Plan Exemptions
-                          .mega-item
-                            %a{:href => "#/"} Job Plan Templates
-                          .mega-item
-                            %a{:href => "#/"} Completed Job Plan PDFs
-                  %li.dropdown
-                    %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
-                      MSF
-                      %b.caret
-                    .dropdown-menu
-                      .megamenu
-                        .mega-column
-                          %p.mega-list-title MSF
-                          .mega-item
-                            %a{:href => "#/"} All MSFs
-                          .mega-item
-                            %a{:href => "#/"} MSF Compliance
-                          .mega-item
-                            %a{:href => "#/"} Action Needed
-                          .mega-item
-                            %a{:href => "#/"} Transfers
-                          .mega-item.super-admin
-                            %a{:href => "#/"} Search Patient Feedback Reference
-                  %li.dropdown
-                    %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
-                      eLeave
-                      %b.caret
-                    .dropdown-menu
-                      .megamenu
-                        .mega-column
-                          %p.mega-list-title eLeave
-                          .mega-item
-                            %a{:href => "#/"} Calendar
-                          .mega-item
-                            %a{:href => "#/"} Heatmap
-                          .mega-item
-                            %a{:href => "#/"} Allowances
-                          .mega-item
-                            %a{:href => "#/"} Approver Management
-                          .mega-item
-                            %a{:href => "#/"} Approver Transfers
-                          .mega-item
-                            %a{:href => "#/"} Leave Periods CSV Exports
-                          .mega-item
-                            %a{:href => "#/"} Job Plan Activities CSV Exports
-                          .mega-item
-                            %a{:href => "#/"} User Leave Years
-                  %li.dropdown
-                    %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
-                      Miscellaneous
-                      %b.caret
-                    .dropdown-menu
-                      .megamenu
-                        .mega-column
-                          %p.mega-list-title Miscellaneous
-                          .mega-item
-                            %a{:href => "#/"} Support Documents
-                          .mega-item.super-admin
-                            %a{:href => "#/"} Global Default Contents
-                          .mega-item
-                            %a{:href => "#/"} Content Overrides
-                          .mega-item.super-admin
-                            %a{:href => "#/"} Designated Bodies
-                          .mega-item
-                            %a{:href => "#/"} Employers
-                          .mega-item
-                            %a{:href => "#/"} Single Pages
-                          .mega-item
-                            %a{:href => "#/"} Audit Log
-                          .mega-item
-                            %a{:href => "#/"} Notification Docs
-                  %li.dropdown.open
-                    %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
-                      Super Admin
-                      %b.caret
-                    .dropdown-menu
-                      .megamenu
-                        .mega-column
-                          %p.mega-list-title Super Admin
-                          .mega-item.super-admin
-                            %a{:href => "#/"} Tenants
-                          .mega-item.super-admin
-                            %a{:href => "#/"} View demo
-                          .mega-item.super-admin
-                            %a{:href => "#/"} Edit demo
-                          .mega-item.super-admin
-                            %a{:href => "#/"} Products
-                          .mega-item.super-admin
-                            %a{:href => "#/"} Support Videos
-                          .mega-item.super-admin
-                            %a{:href => "#/"} Blacklisted Attachments
-                          .mega-item.super-admin
-                            %a{:href => "#/"} Domain Whitelists
-                          .mega-item.super-admin
-                            %a{:href => "#/"} Global User Search
-                          .mega-item.super-admin
-                            %a{:href => "#/"} Resque
-                          .mega-item.super-admin
-                            %a{:href => "#/"} Allocate Imports
-                          .mega-item.super-admin
-                            %a{:href => "#/"} Versions
-                          %hr/
-                          .mega-item.super-admin
-                            %a{:href => "#/"} UI Styles
+
+%nav#navbar-admin.navbar.navbar-admin.fixed-top.navbar-expand-lg
+  .container
+    .div
+    %button.navbar-toggler{"aria-controls" => "navbarAdmin", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbarAdmin", "data-toggle" => "collapse", :type => "button"}
+      %span.navbar-toggler-icon
+     
+    #navbarAdmin.navbar-collapse.collapse
+      #megamenu
+        %ul.navbar-nav.mr-auto
+          %li.nav-item.dropdown
+            %a#bsComponents.nav-link.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
+              User Data
+            .dropdown-menu
+              .megamenu
+                .mega-column
+                  %p.mega-list-title Users
+                  .mega-item
+                    %a{:href => "#/"} New User
+                  .mega-item
+                    %a{:href => "#/"} All Users
+                  .mega-item
+                    %a{:href => "#/"} Advanced User Search
+                  .mega-item.super-admin
+                    %a{:href => "#/"} Guest Users
+                .mega-column
+                  %p.mega-list-title Data
+                  .mega-item
+                    %a{:href => "#/"} Roles
+                  .mega-item
+                    %a{:href => "#/"} Medic Groups
+                  .mega-item
+                    %a{:href => "#/"} Directorates
+                  .mega-item
+                    %a{:href => "#/"} Locations
+                  .mega-item
+                    %a{:href => "#/"} Teams
+                  .mega-item
+                    %a{:href => "#/"} Specialties
+                  .mega-item
+                    %a{:href => "#/"} Position Titles
+                  .mega-item
+                    %a{:href => "#/"} ESR Roles
+                  .mega-item
+                    %a{:href => "#/"} Sites
+                .mega-column
+                  %p.mega-list-title GMC
+                  .mega-item
+                    %a{:href => "#/"} Council Memberships
+                  .mega-item
+                    %a{:href => "#/"} Prescribed Connections
+                .mega-column
+                  %p.mega-list-title CSV Imports
+                  .mega-item
+                    %a{:href => "#/"} New User CSV Import
+                  .mega-item
+                    %a{:href => "#/"} User Update Import
+                  .mega-item
+                    %a{:href => "#/"} Council Membership Import
+                  %hr/
+                  .mega-item
+                    %a{:href => "#/"} Appraisal Month Import
+                  .mega-item
+                    %a{:href => "#/"} Offline Appraisal Import
+                  .mega-item
+                    %a{:href => "#/"} MAG Form Import
+                  .mega-item
+                    %a{:href => "#/"} Recommendation Import
+                  .mega-item
+                    %a{:href => "#/"} Gov and FtoP Import
+                  .mega-item
+                    %a{:href => "#/"} Section 12 Import
+                  %hr/
+                  .mega-item
+                    %a{:href => "#/"} Appraiser Role Import
+                  .mega-item.super-admin
+                    %a{:href => "#/"} User Lead Appraiser Import
+                  .mega-item
+                    %a{:href => "#/"} Custom Appraisal Lead Import
+                  %hr/
+                  .mega-item
+                    %a{:href => "#/"} Offline MSF Import
+                  .mega-item
+                    %a{:href => "#/"} Patient Feedback MSF Import
+                  %hr/
+                  .mega-item
+                    %a{:href => "#/"} Offline Job Plan Import
+                  %hr/
+                  .mega-item
+                    %a{:href => "#/"} Role Import
+                  .mega-item
+                    %a{:href => "#/"} Medic Group Import
+                  %hr/
+                  .mega-item.super-admin
+                    %a{:href => "#/"} Designated Body Import
+                  .mega-item.super-admin
+                    %a{:href => "#/"} Prep Documents Import
+                  .mega-item.super-admin
+                    %a{:href => "#/"} Allocate Appraisal Import
+                  .mega-item.super-admin
+                    %a{:href => "#/"} Equiniti User Appraisals Import
+                  .mega-item.super-admin
+                    %a{:href => "#/"} Equiniti Portfolio Import
+          %li.nav-item.dropdown
+            %a#bsComponents.nav-link.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
+              Medical Revalidation
+            .dropdown-menu
+              .megamenu
+                .mega-column
+                  %p.mega-list-title Appraisals
+                  .mega-item
+                    %a{:href => "#/"} All Appraisals
+                  .mega-item
+                    %a{:href => "#/"} Appraisal Months
+                  %hr/
+                  .mega-item
+                    %a{:href => "#/"} Appraisal Compliance Report
+                  .mega-item
+                    %a{:href => "#/"} Appraisal Compliance Report by Directorate
+                  .mega-item
+                    %a{:href => "#/"} Appraisal Compliance Report by Specialty
+                  .mega-item
+                    %a{:href => "#/"} Appraisal Compliance Report by Position Title
+                  .mega-item
+                    %a{:href => "#/"} Appraisal Compliance Report by Location
+                  .mega-item
+                    %a{:href => "#/"} Appraisal Compliance Report by Team
+                  %hr/
+                  .mega-item
+                    %a{:href => "#/"} Incomplete Appraisals
+                  .mega-item
+                    %a{:href => "#/"} Submitted Appraisals
+                  .mega-item
+                    %a{:href => "#/"} Appraisal Leads
+                  .mega-item
+                    %a{:href => "#/"} Appraisal Lead Transfers
+                  .mega-item
+                    %a{:href => "#/"} Appraisal Employers
+                  .mega-item
+                    %a{:href => "#/"} Appraisal Reminders
+                  .mega-item
+                    %a{:href => "#/"} Appraisal Exemptions
+                  .mega-item
+                    %a{:href => "#/"} Appraisal Due Date Extensions
+                  .mega-item
+                    %a{:href => "#/"} Appraisal New Starters
+                  .mega-item
+                    %a{:href => "#/"} Appraisal Section Exports
+                .mega-column
+                  %p.mega-list-title Appraiser Management
+                  .mega-item
+                    %a{:href => "#/"} Current Configuration Options
+                  .mega-item
+                    %a{:href => "#/"} Medics with consecutive appraisers
+                  .mega-item
+                    %a{:href => "#/"} Medics with no appraiser
+                  .mega-item
+                    %a{:href => "#/"} Reciprocal Appraisers
+                  .mega-item
+                    %a{:href => "#/"} Appraisers
+                  .mega-item
+                    %a{:href => "#/"} Appraiser Feedback Questionnaires
+                  .mega-item
+                    %a{:href => "#/"} Appraiser Feedback Reports
+                .mega-column
+                  %p.mega-list-title Recommendations
+                  .mega-item
+                    %a{:href => "#/"} Recommendations Compliance
+                  .mega-item
+                    %a{:href => "#/"} Recommendation QA Status
+                  %p.mega-list-title GMC
+                  .mega-item
+                    %a{:href => "#/"} Quarterly Reports
+                  .mega-item
+                    %a{:href => "#/"} AOA Reports
+                  .mega-item
+                    %a{:href => "#/"} GDC
+                  .mega-item
+                    %a{:href => "#/"} UKPHR
+                  %p.mega-list-title eDocs
+                  .mega-item
+                    %a{:href => "#/"} eDocs
+                  .mega-item
+                    %a{:href => "#/"} External Appraisal PDFs
+                  .mega-item
+                    %a{:href => "#/"} Transfers
+                  %p.mega-list-title Evidence
+                  .mega-item
+                    %a{:href => "#/"} S12 / AC
+                  .mega-item
+                    %a{:href => "#/"} Complaints
+                  .mega-item
+                    %a{:href => "#/"} SUIs
+                  .mega-item
+                    %a{:href => "#/"} Capability/Performance ...
+                  .mega-item
+                    %a{:href => "#/"} Criminal Records Bureau
+                  .mega-item
+                    %a{:href => "#/"} Disciplinary
+                  .mega-item
+                    %a{:href => "#/"} Grievance
+                  .mega-item
+                    %a{:href => "#/"} Health Concerns
+                  .mega-item
+                    %a{:href => "#/"} Private Medical Insurance
+                .mega-column
+                  %p.mega-list-title Medical Roles
+                  .mega-item
+                    %a{:href => "#/"} Medical Roles
+                  %p.mega-list-title Appraisal Datasets
+                  .mega-item
+                    %a{:href => "#/"} Section Mapping
+                  .mega-item
+                    %a{:href => "#/"} Categories
+                  .mega-item
+                    %a{:href => "#/"} Dataset Matrix
+          %li.nav-item.dropdown
+            %a#bsComponents.nav-link.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
+              Job Planning
+            .dropdown-menu
+              .megamenu
+                .mega-column
+                  %p.mega-list-title Job Planning
+                  .mega-item
+                    %a{:href => "#/"} All Job Plans
+                  .mega-item
+                    %a{:href => "#/"} Advanced Job Plan Report
+                  .mega-item
+                    %a{:href => "#/"} Job Plan Activities CSV Exports
+                  .mega-item
+                    %a{:href => "#/"} Job Plan Department of Health Reports
+                  .mega-item
+                    %a{:href => "#/"} Job Plan Management
+                  %hr/
+                  .mega-item
+                    %a{:href => "#/"} Job Plan Compliance Report
+                  .mega-item
+                    %a{:href => "#/"} Job Plan Compliance Report by Directorate
+                  .mega-item
+                    %a{:href => "#/"} Job Plan Compliance Report by Position
+                  .mega-item
+                    %a{:href => "#/"} Job Plan Compliance Report by Teams
+                  .mega-item
+                    %a{:href => "#/"} Job Plan Compliance Report by Specialty
+                  %hr/
+                  .mega-item
+                    %a{:href => "#/"} Job Plan Category Stats
+                  .mega-item
+                    %a{:href => "#/"} Job Plan Category Stats by Directorate
+                  .mega-item
+                    %a{:href => "#/"} Job Plan Category Stats by Position
+                  .mega-item
+                    %a{:href => "#/"} Job Plan Category Stats by Specialty
+                  %hr/
+                  .mega-item
+                    %a{:href => "#/"} Job Plan Activity Categorisation
+                  .mega-item
+                    %a{:href => "#/"} Job Plan Signatories
+                  .mega-item
+                    %a{:href => "#/"} Job Plan Locations
+                  .mega-item
+                    %a{:href => "#/"} Job Plan Tags
+                  .mega-item
+                    %a{:href => "#/"} Job Plan Exemptions
+                  .mega-item
+                    %a{:href => "#/"} Job Plan Templates
+                  .mega-item
+                    %a{:href => "#/"} Completed Job Plan PDFs
+          %li.nav-item.dropdown
+            %a#bsComponents.nav-link.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
+              MSF
+            .dropdown-menu
+              .megamenu
+                .mega-column
+                  %p.mega-list-title MSF
+                  .mega-item
+                    %a{:href => "#/"} All MSFs
+                  .mega-item
+                    %a{:href => "#/"} MSF Compliance
+                  .mega-item
+                    %a{:href => "#/"} Action Needed
+                  .mega-item
+                    %a{:href => "#/"} Transfers
+                  .mega-item.super-admin
+                    %a{:href => "#/"} Search Patient Feedback Reference
+          %li.nav-item.dropdown
+            %a#bsComponents.nav-link.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
+              eLeave
+            .dropdown-menu
+              .megamenu
+                .mega-column
+                  %p.mega-list-title eLeave
+                  .mega-item
+                    %a{:href => "#/"} Calendar
+                  .mega-item
+                    %a{:href => "#/"} Heatmap
+                  .mega-item
+                    %a{:href => "#/"} Allowances
+                  .mega-item
+                    %a{:href => "#/"} Approver Management
+                  .mega-item
+                    %a{:href => "#/"} Approver Transfers
+                  .mega-item
+                    %a{:href => "#/"} Leave Periods CSV Exports
+                  .mega-item
+                    %a{:href => "#/"} Job Plan Activities CSV Exports
+                  .mega-item
+                    %a{:href => "#/"} User Leave Years
+          %li.nav-item.dropdown
+            %a#bsComponents.nav-link.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
+              Miscellaneous
+            .dropdown-menu
+              .megamenu
+                .mega-column
+                  %p.mega-list-title Miscellaneous
+                  .mega-item
+                    %a{:href => "#/"} Support Documents
+                  .mega-item.super-admin
+                    %a{:href => "#/"} Global Default Contents
+                  .mega-item
+                    %a{:href => "#/"} Content Overrides
+                  .mega-item.super-admin
+                    %a{:href => "#/"} Designated Bodies
+                  .mega-item
+                    %a{:href => "#/"} Employers
+                  .mega-item
+                    %a{:href => "#/"} Single Pages
+                  .mega-item
+                    %a{:href => "#/"} Audit Log
+                  .mega-item
+                    %a{:href => "#/"} Notification Docs
+          %li.nav-item.dropdown.open
+            %a#bsComponents.nav-link.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
+              Super Admin
+            .dropdown-menu
+              .megamenu
+                .mega-column
+                  %p.mega-list-title Super Admin
+                  .mega-item.super-admin
+                    %a{:href => "#/"} Tenants
+                  .mega-item.super-admin
+                    %a{:href => "#/"} View demo
+                  .mega-item.super-admin
+                    %a{:href => "#/"} Edit demo
+                  .mega-item.super-admin
+                    %a{:href => "#/"} Products
+                  .mega-item.super-admin
+                    %a{:href => "#/"} Support Videos
+                  .mega-item.super-admin
+                    %a{:href => "#/"} Blacklisted Attachments
+                  .mega-item.super-admin
+                    %a{:href => "#/"} Domain Whitelists
+                  .mega-item.super-admin
+                    %a{:href => "#/"} Global User Search
+                  .mega-item.super-admin
+                    %a{:href => "#/"} Resque
+                  .mega-item.super-admin
+                    %a{:href => "#/"} Allocate Imports
+                  .mega-item.super-admin
+                    %a{:href => "#/"} Versions
+                  %hr/
+                  .mega-item.super-admin
+                    %a{:href => "#/"} UI Styles
