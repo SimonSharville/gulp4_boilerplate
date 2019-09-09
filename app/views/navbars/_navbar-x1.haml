@@ -1,12 +1,12 @@
 
 %nav#navbar.navbar.fixed-top.navbar-expand-lg.navbar-primary
   .container
-    %a.navbar-brand{:href => "../index.html"} Navbar
+    %a.navbar-brand{:href => "../index.html"} Logo
     %button.navbar-toggler{"aria-controls" => "navbarTop", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbarTop", "data-toggle" => "collapse", :type => "button"}
       %span.navbar-toggler-icon
     #navbarTop.collapse.navbar-collapse
       %ul.navbar-nav.mr-auto
-        %li.nav-item.active
+        %li.nav-item
           %a.nav-link{:href => "../index.html"}
             Home
             %span.sr-only (current)
@@ -50,11 +50,11 @@
             %a.dropdown-item{:href => "../components/components.html#searchbars-anchor"} Searchbars
             %a.dropdown-item{:href => "../components/components.html#tables-anchor"} Tables
             %a.dropdown-item{:href => "../components/components.html#tooltips-anchor"} Tooltips
-
+        
         // Megamenu
-        //=include _megamenu.haml              
+        //=include _megamenu.haml
         %li.nav-item
           %a.nav-link.disabled{"aria-disabled" => "true", :href => "#", :tabindex => "-1"} Disabled
       %form.form-inline.searchbar-sard
         %input.form-control{"aria-label" => "Search", :placeholder => "Search", :type => "search"}/
-        %button.btn.btn-search{:type => "submit"}
+        %button.btn.btn-search{:type => "submit"} 
