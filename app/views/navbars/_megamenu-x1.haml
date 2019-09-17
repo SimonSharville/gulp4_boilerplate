@@ -1,16 +1,30 @@
 
 // Megamenu
 #megamenu
-  %li.nav-item.dropdown
+  %li.dropdown
     %a#bsComponents.nav-link.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
       Megamenu
     .dropdown-menu
       .megamenu
         .mega-column
+          %p.mega-list-title Sard UI
+          .mega-item
+            %a{:href => "../sard-ui/sa-typography.html"} Typography
+          .mega-item
+            %a{:href => "../sard-ui/sa-icons.html"} Icons
+          .mega-item
+            %a{:href => "../sard-ui/sa-colours.html"} Colours
+          .mega-item
+            %a{:href => "../sard-ui/sa-links.html"} Links
+          .mega-item
+            %a{:href => "../sard-ui/sa-lists.html"} Lists
+          .mega-item
+            %a{:href => "../sard-ui/sa-perforations.html"} Perforations and Dividers
+        .mega-column
           %p.mega-list-title Users
           .mega-item
             %a{:href => "#/"} New User
-          .current.mega-item
+          .mega-item
             %a{:href => "#/"} All Users
           .mega-item
             %a{:href => "#/"} Advanced User Search
