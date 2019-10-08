@@ -1,0 +1,35 @@
+!!!
+%html.no-js{:lang => "en"}
+  %head
+    %title Gulp 4, Bootstrap 4 - Sard Nav Tabs
+    %meta{:content => "ie=edge", "http-equiv" => "x-ua-compatible"}/
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+    %link{:href => "../assets/css/sard-styles.min.css", :rel => "stylesheet"}/
+ 
+  %body.theme-trust
+    //=include ../navbars/_navbar-x1.haml
+
+    .container
+      .row
+        .col-sm-12
+          %h1#links.bs-anchor Sard Nav Tabs
+
+      .row
+        .col-sm-12
+          %p.lead
+            Sard Nav Tabs are created for use on the Portfolio and Appraisals pages, but have a different look on each. 
+
+      
+
+      .row
+        .col-sm-6
+
+                
+    //=include ../navbars/_footer.haml
+
+    / Scripts ================================
+
+    / Remote Scripts
+    %script{:src => "https://simonsharville.github.io/gulp4_bootstrap4_boilerplate/assets/js/remote-sard-scripts.min.js"}
+    / Local Scripts
+    %script{:src => "../assets/js/local-scripts.min.js"}

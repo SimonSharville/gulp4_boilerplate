@@ -51,10 +51,15 @@
             %a.dropdown-item{:href => "../bs-components/components.html#tables-anchor"} Tables
             %a.dropdown-item{:href => "../bs-components/components.html#tooltips-anchor"} Tooltips
         
+        %li.nav-item.dropdown
+          %a#sardUI.nav-link.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
+            Sard Components
+          .dropdown-menu{"aria-labelledby" => "sardUI"}
+            %a.dropdown-item{:href => "../sard-components/sa-nav-tabs.html"} Sard Nav Tabs
+            
         // Megamenu
         //=include _megamenu-x1.haml
-        %li.nav-item
-          %a.nav-link.disabled{"aria-disabled" => "true", :href => "#", :tabindex => "-1"} Disabled
+
       %form.form-inline.searchbar-sard
         %input.form-control{"aria-label" => "Search", :placeholder => "Search", :type => "search"}/
         %button.btn.btn-search{:type => "submit"} 
