@@ -1,0 +1,49 @@
+#off_canvas_rag_key
+  %a#rag-key-expander.rag-key-expander.fixed
+    .title
+      / RAG
+      %img{:alt => "Rag icon danger plus sm@2x", :src => "../assets/rag-icons/rag-icon-danger-plus-sm@2x.png"}/
+      %br/
+      %img{:alt => "Rag icon warning plus sm@2x", :src => "../assets/rag-icons/rag-icon-warning-plus-sm@2x.png"}/
+      %br/
+      %img{:alt => "Rag icon approved sm@2x", :src => "../assets/rag-icons/rag-icon-approved-sm@2x.png"}/
+  %nav.rag-key-menu
+    %ul.list-unstyled.rag-menu
+      / Include your navigation here
+      #rag-key-close
+        %a{:href => "#"}
+    %h3 Key to status icons
+    .rag-key.icon-danger-plus
+      %p
+        Incomplete
+        %br/
+        Non compliant
+    .rag-key.icon-warning-plus
+      %p
+        In Progress
+        %br/
+        Compliant with upcoming renewal
+    .rag-key.icon-approved
+      %p
+        Complete
+        %br/
+        Compliant
+    .rag-key.icon-unavailable
+      %p
+        Not applicable
+        %br/
+        Compliance unknown
+    %hr/
+    %h3 Key to state icons
+    .rag-key.icon-draft
+      %p
+        Draft
+    .rag-key.icon-submitted
+      %p
+        Submitted
+    .rag-key.icon-approved
+      %p
+        Complete
+    .rag-key.icon-abandoned
+      %p
+        Archived

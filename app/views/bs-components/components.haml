@@ -9,8 +9,6 @@
   %body.theme-trust
     //=include ../navbars/_navbar-x1.haml
     //=include ../navbars/_navbar-admin.haml
-    //=include ../navbars/_options-tab.haml
-    //=include ../navbars/_rag-tab.haml
 
     #breadcrumb-top.fixed-top
       .container
@@ -120,7 +118,11 @@
       //=include components/_tooltips.haml
 
     //=include ../navbars/_footer.haml
-    
+
+    -# Sidebars must be at the bottom of the file
+    //=include ../navbars/_options-tab.haml
+    //=include ../navbars/_rag-tab-x1.haml
+
     / Scripts
 
     / Remote Scripts
